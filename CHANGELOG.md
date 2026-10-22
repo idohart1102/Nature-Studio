@@ -11,6 +11,7 @@ Phiên bản toàn workspace được đọc từ [VERSION](VERSION). Phiên b�
 - Script đặt UTF-8 cho console (Windows cp1252 không còn lỗi); CI chạy cả Windows. Nội dung: camera cầm tay trong underwater-realism, tag địa điểm trong audience-and-caption, bỏ tham chiếu ổ E:, đánh dấu gói standalone v1.9 là lưu trữ, ghi chú nâng cấp v2.1.2→v2.1.5.
 - Sau tag v2.1.6: CI Windows lộ lỗi fixture test dùng thư mục tạm tên rút gọn 8.3 (RUNNER~1) trong khi helper resolve tên đầy đủ; test nay resolve gốc tạm. Không đổi code chạy thật; tag v2.1.6 giữ nguyên.
 - 2026-10-22: viết lại lịch sử Git, gỡ hồ sơ UF-0001 và idea-ledger cũ khỏi mọi commit; force-push main, codex/release-v2.0.0 và các tag; thêm tag v1.8. Nội dung từng bản không đổi. Bảng mã cũ → mới và cách đồng bộ máy khác ở UPDATE.md.
+- 2026-10-22: repository chính chuyển sang `idohart1102/Nature-Studio` (private) với cùng lịch sử, nhánh và tag; REPOSITORY.json ghi repo cũ bandepdao123 trong previous_repositories.
 - `scripts/session_usage.py`: đọc bộ đếm token từ log Codex/Claude local (request, tool call, input/cached/output, ngữ cảnh đỉnh, compaction, theo lượt); không đọc nội dung chat.
 
 ## v2.1.5 — 2026-10-19

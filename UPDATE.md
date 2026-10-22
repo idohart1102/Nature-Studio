@@ -2,7 +2,7 @@
 
 Version của quy trình: 1.2 | Updated: 2026-10-17
 
-Repository nguồn: [bandepdao123/Nature-Studio](https://github.com/bandepdao123/Nature-Studio). Phiên bản workspace: [VERSION](VERSION); lịch sử: [CHANGELOG.md](CHANGELOG.md). Không giả định nguồn luôn mới hơn local hoặc mọi bản cùng VERSION có nội dung giống nhau.
+Repository nguồn: [idohart1102/Nature-Studio](https://github.com/idohart1102/Nature-Studio) (private; trước 2026-10-22 là bandepdao123/Nature-Studio). Phiên bản workspace: [VERSION](VERSION); lịch sử: [CHANGELOG.md](CHANGELOG.md). Không giả định nguồn luôn mới hơn local hoặc mọi bản cùng VERSION có nội dung giống nhau.
 
 ## Điểm vào cho AI nhận link repository
 
@@ -86,11 +86,11 @@ Không tự render, tiêu tiền hay đăng nội dung để kiểm việc cập
 
 ## Mẫu yêu cầu dùng với AI bất kỳ
 
-> Đây là Nature Studio: https://github.com/bandepdao123/Nature-Studio. Đọc README.md và UPDATE.md ở bản nguồn, kiểm VERSION/CHANGELOG và đối chiếu với workspace tôi cung cấp. Cho biết cần cập nhật gì; khi thực hiện, giữ chỉnh sửa riêng, dữ liệu sản xuất, bài học và lịch sử. Nếu thiếu quyền đọc local hoặc không biết baseline, nêu rõ thay vì đoán.
+> Đây là Nature Studio: https://github.com/idohart1102/Nature-Studio. Đọc README.md và UPDATE.md ở bản nguồn, kiểm VERSION/CHANGELOG và đối chiếu với workspace tôi cung cấp. Cho biết cần cập nhật gì; khi thực hiện, giữ chỉnh sửa riêng, dữ liệu sản xuất, bài học và lịch sử. Nếu thiếu quyền đọc local hoặc không biết baseline, nêu rõ thay vì đoán.
 
 ## Tên repository ổn định — quyết định hiện hành 2026-10-16
 
-Giữ nguyên repository `bandepdao123/Nature-Studio`, ID GitHub 1421542100; không đổi tên repo hoặc remote vì nâng VERSION. Phiên bản thể hiện trong README, VERSION, CHANGELOG, manifest, tên gói ZIP và tag/release nếu được tạo. Số phiên bản không phải một phần URL repo.
+Repository hiện hành `idohart1102/Nature-Studio`, ID GitHub 1429154143, private; từ 2026-10-22 thay `bandepdao123/Nature-Studio` (ID 1421542100) theo yêu cầu người dùng, cùng lịch sử và tag. Máy cũ trỏ remote về repo mới bằng `git remote set-url origin https://github.com/idohart1102/Nature-Studio.git` (cần quyền truy cập repo private). Không đổi tên repo hoặc remote vì nâng VERSION. Phiên bản thể hiện trong README, VERSION, CHANGELOG, manifest, tên gói ZIP và tag/release nếu được tạo. Số phiên bản không phải một phần URL repo.
 
 REPOSITORY.json ghi danh tính nguồn, không nhân bản VERSION. Với bản cũ mang tên thử Nature-Studio-v1.0, phân giải URL hoặc tra repository_id trên GitHub để xác minh đúng nguồn trước khi cập nhật remote về URL ổn định; không chọn repo khác chỉ vì trùng tên. Quy tắc này thay đề xuất đổi tên repo theo phiên bản trước đó. Giữ các manifest/gói đã đóng để truy vết, không sửa URL provenance trong chúng.
 

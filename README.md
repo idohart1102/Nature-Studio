@@ -116,7 +116,7 @@ Repo không chứa API key hoặc cấu hình đăng nhập. Nguồn bên ngoài
 
 ## Tên repository cố định, phiên bản nằm trong nội dung
 
-Repository luôn là [Nature-Studio](https://github.com/bandepdao123/Nature-Studio); không đổi tên khi nâng phiên bản. Tên hiển thị trong README, VERSION, CHANGELOG và gói ZIP thể hiện bản đang dùng, ví dụ Nature Studio v1.1. Khi chốt bản mới, cập nhật các nội dung đó; có thể tạo tag/release v1.1 khi được yêu cầu, giữ nguyên URL repo. [REPOSITORY.json](REPOSITORY.json) ghi danh tính nguồn ổn định.
+Repository là [idohart1102/Nature-Studio](https://github.com/idohart1102/Nature-Studio) (private, từ 2026-10-22; trước đó bandepdao123/Nature-Studio); không đổi tên khi nâng phiên bản. Tên hiển thị trong README, VERSION, CHANGELOG và gói ZIP thể hiện bản đang dùng, ví dụ Nature Studio v1.1. Khi chốt bản mới, cập nhật các nội dung đó; có thể tạo tag/release v1.1 khi được yêu cầu, giữ nguyên URL repo. [REPOSITORY.json](REPOSITORY.json) ghi danh tính nguồn ổn định.
 
 ## /dongvideo và bộ nhớ hai cấp — mới trong v1.1
 

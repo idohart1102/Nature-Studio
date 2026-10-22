@@ -33,7 +33,7 @@ Phiên bản toàn hệ thống đầu tiên: [VERSION](../VERSION), [CHANGELOG]
 
 ## Giữ URL nguồn ổn định — 2026-10-16
 
-Repository hiện hành: [Nature-Studio](https://github.com/bandepdao123/Nature-Studio). Quyết định giữ tên repo, quản lý phiên bản trong nội dung thay chính sách đổi tên thử; xem [manifest khôi phục](manifests/stable-repository-name-2026-10-16.json). [Manifest đổi tên thử](manifests/repository-version-name-2026-10-16.json) giữ như lịch sử, không áp dụng làm quy tắc hiện hành.
+Repository hiện hành: [idohart1102/Nature-Studio](https://github.com/idohart1102/Nature-Studio) (private, từ 2026-10-22; trước đó bandepdao123/Nature-Studio). Quyết định giữ tên repo, quản lý phiên bản trong nội dung thay chính sách đổi tên thử; xem [manifest khôi phục](manifests/stable-repository-name-2026-10-16.json). [Manifest đổi tên thử](manifests/repository-version-name-2026-10-16.json) giữ như lịch sử, không áp dụng làm quy tắc hiện hành.
 
 ## Nature Studio v1.1 — 2026-10-16
 
