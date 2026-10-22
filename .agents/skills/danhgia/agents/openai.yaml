@@ -1,0 +1,3 @@
+interface:
+  display_name: "/danhgia"
+  short_description: "Chấm video render và số liệu sau đăng, độc lập với người viết"

@@ -1,10 +1,14 @@
-# Nature Studio v2.2.0
+# Nature Studio v2.2.1
 
 Workspace sản xuất nội dung thiên nhiên bằng AI, tổ chức theo **Project**. Tài liệu và lịch sử được lưu bằng file để tiếp tục công việc qua nhiều phiên làm việc.
 
 Đọc [START-HERE.md](START-HERE.md) và [SYSTEM.md](SYSTEM.md) trước khi bắt đầu. AI đọc [AGENTS.md](AGENTS.md) để nhận quy tắc workspace.
 
-## Mới trong v2.2.0
+## Mới trong v2.2.1
+
+Skill `/danhgia`: chấm độc lập video render và số liệu sau đăng theo chuẩn Project. Xem [07-Releases/v2.2.1.md](07-Releases/v2.2.1.md).
+
+## Kế thừa v2.2.0
 
 Hook 3 giây đầu (UF-D025): chuẩn chung cho mở đầu và mục riêng Underwater; 5–10 beat, beat đầu ≤3.0s, `checks.hook_signal` ≤3.0s, key vẫn sau 5.0s. Xem [07-Releases/v2.2.0.md](07-Releases/v2.2.0.md).
 
@@ -61,7 +65,7 @@ Có thể giữ dependency trong môi trường riêng: `python -m venv .venv`, 
 
 Đọc [VERSION](VERSION) và [CHANGELOG.md](CHANGELOG.md) để biết phiên bản toàn hệ thống, sau đó theo START-HERE/SYSTEM. Khi kiểm tra hoặc cập nhật từ GitHub, thực hiện [UPDATE.md](UPDATE.md): xác định commit đích, so với bản local và giữ chỉnh sửa riêng trước khi ghi. Chỉ có link repo chưa đủ để biết máy người dùng đã thay đổi gì; cần quyền đọc local hoặc gói workspace/manifest của họ.
 
-Phiên bản hiện hành là **Nature Studio v2.2.0**. Skill/project có số phiên bản riêng. VERSION không tự tạo Git tag/GitHub Release; main có thể chứa thay đổi sau một release, nên luôn ghi kèm commit và trạng thái local. Repository nguồn: [bandepdao123/Nature-Studio](https://github.com/bandepdao123/Nature-Studio).
+Phiên bản hiện hành là **Nature Studio v2.2.1**. Skill/project có số phiên bản riêng. VERSION không tự tạo Git tag/GitHub Release; main có thể chứa thay đổi sau một release, nên luôn ghi kèm commit và trạng thái local. Repository nguồn: [bandepdao123/Nature-Studio](https://github.com/bandepdao123/Nature-Studio).
 
 ## Dự án hiện tại
 
@@ -149,3 +153,7 @@ Phong cách theo benchmark Underfishing: ít chữ, trực tiếp, một điểm
 Dùng `/taoanh <mã video>`, “tạo ảnh” hoặc “tạo first frame” khi thực sự cần ảnh cho Project. [Skill](.agents/skills/taoanh/SKILL.md) tự QA ảnh thật, sửa có mục tiêu và giữ ý định; tối đa 5 lượt sinh/sửa, xin thêm khi chưa đạt. /chayvideo vẫn chỉ tạo văn bản; /dongvideo tổng kết bài học.
 
 Model ưu tiên là GPT Image 2.5 Sunburst qua built-in image_gen. [Profile thực thi](02-Models/model-profiles/sunburst-imagegen.md) ghi rõ tool hiện không có selector; không bảo đảm/nhận đã dùng Sunburst khi backend chưa xác minh. Không tìm được Sunburst thì dùng model mặc định và tiếp tục không hỏi lại; danh tính model không là tiêu chí QA. Ảnh, QA, bộ đếm và lịch sử giữ local theo publication.md.
+
+## Đánh giá video — /danhgia
+
+Từ v2.2.1, `/danhgia <mã video>` chấm video đã render theo chuẩn Project (hook 3 giây đầu, key sau 5s, giải phẫu, chuyển động, dụng cụ, âm, caption) và ghi số liệu sau đăng. Skill độc lập với người viết prompt, chỉ kết luận từ hình/âm/số đo thật, không tự sửa hay render.

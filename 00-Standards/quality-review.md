@@ -31,3 +31,7 @@ Theo [first-frame.md](first-frame.md) và hướng dẫn Project. Xem ảnh outp
 ## Kiểm file và trạng thái — v1.7
 
 Khi có render, theo [media-review-and-finishing.md](media-review-and-finishing.md): đo duration thực, mức âm đầu–giữa–cuối; kiểm giải phẫu lúc reveal/ending, không lấy QA t=0 thay phần chưa thấy. Tách text hiện hành/render thực/QA từng miền/tạm duyệt/final; không suy actual settings từ prompt. Metrics không thay nghe hoặc xem liên tục.
+
+## Skill đánh giá — v2.2.1
+
+Mức video-reviewed và published-measured chạy qua [/danhgia](../.agents/skills/danhgia/SKILL.md): chấm độc lập với người viết prompt, ghi review/CURRENT-STATE/performance, không tự sửa hoặc render.

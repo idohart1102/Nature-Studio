@@ -2,6 +2,12 @@
 
 Phiên bản toàn workspace được đọc từ [VERSION](VERSION). Phiên bản của từng skill/tài liệu được quản lý riêng; không đổi tất cả thành 1.0. Commit và hash dùng để phân biệt các bản có cùng số phiên bản hoặc có chỉnh sửa local.
 
+## v2.2.1 — 2026-10-23
+
+- Skill mới `/danhgia` v1.0: chấm video render và số liệu sau đăng, độc lập với người viết prompt. Dùng `media_review.py`, frame 3 giây đầu/quanh key/toàn clip, nghe âm khi có khả năng; ghi review, CURRENT-STATE schema2 và performance.md (retention 3s và trước key). Không sửa prompt, tạo media, đăng hay đổi approval.
+- Điểm vào: AGENTS.md, START-HERE, README, SYSTEM, quality-review; /dongvideo đọc review/performance của /danhgia; taxonomy `video-review` nhận alias danhgia. Ca EV-REVIEW-01..03.
+- Không đổi script, contract hay quy chuẩn chấm hiện hành.
+
 ## v2.2.0 — 2026-10-22
 
 - Hook 3 giây đầu (UF-D025): chuẩn chung “Mở đầu 3 giây” trong story-development (đối tượng đọc được ở frame đầu, chuyển động có nguyên nhân từ 0.0s, tín hiệu mới ≤3.0s, câu hỏi mở, âm từ đầu); mục Hook 3 giây đầu trong format Underwater; gate ảnh t=0 và render 0–3s; concept thêm dòng hook.

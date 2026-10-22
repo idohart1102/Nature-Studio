@@ -2,7 +2,7 @@
 
 Kho sản xuất nội dung thiên nhiên, lưu trên máy; khởi tạo 15/10/2026 (Asia/Saigon).
 
-Phiên bản toàn hệ thống: **Nature Studio v2.2.0**, nguồn máy đọc là [VERSION](VERSION); xem [CHANGELOG.md](CHANGELOG.md). Khi người dùng đưa link GitHub và yêu cầu so sánh/cập nhật, đọc [UPDATE.md](UPDATE.md) trước khi ghi: cần cả bản đích và trạng thái local, giữ dữ liệu riêng và không đoán bản mới từ tên file.
+Phiên bản toàn hệ thống: **Nature Studio v2.2.1**, nguồn máy đọc là [VERSION](VERSION); xem [CHANGELOG.md](CHANGELOG.md). Khi người dùng đưa link GitHub và yêu cầu so sánh/cập nhật, đọc [UPDATE.md](UPDATE.md) trước khi ghi: cần cả bản đích và trạng thái local, giữ dữ liệu riêng và không đoán bản mới từ tên file.
 
 ## Lệnh tạo bộ nội dung
 
@@ -60,3 +60,7 @@ Khi tạo concept mới, đọc [phương pháp phát triển câu chuyện](00-
 ## /taoanh — ảnh first frame có QA
 
 Gửi `/taoanh <mã video>` hoặc “tạo ảnh”/“tạo first frame” trong ngữ cảnh Project rõ. [Skill](.agents/skills/taoanh/SKILL.md) đọc concept và quy chuẩn, tạo/sửa qua image_gen, xem ảnh thực và QA sau mỗi lượt. Dừng ngay khi đạt hoặc tối đa 5 call; chưa đạt thì báo và xin thêm lượt, không reset qua chat. Ảnh đạt khác với bạn duyệt và khác với video đạt. Ưu tiên Sunburst nếu chọn được; nếu không, dùng model mặc định image_gen và tiếp tục không hỏi lại. QA kiểm chất lượng ảnh, không bắt buộc xác minh model; không giả đã chọn Sunburst. Lệnh chỉ xây/sửa skill không chạy tạo ảnh.
+
+## /danhgia — chấm video render và số liệu
+
+Gửi `/danhgia <mã video>` kèm file render, hoặc kèm số liệu sau đăng. [Skill](.agents/skills/danhgia/SKILL.md) kiểm kỹ thuật bằng `media_review.py`, xem frame 3 giây đầu và quanh key, nghe âm khi có khả năng, rồi ghi review, CURRENT-STATE và performance. Lỗi được chuyển cho /chayvideo hoặc /taoanh sửa; skill không tự sửa hay render.

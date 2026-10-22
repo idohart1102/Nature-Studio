@@ -15,7 +15,7 @@ Nhận lệnh trong tin nhắn, không giả định giao diện đã đăng ký
 
 Ưu tiên Project/production người dùng nêu. Nếu chỉ có mã, đối chiếu PROJECT.md và hồ sơ thực; không giả định prefix độc nhất khi import nhiều nguồn. Nếu không có mã, dùng ngữ cảnh khi chỉ có một production phù hợp; hỏi một câu khi còn mơ hồ, không đoán theo file mới nhất. Chủ đề chưa đủ để đóng video cụ thể. Không tạo production giả để chạy lệnh.
 
-Đọc PROJECT.md, quyết định/format liên quan, SUMMARY, brief, concept, feedback, các attempt và review thực. Liệt kê file trước khi kết luận thiếu lịch sử; không chốt danh sách A01–A04 cố định. Đọc phần chat đang truy cập được và dữ liệu người dùng cung cấp; lưu phản hồi cần giữ vào feedback kèm nguồn/ngày/phạm vi, không nhận đã thấy toàn bộ phiên cũ. Mở media khi cần/được phép bằng công cụ phù hợp; không xem/nghe được thì ghi giới hạn, không suy pass từ tên file hay prompt.
+Đọc PROJECT.md, quyết định/format liên quan, SUMMARY, brief, concept, feedback, các attempt và review thực, gồm review/performance do /danhgia ghi nếu có. Liệt kê file trước khi kết luận thiếu lịch sử; không chốt danh sách A01–A04 cố định. Đọc phần chat đang truy cập được và dữ liệu người dùng cung cấp; lưu phản hồi cần giữ vào feedback kèm nguồn/ngày/phạm vi, không nhận đã thấy toàn bộ phiên cũ. Mở media khi cần/được phép bằng công cụ phù hợp; không xem/nghe được thì ghi giới hạn, không suy pass từ tên file hay prompt.
 
 ## Tổng kết và học ở hai cấp
 
