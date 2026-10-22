@@ -37,7 +37,7 @@ class SessionUsageTests(unittest.TestCase):
             {'type': 'session_meta', 'payload': {'cwd': 'C:\\Nature Studio'}},
             {'type': 'turn_context', 'payload': {'model': 'm1'}},
             codex_user('<environment_context>ignored</environment_context>'),
-            codex_user('/chayvideo secret brief'),
+            codex_user('/na-chayvideo secret brief'),
             {'type': 'response_item', 'payload': {'type': 'function_call', 'arguments': '{}'}},
             codex_tokens(100, 90), codex_tokens(150, 140),
             codex_user('sửa lần 1'), {'type': 'compacted', 'payload': {}}, codex_tokens(300, 0),

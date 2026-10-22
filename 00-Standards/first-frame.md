@@ -2,7 +2,7 @@
 
 Version: 1.3 | Updated: 2026-10-18 | Màu tự nhiên, hạn chế ám vàng toàn cảnh
 
-Thực thi theo [.agents/skills/taoanh/SKILL.md](../.agents/skills/taoanh/SKILL.md). Đây là phương pháp chung; tiêu chí hình ảnh lấy từ Project, không mặc định cá/nước/9:16 cho mọi dự án.
+Thực thi theo [.agents/skills/na-taoanh/SKILL.md](../.agents/skills/na-taoanh/SKILL.md). Đây là phương pháp chung; tiêu chí hình ảnh lấy từ Project, không mặc định cá/nước/9:16 cho mọi dự án.
 
 ## Các tiêu chí bắt buộc
 

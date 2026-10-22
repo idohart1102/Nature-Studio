@@ -255,3 +255,7 @@ Lịch sử Git đã viết lại trước bản này: làm theo mục "Lịch s
 - `check/save` bộ mới/reference Underwater cần `checks.location_tag` (hoặc `checks.location_none_reason` cho legacy chưa có setting) và camera handheld trong video prompt. Attempt cũ không bị kiểm lại; chỉ lần lưu mới áp dụng.
 - underwater-realism.md và audience-and-caption.md đổi nội dung nhưng không nằm trong tiêu chí QA ảnh (qa_sources) của hồ sơ hiện có, nên FIRST-FRAME.json cũ không chuyển needs_review vì bản này.
 - Hồ sơ đang làm dở: từ lượt sửa tiếp theo ghi feedback.md mỗi lượt theo template mới; không cần backfill.
+
+## Nâng lên v2.2.1 — skill /na-danhgia và tiền tố na-
+
+Kéo bản mới bằng Git: các thư mục `.agents/skills/<tên>` được đổi thành `.agents/skills/na-<tên>`. Nếu cập nhật bằng cách chép file, xóa thư mục skill cũ không tiền tố sau khi chép bản mới để không còn hai bản skill song song. Lệnh cũ vẫn được nhận như alias. Không cần đổi production, registry, Memory hay tên script.

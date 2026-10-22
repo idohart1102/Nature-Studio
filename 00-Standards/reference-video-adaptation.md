@@ -1,6 +1,6 @@
 # Chuyển thể từ video mẫu — v1.3
 
-Updated: 2026-10-17 | Scope: /clonevideo và nhánh reference, mọi Project Nature Studio. v1.3 đồng bộ camera Underwater UF-D021.
+Updated: 2026-10-17 | Scope: /na-clonevideo và nhánh reference, mọi Project Nature Studio. v1.3 đồng bộ camera Underwater UF-D021.
 
 ## Giữ cấu trúc, ánh xạ đúng đối tượng
 
@@ -28,7 +28,7 @@ Chuyển thể là tái dùng có chủ đích: ghi nguồn và cơ chế học 
 
 Mapping được gộp/tách event, đổi thời gian hoặc sắp xếp lại khi vẫn giữ quan hệ được giao và tính đúng; không ép một event nguồn bằng một beat đích hoặc chép nguyên số giây. Thay đổi ý nghĩa/quan hệ đã khóa vẫn theo quyền ở trên. So lại phần quyết định trong prompt bằng bước G của [Story Development](story-development.md); đủ ID/liên kết không chứng minh chuyển thể đúng nghĩa. Role/event của schema có thể biểu diễn cảnh vật và đoạn biến đổi/trạng thái quan sát có ý nghĩa; key_event_ids chỉ phần quan trọng cần chuyển thể, không buộc có cao trào. Không bịa nhân vật, động cơ hay biến cố để điền hồ sơ; thiếu quan sát thì ghi giới hạn đúng như quy trình phân tích.
 
-Dùng [lõi prompt](video-prompt-workflow.md), output-contract/format/model/QA hiện hành và helper chayvideo. Mặc định bốn mục, không phát sinh sản phẩm thứ năm bắt buộc. Hồ sơ/coverage/mapping để local. Không tự render để chứng minh; QA ảnh/video/âm thực chỉ sau truy cập sản phẩm thật. Thay đổi ở lõi/Project phải kiểm cả new và reference; thay phân tích media chỉ ảnh hưởng clonevideo, không tự áp cho sáng tạo độc lập.
+Dùng [lõi prompt](video-prompt-workflow.md), output-contract/format/model/QA hiện hành và helper chayvideo. Mặc định bốn mục, không phát sinh sản phẩm thứ năm bắt buộc. Hồ sơ/coverage/mapping để local. Không tự render để chứng minh; QA ảnh/video/âm thực chỉ sau truy cập sản phẩm thật. Thay đổi ở lõi/Project phải kiểm cả new và reference; thay phân tích media chỉ ảnh hưởng na-clonevideo, không tự áp cho sáng tạo độc lập.
 
 ## Khóa cơ chế máy–chủ thể trước viết — v1.7
 

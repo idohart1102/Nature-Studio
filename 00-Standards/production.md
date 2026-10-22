@@ -4,7 +4,7 @@ Updated: 2026-10-17 | Mã XX-YYYY từ Nature Studio v2.0.0.
 
 Clonevideo — 2026-10-17: chuyển thể theo reference-video-adaptation.md, dùng video-prompt-workflow.md và helper chung. Phân tích mẫu không cấp ID; bộ nội dung chuyển thể mới đủ brief thì cấp mới, revision dùng ID cũ. Research/INPUTS ghi nguồn/coverage/hash analysis/brief/mapping và những thay đổi so với mẫu; ledger ghi reuse có chủ đích. Không ép chuyện khác mẫu để đạt novelty; các gate thực tế và Project vẫn giữ. Hồ sơ tham chiếu ở .nature-studio/references hoặc production local, không publish.
 
-Plan 01 — 2026-10-17: /chayvideo được lấy nguồn theo task packet và tra lịch sử bằng chỉ mục có hash. Tạo mới đọc creativity/Story Development; revision giữ chuyện; caption-only chỉ nguồn liên quan. Không bắt đọc lại nguồn nguyên vẹn đã có trong phiên. Index không thay nguồn gốc: đọc hồ sơ chưa có fingerprint/hết hạn và trường hợp gần nhất; không dùng tìm từ khóa để chứng nhận mới. Helper chỉ kiểm cú pháp/lưu attempt, không thay tự kiểm nội dung hoặc hồ sơ/ledger.
+Plan 01 — 2026-10-17: /na-chayvideo được lấy nguồn theo task packet và tra lịch sử bằng chỉ mục có hash. Tạo mới đọc creativity/Story Development; revision giữ chuyện; caption-only chỉ nguồn liên quan. Không bắt đọc lại nguồn nguyên vẹn đã có trong phiên. Index không thay nguồn gốc: đọc hồ sơ chưa có fingerprint/hết hạn và trường hợp gần nhất; không dùng tìm từ khóa để chứng nhận mới. Helper chỉ kiểm cú pháp/lưu attempt, không thay tự kiểm nội dung hoặc hồ sơ/ledger.
 
 ## Trước sản xuất
 
@@ -31,7 +31,7 @@ Cập nhật 2026-10-16: đơn vị quản lý là Project; đọc Slug trong PR
 
 ## Tổng kết phiên và vòng học — v1.2, 2026-10-16
 
-/dongvideo dùng SESSION-REVIEW.md theo mẫu để tổng kết phần dữ liệu đã truy cập; luôn đánh giá riêng Project và shared. Không tự đóng từ /chayvideo, không nhầm đóng phiên với selected/QA pass. INPUTS ghi ID/version/cách áp dụng lesson để lần sau đối chiếu kết quả. Thẩm quyền đổi trạng thái chỉ theo memory-policy, không biến giả thuyết thành quy chuẩn.
+/na-dongvideo dùng SESSION-REVIEW.md theo mẫu để tổng kết phần dữ liệu đã truy cập; luôn đánh giá riêng Project và shared. Không tự đóng từ /na-chayvideo, không nhầm đóng phiên với selected/QA pass. INPUTS ghi ID/version/cách áp dụng lesson để lần sau đối chiếu kết quả. Thẩm quyền đổi trạng thái chỉ theo memory-policy, không biến giả thuyết thành quy chuẩn.
 
 ## Story Development — 2026-10-16
 
@@ -39,11 +39,11 @@ Trước khi chọn concept mới, thực hiện [story-development.md](story-de
 
 ## Riêng tư khi cập nhật hệ thống
 
-Production, attempt, SESSION-REVIEW và idea-ledger giữ local theo publication.md. Repo chỉ phân phối mẫu ledger. /chayvideo vẫn rà lịch sử local và ghi đầy đủ; tách bài học tái sử dụng sang Memory, không dùng việc đồng bộ hệ thống để tự upload toàn bộ lịch sử.
+Production, attempt, SESSION-REVIEW và idea-ledger giữ local theo publication.md. Repo chỉ phân phối mẫu ledger. /na-chayvideo vẫn rà lịch sử local và ghi đầy đủ; tách bài học tái sử dụng sang Memory, không dùng việc đồng bộ hệ thống để tự upload toàn bộ lịch sử.
 
-## Sinh ảnh theo /taoanh
+## Sinh ảnh theo /na-taoanh
 
-Khi được giao tạo ảnh thật, theo first-frame.md và skill taoanh; không khởi chạy từ /chayvideo. Một video giữ ID qua các attempt, quota ảnh theo cycle riêng. Mỗi call ghi prompt/settings/input/output/hash/QA, dùng image_budget.py reserve trước gửi; call lỗi cũng tính. FIRST-FRAME.json chỉ trỏ ảnh QA pass, không sửa provenance các attempt video cũ. Dữ liệu vòng ảnh và quota giữ local, tách lesson theo policy.
+Khi được giao tạo ảnh thật, theo first-frame.md và skill na-taoanh; không khởi chạy từ /na-chayvideo. Một video giữ ID qua các attempt, quota ảnh theo cycle riêng. Mỗi call ghi prompt/settings/input/output/hash/QA, dùng image_budget.py reserve trước gửi; call lỗi cũng tính. FIRST-FRAME.json chỉ trỏ ảnh QA pass, không sửa provenance các attempt video cũ. Dữ liệu vòng ảnh và quota giữ local, tách lesson theo policy.
 
 ## Kiểm–lưu và asset — v2.1.0
 

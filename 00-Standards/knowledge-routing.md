@@ -39,7 +39,7 @@ Register ghi metadata và binding, không tải/sinh/chấm ảnh. File local v�
 
 Selection là planned references; scope/hash không chứng minh model đã dùng nó. Lưu receipt local mới, không ghi đè. `select/verify`: matched=0, needs_review/stale=2, lỗi dữ liệu=1; đọc status/issues, không chỉ exit code. Query chỉ trả metadata, không là visual QA. Sau chọn phải mở đúng ảnh thật để kiểm. Không tự nhận exact SKU/kích cỡ từ ảnh sinh.
 
-Ảnh thư viện độc lập dùng tuyến tạo ảnh thông thường khi thực sự được giao; không tạo video ID giả hoặc dùng production quota ngoài production. First frame của video thật giữ quota/flow /taoanh, không đổi nhãn library để reset. Catalog/binary/private evidence được backup riêng. Chỉ xuất metadata/ảnh public được rà khi có nhiệm vụ publish; không đổi visibility/status do import.
+Ảnh thư viện độc lập dùng tuyến tạo ảnh thông thường khi thực sự được giao; không tạo video ID giả hoặc dùng production quota ngoài production. First frame của video thật giữ quota/flow /na-taoanh, không đổi nhãn library để reset. Catalog/binary/private evidence được backup riêng. Chỉ xuất metadata/ảnh public được rà khi có nhiệm vụ publish; không đổi visibility/status do import.
 
 Asset crop/annotate dùng `derivation: {"parent_id":"REF-...","parent_record_sha256":"...","operation":"crop ..."}`; helper kiểm parent và tự thêm dependency. Parent đổi thì selection cần review lại lineage. Mỗi bản dẫn xuất vẫn cần QA đúng role của chính nó; parent pass không tự làm bản dẫn xuất pass. Không có dẫn xuất thì để null/bỏ trường.
 

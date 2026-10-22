@@ -14,7 +14,7 @@ Phiên bản tài liệu ở trên độc lập với phiên bản Nature Studio
 
 ## Một nơi lưu chính cho mỗi nội dung
 
-/chayvideo và /clonevideo dùng chung 00-Standards/video-prompt-workflow.md, quy chuẩn Project và helper kiểm/lưu. Reference là tái dùng có chủ đích theo reference-video-adaptation.md, không chịu yêu cầu câu chuyện phải mới so với mẫu. Giữ các gate sinh học/vật lý/format/âm/caption; analysis/brief/evidence local không là nguồn quyền. Cập nhật phần lõi kiểm cả new và reference; không tự đưa thay đổi phân tích video sang luồng sáng tạo độc lập.
+/na-chayvideo và /na-clonevideo dùng chung 00-Standards/video-prompt-workflow.md, quy chuẩn Project và helper kiểm/lưu. Reference là tái dùng có chủ đích theo reference-video-adaptation.md, không chịu yêu cầu câu chuyện phải mới so với mẫu. Giữ các gate sinh học/vật lý/format/âm/caption; analysis/brief/evidence local không là nguồn quyền. Cập nhật phần lõi kiểm cả new và reference; không tự đưa thay đổi phân tích video sang luồng sáng tạo độc lập.
 
 - Standards: phương pháp chung. Knowledge: sự kiện có nguồn. Models: khả năng theo model/giao diện/ngày kiểm. Projects: quyết định sáng tạo từng dự án. Productions: lịch sử từng trường hợp. Memory: bài học tái sử dụng. Evaluation: kiểm cải tiến. Releases: ảnh chụp phiên bản để bàn giao.
 - Dùng ID và đường dẫn tương đối để liên kết, không sao chép bài học sang nhiều dự án. File index là bản đồ có thể tạo lại, không phải nguồn dữ kiện gốc.
@@ -52,7 +52,7 @@ Giữ repository Nature-Studio và URL nguồn cố định khi tăng VERSION. �
 
 Nguồn quyền/trạng thái là [memory-policy v2.1](00-Standards/memory-policy.md). Bộ nhớ riêng tại 05-Memory/projects/<slug>/; bộ nhớ chung tại 05-Memory/shared/. Theo [truy xuất chọn lọc](00-Standards/memory-retrieval.md), query descriptor đúng nhiệm vụ/hint rồi mở gốc; không nạp toàn bộ INDEX/active. Dùng ID Project ổn định và xét điều kiện/unknown/legacy khi áp dụng. Shared không cao hơn quy chuẩn Project; không tự áp lesson của Project khác.
 
-/dongvideo được ghi tổng kết, đề xuất ở cả hai cấp và tự kích hoạt procedural lesson có phép kiểm khách quan khi đạt mọi gate trong policy. Đây không phải quyền nâng hypothesis, kết luận sáng tạo/khán giả/hiệu quả model chưa kiểm thành active. Quyền này không áp cho /chayvideo. Đóng phiên không đồng nghĩa QA pass, selected, approved hay published; không tự render/chi tiền/push. Không sửa Standards/format từ lesson; yêu cầu rõ của người dùng vẫn được xử lý như quyết định đúng phạm vi.
+/na-dongvideo được ghi tổng kết, đề xuất ở cả hai cấp và tự kích hoạt procedural lesson có phép kiểm khách quan khi đạt mọi gate trong policy. Đây không phải quyền nâng hypothesis, kết luận sáng tạo/khán giả/hiệu quả model chưa kiểm thành active. Quyền này không áp cho /na-chayvideo. Đóng phiên không đồng nghĩa QA pass, selected, approved hay published; không tự render/chi tiền/push. Không sửa Standards/format từ lesson; yêu cầu rõ của người dùng vẫn được xử lý như quyết định đúng phạm vi.
 
 ## Mã video — Nature Studio v1.2
 
@@ -64,8 +64,8 @@ Video mới dùng **XX-YYYY**, hai chữ A–Z riêng từng Project local, bố
 
 ## Ảnh first frame — v1.5
 
-/taoanh theo skill và first-frame.md: tối đa 5 call image_gen mỗi cycle, mỗi call đã gửi kể cả lỗi tính lượt; không reset khi đổi chat. Hết chưa đạt dừng xin thêm lượt, chỉ grant sau chấp thuận thật. Ưu tiên Sunburst; không tìm được hoặc không có selector thì dùng model mặc định image_gen, không hỏi lại. Ghi actual unknown nếu tool không công bố; danh tính model không chặn QA hoặc sinh ảnh. QA chỉ pass sau xem/đo ảnh thực và mọi tiêu chí bắt buộc pass; không tự duyệt người dùng hoặc tạo video. Bộ đếm .image-qa.sqlite3 nằm trong production local, không vào bản public.
+/na-taoanh theo skill và first-frame.md: tối đa 5 call image_gen mỗi cycle, mỗi call đã gửi kể cả lỗi tính lượt; không reset khi đổi chat. Hết chưa đạt dừng xin thêm lượt, chỉ grant sau chấp thuận thật. Ưu tiên Sunburst; không tìm được hoặc không có selector thì dùng model mặc định image_gen, không hỏi lại. Ghi actual unknown nếu tool không công bố; danh tính model không chặn QA hoặc sinh ảnh. QA chỉ pass sau xem/đo ảnh thực và mọi tiêu chí bắt buộc pass; không tự duyệt người dùng hoặc tạo video. Bộ đếm .image-qa.sqlite3 nằm trong production local, không vào bản public.
 
 ## Đánh giá video — v2.2.1
 
-/danhgia là bước chấm độc lập sau render và sau đăng: review theo templates/review.md, CURRENT-STATE schema2 từng miền, performance.md với retention 3s và trước key. Không đổi approval/selected_render, không sửa prompt hay media.
+/na-danhgia là bước chấm độc lập sau render và sau đăng: review theo templates/review.md, CURRENT-STATE schema2 từng miền, performance.md với retention 3s và trước key. Không đổi approval/selected_render, không sửa prompt hay media.

@@ -19,14 +19,14 @@ class ContextTests(unittest.TestCase):
         self.addCleanup(temp.cleanup)
         self.root = Path(temp.name).resolve()
         for name in ['VERSION', 'START-HERE.md', 'SYSTEM.md', 'AGENTS.md',
-                     '.agents/skills/chayvideo/SKILL.md',
-                     '.agents/skills/chayvideo/references/workflow.md',
+                     '.agents/skills/na-chayvideo/SKILL.md',
+                     '.agents/skills/na-chayvideo/references/workflow.md',
                      '00-Standards/video-prompt-workflow.md',
-                     *[f'.agents/skills/chayvideo/references/{m}.md' for m in ('new','revision','caption','reference')],
+                     *[f'.agents/skills/na-chayvideo/references/{m}.md' for m in ('new','revision','caption','reference')],
                      '00-Standards/reference-video-adaptation.md',
-                     '.agents/skills/clonevideo/SKILL.md',
-                     '.agents/skills/clonevideo/references/analysis.md',
-                     '.agents/skills/clonevideo/references/schema.md',
+                     '.agents/skills/na-clonevideo/SKILL.md',
+                     '.agents/skills/na-clonevideo/references/analysis.md',
+                     '.agents/skills/na-clonevideo/references/schema.md',
                      'scripts/reference_video.py']:
             self.write(name, 'fixture')
         self.write('03-Projects/one/PROJECT.md', 'ID: stable-one\nSlug: one\nRouting: fish project\n')
@@ -88,8 +88,8 @@ class ContextTests(unittest.TestCase):
 
     def test_freshness_includes_dispatcher(self):
         p = ctx.packet(self.root, 'one', 'caption')
-        self.write('.agents/skills/chayvideo/SKILL.md','changed')
-        self.assertIn('.agents/skills/chayvideo/SKILL.md', ctx.verify(self.root, p))
+        self.write('.agents/skills/na-chayvideo/SKILL.md','changed')
+        self.assertIn('.agents/skills/na-chayvideo/SKILL.md', ctx.verify(self.root, p))
 
     def test_active_discovery_ignores_candidates(self):
         self.write('05-Memory/projects/one/candidates/L-a.md','candidate')

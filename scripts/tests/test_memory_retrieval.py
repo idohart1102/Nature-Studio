@@ -124,8 +124,8 @@ class RetrievalTests(unittest.TestCase):
     def test_packet_omits_indexes_and_body_until_selected(self):
         self.lesson('a',task='video-prompt-revision')
         for rel in ['VERSION','START-HERE.md','SYSTEM.md','AGENTS.md',
-                    '.agents/skills/chayvideo/SKILL.md','.agents/skills/chayvideo/references/workflow.md',
-                    '00-Standards/video-prompt-workflow.md','.agents/skills/chayvideo/references/revision.md']:
+                    '.agents/skills/na-chayvideo/SKILL.md','.agents/skills/na-chayvideo/references/workflow.md',
+                    '00-Standards/video-prompt-workflow.md','.agents/skills/na-chayvideo/references/revision.md']:
             self.write(rel,'fixture')
         index='05-Memory/projects/one/INDEX.md';self.write(index,'massive private index '*1000)
         self.write('03-Projects/one/context-map.json',json.dumps(dict(common=[index],revision=[])))

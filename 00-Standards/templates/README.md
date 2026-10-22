@@ -10,7 +10,7 @@
 
 Tạo thư mục production/attempt thực khi có nhiệm vụ; A01 chứa prompt ảnh, prompt video, caption và media thật nếu có. Chưa nhập các clip cũ trong chat vào kho; không tự coi đây là video đầu tiên đã hoàn thành.
 
-- [Tổng kết phiên](session-review.md) cho /dongvideo. [Lesson](lesson.md) dùng JSON frontmatter portable; không copy mẫu chưa điền vào Memory.
+- [Tổng kết phiên](session-review.md) cho /na-dongvideo. [Lesson](lesson.md) dùng JSON frontmatter portable; không copy mẫu chưa điền vào Memory.
 
 - [QA first frame](first-frame-review.md), [handoff JSON](first-frame-handoff.json): chỉ điền dữ liệu thực; không coi template là kết quả đạt.
 

@@ -1,4 +1,4 @@
-# Phân luồng nguồn cho /chayvideo
+# Phân luồng nguồn cho /na-chayvideo
 
 Version: 1.1 | Updated: 2026-10-22 | Source-preserving stage routing; chưa đo chất lượng model đối chứng.
 

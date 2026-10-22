@@ -9,7 +9,7 @@ Nguồn quyền/trạng thái vẫn là [memory-policy](memory-policy.md). Engin
 1. Xác định Project và **giai đoạn công việc thật**. `mode new/revision/caption/reference` dùng cho bộ đầu ra; khi chỉ sửa một phần, truyền `--task` chính xác thay vì mở rộng cả mode. Hint từ brief gồm topic/entity/interaction; không buộc người dùng tự gắn tag. Dùng tên chuẩn/alias từ [taxonomy](memory-taxonomy.json); nhãn mới vẫn hợp lệ. Không giả model/interface yêu cầu là backend đã xác minh; thiếu thì bỏ điều kiện đó để trả unknown cần xét.
 2. Query chỉ xét Project hiện hành + shared. `conditions` quyết định mâu thuẫn rõ; topic/entity/interaction chỉ xếp mức liên quan. Có ba trạng thái điều kiện: match, unknown, excluded. Điều kiện rỗng không thêm hạn chế, không chứng minh áp dụng toàn cục. Task lạ không bị loại bằng so chuỗi không hiểu. Không tự áp lesson Project khác.
 3. Đọc mô tả ngắn trong kết quả, rồi **mở nguyên văn bản gốc** của bài có thể áp dụng; kiểm điều kiện/ngoại lệ/mâu thuẫn trước dùng. Summary không thay nguồn. Ghi ID/version/hash/path/cách dùng vào INPUTS; candidate thử riêng, không coi là luật. Ghi lesson đã xem khác lesson thật sự dùng.
-4. Active/candidate/retired nằm trong ba nhóm tách biệt. Mặc định chỉ active; thêm `--candidates` khi nghiên cứu/thử/sửa lỗi hoặc `/dongvideo` kiểm trùng. `/dongvideo` không truyền task khi cần so ý nghĩa toàn namespace, rồi xét điều kiện gốc. Retired chỉ `--retired` để truy nguyên. Không tự biến approval video thành active lesson.
+4. Active/candidate/retired nằm trong ba nhóm tách biệt. Mặc định chỉ active; thêm `--candidates` khi nghiên cứu/thử/sửa lỗi hoặc `/na-dongvideo` kiểm trùng. `/na-dongvideo` không truyền task khi cần so ý nghĩa toàn namespace, rồi xét điều kiện gốc. Retired chỉ `--retired` để truy nguyên. Không tự biến approval video thành active lesson.
 
 Ví dụ query cho review video (lệnh dùng đúng dữ liệu nhiệm vụ, không bốc mẫu làm quy chuẩn):
 
@@ -42,6 +42,6 @@ Catalog tự dựng tại `.nature-studio/memory/<slug>/catalog.json`, giữ inv
 
 ## Lưu và xuất bản
 
-`retrieval` tùy chọn: `schema:1`, `summary` có hành động/giới hạn cần thiết, `topics`, `entities`, `interactions` là danh sách nhãn. Không nhân đôi scope/tasks/model làm nguồn quyền thứ hai. `/dongvideo` đọc nguồn và bổ sung nhãn khi tạo/sửa lesson, kiểm trùng; không nâng candidate để tiện truy xuất. Lesson legacy tiếp tục dùng qua fallback, JSON retrieval có mặt nhưng lỗi phải sửa/báo lỗi.
+`retrieval` tùy chọn: `schema:1`, `summary` có hành động/giới hạn cần thiết, `topics`, `entities`, `interactions` là danh sách nhãn. Không nhân đôi scope/tasks/model làm nguồn quyền thứ hai. `/na-dongvideo` đọc nguồn và bổ sung nhãn khi tạo/sửa lesson, kiểm trùng; không nâng candidate để tiện truy xuất. Lesson legacy tiếp tục dùng qua fallback, JSON retrieval có mặt nhưng lỗi phải sửa/báo lỗi.
 
 Theo [publication](publication.md), metadata mới cũng cần làm sạch nếu công khai. Catalog/query/selection log không xuất; public INDEX được dựng trong staging từ các lesson `public/reviewed=true` thực được xuất, không từ catalog runtime. Giữ ID/version/status và bằng chứng hợp phạm vi; không làm mất private originals khi nâng cấp. Không xuất JSON catalog ở `05-Memory`; guard chặn để tránh lộ descriptor riêng. Bản đầu không thêm public JSON index vì Markdown INDEX và source metadata đã đủ rebuild.

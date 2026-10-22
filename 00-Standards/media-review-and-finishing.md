@@ -4,7 +4,7 @@ Version: 1.1 | Updated: 2026-10-22 | Nature Studio v2.2.0
 
 ## Kiểm khả năng trước khi nhận mẫu
 
-`python scripts/media_review.py capabilities` phát hiện executable local, không chứng nhận AI hiểu video/âm. Đối chiếu thêm công cụ thực sự có trong phiên: video liên tục, nghe âm môi trường, frame, metadata, ASR là các khả năng riêng. Báo phần thiếu ngay trước phân tích. File upload không tự mở khả năng mới. Với adapter thật, ghi tên phương pháp, khoảng thời gian đã tiếp cận và evidence. Không tự cài dịch vụ, truyền media sang nhà cung cấp khác hoặc tiêu tiền. Chỉ frame/ASR thì partial; nhận draft có giới hạn cần chấp thuận như clonevideo hiện hành.
+`python scripts/media_review.py capabilities` phát hiện executable local, không chứng nhận AI hiểu video/âm. Đối chiếu thêm công cụ thực sự có trong phiên: video liên tục, nghe âm môi trường, frame, metadata, ASR là các khả năng riêng. Báo phần thiếu ngay trước phân tích. File upload không tự mở khả năng mới. Với adapter thật, ghi tên phương pháp, khoảng thời gian đã tiếp cận và evidence. Không tự cài dịch vụ, truyền media sang nhà cung cấp khác hoặc tiêu tiền. Chỉ frame/ASR thì partial; nhận draft có giới hạn cần chấp thuận như na-clonevideo hiện hành.
 
 ## Đo file, không suy từ prompt
 

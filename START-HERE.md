@@ -6,9 +6,9 @@ Phiên bản toàn hệ thống: **Nature Studio v2.2.1**, nguồn máy đọc l
 
 ## Lệnh tạo bộ nội dung
 
-Để chuyển thể video mẫu, gửi `/clonevideo` kèm file/link và thay đổi mong muốn. [Skill clonevideo](.agents/skills/clonevideo/SKILL.md) phân tích cách quay, vai trò/hành động từng chủ thể, câu chuyện và âm thanh; đổi loài/nhân vật/bối cảnh qua mapping đúng tự nhiên rồi xuất cùng bốn mục. Dùng [lõi chung](00-Standards/video-prompt-workflow.md) và [chuẩn chuyển thể](00-Standards/reference-video-adaptation.md), không ép sáng tạo một chuyện khác mẫu. Cần công cụ truy cập hình/âm thật; chỉ xem frame/transcript không là phân tích toàn clip. Không tự tạo media hoặc công bố nội dung. Việc xây skill không chạy phân tích/render thật.
+Để chuyển thể video mẫu, gửi `/na-clonevideo` kèm file/link và thay đổi mong muốn. [Skill na-clonevideo](.agents/skills/na-clonevideo/SKILL.md) phân tích cách quay, vai trò/hành động từng chủ thể, câu chuyện và âm thanh; đổi loài/nhân vật/bối cảnh qua mapping đúng tự nhiên rồi xuất cùng bốn mục. Dùng [lõi chung](00-Standards/video-prompt-workflow.md) và [chuẩn chuyển thể](00-Standards/reference-video-adaptation.md), không ép sáng tạo một chuyện khác mẫu. Cần công cụ truy cập hình/âm thật; chỉ xem frame/transcript không là phân tích toàn clip. Không tự tạo media hoặc công bố nội dung. Việc xây skill không chạy phân tích/render thật.
 
-Gửi `/chayvideo` kèm tên dự án, loài hoặc brief nếu có. AI đọc [skill chayvideo](.agents/skills/chayvideo/SKILL.md), tra nguồn hiện hành và lịch sử thực trước khi chọn ý tưởng; trả bốn mục: Ý TƯỞNG tiếng Việt; FIRST FRAME PROMPT và VIDEO PROMPT tiếng Anh; CAPTION tiếng Anh Mỹ tự nhiên kèm hashtag. Có thể chỉ nêu đặc trưng dự án trong yêu cầu tạo nội dung, skill tự tra dự án phù hợp; chỉ hỏi khi mơ hồ hoặc không có dự án khớp. Mỗi prompt là một đoạn văn. Khi thiếu lựa chọn bắt buộc, skill hỏi đúng phần còn thiếu. Lệnh chỉ tạo văn bản và hồ sơ local, không tự render/đăng.
+Gửi `/na-chayvideo` kèm tên dự án, loài hoặc brief nếu có. AI đọc [skill na-chayvideo](.agents/skills/na-chayvideo/SKILL.md), tra nguồn hiện hành và lịch sử thực trước khi chọn ý tưởng; trả bốn mục: Ý TƯỞNG tiếng Việt; FIRST FRAME PROMPT và VIDEO PROMPT tiếng Anh; CAPTION tiếng Anh Mỹ tự nhiên kèm hashtag. Có thể chỉ nêu đặc trưng dự án trong yêu cầu tạo nội dung, skill tự tra dự án phù hợp; chỉ hỏi khi mơ hồ hoặc không có dự án khớp. Mỗi prompt là một đoạn văn. Khi thiếu lựa chọn bắt buộc, skill hỏi đúng phần còn thiếu. Lệnh chỉ tạo văn bản và hồ sơ local, không tự render/đăng.
 
 Đây là quy ước nhận lệnh trong chat qua [AGENTS.md](AGENTS.md), không phải cam kết giao diện có menu slash riêng. Updated: 2026-10-16.
 
@@ -18,7 +18,7 @@ Giao file này cùng yêu cầu và quyền đọc thư mục repo; đường d�
 
 1. Đọc [SYSTEM.md](SYSTEM.md); xác định nhiệm vụ: nghiên cứu, ý tưởng, viết prompt, tạo media, review hay cập nhật hệ thống.
 2. Tra [danh mục dự án](03-Projects/INDEX.md), xác định dự án; đọc PROJECT.md của đúng dự án. Dự án đã cấu hình: [Underwater](03-Projects/underwater/PROJECT.md). Thiếu dự án và không suy được từ yêu cầu thì hỏi một câu ngắn.
-3. Đọc quy chuẩn dự án liên quan nhiệm vụ rồi lấy hướng dẫn từ [Standards](00-Standards/INDEX.md). /chayvideo theo nhánh new/revision/caption của skill: tạo bộ đầy đủ đọc format/giọng/output-contract; chỉ sửa caption không buộc nạp lại format/model/kiến thức không liên quan. Khi tạo ý tưởng mới, bắt buộc đọc [hướng dẫn sáng tạo chung](00-Standards/creativity.md) và tài liệu sáng tạo mà PROJECT.md dẫn tới; Underwater có [Sáng tạo mở](03-Projects/underwater/creative-direction.md). Khi sửa clip, giữ trọng tâm đã chốt.
+3. Đọc quy chuẩn dự án liên quan nhiệm vụ rồi lấy hướng dẫn từ [Standards](00-Standards/INDEX.md). /na-chayvideo theo nhánh new/revision/caption của skill: tạo bộ đầy đủ đọc format/giọng/output-contract; chỉ sửa caption không buộc nạp lại format/model/kiến thức không liên quan. Khi tạo ý tưởng mới, bắt buộc đọc [hướng dẫn sáng tạo chung](00-Standards/creativity.md) và tài liệu sáng tạo mà PROJECT.md dẫn tới; Underwater có [Sáng tạo mở](03-Projects/underwater/creative-direction.md). Khi sửa clip, giữ trọng tâm đã chốt.
 4. Tra [Knowledge](01-Knowledge/INDEX.md) theo loài, môi trường, tương tác/dụng cụ; tra [Models](02-Models/INDEX.md) khi cần thông tin model/giao diện.
 5. Tra [Memory](00-Standards/memory-retrieval.md): query descriptor Project + shared theo nhiệm vụ/hint, phân trang và xét unknown/legacy, mở bài gốc phù hợp rồi chỉ áp active đúng điều kiện; không nạp toàn bộ INDEX/active. Ghi ID/version/cách dùng vào INPUTS; không tự áp lesson Project khác. Tạo mới rà idea-ledger và hồ sơ thực để tránh lặp; chỉ mục/fingerprint có hash hỗ trợ tra cứu, hồ sơ chưa được bao phủ hoặc hết hạn vẫn phải đọc gốc. Revision/caption giữ chuyện đã chốt, đọc lịch sử liên quan.
 6. Khi sản xuất, tạo hồ sơ bằng mẫu trong 00-Standards/templates/. Ghi phiên bản tài liệu/đầu vào đã dùng; mỗi lần thử là một thư mục mới. Không tạo/render nếu yêu cầu chỉ viết prompt.
@@ -41,7 +41,7 @@ Tên repo cố định là Nature-Studio; nâng VERSION không đổi URL. [REPO
 
 ## Tổng kết và học sau phiên — v1.1
 
-Gửi `/dongvideo UF-0001` hoặc yêu cầu đóng phiên video cụ thể. Đọc [skill dongvideo](.agents/skills/dongvideo/SKILL.md): tổng kết dữ liệu thực, luôn xét bài học Project và shared; tự lưu candidate, chỉ tự kích hoạt phương pháp đã kiểm khách quan theo [policy](00-Standards/memory-policy.md). Kết luận rộng còn chờ kiểm/duyệt được gom trong báo cáo tiếng Việt. Đóng phiên không tự duyệt video hoặc đẩy GitHub. Gọi lại với cùng dữ liệu không tạo mục trùng.
+Gửi `/na-dongvideo UF-0001` hoặc yêu cầu đóng phiên video cụ thể. Đọc [skill na-dongvideo](.agents/skills/na-dongvideo/SKILL.md): tổng kết dữ liệu thực, luôn xét bài học Project và shared; tự lưu candidate, chỉ tự kích hoạt phương pháp đã kiểm khách quan theo [policy](00-Standards/memory-policy.md). Kết luận rộng còn chờ kiểm/duyệt được gom trong báo cáo tiếng Việt. Đóng phiên không tự duyệt video hoặc đẩy GitHub. Gọi lại với cùng dữ liệu không tạo mục trùng.
 
 Nâng từ v1.0: đọc phần migration trong [UPDATE.md](UPDATE.md); bảo toàn production/lesson/chỉnh sửa riêng trước khi chuyển cấu trúc. Chạy `python scripts/validate_memory.py` sau cập nhật.
 
@@ -57,10 +57,10 @@ Khi tạo concept mới, đọc [phương pháp phát triển câu chuyện](00-
 
 Đọc [publication.md](00-Standards/publication.md) trước khi commit/push hoặc cập nhật GitHub bằng API. Production/attempt/media/ledger/registry giữ local; không đưa vào cây repo hoặc gói hệ thống. Bài học cải thiện ở Project/shared vẫn đi cùng cập nhật sau khi làm sạch và đánh dấu public/reviewed; không tự active. Chạy `python scripts/validate_publication.py` trên cây index trước publish; CI kiểm lại. Không xóa dữ liệu local theo các deletion runtime từ upstream. Commit cũ vẫn có thể chứa dữ liệu đã từng công khai; lần cập nhật này không rewrite lịch sử.
 
-## /taoanh — ảnh first frame có QA
+## /na-taoanh — ảnh first frame có QA
 
-Gửi `/taoanh <mã video>` hoặc “tạo ảnh”/“tạo first frame” trong ngữ cảnh Project rõ. [Skill](.agents/skills/taoanh/SKILL.md) đọc concept và quy chuẩn, tạo/sửa qua image_gen, xem ảnh thực và QA sau mỗi lượt. Dừng ngay khi đạt hoặc tối đa 5 call; chưa đạt thì báo và xin thêm lượt, không reset qua chat. Ảnh đạt khác với bạn duyệt và khác với video đạt. Ưu tiên Sunburst nếu chọn được; nếu không, dùng model mặc định image_gen và tiếp tục không hỏi lại. QA kiểm chất lượng ảnh, không bắt buộc xác minh model; không giả đã chọn Sunburst. Lệnh chỉ xây/sửa skill không chạy tạo ảnh.
+Gửi `/na-taoanh <mã video>` hoặc “tạo ảnh”/“tạo first frame” trong ngữ cảnh Project rõ. [Skill](.agents/skills/na-taoanh/SKILL.md) đọc concept và quy chuẩn, tạo/sửa qua image_gen, xem ảnh thực và QA sau mỗi lượt. Dừng ngay khi đạt hoặc tối đa 5 call; chưa đạt thì báo và xin thêm lượt, không reset qua chat. Ảnh đạt khác với bạn duyệt và khác với video đạt. Ưu tiên Sunburst nếu chọn được; nếu không, dùng model mặc định image_gen và tiếp tục không hỏi lại. QA kiểm chất lượng ảnh, không bắt buộc xác minh model; không giả đã chọn Sunburst. Lệnh chỉ xây/sửa skill không chạy tạo ảnh.
 
-## /danhgia — chấm video render và số liệu
+## /na-danhgia — chấm video render và số liệu
 
-Gửi `/danhgia <mã video>` kèm file render, hoặc kèm số liệu sau đăng. [Skill](.agents/skills/danhgia/SKILL.md) kiểm kỹ thuật bằng `media_review.py`, xem frame 3 giây đầu và quanh key, nghe âm khi có khả năng, rồi ghi review, CURRENT-STATE và performance. Lỗi được chuyển cho /chayvideo hoặc /taoanh sửa; skill không tự sửa hay render.
+Gửi `/na-danhgia <mã video>` kèm file render, hoặc kèm số liệu sau đăng. [Skill](.agents/skills/na-danhgia/SKILL.md) kiểm kỹ thuật bằng `media_review.py`, xem frame 3 giây đầu và quanh key, nghe âm khi có khả năng, rồi ghi review, CURRENT-STATE và performance. Lỗi được chuyển cho /na-chayvideo hoặc /na-taoanh sửa; skill không tự sửa hay render.

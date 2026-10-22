@@ -21,16 +21,16 @@ class RoutingTests(unittest.TestCase):
         self.addCleanup(tmp.cleanup)
         self.root = Path(tmp.name).resolve()
         for rel in ['VERSION', 'START-HERE.md', 'SYSTEM.md', 'AGENTS.md',
-                    '.agents/skills/chayvideo/SKILL.md',
-                    '.agents/skills/chayvideo/references/workflow.md',
+                    '.agents/skills/na-chayvideo/SKILL.md',
+                    '.agents/skills/na-chayvideo/references/workflow.md',
                     '00-Standards/video-prompt-workflow.md',
                     '00-Standards/context-routing.md',
                     'scripts/chayvideo_context.py', 'scripts/context_routing.py',
                     '00-Standards/reference-video-adaptation.md',
-                    '.agents/skills/clonevideo/SKILL.md',
-                    '.agents/skills/clonevideo/references/analysis.md',
-                    '.agents/skills/clonevideo/references/schema.md', 'scripts/reference_video.py',
-                    *['.agents/skills/chayvideo/references/' + m + '.md' for m in ('new', 'revision', 'caption', 'reference')]]:
+                    '.agents/skills/na-clonevideo/SKILL.md',
+                    '.agents/skills/na-clonevideo/references/analysis.md',
+                    '.agents/skills/na-clonevideo/references/schema.md', 'scripts/reference_video.py',
+                    *['.agents/skills/na-chayvideo/references/' + m + '.md' for m in ('new', 'revision', 'caption', 'reference')]]:
             self.write(rel, 'Fixture dependency\n')
         self.write('03-Projects/one/PROJECT.md', 'ID: one\nSlug: one\nRouting: fixture\n')
         self.write('00-Standards/memory-taxonomy.json',

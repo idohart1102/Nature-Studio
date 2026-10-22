@@ -25,9 +25,9 @@ Mỗi lesson có một bản gốc, ID duy nhất toàn kho (`L-<UUID>` hoặc I
 - active: đủ căn cứ trong phạm vi đã ghi; chỉ áp khi khớp điều kiện.
 - retired: sai/bị thay thế/hết áp dụng; giữ lịch sử và liên kết thay thế.
 
-`/dongvideo` được tự ghi tổng kết, tạo/cập nhật candidate ở cả hai cấp, bổ sung bằng chứng và gộp mục trùng có truy vết. `/chayvideo` được ghi quan sát/candidate nhưng không tự nâng trạng thái. Đóng phiên, lặp lời AI, im lặng hoặc một lượt render đẹp không chứng minh đã duyệt/đã hiệu quả.
+`/na-dongvideo` được tự ghi tổng kết, tạo/cập nhật candidate ở cả hai cấp, bổ sung bằng chứng và gộp mục trùng có truy vết. `/na-chayvideo` được ghi quan sát/candidate nhưng không tự nâng trạng thái. Đóng phiên, lặp lời AI, im lặng hoặc một lượt render đẹp không chứng minh đã duyệt/đã hiệu quả.
 
-Riêng `/dongvideo` được tự kích hoạt **bài học phương pháp có phép kiểm khách quan** khi đồng thời đạt:
+Riêng `/na-dongvideo` được tự kích hoạt **bài học phương pháp có phép kiểm khách quan** khi đồng thời đạt:
 
 1. Có bằng chứng gốc đã truy cập, hành động cụ thể, phạm vi hẹp, ngoại lệ; ghi mức chắc chắn và điều không được suy ra.
 2. Có ca kiểm phù hợp với kết luận, kết quả thực tế pass và hồ sơ ở `06-Evaluation/results/`. Không tự tạo expected rồi gọi là actual. Kiểm prompt không chứng minh render; kiểm schema/liên kết không chứng minh quyết định AI đúng.
@@ -43,7 +43,7 @@ Khi bằng chứng mới mâu thuẫn, ghi phạm vi/bằng chứng, ngừng dù
 
 Theo [truy xuất chọn lọc](memory-retrieval.md), query metadata Project hiện hành + shared theo nhiệm vụ và hint chủ đề/đối tượng/tương tác; không nạp toàn bộ INDEX hoặc toàn văn mọi active. Đọc descriptor theo trang rồi mở bản gốc có thể áp dụng. Conditions mâu thuẫn rõ mới loại; thông tin chưa biết/legacy cần xét, nhãn chỉ xếp liên quan. Không cắt top-k để chứng nhận coverage. Danh sách conditions rỗng không thêm hạn chế ở chiều đó, không chứng minh áp dụng mọi nơi; vẫn đọc điều kiện/ngoại lệ. Không tự áp bộ nhớ Project khác; chỉ tra khi được giao đánh giá chuyển giao.
 
-Quy chuẩn hiện hành ưu tiên hơn memory; gặp mâu thuẫn nêu vấn đề, không âm thầm ghi đè. INPUTS ghi ID + version + đường dẫn + cách dùng; candidate đã thử ghi riêng. Lần `/dongvideo` sau kiểm lesson nào thật sự được dùng, kết quả/giới hạn; đã dùng không chứng minh có ích hoặc quan hệ nhân quả.
+Quy chuẩn hiện hành ưu tiên hơn memory; gặp mâu thuẫn nêu vấn đề, không âm thầm ghi đè. INPUTS ghi ID + version + đường dẫn + cách dùng; candidate đã thử ghi riêng. Lần `/na-dongvideo` sau kiểm lesson nào thật sự được dùng, kết quả/giới hạn; đã dùng không chứng minh có ích hoặc quan hệ nhân quả.
 
 INDEX là bản đồ. Nếu thiếu/cũ, tìm file thực và sửa chỉ mục. Dùng [mẫu lesson](templates/lesson.md), metadata JSON trong frontmatter cũng là YAML hợp lệ, đọc bằng stdlib Python. Chạy `python scripts/validate_memory.py`: chỉ kiểm cấu trúc/liên kết, không xác nhận nội dung hay hiệu quả.
 
@@ -51,4 +51,4 @@ Không ghi chuỗi suy luận nội bộ; chỉ lưu kết luận, hành động
 
 ## Chia sẻ lesson khi cập nhật hệ thống — v1.4
 
-Theo [publication.md](publication.md), /dongvideo tạo lesson mặc định private, reviewed=false. Khi publish đã được giao, rà bài học cải thiện ở cả Project/shared để đưa bản làm sạch lên hệ thống; không tự upload production làm bằng chứng. Public/reviewed độc lập candidate/active/retired, giữ phạm vi và sự thật. Lesson chưa thể chia sẻ ở lại local, nêu rõ thay vì loại hết bộ nhớ hoặc tự active. Chỉ mục public chỉ liệt kê mục đã xuất.
+Theo [publication.md](publication.md), /na-dongvideo tạo lesson mặc định private, reviewed=false. Khi publish đã được giao, rà bài học cải thiện ở cả Project/shared để đưa bản làm sạch lên hệ thống; không tự upload production làm bằng chứng. Public/reviewed độc lập candidate/active/retired, giữ phạm vi và sự thật. Lesson chưa thể chia sẻ ở lại local, nêu rõ thay vì loại hết bộ nhớ hoặc tự active. Chỉ mục public chỉ liệt kê mục đã xuất.

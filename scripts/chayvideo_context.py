@@ -116,17 +116,17 @@ def packet(root, slug, mode, species=(), interaction='unspecified',
     sources = [source(root, path) for path in dict.fromkeys(files)]
     dependencies = [{k: v for k, v in recipe_source.items() if k != 'text'}]
     for path in ['VERSION', 'START-HERE.md', 'SYSTEM.md', 'AGENTS.md',
-                 '.agents/skills/chayvideo/SKILL.md',
-                 '.agents/skills/chayvideo/references/workflow.md',
+                 '.agents/skills/na-chayvideo/SKILL.md',
+                 '.agents/skills/na-chayvideo/references/workflow.md',
                  '00-Standards/video-prompt-workflow.md',
-                 f'.agents/skills/chayvideo/references/{mode}.md']:
+                 f'.agents/skills/na-chayvideo/references/{mode}.md']:
         item = source(root, path)
         item.pop('text')
         dependencies.append(item)
     # asset_catalog.py is always a dependency so adding --asset-selection keeps the digest.
     for path in ['scripts/chayvideo_context.py', 'scripts/context_routing.py',
                  'scripts/memory_retrieval.py', 'scripts/asset_catalog.py', '00-Standards/memory-taxonomy.json',
-                 *[f'.agents/skills/chayvideo/references/{m}.md'
+                 *[f'.agents/skills/na-chayvideo/references/{m}.md'
                    for m in ('new', 'revision', 'caption', 'reference')],
                  '00-Standards/context-routing.md', *([plan['config']] if plan and plan['config'] else [])]:
         if inside(root, path).is_file():
@@ -135,9 +135,9 @@ def packet(root, slug, mode, species=(), interaction='unspecified',
             dependencies.append(item)
     if mode == 'reference':
         for path in ['00-Standards/reference-video-adaptation.md',
-                     '.agents/skills/clonevideo/SKILL.md',
-                     '.agents/skills/clonevideo/references/analysis.md',
-                     '.agents/skills/clonevideo/references/schema.md',
+                     '.agents/skills/na-clonevideo/SKILL.md',
+                     '.agents/skills/na-clonevideo/references/analysis.md',
+                     '.agents/skills/na-clonevideo/references/schema.md',
                      'scripts/reference_video.py']:
             item = source(root, path)
             item.pop('text')

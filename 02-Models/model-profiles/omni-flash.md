@@ -6,7 +6,7 @@ Updated: 2026-10-16
 Requested by user: Omni Flash
 Provider/model ID theo tài liệu Google đã mở 2026-10-16: Google / gemini-omni-1.1-flash. Giao diện thực tế của người dùng vẫn chưa kiểm; không tự đổi model hoặc suy setting của wrapper từ API.
 
-## Viết prompt — /chayvideo v1.1
+## Viết prompt — /na-chayvideo v1.1
 
 Nguồn: [Google Omni Flash](https://ai.google.dev/gemini-api/docs/omni.md), truy cập 2026-10-16; hồ sơ [SRC-GOOGLE-OMNI-20261016](../../01-Knowledge/sources/google-omni-2026-10-16.md). Đây là kiểm tài liệu, chưa test render.
 

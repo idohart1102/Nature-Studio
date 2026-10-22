@@ -21,9 +21,9 @@ class Fixture(unittest.TestCase):
         self.addCleanup(temp.cleanup)
         self.root = Path(temp.name).resolve()
         for name in ['VERSION', 'START-HERE.md', 'SYSTEM.md', 'AGENTS.md',
-                     '.agents/skills/chayvideo/SKILL.md', '.agents/skills/chayvideo/references/workflow.md',
+                     '.agents/skills/na-chayvideo/SKILL.md', '.agents/skills/na-chayvideo/references/workflow.md',
                      '00-Standards/video-prompt-workflow.md', 'scripts/asset_catalog.py',
-                     *[f'.agents/skills/chayvideo/references/{m}.md' for m in ('new', 'revision', 'caption', 'reference')]]:
+                     *[f'.agents/skills/na-chayvideo/references/{m}.md' for m in ('new', 'revision', 'caption', 'reference')]]:
             self.write(name, 'fixture')
         self.write('00-Standards/memory-taxonomy.json', (ctx.ROOT / '00-Standards/memory-taxonomy.json').read_text(encoding='utf-8'))
         self.write('03-Projects/one/PROJECT.md', 'ID: stable-one\nSlug: one\nRouting: cá nước ngọt\n')

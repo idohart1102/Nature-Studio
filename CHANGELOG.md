@@ -4,9 +4,11 @@ Phiên bản toàn workspace được đọc từ [VERSION](VERSION). Phiên b�
 
 ## v2.2.1 — 2026-10-23
 
-- Skill mới `/danhgia` v1.0: chấm video render và số liệu sau đăng, độc lập với người viết prompt. Dùng `media_review.py`, frame 3 giây đầu/quanh key/toàn clip, nghe âm khi có khả năng; ghi review, CURRENT-STATE schema2 và performance.md (retention 3s và trước key). Không sửa prompt, tạo media, đăng hay đổi approval.
-- Điểm vào: AGENTS.md, START-HERE, README, SYSTEM, quality-review; /dongvideo đọc review/performance của /danhgia; taxonomy `video-review` nhận alias danhgia. Ca EV-REVIEW-01..03.
-- Không đổi script, contract hay quy chuẩn chấm hiện hành.
+- Skill mới `/na-danhgia` v1.1: chấm video render và số liệu sau đăng, độc lập với người viết prompt. Dùng `media_review.py`, frame 3 giây đầu/quanh key/toàn clip, nghe âm khi có khả năng; chấm cả chuyển động môi trường và yếu tố tự nhiên (dòng chảy, cỏ/rong, hạt lơ lửng, bùn, ánh sáng/quang học, bọt khí, sinh vật phụ, khớp địa điểm) trong miền visual/motion; ghi review, CURRENT-STATE schema2 và performance.md (retention 3s và trước key). Không sửa prompt, tạo media, đăng hay đổi approval.
+- Đổi tên mọi skill sang tiền tố `na-`: thư mục `.agents/skills/na-*`, frontmatter, lệnh `/na-chayvideo`, `/na-clonevideo`, `/na-dongvideo`, `/na-taoanh`, `/na-danhgia` và mọi liên kết hiện hành. Tên cũ (`/chayvideo`, `/danhgia`...) vẫn được AGENTS.md nhận như alias; taxonomy `video-review` nhận alias danhgia/na-danhgia. Không đổi tên script, lịch sử phát hành, kết quả đánh giá cũ hay decisions.
+- Điểm vào: AGENTS.md, START-HERE, README, SYSTEM, quality-review; /na-dongvideo đọc review/performance của /na-danhgia; UPDATE.md hướng dẫn xóa thư mục skill cũ khi cập nhật bằng chép file. Ca EV-REVIEW-01..04.
+- CI: bước kiểm frontmatter skill kiểm 5 skill, `name` khớp thư mục và có tiền tố `na-` (trước đó đếm cứng 4 skill nên commit đầu của v2.2.1 fail CI).
+- Không đổi script, contract hay quy chuẩn chấm hiện hành ngoài đường dẫn skill.
 
 ## v2.2.0 — 2026-10-22
 

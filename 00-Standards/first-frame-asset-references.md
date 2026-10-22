@@ -6,11 +6,11 @@ Version: 1.0 | Updated: 2026-10-18 | Dùng chung mọi Project
 
 ## Nhu cầu trước, ảnh sau
 
-/chayvideo và /clonevideo ghi `reference_requirements` trong OUTPUT/INPUTS hiện có, giữ bốn phần đầu ra người dùng. Shape: `{"schema":1,"items":[],"none_reason":"Không cần ảnh tham chiếu cho tác vụ này"}`. Nếu có nhu cầu, mỗi item có `subject`, `entity_id` (null nếu chưa xác định), `variant`, `stage`, `view` khi đã biết; `role`, `must_preserve`, `reason`, `essential` (boolean), `applies_to` (`first_frame`, `video`, `both`). Với items không rỗng, none_reason=null. Không suy tuổi từ cỡ hoặc ảnh AI. Không yêu cầu mọi loài có trứng/con non/S–XL.
+/na-chayvideo và /na-clonevideo ghi `reference_requirements` trong OUTPUT/INPUTS hiện có, giữ bốn phần đầu ra người dùng. Shape: `{"schema":1,"items":[],"none_reason":"Không cần ảnh tham chiếu cho tác vụ này"}`. Nếu có nhu cầu, mỗi item có `subject`, `entity_id` (null nếu chưa xác định), `variant`, `stage`, `view` khi đã biết; `role`, `must_preserve`, `reason`, `essential` (boolean), `applies_to` (`first_frame`, `video`, `both`). Với items không rỗng, none_reason=null. Không suy tuổi từ cỡ hoặc ảnh AI. Không yêu cầu mọi loài có trứng/con non/S–XL.
 
-Tự xác định đối tượng, cỡ, góc nhìn, đặc điểm nhận dạng, tiếp xúc/cấu tạo và bộ lắp ráp cần giữ. Phần chỉ lộ trong video ghi video, không ép vào t=0. Chỉ mở ảnh khi cần giải quyết chi tiết thị giác; đọc metadata không là xem ảnh. Asset ID gợi ý không ràng buộc /taoanh dùng ảnh không phù hợp.
+Tự xác định đối tượng, cỡ, góc nhìn, đặc điểm nhận dạng, tiếp xúc/cấu tạo và bộ lắp ráp cần giữ. Phần chỉ lộ trong video ghi video, không ép vào t=0. Chỉ mở ảnh khi cần giải quyết chi tiết thị giác; đọc metadata không là xem ảnh. Asset ID gợi ý không ràng buộc /na-taoanh dùng ảnh không phù hợp.
 
-/taoanh luôn đánh giá lại nhu cầu theo brief/t=0 hiện hành. Ảnh trực tiếp từ user không phải đi qua /chayvideo; ghi cùng requirements trong INPUTS của attempt ảnh, không bịa bộ video. Caption-only không đổi requirements/selection. Revision hình/nội dung phải ghi lại requirements còn hiệu lực, kể cả phần không đổi; thiếu thì unverified, không kế thừa ngầm chứng nhận đúng.
+/na-taoanh luôn đánh giá lại nhu cầu theo brief/t=0 hiện hành. Ảnh trực tiếp từ user không phải đi qua /na-chayvideo; ghi cùng requirements trong INPUTS của attempt ảnh, không bịa bộ video. Caption-only không đổi requirements/selection. Revision hình/nội dung phải ghi lại requirements còn hiệu lực, kể cả phần không đổi; thiếu thì unverified, không kế thừa ngầm chứng nhận đúng.
 
 ## Tra cứu có phạm vi
 

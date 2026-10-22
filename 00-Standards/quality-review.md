@@ -34,4 +34,4 @@ Khi có render, theo [media-review-and-finishing.md](media-review-and-finishing.
 
 ## Skill đánh giá — v2.2.1
 
-Mức video-reviewed và published-measured chạy qua [/danhgia](../.agents/skills/danhgia/SKILL.md): chấm độc lập với người viết prompt, ghi review/CURRENT-STATE/performance, không tự sửa hoặc render.
+Mức video-reviewed và published-measured chạy qua [/na-danhgia](../.agents/skills/na-danhgia/SKILL.md): chấm độc lập với người viết prompt, ghi review/CURRENT-STATE/performance, không tự sửa hoặc render.

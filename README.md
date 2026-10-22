@@ -6,7 +6,7 @@ Workspace sản xuất nội dung thiên nhiên bằng AI, tổ chức theo **Pr
 
 ## Mới trong v2.2.1
 
-Skill `/danhgia`: chấm độc lập video render và số liệu sau đăng theo chuẩn Project. Xem [07-Releases/v2.2.1.md](07-Releases/v2.2.1.md).
+Skill `/na-danhgia`: chấm độc lập video render và số liệu sau đăng theo chuẩn Project, gồm cả chuyển động môi trường và yếu tố tự nhiên. Mọi skill đổi sang tiền tố `na-` (ví dụ `/na-chayvideo`); tên cũ vẫn dùng được. Xem [07-Releases/v2.2.1.md](07-Releases/v2.2.1.md).
 
 ## Kế thừa v2.2.0
 
@@ -22,11 +22,11 @@ Giảm lượt gọi tool và chi phí phiên dài mà không hạ gate: `prefli
 
 ## Kế thừa v2.1.4
 
-/chayvideo trả ba caption Chuẩn/Hài hước/Tò mò cho Underwater; mỗi bản theo thứ tự caption Anh Mỹ + hashtag → lược dịch Việt → hook Anh 1–9 từ → lược dịch Việt. Viết Anh trước, dịch ý sau; giữ giọng người câu cá Mỹ và quy tắc hashtag. Helper lưu/kiểm từng bản, tương thích caption cũ. Xem [v2.1.4](07-Releases/v2.1.4.md).
+/na-chayvideo trả ba caption Chuẩn/Hài hước/Tò mò cho Underwater; mỗi bản theo thứ tự caption Anh Mỹ + hashtag → lược dịch Việt → hook Anh 1–9 từ → lược dịch Việt. Viết Anh trước, dịch ý sau; giữ giọng người câu cá Mỹ và quy tắc hashtag. Helper lưu/kiểm từng bản, tương thích caption cũ. Xem [v2.1.4](07-Releases/v2.1.4.md).
 
 ## Kế thừa v2.1.3
 
-/taoanh mặc định màu chân thực, hạn chế ám vàng/cam mạnh toàn cảnh; giữ màu vàng/vàng đồng thật của đối tượng. Prompt và QA cùng áp dụng, không khử vàng bằng ám màu khác. Xem [v2.1.3](07-Releases/v2.1.3.md).
+/na-taoanh mặc định màu chân thực, hạn chế ám vàng/cam mạnh toàn cảnh; giữ màu vàng/vàng đồng thật của đối tượng. Prompt và QA cùng áp dụng, không khử vàng bằng ám màu khác. Xem [v2.1.3](07-Releases/v2.1.3.md).
 
 ## Kế thừa v2.1.2
 
@@ -34,11 +34,11 @@ Repo và ZIP có sẵn **64 ảnh tham chiếu** (~106 MB) trong [08-Assets](08-
 
 ## Kế thừa v2.1.1
 
-/chayvideo xác định nhu cầu tham chiếu; /taoanh đánh giá/chọn/gửi asset đúng Project, ghi input thực và QA. Catalog lọc view/phạm vi; metadata trước, ảnh sau, không nạp toàn thư viện. Handoff schema3, legacy được giữ. Xem [ghi chú v2.1.1](07-Releases/v2.1.1.md) và [quy trình tham chiếu](00-Standards/first-frame-asset-references.md).
+/na-chayvideo xác định nhu cầu tham chiếu; /na-taoanh đánh giá/chọn/gửi asset đúng Project, ghi input thực và QA. Catalog lọc view/phạm vi; metadata trước, ảnh sau, không nạp toàn thư viện. Handoff schema3, legacy được giữ. Xem [ghi chú v2.1.1](07-Releases/v2.1.1.md) và [quy trình tham chiếu](00-Standards/first-frame-asset-references.md).
 
 ## Kế thừa v2.1.0
 
-Hồ sơ loài thực dụng gồm ngoại hình, cỡ/biến thể, hành vi và điểm thật đáng xem; dùng chung cho cá và nhóm khác. Catalog asset local lọc đúng entity/stage/role/component, không nạp toàn thư viện. Kiểm–lưu giữ metadata, ngoại lệ beat có binding, CURRENT-STATE schema2 gắn QA đúng render/coverage. Một /chayvideo và các gate chất lượng tiếp tục được giữ. Mã **XX-YYYY** không đổi. Xem [v2.1.0](07-Releases/v2.1.0.md), [profile và asset](00-Standards/knowledge-routing.md), [phân luồng](00-Standards/context-routing.md).
+Hồ sơ loài thực dụng gồm ngoại hình, cỡ/biến thể, hành vi và điểm thật đáng xem; dùng chung cho cá và nhóm khác. Catalog asset local lọc đúng entity/stage/role/component, không nạp toàn thư viện. Kiểm–lưu giữ metadata, ngoại lệ beat có binding, CURRENT-STATE schema2 gắn QA đúng render/coverage. Một /na-chayvideo và các gate chất lượng tiếp tục được giữ. Mã **XX-YYYY** không đổi. Xem [v2.1.0](07-Releases/v2.1.0.md), [profile và asset](00-Standards/knowledge-routing.md), [phân luồng](00-Standards/context-routing.md).
 
 ## Bản vá v1.7.1 được giữ
 
@@ -79,19 +79,19 @@ Khi được giao tạo mới, đọc [nguyên tắc sáng tạo chung](00-Stand
 
 Ví dụ không phải danh sách tình huống đóng. Độ mới được kiểm ở hành vi và nhân quả, không chỉ đổi cá/mồi/địa điểm. Revision giữ câu chuyện đã chốt. Đây là phần bắt buộc khi AI phát triển ý tưởng, kể cả khi chỉ nhận link repo và không gọi skill. Hướng dẫn không bảo đảm mọi kết quả sẽ hay hoặc chưa từng có.
 
-## Gọi skill /chayvideo
+## Gọi skill /na-chayvideo
 
-Trong workspace, gửi `/chayvideo` kèm loài hoặc ý tưởng, hoặc yêu cầu tạo nội dung bằng đặc trưng dự án. Ví dụ:
+Trong workspace, gửi `/na-chayvideo` kèm loài hoặc ý tưởng, hoặc yêu cầu tạo nội dung bằng đặc trưng dự án. Ví dụ:
 
 ```text
-/chayvideo Underwater — Walleye, một bộ, tự phát triển ý tưởng mới
+/na-chayvideo Underwater — Walleye, một bộ, tự phát triển ý tưởng mới
 ```
 
-Skill [chayvideo](.agents/skills/chayvideo/SKILL.md) tự tìm dự án phù hợp, đọc quy chuẩn và rà lịch sử trước khi viết. Đầu ra gồm Ý TƯỞNG tiếng Việt; FIRST FRAME PROMPT và VIDEO PROMPT tiếng Anh, mỗi prompt một đoạn; CAPTION tiếng Anh Mỹ tự nhiên kèm hashtag. Lệnh chỉ tạo văn bản và hồ sơ local; không tự render hoặc đăng bài. `/chayvideo` là quy ước trong tin nhắn, không cam kết mọi giao diện có menu slash riêng.
+Skill [na-chayvideo](.agents/skills/na-chayvideo/SKILL.md) tự tìm dự án phù hợp, đọc quy chuẩn và rà lịch sử trước khi viết. Đầu ra gồm Ý TƯỞNG tiếng Việt; FIRST FRAME PROMPT và VIDEO PROMPT tiếng Anh, mỗi prompt một đoạn; CAPTION tiếng Anh Mỹ tự nhiên kèm hashtag. Lệnh chỉ tạo văn bản và hồ sơ local; không tự render hoặc đăng bài. `/na-chayvideo` là quy ước trong tin nhắn, không cam kết mọi giao diện có menu slash riêng.
 
-## Chuyển thể video mẫu — /clonevideo
+## Chuyển thể video mẫu — /na-clonevideo
 
-Gửi `/clonevideo` kèm file/link video và thay đổi mong muốn. [Skill clonevideo](.agents/skills/clonevideo/SKILL.md) xem xét hình/âm/timecode, ánh xạ vai trò và chức năng câu chuyện sang loài/nhân vật/bối cảnh đích rồi xuất bốn mục như chayvideo. Quy chuẩn được chọn theo Project; cần truy cập video thực để phân tích, thiếu coverage phải ghi rõ. Skill chỉ tạo nội dung và hồ sơ local, không tự render hoặc đăng.
+Gửi `/na-clonevideo` kèm file/link video và thay đổi mong muốn. [Skill na-clonevideo](.agents/skills/na-clonevideo/SKILL.md) xem xét hình/âm/timecode, ánh xạ vai trò và chức năng câu chuyện sang loài/nhân vật/bối cảnh đích rồi xuất bốn mục như chayvideo. Quy chuẩn được chọn theo Project; cần truy cập video thực để phân tích, thiếu coverage phải ghi rõ. Skill chỉ tạo nội dung và hồ sơ local, không tự render hoặc đăng.
 
 ## Cấu trúc
 
@@ -126,11 +126,11 @@ Repo không chứa API key hoặc cấu hình đăng nhập. Nguồn bên ngoài
 
 Repository là [idohart1102/Nature-Studio](https://github.com/idohart1102/Nature-Studio) (private, từ 2026-10-22; trước đó bandepdao123/Nature-Studio); không đổi tên khi nâng phiên bản. Tên hiển thị trong README, VERSION, CHANGELOG và gói ZIP thể hiện bản đang dùng, ví dụ Nature Studio v1.1. Khi chốt bản mới, cập nhật các nội dung đó; có thể tạo tag/release v1.1 khi được yêu cầu, giữ nguyên URL repo. [REPOSITORY.json](REPOSITORY.json) ghi danh tính nguồn ổn định.
 
-## /dongvideo và bộ nhớ hai cấp — mới trong v1.1
+## /na-dongvideo và bộ nhớ hai cấp — mới trong v1.1
 
-Gửi `/dongvideo UF-0001` để [tổng kết phiên](.agents/skills/dongvideo/SKILL.md). Skill rà attempt/phản hồi thực, xét bài học riêng Project **và** đóng góp phương pháp/kinh nghiệm cho bộ nhớ chung. Không ép mỗi phiên có lesson; chạy lại không nhân đôi dữ liệu. Báo cáo bằng tiếng Việt, không tự render, duyệt video hay push.
+Gửi `/na-dongvideo UF-0001` để [tổng kết phiên](.agents/skills/na-dongvideo/SKILL.md). Skill rà attempt/phản hồi thực, xét bài học riêng Project **và** đóng góp phương pháp/kinh nghiệm cho bộ nhớ chung. Không ép mỗi phiên có lesson; chạy lại không nhân đôi dữ liệu. Báo cáo bằng tiếng Việt, không tự render, duyệt video hay push.
 
-[Memory](05-Memory/INDEX.md) tách `projects/<slug>/` và `shared/`. /chayvideo đọc active phù hợp ở cả hai nơi, ghi lesson ID/version vào INPUTS. /dongvideo tự lưu candidate; chỉ tự active phương pháp kiểm khách quan khi đạt đủ [gate](00-Standards/memory-policy.md). Kiểm cấu trúc bằng `python scripts/validate_memory.py` không chứng minh bài học đúng hay video tốt hơn.
+[Memory](05-Memory/INDEX.md) tách `projects/<slug>/` và `shared/`. /na-chayvideo đọc active phù hợp ở cả hai nơi, ghi lesson ID/version vào INPUTS. /na-dongvideo tự lưu candidate; chỉ tự active phương pháp kiểm khách quan khi đạt đủ [gate](00-Standards/memory-policy.md). Kiểm cấu trúc bằng `python scripts/validate_memory.py` không chứng minh bài học đúng hay video tốt hơn.
 
 Nâng cấp từ v1.0 theo [UPDATE.md — migration](UPDATE.md#nâng-từ-v10-lên-v11). Giữ dữ liệu riêng, phân loại lesson theo phạm vi, không chép đè cả thư mục và không đẩy production đang làm lên public chỉ vì nâng framework. GitHub main mang phiên bản workspace, không tự có GitHub Release/tag.
 
@@ -148,12 +148,12 @@ Phong cách theo benchmark Underfishing: ít chữ, trực tiếp, một điểm
 
 Đọc [publication.md](00-Standards/publication.md) trước khi commit/push hoặc cập nhật GitHub bằng API. Production/attempt/media/ledger/registry giữ local; không đưa vào cây repo hoặc gói hệ thống. Bài học cải thiện ở Project/shared vẫn đi cùng cập nhật sau khi làm sạch và đánh dấu public/reviewed; không tự active. Chạy `python scripts/validate_publication.py` trên cây index trước publish; CI kiểm lại. Không xóa dữ liệu local theo các deletion runtime từ upstream. Commit cũ vẫn có thể chứa dữ liệu đã từng công khai; lần cập nhật này không rewrite lịch sử.
 
-## Tạo first frame — /taoanh
+## Tạo first frame — /na-taoanh
 
-Dùng `/taoanh <mã video>`, “tạo ảnh” hoặc “tạo first frame” khi thực sự cần ảnh cho Project. [Skill](.agents/skills/taoanh/SKILL.md) tự QA ảnh thật, sửa có mục tiêu và giữ ý định; tối đa 5 lượt sinh/sửa, xin thêm khi chưa đạt. /chayvideo vẫn chỉ tạo văn bản; /dongvideo tổng kết bài học.
+Dùng `/na-taoanh <mã video>`, “tạo ảnh” hoặc “tạo first frame” khi thực sự cần ảnh cho Project. [Skill](.agents/skills/na-taoanh/SKILL.md) tự QA ảnh thật, sửa có mục tiêu và giữ ý định; tối đa 5 lượt sinh/sửa, xin thêm khi chưa đạt. /na-chayvideo vẫn chỉ tạo văn bản; /na-dongvideo tổng kết bài học.
 
 Model ưu tiên là GPT Image 2.5 Sunburst qua built-in image_gen. [Profile thực thi](02-Models/model-profiles/sunburst-imagegen.md) ghi rõ tool hiện không có selector; không bảo đảm/nhận đã dùng Sunburst khi backend chưa xác minh. Không tìm được Sunburst thì dùng model mặc định và tiếp tục không hỏi lại; danh tính model không là tiêu chí QA. Ảnh, QA, bộ đếm và lịch sử giữ local theo publication.md.
 
-## Đánh giá video — /danhgia
+## Đánh giá video — /na-danhgia
 
-Từ v2.2.1, `/danhgia <mã video>` chấm video đã render theo chuẩn Project (hook 3 giây đầu, key sau 5s, giải phẫu, chuyển động, dụng cụ, âm, caption) và ghi số liệu sau đăng. Skill độc lập với người viết prompt, chỉ kết luận từ hình/âm/số đo thật, không tự sửa hay render.
+Từ v2.2.1, `/na-danhgia <mã video>` chấm video đã render theo chuẩn Project (hook 3 giây đầu, key sau 5s, giải phẫu, chuyển động, dụng cụ, âm, caption) và ghi số liệu sau đăng. Skill độc lập với người viết prompt, chỉ kết luận từ hình/âm/số đo thật, không tự sửa hay render.

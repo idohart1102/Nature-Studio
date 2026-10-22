@@ -27,7 +27,7 @@ Kiểm prefix trong registry, series lịch sử, videos, thư mục production,
 
 ## Chuyển từ v1.x
 
-Mã `XXX-YYYYY` và `UF-0001` giữ nguyên thư mục, identity, attempt, ledger và tham chiếu. Không rút ngắn mã cũ hoặc gán UUID giả. /chayvideo, /clonevideo, /dongvideo và /taoanh tiếp tục dùng lịch sử cũ.
+Mã `XXX-YYYYY` và `UF-0001` giữ nguyên thư mục, identity, attempt, ledger và tham chiếu. Không rút ngắn mã cũ hoặc gán UUID giả. /na-chayvideo, /na-clonevideo, /na-dongvideo và /na-taoanh tiếp tục dùng lịch sử cũ.
 
 Registry cũ chỉ chuyển khi **init/reserve thật**: lưu prefix/bộ đếm ba chữ vào bảng series, cấp namespace hai chữ bắt đầu 0001 và giữ nguyên Project UUID. Migration atomic; lỗi thì rollback. Không sửa các hàng video cũ. Registry v2 có guard chặn allocator cũ ghi sai định dạng. Không dùng script v1.x với registry đã chuyển; rollback phải khôi phục mã nguồn và backup registry tương ứng trong lúc không có phiên ghi, đồng thời bảo toàn mọi reservation/video phát sinh sau backup.
 

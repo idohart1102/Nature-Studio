@@ -1,9 +1,9 @@
 ---
-name: taoanh
-description: Tạo hoặc sửa ảnh first frame Nature Studio khi gọi /taoanh, “tạo ảnh”, “tạo first frame” với ý định tạo media trong Project; QA ảnh thật sau mỗi lượt, tối đa 5 lượt rồi xin thêm. Không kích hoạt khi chỉ hỏi, trích dẫn, viết prompt hoặc sửa skill; ảnh ngoài dự án dùng luồng tạo ảnh thông thường.
+name: na-taoanh
+description: Tạo hoặc sửa ảnh first frame Nature Studio khi gọi /na-taoanh, “tạo ảnh”, “tạo first frame” với ý định tạo media trong Project; QA ảnh thật sau mỗi lượt, tối đa 5 lượt rồi xin thêm. Không kích hoạt khi chỉ hỏi, trích dẫn, viết prompt hoặc sửa skill; ảnh ngoài dự án dùng luồng tạo ảnh thông thường.
 ---
 
-# /taoanh
+# /na-taoanh
 
 Version: 1.8 | Updated: 2026-10-22 | Lệnh handoff tự tính hash; feedback mỗi lượt sửa
 
@@ -54,11 +54,11 @@ Hết 5 chưa đạt: **không gọi lượt thứ 6**. Hiển thị bản tốt
 
 Theo mẫu `00-Standards/templates/first-frame-review.md`, giữ mỗi attempt INPUTS, prompt thực thi, settings, ảnh output thực, QA và mã quota. Log vào production `.image-qa.sqlite3`; đây là dữ liệu local. FIRST-FRAME.json ghi attempt/path/hash, qa_status, requested_model/actual_model/model_verified, user approval độc lập. Khi sinh/sửa không cần tự đổi user selection; AI QA pass không phải người dùng duyệt.
 
-Trả ảnh inline + đường dẫn tuyệt đối, QA status/ảnh đạt ở attempt nào, số lượt dùng/còn, model thực xác nhận được và hạn chế quan trọng. Nếu chưa đạt thì chỉ rõ, không đặt tên “final/approved” để gây hiểu nhầm. Không tự tạo video, chi tiền ngoài tuyến đã được giao, đăng bài, commit hoặc push. /dongvideo tổng kết và xét bài học hai cấp; mọi runtime/ảnh/feedback/registry giữ local, bài học theo memory-policy/publication. Không tự active từ vòng sửa ảnh.
+Trả ảnh inline + đường dẫn tuyệt đối, QA status/ảnh đạt ở attempt nào, số lượt dùng/còn, model thực xác nhận được và hạn chế quan trọng. Nếu chưa đạt thì chỉ rõ, không đặt tên “final/approved” để gây hiểu nhầm. Không tự tạo video, chi tiền ngoài tuyến đã được giao, đăng bài, commit hoặc push. /na-dongvideo tổng kết và xét bài học hai cấp; mọi runtime/ảnh/feedback/registry giữ local, bài học theo memory-policy/publication. Không tự active từ vòng sửa ảnh.
 
-Sau call, ghi `image_budget.py finish --production ... --call-id <id> --outcome success|error|cancelled|unknown`; thao tác này không hoàn lượt. Handoff ghi bằng lệnh `handoff` ở bước 8 (trường theo 00-Standards/templates/first-frame-handoff.json); không lưu template rỗng như ảnh đạt. Mỗi lượt sửa ảnh theo yêu cầu người dùng ghi feedback.md như mục Phiên làm việc của /chayvideo; vòng ảnh nên chạy trong chat riêng, nối bằng mã video và attempt. Quota helper chỉ xác nhận file chấp thuận tồn tại, agent phải kiểm đó là lời đồng ý thật cho số lượt/phạm vi tương ứng.
+Sau call, ghi `image_budget.py finish --production ... --call-id <id> --outcome success|error|cancelled|unknown`; thao tác này không hoàn lượt. Handoff ghi bằng lệnh `handoff` ở bước 8 (trường theo 00-Standards/templates/first-frame-handoff.json); không lưu template rỗng như ảnh đạt. Mỗi lượt sửa ảnh theo yêu cầu người dùng ghi feedback.md như mục Phiên làm việc của /na-chayvideo; vòng ảnh nên chạy trong chat riêng, nối bằng mã video và attempt. Quota helper chỉ xác nhận file chấp thuận tồn tại, agent phải kiểm đó là lời đồng ý thật cho số lượt/phạm vi tương ứng.
 
-Trước tạo/sửa, tự đánh giá ảnh cần asset gì từ brief/t=0: identity, anatomy, assembly và nguồn scale khi liên quan; kế thừa reference_requirements từ /chayvideo rồi kiểm lại, brief ảnh trực tiếp tự lập nhu cầu. Khi cần ref, theo [quy trình asset chung](../../../00-Standards/first-frame-asset-references.md): lọc đúng Project/entity/variant/stage/view/role, mở ảnh đã chọn, pin/verify receipt, chỉ gửi ảnh cần và ghi input thực có thứ tự/hash/mục đích. Không mang nền trắng/chữ kích thước từ thư viện vào cảnh; không coi nhãn AI là số đo. Handoff mới schema3 kiểm actual input, schema2 cũ không tự nâng. Thiếu ref hỗ trợ có thể dùng Knowledge; thiếu ref thiết yếu xử lý trước call. Không tạo ảnh chỉ từ việc mở profile/cập nhật catalog; không đọc cả thư viện.
+Trước tạo/sửa, tự đánh giá ảnh cần asset gì từ brief/t=0: identity, anatomy, assembly và nguồn scale khi liên quan; kế thừa reference_requirements từ /na-chayvideo rồi kiểm lại, brief ảnh trực tiếp tự lập nhu cầu. Khi cần ref, theo [quy trình asset chung](../../../00-Standards/first-frame-asset-references.md): lọc đúng Project/entity/variant/stage/view/role, mở ảnh đã chọn, pin/verify receipt, chỉ gửi ảnh cần và ghi input thực có thứ tự/hash/mục đích. Không mang nền trắng/chữ kích thước từ thư viện vào cảnh; không coi nhãn AI là số đo. Handoff mới schema3 kiểm actual input, schema2 cũ không tự nâng. Thiếu ref hỗ trợ có thể dùng Knowledge; thiếu ref thiết yếu xử lý trước call. Không tạo ảnh chỉ từ việc mở profile/cập nhật catalog; không đọc cả thư viện.
 
 Máy mới hoặc catalog thiếu bộ ref đi kèm: nếu có `08-Assets/reference-library.json`, chạy `python scripts/asset_catalog.py import-bundle 08-Assets/reference-library.json` trước khi báo thiếu, rồi query đúng Project. Không nạp cả manifest vào context hoặc tự ghi đè ID xung đột.
 

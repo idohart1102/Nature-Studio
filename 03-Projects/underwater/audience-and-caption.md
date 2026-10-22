@@ -1,8 +1,8 @@
 # Khán giả và giọng — v1.9
 
-Updated: 2026-10-22 | Origin: approved guide v1.9 + /chayvideo
+Updated: 2026-10-22 | Origin: approved guide v1.9 + /na-chayvideo
 
-**Chế độ skill /chayvideo (kể cả nhận diện theo đặc trưng):** theo [output-contract.md](output-contract.md), mặc định ba lựa chọn Chuẩn/Hài hước/Tò mò, tiếng Anh Mỹ tự nhiên cho người câu cá Mỹ; mỗi caption một đoạn có 3–5 hashtag đúng cảnh, kèm lược dịch caption rồi hook text và lược dịch hook; ý tưởng tiếng Việt, FIRST FRAME PROMPT và VIDEO PROMPT tiếng Anh, mỗi prompt một đoạn. Yêu cầu mới này thay ngoại lệ caption tiếng Việt ở v1.1. Các tiêu chí giọng/cấu trúc bên dưới tiếp tục áp dụng. Lý do: điều chỉnh người dùng 2026-10-16.
+**Chế độ skill /na-chayvideo (kể cả nhận diện theo đặc trưng):** theo [output-contract.md](output-contract.md), mặc định ba lựa chọn Chuẩn/Hài hước/Tò mò, tiếng Anh Mỹ tự nhiên cho người câu cá Mỹ; mỗi caption một đoạn có 3–5 hashtag đúng cảnh, kèm lược dịch caption rồi hook text và lược dịch hook; ý tưởng tiếng Việt, FIRST FRAME PROMPT và VIDEO PROMPT tiếng Anh, mỗi prompt một đoạn. Yêu cầu mới này thay ngoại lệ caption tiếng Việt ở v1.1. Các tiêu chí giọng/cấu trúc bên dưới tiếp tục áp dụng. Lý do: điều chỉnh người dùng 2026-10-16.
 
 Khán giả Mỹ thích câu cá; ngôn ngữ đầu ra tiếng Anh Mỹ, gợi tò mò bằng chi tiết thật trong clip. Không tự nhận giọng native bảo đảm performance.
 

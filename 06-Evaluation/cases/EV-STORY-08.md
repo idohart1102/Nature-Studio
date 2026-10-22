@@ -2,7 +2,7 @@
 
 Status: not run
 Date: 2026-10-16
-Input: Underwater dùng /chayvideo, có story card nội bộ và caption không #Underwater.
+Input: Underwater dùng /na-chayvideo, có story card nội bộ và caption không #Underwater.
 Expected: Bốn mục đúng hợp đồng hiện hành; story card không trở thành mục thứ năm, không thay chính sách caption.
 Actual AI output: chưa chạy độc lập
 Result: not checked

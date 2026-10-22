@@ -1,4 +1,4 @@
-# Nhánh reference — dùng chung cho /clonevideo
+# Nhánh reference — dùng chung cho /na-clonevideo
 
 Đây là chế độ tạo bộ từ tham chiếu, không phải revision của video đã tồn tại và không chạy lại toàn bộ skill new. Có analysis/brief có coverage và mapping theo [chuẩn chuyển thể](../../../../00-Standards/reference-video-adaptation.md) trước khi viết; chỉ có link/tóm tắt thì quay bước phân tích, không bịa dữ liệu.
 

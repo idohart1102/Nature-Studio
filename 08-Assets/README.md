@@ -12,7 +12,7 @@ python scripts/asset_catalog.py import-bundle 08-Assets/reference-library.json
 
 Lệnh kiểm hash file/review và dependency rồi tạo/cập nhật catalog local cho các ID chưa có. Không tải từ dịch vụ ngoài, không copy 64 ảnh thêm lần nữa, không gọi model và không cấp mã/quota. Chạy lại giữ nguyên mục local tương đương; gặp cùng ID khác dữ liệu thì dừng, không ghi đè. Dữ liệu riêng và metadata local được giữ.
 
-Sau đó /chayvideo và /taoanh tra catalog như bình thường. Khi tra lần đầu mà catalog chưa có hoặc thiếu bộ ref đi kèm, AI tự chạy lệnh nhập trên trước khi kết luận thiếu ảnh. Không đọc toàn bộ manifest này vào context mỗi lần; helper xử lý file và trả tóm tắt. Chỉ mở metadata/ảnh phù hợp yêu cầu.
+Sau đó /na-chayvideo và /na-taoanh tra catalog như bình thường. Khi tra lần đầu mà catalog chưa có hoặc thiếu bộ ref đi kèm, AI tự chạy lệnh nhập trên trước khi kết luận thiếu ảnh. Không đọc toàn bộ manifest này vào context mỗi lần; helper xử lý file và trả tóm tắt. Chỉ mở metadata/ảnh phù hợp yêu cầu.
 
 ## Quy ước
 

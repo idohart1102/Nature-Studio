@@ -1,6 +1,6 @@
 # Lõi viết prompt và lưu hồ sơ video — v1.5
 
-Updated: 2026-10-22 | Một lõi cho chayvideo/clonevideo; nguồn nguyên văn theo giai đoạn.
+Updated: 2026-10-22 | Một lõi cho na-chayvideo/na-clonevideo; nguồn nguyên văn theo giai đoạn.
 
 ## Context đúng nhiệm vụ
 
@@ -73,7 +73,7 @@ Check/save giữ `checks` và phiên bản contract; metadata dự định khôn
 
 Mỗi bộ nội dung mới/reference hoặc revision hình ghi `reference_requirements` trong OUTPUT/INPUTS: đối tượng/entity, variant/stage/view khi biết, role, must_preserve, reason, essential, applies_to=first_frame/video/both. Khi không cần ghi items=[] và none_reason. Contract và cách dùng theo [quy trình tham chiếu](first-frame-asset-references.md), chỉ đọc phần thao tác chi tiết khi cần asset. Đây là metadata nội bộ, không thêm mục vào bốn phần người dùng nhận. Helper đọc legacy thiếu trường như unverified; revision phải khai lại nhu cầu còn hiệu lực, caption giữ nguyên không query ảnh.
 
-/chayvideo viết từ brief và Knowledge trước, metadata catalog hỗ trợ xác định ref; mở ảnh khi cần chi tiết thị giác, không giả đã xem từ descriptor. /taoanh tự đối chiếu t=0 và chọn bộ ảnh thực gửi. Asset sau t=0 thuộc nhu cầu video, không ép vào ảnh mở đầu. Giữ ý định/cỡ có căn cứ dù thư viện thiếu; không tự đổi loài/Project để tận dụng ảnh. Prompt không coi đường dẫn local là ảnh model đã nhận. Chất lượng motion/audio vẫn kiểm trên video thật.
+/na-chayvideo viết từ brief và Knowledge trước, metadata catalog hỗ trợ xác định ref; mở ảnh khi cần chi tiết thị giác, không giả đã xem từ descriptor. /na-taoanh tự đối chiếu t=0 và chọn bộ ảnh thực gửi. Asset sau t=0 thuộc nhu cầu video, không ép vào ảnh mở đầu. Giữ ý định/cỡ có căn cứ dù thư viện thiếu; không tự đổi loài/Project để tận dụng ảnh. Prompt không coi đường dẫn local là ảnh model đã nhận. Chất lượng motion/audio vẫn kiểm trên video thật.
 
 ## Caption có lựa chọn — schema1
 
