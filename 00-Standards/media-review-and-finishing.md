@@ -1,6 +1,6 @@
 # Kiểm media thực và hậu kỳ mức âm
 
-Version: 1.0 | Updated: 2026-10-17 | Nature Studio v1.7
+Version: 1.1 | Updated: 2026-10-22 | Nature Studio v2.2.0
 
 ## Kiểm khả năng trước khi nhận mẫu
 
@@ -28,6 +28,10 @@ python scripts/media_review.py normalize <input.mp4> <new-v002.mp4> --target-luf
 ```
 
 Helper đo pass 1, dùng measured parameters cho pass 2 của [FFmpeg loudnorm](https://ffmpeg.org/ffmpeg-filters.html#loudnorm), copy video, mã hóa audio đầu tiên AAC 48kHz và tạo sidecar before/after/hash. Không ghi đè file gốc/output cũ; không hứa giữ mọi stream/subtitle/metadata. Chỉ dùng tuyến này cho bản video phân phối có một audio stream; master đa track cần quy trình conform riêng. Đo lại peak sau AAC; output tạo xong không tự đạt mục tiêu hoặc được duyệt. Kiểm nghe lại noise, dynamics, clipping, đầu/giữa/đuôi, đồng bộ và duration trước giao. Lỗi giữa chừng giữ file chẩn đoán, lần sau dùng tên mới. Không tự chạy normalization trên video người dùng chỉ vì họ đồng ý nâng hệ thống.
+
+## Mở đầu 3 giây
+
+Khi Project có gate hook (Underwater UF-D025), xem 0–3s theo bước khoảng 0.1s: frame đầu tiên có chuyển động của cảnh, thời điểm tín hiệu mới thật, âm có từ 0.0s và không có biến cố quyết định sớm. Ghi vào QA miền hình/âm; không đạt thì ghi fail với lý do “hook 0–3s”. `checks.hook_signal` là dự định, không thay xem render.
 
 ## Phần chưa xuất hiện và trạng thái hiện hành
 

@@ -1,6 +1,6 @@
-# Format Underwater — v2.1
+# Format Underwater — v2.2
 
-Updated: 2026-10-17 | UF-D021 — camera cầm tay nhẹ theo yêu cầu người dùng | Nguồn: guide v1.9 và quyết định hiện hành.
+Updated: 2026-10-22 | UF-D025 — hook 3 giây đầu, 5–10 beat; UF-D021 — camera cầm tay nhẹ theo yêu cầu người dùng | Nguồn: guide v1.9 và quyết định hiện hành.
 
 ## Thông số và phạm vi
 
@@ -40,6 +40,22 @@ Lập **bản đồ trạng thái ở t=0** trước khi viết diễn biến. G
 
 **Cảnh key bắt buộc — một sự kiện tạo câu chuyện cho toàn bộ 10 giây:** trước khi chia beat, xác định `kỳ vọng người xem → tín hiệu/chuẩn bị → twist hoặc hành động then chốt → hậu quả xác nhận`. Key là thay đổi quan trọng trong một cú máy liên tục, **không phải một cảnh cắt**. Nó có thể là cú twist về kết quả, một cú đớp/lao/thoát cực nhanh, cú nhả đảo ngược tưởng đã ăn, động tác phòng thủ làm cá đổi hướng, hoặc một hành động khác đủ làm người xem hiểu clip đang kể chuyện gì. Không chấp nhận chỉ cá bơi qua, áp sát lặp lại hoặc hình đẹp không có đổi trạng thái đáng chú ý.
 
+### Hook 3 giây đầu — UF-D025
+
+3 giây đầu phải giữ người xem ở mức cao; tình huống quyết định vẫn bắt đầu sau 5.0s. Đây là ràng buộc trên toàn timeline, **không chia mô tả thành các giai đoạn 0–3s / 3–5s / sau 5s**: chia 5–10 beat theo câu chuyện, chỉ bảo đảm trong 3 giây đầu có đủ các điều dưới đây theo [chuẩn chung](../../00-Standards/story-development.md#mở-đầu-3-giây--giữ-người-xem).
+
+- **Đối tượng thu hút đọc được ngay frame đầu:** mồi/rig, con mồi sống hoặc một phần cá, gần camera, ở vùng nước đủ đọc. Không cần cả cá và mồi cùng lộ. Nước đục thì kéo đối tượng lại gần, không làm nước trong giả. Thu nhỏ ảnh khoảng 1/4 vẫn nhận ra.
+- **Chuyển động của cảnh từ 0.0s có nguyên nhân:** lure quay/rung/lượn theo lực kéo, bait sống cử động, cỏ theo dòng, vây cá điều chỉnh. Camera cầm tay trôi nhẹ không thay được chuyển động của cảnh.
+- **Ít nhất một tín hiệu mới trước 3.0s, hợp loài:** thân/bóng cá lộ từ cỏ, vùng mờ hoặc mép khung; cá đổi hướng về phía mồi; con mồi phát hiện và phản ứng nhỏ; chi tiết nhận dạng lộ ra; dây đổi chùng/căng do người câu. Tín hiệu này không phải tấn công, cắn, mắc câu, thoát quyết định hay kết quả.
+- **Một câu hỏi mở người câu Mỹ muốn biết:** loài gì, rig gì, có ăn không, con gì đang tới. Video phải có phần trả lời hoặc hậu quả.
+- **Âm từ 0.0s:** sound bed lớn theo mục Âm thanh; âm hành động đầu tiên (lure, dây, cỏ, nền) xuất hiện sớm, khoảng trước 1.5s, khi cảnh có nguồn thật.
+
+Gợi ý mở, không phải danh mục đóng: rig/mồi rất gần để người câu đoán; cá hiện dần để đoán loài; chi tiết sinh học cận cảnh; con mồi sống phòng thủ; cá lớn bất ngờ về tỷ lệ so với mồi.
+
+Trong video prompt, beat đầu kết thúc ≤3.0s và metadata `checks.hook_signal` ghi giây dự định của tín hiệu mới (0 < t ≤ 3.0). Không đặt tín hiệu ở cùng một giây cho mọi video. Hook không hợp thức hóa việc đưa key lên sớm.
+
+**Câu khóa để tích hợp vào video prompt (viết lại theo cảnh):** `From the very first frame, the [lure/bait/fish part] is clearly readable near the camera and already moving because of [cause]. Before 3.0 seconds, [one specific new signal] happens, raising a clear question without any attack, bite, hookup or outcome. Audible habitat ambience and the first action sound are present from 0.0 seconds.`
+
 ### Thời điểm key — bắt đầu sau giây thứ 5, không giải quyết câu chuyện ngay đầu clip
 
 **Quy tắc bắt buộc của kênh mới:** trong video đúng 10s, hành động key chỉ được **bắt đầu khi `t_key_start > 5.0s`**, không phải đúng 5.0s và không chỉ là đạt đỉnh sau mốc đó. Mốc được chọn linh hoạt theo từng câu chuyện; không mặc định mọi video đều đớp ở 5.1s, 6s hay 7s. Key vẫn phải kết thúc đủ sớm để thấy hậu quả trước 10.0s. Đây là quyết định biên tập cần thử nghiệm trên video và dữ liệu người xem, không phải kết luận nghiên cứu rằng chỉ cần dời key là bảo đảm retention/viral.
@@ -61,7 +77,7 @@ Lập **bản đồ trạng thái ở t=0** trước khi viết diễn biến. G
 
 **Tương tác:** nếu cá đụng mồi, mồi đổi vị trí/hướng; nếu dây câu gắn mồi, dây phải đi tới mép khung đúng phía người câu và thay đổi chùng/căng theo lực. Dây có thể đã căng ở t=0 khi lure đang được kéo; không bắt mọi loại rig phải chùng ban đầu. Mồi giả chuyển động theo lực kéo/dòng nước; con mồi sống có lực đẩy riêng; chỉ thêm tác động từ cá khi đã có tiếp xúc hoặc dòng nước do cá gây ra. Nếu cá nhả mồi, mồi đi từ miệng ra theo hướng hợp vận tốc/dòng nước; không xuất hiện lại đúng vị trí ban đầu. Đám bùn bắt đầu tại nơi vây, mõm hoặc mồi chạm nền, lan và lắng dần; sỏi lớn không nổi như tro. Cỏ chỉ cong khi dòng nước hoặc vật va chạm, rồi hồi lại. Âm thanh xuất hiện **cùng thời điểm** với va chạm/đáy bị quét, không đến trước vài giây.
 
-**Nhịp 10 giây linh hoạt — 5–8 beat:** tự chia khoảng `[0.0–10.0s]` thành **5 đến 8 beat**, ngắn/dài theo hành vi và câu chuyện. Cho phép mốc thập phân như `[1.3–2.3s]` và beat rất ngắn cho cú đớp/thoát nhanh. Không chia cố định mỗi 2 giây; không đặt thời lượng tối thiểu/tối đa chung cho mọi beat. Các khoảng phải liên tiếp, mốc kết beat trước bằng mốc đầu beat sau, không chồng/thiếu thời gian, và tổng đúng 10 giây. Mỗi beat có một thay đổi chính mới, đọc được; mọi beat nằm trong cùng shot.
+**Nhịp 10 giây linh hoạt — 5–10 beat:** tự chia khoảng `[0.0–10.0s]` thành **5 đến 10 beat**, beat đầu kết thúc ≤3.0s, ngắn/dài theo hành vi và câu chuyện. Cho phép mốc thập phân như `[1.3–2.3s]` và beat rất ngắn cho cú đớp/thoát nhanh. Không chia cố định mỗi 2 giây; không đặt thời lượng tối thiểu/tối đa chung cho mọi beat. Các khoảng phải liên tiếp, mốc kết beat trước bằng mốc đầu beat sau, không chồng/thiếu thời gian, và tổng đúng 10 giây. Mỗi beat có một thay đổi chính mới, đọc được; mọi beat nằm trong cùng shot.
 
 **Một ví dụ nhịp, không phải khuôn:** `[0.0–1.3s]`, `[1.3–2.3s]`, `[2.3–3.8s]`, `[3.8–5.2s]`, `[5.2–5.5s]`, `[5.5–7.6s]`, `[7.6–10.0s]`. Beat thứ năm có thể chứa key nhanh, chẳng hạn chuẩn bị đã hoàn tất trước 5.2s, cú lao/né ở khoảng 5.3s, rồi phản ứng tiếp diễn ở beat sau. Đây chỉ là ví dụ dàn cảnh; chọn lại toàn bộ mốc theo key của video, không sao chép chuỗi này cho mọi loài. Key bắt đầu sau 5.0s theo quy tắc trên; ví dụ này dùng 5.2s, nhưng không bắt buộc mọi key ở 5.2s, trong khoảng 6–8s hoặc sát cuối clip.
 
@@ -86,8 +102,8 @@ Lập **bản đồ trạng thái ở t=0** trước khi viết diễn biến. G
 ## Kiểm trước khi giao và kiểm media
 
 - Khóa t=0: đúng loài/số lượng/vùng, màu nước và độ trong riêng, nền/cây/hạt/ánh sáng; vị trí/hướng/cự ly/điểm nối, đường vào và nơi kết thúc. Không đặt sẵn vết bùn, cú cắn hoặc tải của sự kiện tương lai.
-- 5–8 beat linh hoạt, mốc thập phân, nối liên tục 0.0–10.0s. Key có hành động nhanh/twist/đổi trạng thái tạo câu chuyện, onset thực >5.0s; setup tiến triển có lý do, hậu quả còn thấy trước hết. Không đổi nhãn cú đớp sớm thành chuẩn bị để lách quy định.
+- 5–10 beat linh hoạt, mốc thập phân, nối liên tục 0.0–10.0s; 3 giây đầu đạt [Hook 3 giây đầu](#hook-3-giây-đầu--uf-d025) và `checks.hook_signal` ≤3.0s. Key có hành động nhanh/twist/đổi trạng thái tạo câu chuyện, onset thực >5.0s; setup tiến triển có lý do, hậu quả còn thấy trước hết. Không đổi nhãn cú đớp sớm thành chuẩn bị để lách quy định.
 - Hình và âm cùng nguyên nhân; dụng cụ đúng một cấu hình theo loài/vùng/mùa/phương pháp, không tự thêm hook/line vào săn mồi tự nhiên. Quy định pháp lý phải tra đúng địa phương/hiện hành khi liên quan.
 - Caption đúng mức chứng cứ, 3–5 hashtag cùng đoạn, không AI hoặc #Underwater; thuật ngữ đúng hành vi.
-- Prompt-only chỉ kiểm văn bản. Khi có ảnh/video thật: kiểm nhận dạng/giải phẫu, màu/độ trong/suy giảm theo cự ly, chuyển động/đường đi/dụng cụ và hạt/bùn đúng nguồn. Xem quanh key đủ nhỏ để bắt cú lao vài phần mười giây; lịch lấy mẫu 0.25s có thể bỏ sót. Nghe loa điện thoại: môi trường và hành động lớn/rõ từ đầu đến hết, đồng bộ, không clipping/rè/méo hoặc một hit to trên nền nhỏ. Không kết luận đã QA media từ prompt.
+- Prompt-only chỉ kiểm văn bản. Khi có ảnh/video thật: kiểm nhận dạng/giải phẫu, màu/độ trong/suy giảm theo cự ly, chuyển động/đường đi/dụng cụ và hạt/bùn đúng nguồn. Xem 0–3s theo bước khoảng 0.1s: frame có chuyển động của cảnh đầu tiên, thời điểm tín hiệu mới thật và âm ở 0.0s. Xem quanh key đủ nhỏ để bắt cú lao vài phần mười giây; lịch lấy mẫu 0.25s có thể bỏ sót. Nghe loa điện thoại: môi trường và hành động lớn/rõ từ đầu đến hết, đồng bộ, không clipping/rè/méo hoặc một hit to trên nền nhỏ. Không kết luận đã QA media từ prompt.
 - Kiểm file cuối đúng 10s, 9:16 và dễ đọc ở điện thoại. Xác định chữ/dấu xuất hiện từ first frame, render hay export. AI tự vẽ sai thì sửa khi được giao tạo media; dấu bắt buộc của công cụ thì ghi giới hạn và chỉ chọn xuất không dấu khi công cụ cho phép. Không giả kết quả hoặc tự render để kiểm.

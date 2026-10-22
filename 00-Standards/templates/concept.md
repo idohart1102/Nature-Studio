@@ -3,6 +3,7 @@ Production ID:
 Version:
 Premise:
 Opening visual question:
+Hook first 3s (readable frame-0 subject / caused motion from 0.0s / new signal ≤3.0s / open question / opening sound):
 Initial state and layout:
 Subject / interaction / equipment:
 Cause and effect:

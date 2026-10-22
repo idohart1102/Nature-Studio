@@ -39,7 +39,7 @@ Mặc định **Chuẩn → Hài hước → Tò mò**, mỗi bản trả theo �
 - **Hài hước (humor):** dí dỏm nhẹ từ tình huống, cách nói người câu cá Mỹ thực sự có thể dùng. Nhân hóa chỉ là câu đùa rõ nghĩa, không dùng để khẳng định sinh học/ý định/giới tính chưa biết. Không cố dựng một cú punchline hay slang cho mọi clip.
 - **Tò mò (curiosity):** gợi chú ý chi tiết, quyết định hoặc nguyên nhân phù hợp clip; không hứa biến cố không có hoặc câu kéo “watch till the end”. Câu hỏi chỉ dùng khi tự nhiên.
 
-Ba bản phải khác cách tiếp cận, không chỉ đổi dấu câu hoặc vài từ đồng nghĩa. Hook bổ trợ caption, không lặp nguyên câu; hướng người xem tới diễn biến/chi tiết có thật hoặc được chốt trong concept. Không tự hứa “last second” nếu không có căn cứ thời điểm. Concept chỉ là dự kiến, phải đối chiếu lại khi có footage.
+Ba bản phải khác cách tiếp cận, không chỉ đổi dấu câu hoặc vài từ đồng nghĩa. Hook bổ trợ caption, không lặp nguyên câu; hướng người xem tới diễn biến/chi tiết có thật hoặc được chốt trong concept, ưu tiên điều thấy được trong 3 giây đầu (UF-D025). Không tự hứa “last second” nếu không có căn cứ thời điểm. Concept chỉ là dự kiến, phải đối chiếu lại khi có footage.
 
 Hook dưới 10 từ là giới hạn cứng riêng; ưu tiên ngắn và tự nhiên, không kéo cho đủ 9 từ: helper đếm từ Anh gồm chữ/số, contractions như that's/don’t là một từ; từ nối bằng gạch nối/dash tính tách. Không nối bằng dấu gạch để lách hạn mức. Mọi bản vẫn giữ quy tắc hashtag/cảnh/khán giả bên trên; bộ tag có thể giống nhau khi đúng nội dung, không đổi tag chỉ để tạo khác biệt.
 

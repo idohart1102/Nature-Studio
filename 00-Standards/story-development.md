@@ -1,6 +1,6 @@
 # Phát triển câu chuyện — Nature Studio
 
-Version: 1.1 | Updated: 2026-10-17 | Scope: concept mới trong mọi Project
+Version: 1.2 | Updated: 2026-10-22 | Scope: concept mới trong mọi Project
 Status: phương pháp biên tập hiện hành, được người dùng yêu cầu triển khai; hiệu quả khán giả chưa kiểm chứng.
 
 Đọc cùng [creativity](creativity.md), quy chuẩn Project, [research](research.md), [memory-policy](memory-policy.md). Cơ sở và giới hạn từng nguồn: [SRC-STORY-20261016](../01-Knowledge/sources/story-development-research-2026-10-16.md). Underwater có [áp dụng riêng](../03-Projects/underwater/story-development.md). Nguồn bên ngoài giải thích cơ chế hoặc cách làm, không tự đặt quy định mới lên Project. Không cần mở lại mọi nguồn cho mỗi clip nếu không có dữ kiện mới; nghiên cứu loài/cảnh vẫn phải đúng.
@@ -31,6 +31,22 @@ Rà lịch sử theo creativity.md rồi phát triển vài tiền đề độc 
 ### Bước C — Thiết kế điều biết và điều chưa biết
 
 Ở đầu, người xem cần đủ thông tin để hiểu mối quan hệ chủ thể–mục tiêu–không gian. Xác định chi tiết nào tạo lý do theo dõi và điều gì còn mở. Có thể chưa biết kết quả, cách xảy ra hoặc một đặc điểm sắp được phát hiện. Không đồng nhất tò mò với footage mờ/khó hiểu hoặc caption “wait for it”. Giữ khả năng đọc thật trong điều kiện nước/ánh sáng; nếu không thấy, đổi cự ly/bố cục phù hợp thay vì làm môi trường giả.
+
+### Mở đầu 3 giây — giữ người xem
+
+3 giây đầu quyết định người xem lướt qua hay ở lại, nên mọi Project thiết kế đoạn này có chủ đích. Căn cứ là hướng dẫn nền tảng: TikTok khuyên đưa nội dung cốt lõi vào 3 giây đầu và hook trong 6 giây đầu; Meta khuyên cho người đang lướt lý do dừng lại ngay. Các hướng dẫn này viết cho quảng cáo, nên đây là quyết định biên tập cần kiểm bằng dữ liệu kênh, không bảo đảm viral.
+
+Mốc 3 giây là ràng buộc lên toàn timeline, **không phải một giai đoạn mô tả riêng**: chia beat theo câu chuyện và Project, chỉ bảo đảm trong 3 giây đầu có đủ:
+
+1. **Đọc được ở frame đầu:** đối tượng thu hút nhận ra được trên màn hình điện thoại ngay t=0. Không fade-in từ đen, không frame trống, không logo/tiêu đề mở đầu.
+2. **Chuyển động có nguyên nhân từ 0.0s:** có vật trong cảnh đang động vì lý do của cảnh; chuyển động camera đơn thuần không tính.
+3. **Tín hiệu mới trước 3.0s:** ít nhất một thay đổi đọc được như xuất hiện, phát hiện, đổi hướng, phản ứng hoặc chi tiết lộ ra; không phải biến cố quyết định hay kết quả.
+4. **Câu hỏi mở có trả lời:** một điều người xem muốn biết, ghi trong concept; video phải có phần trả lời hoặc hậu quả.
+5. **Âm thanh từ 0.0s** theo luật âm của Project.
+
+Không dùng teaser/flash-forward kết quả, clickbait sai hình, “wait for it”, hoặc làm mờ/khó hiểu để giả tò mò. Hook không được đưa biến cố quyết định lên sớm hơn quy định key của Project. Project ghi cách thể hiện và gate cụ thể.
+
+Kiểm theo chặng: prompt có tín hiệu mới với mốc ≤3.0s; ảnh t=0 thu nhỏ khoảng 1/4 vẫn nhận ra đối tượng thu hút; render xem 0–3s theo bước khoảng 0.1s để ghi chuyển động đầu tiên, thời điểm tín hiệu thật và âm từ 0.0s. Không xác nhận đạt khi chưa xem render.
 
 ### Bước D — Xây diễn biến bằng nhân quả
 
@@ -65,6 +81,7 @@ Caption đúng phong cách/kiến thức người xem của Project, hướng m�
 | Câu hỏi | Bằng chứng cần chỉ ra | Nếu chưa đạt |
 |---|---|---|
 | Vì sao đúng người xem sẽ chú ý? | Chi tiết cụ thể và lý do liên quan; là giả thuyết audience | Sửa bố cục/điểm quan sát, không chỉ tăng tính từ |
+| 3 giây đầu có giữ người xem? | Đối tượng đọc được ở frame đầu, chuyển động từ 0.0s, tín hiệu mới ≤3.0s, câu hỏi mở, âm từ đầu | Sửa đối tượng/cự ly/chuyển động/tín hiệu; không dùng teaser kết quả |
 | Người xem biết đủ để muốn biết tiếp chưa? | Quan hệ thấy được và phần còn mở | Bổ sung tín hiệu, giảm nhiễu; không che tất cả |
 | Vì sao tiếp tục xem? | Chuỗi thay đổi có nghĩa trước key | Gộp beat lặp, sửa đường đi/tín hiệu |
 | Chờ đợi nhận lại gì? | Key có nhân quả và hậu quả nhìn/nghe được | Sửa tiền đề/thể hiện, không chỉ dời timestamp |
@@ -76,7 +93,7 @@ Không phải mọi video cần tối đa xem lại/chia sẻ hoặc đủ mọi
 
 ## 4. Ghi hồ sơ ngắn, có thể truy nguyên
 
-Trong concept.md ghi: viewer relevance; câu hỏi/điểm quan sát; trạng thái đầu và chi tiết hook; tiến triển nhân quả; key onset/interval theo Project; payoff/hậu quả; giả thuyết cảm xúc/xem lại/chia sẻ nếu có; fingerprint lịch sử; cơ sở và điều chưa kiểm; tiêu chí review. Dùng [mẫu concept](templates/concept.md). Đây là tóm tắt lựa chọn và căn cứ, không ghi suy luận nội bộ hoặc bắt người dùng điền hết.
+Trong concept.md ghi: viewer relevance; câu hỏi/điểm quan sát; trạng thái đầu và hook 3 giây đầu; tiến triển nhân quả; key onset/interval theo Project; payoff/hậu quả; giả thuyết cảm xúc/xem lại/chia sẻ nếu có; fingerprint lịch sử; cơ sở và điều chưa kiểm; tiêu chí review. Dùng [mẫu concept](templates/concept.md). Đây là tóm tắt lựa chọn và căn cứ, không ghi suy luận nội bộ hoặc bắt người dùng điền hết.
 
 Không tạo production ID cho việc sửa hệ thống hoặc hỏi kiến thức. Khi chỉ sửa clip, áp tiêu chí liên quan trong phạm vi, không ép sáng tác lại toàn bộ.
 
@@ -84,7 +101,7 @@ Không tạo production ID cho việc sửa hệ thống hoặc hỏi kiến th�
 
 1. Trước đăng: ghi thay đổi muốn thử và chỉ số liên quan; nếu chỉ sửa rõ hook thì đừng đồng thời đổi mọi yếu tố rồi gán kết quả cho hook. Không tự đăng/render/thử trả phí ngoài quyền đã giao.
 2. Kiểm hiểu khi có người thật/công cụ được phép: họ nhìn thấy điều gì, dự đoán gì, hiểu kết quả ra sao; ghi số người/đối tượng/cách hỏi. Nếu AI tự đóng vai audience thì chỉ gọi là self-review, không phải human validation.
-3. Dữ liệu đăng: lưu nền tảng, định nghĩa chỉ số, ngày/tuổi bài, mẫu số, organic/paid nếu biết. Không giả định mọi tài khoản có retention curve/completion/rewatch tách riêng; unavailable không bằng 0. Không dùng ngưỡng intro 30s hoặc highlight video 60s của S6 cho Reel 10s.
+3. Dữ liệu đăng: lưu nền tảng, định nghĩa chỉ số, ngày/tuổi bài, mẫu số, organic/paid nếu biết. Không giả định mọi tài khoản có retention curve/completion/rewatch tách riêng; unavailable không bằng 0. Không dùng ngưỡng intro 30s hoặc highlight video 60s của S6 cho Reel 10s. Khi có, ghi retention tại 3s và tại mốc ngay trước key (Facebook Reels: `post_video_retention_graph`); lượt view không đo được hook vì nền tảng đếm view gần như ngay khi video bắt đầu phát.
 4. Đối chiếu điểm rơi với frame thật. Retention giảm trước key có thể do thiếu tiến triển, khó đọc, tệp xem hoặc phân phối; không tự suy cần sớm/muộn hơn. Key sau 5s hiện hành vẫn giữ cho Underwater; nếu có bằng chứng cần đổi thì đề xuất quyết định, không tự phá format.
 5. So với nhiều sản phẩm tương đồng về format/tuổi bài/khán giả khi có; mô tả độ biến thiên và nhiễu. Không quy định cỡ mẫu thống kê giả hoặc “view chuẩn viral” chung. Thiết kế A/B khi nền tảng và quyền cho phép; đăng hai bài khác nhau không tự thành randomized experiment.
 6. Review tách prompt/media/hiệu quả; kết luận sáng tạo/retention/chia sẻ chưa kiểm giữ hypothesis/candidate theo policy. Chỉ directive người dùng hiện hành mới cập nhật chính sách trực tiếp; lesson không tự ghi đè Standards.

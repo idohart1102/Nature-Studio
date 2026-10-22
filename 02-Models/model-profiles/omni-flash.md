@@ -14,7 +14,7 @@ Nguồn: [Google Omni Flash](https://ai.google.dev/gemini-api/docs/omni.md), tru
 - Chỉ định ảnh mở đầu bằng lời; dùng `<FIRST_FRAME>` khi giao diện hỗ trợ và thực sự gắn ảnh.
 - Có thể dùng timecode; không có cú pháp thời gian bắt buộc. Loại trừ ngắn đặt trong prompt chính.
 
-Cách tổ chức của studio (không phải schema Google): FIRST FRAME PROMPT tiếng Anh, một đoạn chỉ t=0; VIDEO PROMPT tiếng Anh, một đoạn gồm ảnh mở đầu → thời lượng/tỷ lệ/camera → cảnh nhất quán → beat/chuyển động/nhân quả → Sound design → loại trừ. Áp nhịp riêng từng dự án. Với Underwater, giữ 5–8 beat đủ 10s và key >5.0s. Kiểm thông số giao diện trước thực thi; không hứa prompt khóa chính xác mọi frame.
+Cách tổ chức của studio (không phải schema Google): FIRST FRAME PROMPT tiếng Anh, một đoạn chỉ t=0; VIDEO PROMPT tiếng Anh, một đoạn gồm ảnh mở đầu → thời lượng/tỷ lệ/camera → cảnh nhất quán → beat/chuyển động/nhân quả → Sound design → loại trừ. Áp nhịp riêng từng dự án. Với Underwater, giữ 5–10 beat đủ 10s, beat đầu ≤3.0s và key >5.0s. Kiểm thông số giao diện trước thực thi; không hứa prompt khóa chính xác mọi frame.
 
 ## Yêu cầu sản xuất Underwater
 

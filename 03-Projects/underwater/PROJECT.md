@@ -2,7 +2,7 @@
 
 ID: under-fishing-us
 Slug: underwater
-Version: 2.5 | Updated: 2026-10-19 | Nguồn theo giai đoạn; giữ UF-D021
+Version: 2.6 | Updated: 2026-10-22 | Nguồn theo giai đoạn; giữ UF-D021; hook 3 giây đầu UF-D025
 Aliases: Under Fish US; Under Fishing US; Under Fishing
 Routing: Video/prompt tương tác cá–mồi dưới nước, khán giả câu cá Mỹ; săn mồi tự nhiên hoặc bait/lure/rig/jig; mọi loài cá được câu phù hợp tại Mỹ, không giới hạn Redfish/red drum/Sciaenops ocellatus, Muskie/muskellunge/Esox masquinongy, Walleye/Sander vitreus. Camera chìm cầm tay chuyển động nhẹ tự nhiên, dọc 10s và key sau 5s là dấu hiệu kết hợp. Một từ cá/Mỹ/Omni hoặc nhắc benchmark Underfishing riêng không đủ phân biệt dự án.
 Model: omni-flash
@@ -10,6 +10,8 @@ Model: omni-flash
 UF-D020 — 2026-10-17: /clonevideo dùng [chuẩn chuyển thể](../../00-Standards/reference-video-adaptation.md) và lõi prompt chung. Reference giữ cơ chế mẫu có chủ đích, ánh xạ đúng loài/bối cảnh mới; ngưỡng độ mới dành cho concept độc lập không ép thay câu chuyện của bản chuyển thể. Quy chuẩn kỹ thuật/QA/âm/caption hiện hành vẫn áp dụng, khác biệt camera/nhịp so với mẫu phải ghi rõ.
 
 UF-D021 — 2026-10-17: người dùng thay mặc định camera cố định bằng camera chuyển động nhẹ, tự nhiên như người cầm điện thoại quay. Áp dụng [camera cầm tay](format.md#camera-cầm-tay-tự-nhiên--uf-d021) cho bộ mới và revision được giao; tham chiếu học quan hệ máy–chủ thể, không đổi thành cá tự quay. Không sửa media/attempt lịch sử hoặc tự render.
+
+UF-D025 — 2026-10-22: 3 giây đầu phải giữ người xem theo [Hook 3 giây đầu](format.md#hook-3-giây-đầu--uf-d025); 5–10 beat, beat đầu ≤3.0s, `checks.hook_signal` ≤3.0s; key vẫn onset >5.0s. Không chia mô tả thành giai đoạn cố định.
 
 ## Nguồn hiện hành
 

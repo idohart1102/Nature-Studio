@@ -26,7 +26,9 @@ class ContractTests(unittest.TestCase):
         file=self.base/'exception.json';file.write_text(json.dumps(grant),encoding='utf-8');data['contract_exception']=dict(path='exception.json',sha256=output.sha256(file))
 
     def nine(self):
-        data=copy.deepcopy(self.good);data['video_prompt']='Handheld underwater shot. '+'; '.join(f'[{i}.0-{i+1 if i<8 else 10}.0s] fixture' for i in range(9));return data
+        # Outside the default 5–10 range (UF-D025): 11 contiguous beats, first ends by 3.0s.
+        b=['0.0','1.0','2.0','3.0','4.0','5.0','6.0','7.0','8.0','8.5','9.0','10.0']
+        data=copy.deepcopy(self.good);data['video_prompt']='Handheld underwater shot. '+'; '.join(f'[{x}-{y}s] fixture' for x,y in zip(b,b[1:]));return data
 
     def test_check_save_check_roundtrip(self):
         saved=output.save(self.root,'underwater','UF-0001',self.good);stored=json.loads((saved/'OUTPUT.json').read_text(encoding='utf-8'))
@@ -62,7 +64,7 @@ class ContractTests(unittest.TestCase):
         with self.assertRaises(ValueError):output.effective_contract(self.root,'underwater','UF-0001',data,'new')
 
     def test_exception_does_not_waive_key_or_timeline(self):
-        for transform in (lambda s:s.replace('[0.0-1.0s]','[0.0-1.5s]'),lambda s:s.replace('[8.0-10.0s]','[8.0-11.0s]')):
+        for transform in (lambda s:s.replace('[0.0-1.0s]','[0.0-1.5s]'),lambda s:s.replace('[9.0-10.0s]','[9.0-11.0s]')):
             data=self.nine();data['video_prompt']=transform(data['video_prompt']);self.grant(data)
             contract=output.effective_contract(self.root,'underwater','UF-0001',data,'new')
             self.assertTrue(any('timeline' in e for e in output.validate(data,underwater=True,contract=contract)))

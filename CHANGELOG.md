@@ -2,6 +2,13 @@
 
 Phiên bản toàn workspace được đọc từ [VERSION](VERSION). Phiên bản của từng skill/tài liệu được quản lý riêng; không đổi tất cả thành 1.0. Commit và hash dùng để phân biệt các bản có cùng số phiên bản hoặc có chỉnh sửa local.
 
+## v2.2.0 — 2026-10-22
+
+- Hook 3 giây đầu (UF-D025): chuẩn chung “Mở đầu 3 giây” trong story-development (đối tượng đọc được ở frame đầu, chuyển động có nguyên nhân từ 0.0s, tín hiệu mới ≤3.0s, câu hỏi mở, âm từ đầu); mục Hook 3 giây đầu trong format Underwater; gate ảnh t=0 và render 0–3s; concept thêm dòng hook.
+- Không chia mô tả thành giai đoạn 0–3s/3–5s/sau 5s; Underwater cho phép 5–10 beat (trước đây 5–8), key vẫn onset >5.0s.
+- `chayvideo_output.py` (contract `underwater-3`): 5–10 beat, beat đầu kết thúc ≤3.0s, bắt buộc `checks.hook_signal` trong (0, 3.0] cho bộ không phải caption-only. Thêm test; ca EV-UF-008.
+- Ghi retention 3s và trước key khi có dữ liệu đăng. Chưa kiểm hiệu quả retention thực.
+
 ## v2.1.6 — 2026-10-22
 
 - Giảm lượt gọi tool, không hạ gate: `chayvideo_context.py preflight` (packet + history trong một lệnh, chỉ in đường dẫn/số lượng/ID), `context-id` + `view --ledger` (một sổ đọc theo chat, thay receipt mỗi lượt), `view --page-large` (chia trang nguồn lớn theo heading, chỉ tính đã đọc khi đủ mọi trang), output JSON gọn.

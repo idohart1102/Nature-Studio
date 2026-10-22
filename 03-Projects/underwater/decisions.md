@@ -47,3 +47,7 @@ Người dùng duyệt triển khai local: phân bố + sinh cảnh là bắt bu
 ## UF-D024 — 2026-10-22 — Nguồn kế thừa theo camera cầm tay; gate helper cho camera và tag địa điểm
 
 Người dùng duyệt phương án tối ưu bản 3: viết lại hai đoạn camera cố định trong `01-Knowledge/habitats/underwater-realism.md` theo UF-D021, giữ phần quang học còn đúng; câu UF-D016 về tag vùng trong audience-and-caption được cập nhật theo UF-D023. Từ v2.1.6, `chayvideo_output.py check/save` yêu cầu video prompt bộ mới/reference có camera handheld và `checks.location_tag` xuất hiện đúng một lần trong mọi caption (legacy chưa có setting dùng `checks.location_none_reason`). Đây là kiểm cú pháp; chọn vùng và mô tả camera đúng cảnh vẫn là QA nội dung. Không sửa media/attempt lịch sử.
+
+## UF-D025 — 2026-10-22 — Hook 3 giây đầu và 5–10 beat
+
+Người dùng duyệt quy chuẩn 3 giây đầu với điều chỉnh: không chia mô tả chuỗi hành động thành giai đoạn 0–3s / 3–5s / sau 5s; có thể mô tả tới 10 beat; tổng thể 3 giây đầu phải giữ người xem cao, tình huống quyết định vẫn sau 5.0s. Thêm chuẩn chung “Mở đầu 3 giây” trong story-development và mục Hook 3 giây đầu trong format. Từ v2.2.0, `chayvideo_output.py` nhận 5–10 beat, yêu cầu beat đầu kết thúc ≤3.0s và `checks.hook_signal` trong (0, 3.0]; contract `underwater-3`. hook_text vẫn chỉ nằm trong caption, không vẽ lên media. Đây là quyết định biên tập cần kiểm bằng retention thực; không sửa media/attempt lịch sử.

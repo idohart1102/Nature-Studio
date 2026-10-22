@@ -191,7 +191,7 @@ class OutputTests(unittest.TestCase):
                     video_prompt='One continuous handheld underwater shot. [0.0–1.2s] Setup; [1.2–3.1s] Track; '
                                  '[3.1–5.6s] React; [5.6–6.3s] Key action; [6.3–10.0s] Aftermath.',
                     caption='Not buying it. #Muskie #MuskyFishing #WisconsinFishing',
-                    checks={'key_onset':5.6,'location_tag':'#WisconsinFishing'},
+                    checks={'key_onset':5.6,'hook_signal':1.2,'location_tag':'#WisconsinFishing'},
                     files={'INPUTS.md':'Source paths and hashes; no media generated.',
                            'settings.md':'Not executed; settings unknown.',
                            'review.md':'Prompt-only; media QA pending.'})
@@ -210,6 +210,25 @@ class OutputTests(unittest.TestCase):
             self.assertTrue(output.validate(data,underwater=True))
         data=self.good(); data['video_prompt']=data['video_prompt'].replace('[1.2','[1.3')
         self.assertTrue(output.validate(data,underwater=True))
+
+    def test_ten_beats_allowed_eleven_rejected(self):
+        bounds=['0.0','0.6','1.2','2.0','2.8','3.6','4.6','5.6','6.3','8.0','10.0']
+        data=self.good();data['video_prompt']='One continuous handheld underwater shot. '+' '.join(f'[{a}–{b}s] beat' for a,b in zip(bounds,bounds[1:]))
+        self.assertEqual(output.validate(data,underwater=True),[])
+        bounds.insert(1,'0.3');data['video_prompt']='One continuous handheld underwater shot. '+' '.join(f'[{a}–{b}s] beat' for a,b in zip(bounds,bounds[1:]))
+        self.assertTrue(any('5–10 beats' in e for e in output.validate(data,underwater=True)))
+
+    def test_hook_signal_window_and_first_beat(self):
+        for value in [0,3.01,4,'NaN',None,True]:
+            with self.subTest(value=value):
+                data=self.good();data['checks']['hook_signal']=value
+                self.assertTrue(any('hook_signal' in e for e in output.validate(data,underwater=True)))
+        data=self.good();data['checks']['hook_signal']=3
+        self.assertEqual(output.validate(data,underwater=True),[])
+        data=self.good();data['video_prompt']=data['video_prompt'].replace('[0.0–1.2s] Setup; [1.2–3.1s] Track; ','[0.0–3.1s] Setup and track; ')
+        self.assertTrue(any('first beat' in e for e in output.validate(data,underwater=True)))
+        data=self.good();del data['checks']['hook_signal']
+        self.assertEqual(output.validate({'caption':data['caption']},'caption',True),[])
 
     def test_caption_tags_and_newlines(self):
         for caption in ['Watch. #Muskie #Muskie #Fish',

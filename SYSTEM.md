@@ -2,7 +2,7 @@
 
 Version: 2.1 | Updated: 2026-10-18 | Scope: toàn kho
 
-Phiên bản tài liệu ở trên độc lập với phiên bản Nature Studio tại [VERSION](VERSION). Phiên bản workspace hiện hành là Nature Studio v2.1.6; xem [CHANGELOG.md](CHANGELOG.md) và [UPDATE.md](UPDATE.md) để xác định bản nguồn/cập nhật mà giữ dữ liệu riêng.
+Phiên bản tài liệu ở trên độc lập với phiên bản Nature Studio tại [VERSION](VERSION). Phiên bản workspace hiện hành là Nature Studio v2.2.0; xem [CHANGELOG.md](CHANGELOG.md) và [UPDATE.md](UPDATE.md) để xác định bản nguồn/cập nhật mà giữ dữ liệu riêng.
 
 ## Thẩm quyền và mâu thuẫn
 

@@ -408,7 +408,7 @@ def handoff(root, slug, production_id, source_attempt, image_attempt, image, rev
 
 def effective_contract(root, slug, production_id, data, mode, for_save=False):
     """Verify scoped bindings, not the authorship of the saved user request."""
-    contract = dict(version='underwater-2' if slug == 'underwater' else 'common-1', beat_count=None)
+    contract = dict(version='underwater-3' if slug == 'underwater' else 'common-1', beat_count=None)
     selection = data.get('asset_selection') if isinstance(data, dict) else None
     if selection is not None:
         import asset_catalog
@@ -519,8 +519,8 @@ def validate(data, mode='new', underwater=False, contract=None):
         beats = re.findall(r'\[(\d+(?:\.\d+)?)\s*[–—-]\s*(\d+(?:\.\d+)?)s\]', text)
         beats = [(Decimal(a), Decimal(b)) for a, b in beats]
         count = contract.get('beat_count') if isinstance(contract, dict) else None
-        if not (len(beats) == count if count is not None else 5 <= len(beats) <= 8):
-            errors.append('video_prompt: beat count must match explicit exception' if count is not None else 'video_prompt: 5–8 beats required')
+        if not (len(beats) == count if count is not None else 5 <= len(beats) <= 10):
+            errors.append('video_prompt: beat count must match explicit exception' if count is not None else 'video_prompt: 5–10 beats required')
         if (not beats or beats[0][0] != 0 or beats[-1][1] != 10
                 or any(a >= b for a, b in beats)
                 or any(beats[i][1] != beats[i+1][0] for i in range(len(beats)-1))):
@@ -535,6 +535,16 @@ def validate(data, mode='new', underwater=False, contract=None):
                 raise ValueError()
         except (ValueError, ArithmeticError):
             errors.append('checks.key_onset: provide actual intended onset >5 and <10')
+        # UF-D025: hook 0–3s is a declared, early, non-decisive signal; a beat must close by 3.0s.
+        if beats and beats[0][1] > 3:
+            errors.append('video_prompt: first beat must end by 3.0s (UF-D025 hook)')
+        hook = checks.get('hook_signal') if isinstance(checks, dict) else None
+        try:
+            signal = Decimal(str(hook))
+            if isinstance(hook, bool) or not signal.is_finite() or not 0 < signal <= 3:
+                raise ValueError()
+        except (ValueError, ArithmeticError):
+            errors.append('checks.hook_signal: provide intended first new signal time within (0, 3.0]s')
     return errors
 
 
