@@ -154,6 +154,8 @@ def set_status(root, lesson, target, *, by, authority=None, reason='', today=Non
     """Move a lesson to the status chosen in the sheet. `by` is 'user' or 'ai'."""
     meta, path = lesson['meta'], lesson['path']
     today = today or date.today().isoformat()
+    # Memory validator resolves authority as a workspace path with forward slashes on every OS.
+    authority = authority.replace('\\', '/') if isinstance(authority, str) else authority
     base = path.parent.parent
     old_rel = f'{path.parent.name}/{path.name}'
     new_status = {'Đã duyệt': 'active', 'Chờ duyệt': 'candidate'}.get(target, 'retired')
@@ -363,7 +365,7 @@ def pull(root):
     if result['lesson_changes'] or result['new_lessons'] or result['removed_rows']:
         receipt_path = state(root, 'approvals', f'{stamp}.json')
         save_json(receipt_path, receipt)
-        result['receipt'] = str(receipt_path.relative_to(root))
+        result['receipt'] = receipt_path.relative_to(root).as_posix()
     save_json(state(root, 'last-pull.json'), result)
     return result
 

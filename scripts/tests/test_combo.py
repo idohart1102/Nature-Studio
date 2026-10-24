@@ -87,6 +87,15 @@ class ComboTests(unittest.TestCase):
         self.assertEqual(combo.sheet_status(lesson['meta']), 'Không duyệt')
         self.valid()
 
+    def test_windows_style_authority_is_stored_with_forward_slashes(self):
+        combo.new_lesson(self.root, 'underwater', self.spec())
+        lesson = combo.lessons(self.root, 'underwater')[0]
+        receipt = combo.state(self.root, 'approvals', 'w.json'); receipt.write_text('{}')
+        windows = str(receipt.relative_to(self.root)).replace('/', '\\')
+        combo.set_status(self.root, lesson, 'Đã duyệt', by='user', authority=windows)
+        self.assertNotIn('\\', lesson['meta']['activation']['authority'])
+        self.valid()
+
     def test_ai_cannot_mark_approved_without_objective_activation(self):
         combo.new_lesson(self.root, 'underwater', self.spec())
         lesson = combo.lessons(self.root, 'underwater')[0]

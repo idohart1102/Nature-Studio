@@ -12,6 +12,7 @@ Phiên bản toàn workspace được đọc từ [VERSION](VERSION). Phiên b�
 - Đã kiểm thực tế 2026-10-25: 10/10 call hợp lệ thành công (generate ~30 giây, edit có ảnh tham chiếu 2,5–5 phút). `size` không được tôn trọng, khổ ảnh theo prompt; skill yêu cầu ghi khổ trong prompt và đo file thật.
 - Skill mới `/na-combo` v1.0 (UF-D026) và `scripts/combo.py` + `scripts/combo_sheet.py` (stdlib): sheet Google cố định round-trip qua .xlsx (giữ nguyên ID), tab 50 mã video + tab Bài học có ô chọn trạng thái/loại, tô đỏ dòng CHƯA ĐẠT, tô vàng bài Chờ duyệt; đồng bộ hai chiều với 05-Memory, nhận diện ô người dùng sửa, biên nhận duyệt; upload ảnh, kiểm checksum, xóa ảnh local. Test `test_combo.py`.
 - memory-policy v2.2: sheet là kênh duyệt; người dùng duyệt/thêm là nguồn chính thức; AI chỉ tự duyệt Ràng buộc có bằng chứng khách quan lặp lại; hai loại bài học; candidate là tiêu chí bắt buộc xét; chống trùng bằng `lesson-confirm`. quality-review v1.2: QA tối đa 5 vòng bằng reviewer độc lập. creativity.md v1.1: suất Khám phá/Thử nghiệm, idea-bank, tiêu chí độ mới/độ hay. `/na-chayvideo` v2.14, `/na-taoanh` v1.10 (ảnh mẫu từ lượt đầu khi phù hợp). CI kiểm 6 skill.
+- Sau push d40b820: CI Windows lỗi vì biên nhận duyệt bài học lưu đường dẫn `\`; `combo.py` nay luôn ghi đường dẫn `/` (cả receipt pull và `set_status`), thêm test.
 - `asset_catalog.py` chấp nhận tool `9router_image` trong actual-input; first-frame.md v1.4, model profile Sunburst v1.1, AGENTS/SYSTEM/START-HERE/INDEX cập nhật. Test mới `test_image_9router.py`.
 
 ## v2.2.1 — 2026-10-23
