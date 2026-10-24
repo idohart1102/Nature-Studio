@@ -8,6 +8,10 @@ Workspace sản xuất nội dung thiên nhiên bằng AI, tổ chức theo **Pr
 
 Skill `/na-danhgia`: chấm độc lập video render và số liệu sau đăng theo chuẩn Project, gồm cả chuyển động môi trường và yếu tố tự nhiên. Mọi skill đổi sang tiền tố `na-` (ví dụ `/na-chayvideo`); tên cũ vẫn dùng được. Xem [07-Releases/v2.2.1.md](07-Releases/v2.2.1.md).
 
+## Chưa phát hành — /na-combo
+
+Skill `/na-combo` chạy trọn lượt: N bộ nội dung (QA tối đa 5 vòng, reviewer độc lập) → first frame → upload Drive + ghi sheet cố định (tab 50 mã video, tab Bài học có ô duyệt) → xóa ảnh local → tổng kết bài học. Bài học là cổng QA cho mọi kết quả; có suất Khám phá/Thử nghiệm và kho tiền đề để ý tưởng không bị bó hẹp. Tạo ảnh có tuyến dự phòng Sunburst qua 9router.
+
 ## Kế thừa v2.2.0
 
 Hook 3 giây đầu (UF-D025): chuẩn chung cho mở đầu và mục riêng Underwater; 5–10 beat, beat đầu ≤3.0s, `checks.hook_signal` ≤3.0s, key vẫn sau 5.0s. Xem [07-Releases/v2.2.0.md](07-Releases/v2.2.0.md).

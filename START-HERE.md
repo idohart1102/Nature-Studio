@@ -59,8 +59,12 @@ Khi tạo concept mới, đọc [phương pháp phát triển câu chuyện](00-
 
 ## /na-taoanh — ảnh first frame có QA
 
-Gửi `/na-taoanh <mã video>` hoặc “tạo ảnh”/“tạo first frame” trong ngữ cảnh Project rõ. [Skill](.agents/skills/na-taoanh/SKILL.md) đọc concept và quy chuẩn, tạo/sửa qua image_gen, xem ảnh thực và QA sau mỗi lượt. Dừng ngay khi đạt hoặc tối đa 5 call; chưa đạt thì báo và xin thêm lượt, không reset qua chat. Ảnh đạt khác với bạn duyệt và khác với video đạt. Ưu tiên Sunburst nếu chọn được; nếu không, dùng model mặc định image_gen và tiếp tục không hỏi lại. QA kiểm chất lượng ảnh, không bắt buộc xác minh model; không giả đã chọn Sunburst. Lệnh chỉ xây/sửa skill không chạy tạo ảnh.
+Gửi `/na-taoanh <mã video>` hoặc “tạo ảnh”/“tạo first frame” trong ngữ cảnh Project rõ. [Skill](.agents/skills/na-taoanh/SKILL.md) đọc concept và quy chuẩn, tạo/sửa qua image_gen (không dùng được thì Sunburst qua 9router), xem ảnh thực và QA sau mỗi lượt. Dừng ngay khi đạt hoặc tối đa 5 call; chưa đạt thì báo và xin thêm lượt, không reset qua chat. Ảnh đạt khác với bạn duyệt và khác với video đạt. Ưu tiên Sunburst nếu chọn được; nếu không, dùng model mặc định image_gen và tiếp tục không hỏi lại. QA kiểm chất lượng ảnh, không bắt buộc xác minh model; không giả đã chọn Sunburst. Lệnh chỉ xây/sửa skill không chạy tạo ảnh.
 
 ## /na-danhgia — chấm video render và số liệu
 
 Gửi `/na-danhgia <mã video>` kèm file render, hoặc kèm số liệu sau đăng. [Skill](.agents/skills/na-danhgia/SKILL.md) kiểm kỹ thuật bằng `media_review.py`, xem frame 3 giây đầu và quanh key, nghe âm khi có khả năng, rồi ghi review, CURRENT-STATE và performance. Lỗi được chuyển cho /na-chayvideo hoặc /na-taoanh sửa; skill không tự sửa hay render.
+
+## /na-combo — trọn lượt: ý tưởng → ảnh → sheet → bài học
+
+Gửi `/na-combo <số bộ> [hướng chủ đề] [loài]`, ví dụ `/na-combo 10 săn mồi tự nhiên`. [Skill](.agents/skills/na-combo/SKILL.md) đọc bài học và phản hồi trong sheet trước, viết N bộ qua /na-chayvideo (QA tối đa 5 vòng bằng reviewer độc lập), tạo first frame qua /na-taoanh, upload ảnh lên folder Drive cố định rồi xóa ảnh local, ghi tiếp vào sheet cố định (mỗi tab 50 mã video, tab "Bài học" riêng; dòng chưa đạt tô đỏ) và tổng kết bài học. Bạn duyệt bài học bằng ô chọn trạng thái trong tab "Bài học" hoặc tự thêm dòng; lượt sau AI đọc lại trước khi làm.

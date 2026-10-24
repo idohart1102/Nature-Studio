@@ -1,6 +1,6 @@
 # Tạo ảnh first frame và QA
 
-Version: 1.3 | Updated: 2026-10-18 | Màu tự nhiên, hạn chế ám vàng toàn cảnh
+Version: 1.4 | Updated: 2026-10-25 | Tuyến dự phòng Sunburst qua 9router
 
 Thực thi theo [.agents/skills/na-taoanh/SKILL.md](../.agents/skills/na-taoanh/SKILL.md). Đây là phương pháp chung; tiêu chí hình ảnh lấy từ Project, không mặc định cá/nước/9:16 cho mọi dự án.
 
@@ -40,7 +40,7 @@ Mỗi lượt là một attempt Axx riêng, dùng đúng mã video hiện có. C
 
 ## Lựa chọn model
 
-Sunburst là ưu tiên, image_gen là tuyến thực thi. Chọn Sunburst nếu công cụ hỗ trợ; nếu không tìm được hoặc không có selector thì dùng model mặc định và tiếp tục không hỏi lại. Danh tính model không thuộc tiêu chí QA và không chặn sinh/duyệt chất lượng ảnh. Ghi actual_model=unknown nếu tool không công bố, không nhận đã dùng Sunburst. Không tự chuyển API/CLI. Xem [model profile](../02-Models/model-profiles/sunburst-imagegen.md).
+Sunburst là ưu tiên, image_gen là tuyến thực thi. Chọn Sunburst nếu công cụ hỗ trợ; nếu không tìm được hoặc không có selector thì dùng model mặc định và tiếp tục không hỏi lại. Khi không dùng được image_gen (không có tool hoặc tool báo không khả dụng), gọi Sunburst qua 9router bằng `scripts/image_9router.py`; không dùng API/CLI khác. Tuyến 9router không tôn trọng `size`: ghi khổ ảnh trong prompt và đo file thật. Danh tính model không thuộc tiêu chí QA và không chặn sinh/duyệt chất lượng ảnh. Ghi actual_model=unknown nếu tool không công bố, không nhận đã dùng Sunburst. Xem [model profile](../02-Models/model-profiles/sunburst-imagegen.md).
 
 ## Kiểm liên kết ảnh trước tái dùng
 

@@ -34,6 +34,7 @@ Thumbs.db
 **/04-Productions/**
 !04-Productions/README.md
 **/idea-ledger.md
+**/idea-bank.md
 !00-Standards/templates/idea-ledger.md
 # New lessons default private; explicitly force-add only public/reviewed exports
 /05-Memory/**/L-*.md

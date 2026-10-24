@@ -64,8 +64,12 @@ Video mới dùng **XX-YYYY**, hai chữ A–Z riêng từng Project local, bố
 
 ## Ảnh first frame — v1.5
 
-/na-taoanh theo skill và first-frame.md: tối đa 5 call image_gen mỗi cycle, mỗi call đã gửi kể cả lỗi tính lượt; không reset khi đổi chat. Hết chưa đạt dừng xin thêm lượt, chỉ grant sau chấp thuận thật. Ưu tiên Sunburst; không tìm được hoặc không có selector thì dùng model mặc định image_gen, không hỏi lại. Ghi actual unknown nếu tool không công bố; danh tính model không chặn QA hoặc sinh ảnh. QA chỉ pass sau xem/đo ảnh thực và mọi tiêu chí bắt buộc pass; không tự duyệt người dùng hoặc tạo video. Bộ đếm .image-qa.sqlite3 nằm trong production local, không vào bản public.
+/na-taoanh theo skill và first-frame.md: tối đa 5 call image_gen mỗi cycle, mỗi call đã gửi kể cả lỗi tính lượt; không reset khi đổi chat. Hết chưa đạt dừng xin thêm lượt, chỉ grant sau chấp thuận thật. Ưu tiên Sunburst; không tìm được hoặc không có selector thì dùng model mặc định image_gen, không hỏi lại. Không dùng được image_gen thì gọi Sunburst qua 9router (`scripts/image_9router.py`), cùng bộ đếm lượt. Ghi actual unknown nếu tool không công bố; danh tính model không chặn QA hoặc sinh ảnh. QA chỉ pass sau xem/đo ảnh thực và mọi tiêu chí bắt buộc pass; không tự duyệt người dùng hoặc tạo video. Bộ đếm .image-qa.sqlite3 nằm trong production local, không vào bản public.
 
 ## Đánh giá video — v2.2.1
 
 /na-danhgia là bước chấm độc lập sau render và sau đăng: review theo templates/review.md, CURRENT-STATE schema2 từng miền, performance.md với retention 3s và trước key. Không đổi approval/selected_render, không sửa prompt hay media.
+
+## Combo và bài học làm cổng QA — 2026-10-25 (UF-D026)
+
+/na-combo điều phối /na-chayvideo + /na-taoanh + Drive/sheet cố định qua `scripts/combo.py` (tab 50 mã video, tab Bài học có Đã duyệt/Chờ duyệt/Không duyệt/Ngừng áp dụng). Mọi kết quả qua bảng bài học theo memory-policy v2.2 (query kèm candidates; Ràng buộc là cổng, Định hướng sáng tạo chỉ tham khảo); QA văn bản tối đa 5 vòng bằng reviewer độc lập; khám phá có chủ đích theo creativity.md v1.1. Ảnh sinh ra được upload rồi xóa local; hồ sơ văn bản giữ lại.

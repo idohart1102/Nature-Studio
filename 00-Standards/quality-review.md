@@ -35,3 +35,9 @@ Khi có render, theo [media-review-and-finishing.md](media-review-and-finishing.
 ## Skill đánh giá — v2.2.1
 
 Mức video-reviewed và published-measured chạy qua [/na-danhgia](../.agents/skills/na-danhgia/SKILL.md): chấm độc lập với người viết prompt, ghi review/CURRENT-STATE/performance, không tự sửa hoặc render.
+
+## QA nhiều vòng có bài học — v1.2, 2026-10-25
+
+Bộ nội dung /na-chayvideo, chạy riêng hoặc trong /na-combo (UF-D026): QA tối đa **5 vòng**, dừng sớm khi đạt. Mỗi vòng do một agent reviewer độc lập chấm: context mới, chỉ nhận bảng tiêu chí, đầu ra và đường dẫn nguồn cần đối chiếu, không nhận lập luận của người viết. Reviewer chấm từng tiêu chí pass/fail/not_checked kèm lỗi cụ thể và hướng sửa; người viết sửa đúng lỗi rồi gửi vòng sau, reviewer kiểm cả hồi quy.
+
+Bảng tiêu chí = tiêu chí gốc (output-contract, format, story, caption, sinh học/dụng cụ, địa điểm) + độ mới + độ hay theo creativity.md + mọi bài học theo memory-policy v2.2 (Ràng buộc Đã duyệt bắt buộc đạt; Ràng buộc Chờ duyệt bắt buộc xét). Hết 5 vòng chưa đạt: giữ bản tốt nhất, ghi "CHƯA ĐẠT" và lỗi còn lại, không hạ chuẩn. review.md ghi số vòng, kết quả từng vòng và bài học đã áp dụng. Môi trường không có công cụ agent thì ghi rõ giới hạn self-review. Ảnh first frame giữ hạn mức 5 lượt của /na-taoanh với cùng bảng bài học cho task ảnh.

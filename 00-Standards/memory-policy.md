@@ -1,6 +1,6 @@
 # Ghi và sử dụng bộ nhớ
 
-Version: 2.1 | Updated: 2026-10-17 | Truy xuất chọn lọc v1.8; giữ gate activation
+Version: 2.2 | Updated: 2026-10-25 | Kênh duyệt sheet /na-combo; bài học là cổng QA; chống trùng
 
 ## Phân luồng và nguồn duy nhất
 
@@ -52,3 +52,15 @@ Không ghi chuỗi suy luận nội bộ; chỉ lưu kết luận, hành động
 ## Chia sẻ lesson khi cập nhật hệ thống — v1.4
 
 Theo [publication.md](publication.md), /na-dongvideo tạo lesson mặc định private, reviewed=false. Khi publish đã được giao, rà bài học cải thiện ở cả Project/shared để đưa bản làm sạch lên hệ thống; không tự upload production làm bằng chứng. Public/reviewed độc lập candidate/active/retired, giữ phạm vi và sự thật. Lesson chưa thể chia sẻ ở lại local, nêu rõ thay vì loại hết bộ nhớ hoặc tự active. Chỉ mục public chỉ liệt kê mục đã xuất.
+
+## Kênh duyệt sheet và bài học làm cổng QA — v2.2, 2026-10-25
+
+Người dùng chốt (UF-D026) cho /na-combo, đồng thời áp cho /na-chayvideo và /na-taoanh khi chạy riêng:
+
+- Tab "Bài học" trong sheet cố định là bản điều khiển; bản gốc đầy đủ vẫn ở 05-Memory. Ánh xạ: **Đã duyệt** = active, **Chờ duyệt** = candidate, **Không duyệt**/**Ngừng áp dụng** = retired (giữ lại để chặn đề xuất lặp). `scripts/combo.py` đồng bộ hai chiều; ô người dùng đã sửa so với lần đẩy trước luôn thắng, AI không ghi đè.
+- Người dùng chọn "Đã duyệt" hoặc tự thêm bài trong sheet là **nguồn bài học chính thức**: kích hoạt `user`, authority là biên nhận sheet local `.nature-studio/combo/approvals/`. Với bài người dùng thêm, AI chỉ kiểm trùng, làm rõ phạm vi/điều kiện và ghi nguồn; không hạ trạng thái người dùng đã chọn.
+- AI tự đặt "Đã duyệt" chỉ khi đủ gate tự kích hoạt ở trên (procedural, objective pass, regression, record 06-Evaluation/results) **và** đồng thời: bằng chứng khách quan trên media/file thật hoặc helper; lặp lại ít nhất 2 lần hoặc có nguồn chính thức; thuộc loại Ràng buộc. Mọi trường hợp khác để "Chờ duyệt".
+- Hai loại bài: **Ràng buộc** (đúng sinh học, dụng cụ, model, format, quy trình) là cổng QA; **Định hướng sáng tạo** (gu, kiểu chuyện, giọng) chỉ để tham khảo khi viết, không bao giờ là cổng chặn, không viết dạng cấm và không tự duyệt.
+- Ngoại lệ có chủ đích cho candidate trong phạm vi này: trước khi trả **bất kỳ** kết quả nào phải query Project + shared kèm `--candidates`. Ràng buộc "Đã duyệt" là tiêu chí bắt buộc đạt; Ràng buộc "Chờ duyệt" là tiêu chí bắt buộc xét: áp dụng, hoặc ghi lý do không áp dụng; Định hướng sáng tạo được đọc và ghi đã cân nhắc. Ghi từng bài applied / not_applicable (lý do) / trial trong INPUTS và cột "Bài học đã áp dụng". Candidate vẫn không được gọi là kết luận đã xác nhận.
+- Chống trùng: trước khi tạo bài, so nghĩa với mọi bài kể cả retired theo hai trục hành động + phạm vi. Trùng thì `combo.py lesson-confirm` (tăng số lần xác nhận, thêm nguồn) thay vì tạo dòng mới; cùng ý khác phạm vi thì gộp một bài và ghi "Trùng/gộp với"; bài người dùng thêm bị trùng thì ghi chú thay vì nhân bản. Mỗi lượt chỉ thêm ít bài có tác động rõ, không ghi nhận xét vụn.
+- Tổng kết cuối lượt /na-combo theo quy trình /na-dongvideo cho đúng phạm vi lượt đó; quyền tự kích hoạt không rộng hơn gate trên.

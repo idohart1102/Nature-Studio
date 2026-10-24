@@ -32,11 +32,11 @@ jobs:
           from pathlib import Path
           import yaml
           paths = sorted(Path('.agents/skills').glob('*/SKILL.md'))
-          assert len(paths) == 5, paths
+          assert len(paths) == 6, paths
           for path in paths:
               metadata = yaml.safe_load(path.read_text(encoding='utf-8').split('---', 2)[1])
               assert isinstance(metadata, dict), path
               assert metadata.get('name') and metadata.get('description'), path
               assert metadata['name'] == path.parent.name and metadata['name'].startswith('na-'), path
-          print('PyYAML', yaml.__version__, ': five na- skill frontmatters parsed')
+          print('PyYAML', yaml.__version__, ': six na- skill frontmatters parsed')
           PY

@@ -52,6 +52,15 @@
     ],
     "entities": [],
     "interactions": []
+  },
+  "sheet": {
+    "type": "Định hướng sáng tạo",
+    "group": "Caption",
+    "applies": "Viết caption",
+    "author": "AI",
+    "confirmations": 1,
+    "updated": "2026-10-17",
+    "basis": "Thử caption hướng vào chi tiết thật theo footage; hiệu quả khán giả chưa kiểm, giữ format Project."
   }
 }
 ---

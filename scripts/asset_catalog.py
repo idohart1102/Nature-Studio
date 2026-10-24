@@ -399,8 +399,8 @@ def inputs_check(root, record, project_id=None, historical=False):
         if not isinstance(record.get(key),str) or not record[key].strip():errors.append(key+' required after reservation/dispatch')
     if record.get('outcome') not in ('not_submitted','success','error','cancelled','unknown'):errors.append('Invalid call outcome')
     tool=record.get('tool')
-    if not isinstance(tool,dict) or tool.get('name')!='image_gen' or not isinstance(tool.get('arguments'),dict):
-        raise ValueError('Record actual image_gen arguments')
+    if not isinstance(tool,dict) or tool.get('name') not in ('image_gen','9router_image') or not isinstance(tool.get('arguments'),dict):
+        raise ValueError('Record actual image_gen/9router_image arguments')
     args=tool['arguments'];errors.extend(binding_errors(root,record.get('prompt'),'prompt'))
     if not errors:
         if local(root,record['prompt']['path']).read_text(encoding='utf-8-sig')!=args.get('prompt'):errors.append('Prompt differs from tool arguments')

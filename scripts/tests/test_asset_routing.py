@@ -65,6 +65,10 @@ class RoutingTests(unittest.TestCase):
 
     def test_actual_inputs_and_historical_catalog_change(self):
         record=self.actual();self.assertEqual(a.inputs_check(self.root,record)['status'],'matched')
+        routed=copy.deepcopy(record);routed['tool']['name']='9router_image'
+        self.assertEqual(a.inputs_check(self.root,routed)['status'],'matched')
+        routed['tool']['name']='other_api'
+        with self.assertRaises(ValueError):a.inputs_check(self.root,routed)
         record.update(outcome='success',output=self.bind(self.root/'output.bin'))
         old=self.select()['records'][0]['record_sha256'];self.record['notes']='metadata changed';self.reg(expected=old)
         self.assertEqual(a.inputs_check(self.root,record)['status'],'needs_review')

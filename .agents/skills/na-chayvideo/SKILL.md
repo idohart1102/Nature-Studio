@@ -5,7 +5,7 @@ description: Tạo hoặc sửa bộ nội dung video Nature Studio khi gọi /n
 
 # /na-chayvideo
 
-Version: 2.13 | Updated: 2026-10-22 | Preflight/ledger, ghi feedback mỗi lượt sửa, tách phiên theo pha
+Version: 2.14 | Updated: 2026-10-25 | Bài học là cổng QA (kể cả Chờ duyệt), QA tối đa 5 vòng reviewer độc lập, khám phá có chủ đích
 
 Gốc workspace chứa START-HERE.md, đi lên ba cấp từ thư mục skill; không ghi cứng ổ đĩa. Đọc START-HERE.md và SYSTEM.md trước công việc; trong cùng phiên không cần nạp lại nguồn nguyên vẹn đã đọc. Yêu cầu hiện hành của người dùng ưu tiên trong phạm vi được giao.
 
@@ -24,7 +24,7 @@ Gốc workspace chứa START-HERE.md, đi lên ba cấp từ thư mục skill; k
 - Mặc định một bộ bốn mục: **Ý TƯỞNG** tiếng Việt; **FIRST FRAME PROMPT**, **VIDEO PROMPT** tiếng Anh; **CAPTION** theo hợp đồng Project. Underwater trả Chuẩn/Hài hước/Tò mò; mỗi bản đúng thứ tự caption EN + hashtag → lược dịch caption VI → hook text EN 1–9 từ → lược dịch hook VI. Viết trực tiếp giọng người câu cá Mỹ, rồi lược dịch; loại văn dịch/slang hoặc câu đùa gượng. Mỗi prompt và từng caption là một đoạn riêng. JSON giữ `caption` chuỗi, thêm `caption_variants`/`caption_variant` theo template; không nhét cả ba bản vào một chuỗi caption. Sửa đúng phần được giao; chi tiết giọng/hashtag theo nguồn Project, không áp luật Underwater lên Project khác.
 - Tạo mới phải đọc creativity/story-development chung + Project; nghiên cứu đúng loài/vùng/tình huống. Ví dụ không là danh mục đóng. Độ mới xét hành vi/nhân quả, không đổi tên loài/màu/địa danh rồi lặp chuyện.
 - Packet/index tạo lại được, không cao hơn nguồn gốc. Không cắt yêu cầu để đạt ngân sách token; thiếu/stale/coverage chưa đủ thì đọc thêm. Không bịa nguồn hoặc đã xem/nghe/đo/QA.
-- Chỉ áp active gốc đúng điều kiện, ghi ID/version/path/cách dùng; không tự active candidate. Bảo toàn registry/media/quota ảnh/FIRST-FRAME.json/lịch sử; không tự /na-dongvideo hoặc /na-taoanh.
+- Áp bài học theo [memory-policy v2.2](../../../00-Standards/memory-policy.md#kênh-duyệt-sheet-và-bài-học-làm-cổng-qa--v22-2026-10-25): query kèm `--candidates`; Ràng buộc Đã duyệt bắt buộc đạt, Ràng buộc Chờ duyệt bắt buộc xét, Định hướng sáng tạo chỉ tham khảo. Ghi ID/version/path/applied hoặc lý do không áp dụng; không tự active candidate ngoài gate. Bảo toàn registry/media/quota ảnh/FIRST-FRAME.json/lịch sử; không tự /na-dongvideo hoặc /na-taoanh.
 - Chỉ văn bản và hồ sơ local. Media/chi tiền/đăng/push cần yêu cầu tương ứng; sửa skill không là sản xuất. Thiếu brief không reserve mã/lưu ý tưởng giả.
 
 ## Phiên làm việc
@@ -37,3 +37,11 @@ Máy mới hoặc catalog thiếu bộ ref đi kèm: nếu có `08-Assets/refere
 
 
 Khi Project cần địa điểm thực, dùng [chuẩn địa điểm](../../../00-Standards/location-context.md): profile loài → descriptor đúng loài → hồ sơ vùng chọn; khóa setting trong INPUTS và frame_state.environment. Underwater yêu cầu một hashtag địa điểm trong tổng 3–5 tag mỗi caption khi setting đã xác nhận; caption-only/legacy thiếu setting xử lý theo nguồn Project, không đoán vùng.
+
+## QA và bài học — v2.14
+
+Trước khi viết: chạy `python scripts/memory_retrieval.py query <slug> --mode <mode> --entity ... --interaction ... --candidates --out .nature-studio/memory/<ctx>-query.json`, đọc hết trang/unknown, mở gốc bài có thể áp dụng; nếu có sheet combo (`.nature-studio/combo/config.json`) thì chạy `python scripts/combo.py pull` và `apply-user` trước để trạng thái người dùng vừa duyệt có hiệu lực. Dựng bảng tiêu chí theo [quality-review v1.2](../../../00-Standards/quality-review.md#qa-nhiều-vòng-có-bài-học--v12-2026-10-25): tiêu chí gốc + độ mới + độ hay + từng bài học kèm cách kiểm.
+
+Sau khi viết và helper `check` đạt: QA tối đa **5 vòng** bằng reviewer độc lập (Agent tool, context mới; chỉ đưa bảng tiêu chí, JSON đầu ra và đường dẫn nguồn, không đưa lập luận). Reviewer trả pass/fail từng tiêu chí, lỗi cụ thể, hướng sửa; sửa đúng lỗi, chạy lại helper rồi gửi vòng sau. Dừng sớm khi mọi tiêu chí bắt buộc pass. Hết 5 vòng chưa đạt: giữ bản tốt nhất, ghi "CHƯA ĐẠT" và lỗi còn lại trong review.md/sheet, không hạ chuẩn hay đổi chuyện đã khóa để lách. Không có Agent tool thì tự QA và ghi giới hạn self-review.
+
+Khám phá theo [creativity.md](../../../00-Standards/creativity.md#khám-phá-có-chủ-đích--2026-10-25): xét `03-Projects/<slug>/idea-bank.md` trước khi phát triển tiền đề; lượt ≥3 bộ có ≥30% suất Khám phá + 1 suất Thử nghiệm; ghi tiền đề tốt chưa dùng vào idea-bank. Hướng chủ đề do người dùng giao từng lượt; không mặc định câu cá bằng mồi hay săn mồi tự nhiên.
