@@ -12,14 +12,14 @@
  "look_alikes": [{"name": "sauger", "scientific_name": "Sander canadensis"}, {"name": "saugeye", "scientific_name": "Sander canadensis x vitreus"}, {"name": "yellow perch", "scientific_name": "Perca flavescens"}],
  "modules": {"angling": "01-Knowledge/equipment/species/walleye-angling.md"},
  "status": "researched",
- "version": "3.0",
+ "version": "3.1",
  "updated": "2026-10-25",
  "review_due": "2027-10-25",
  "sources_file": "01-Knowledge/sources/species/walleye.md"
 }
 ```
 
-Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.md). Nguồn: [sổ nguồn](../sources/species/walleye.md). ID giữ từ v2.1; tên cũ *Stizostedion vitreum* là synonym [S1].
+Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.md). Nguồn: [sổ nguồn](../sources/species/walleye.md). ID giữ từ v2.1; tên cũ *Stizostedion vitreum* là synonym [S1]. v3.1 thêm lịch mùa và ảnh thật độ phân giải gốc.
 
 ## 1. Nhận dạng
 
@@ -65,7 +65,24 @@ Cá cái lớn nhanh và to hơn cá đực [S7]; tuổi thọ trung bình ~7 n�
 ## 4. Hành vi
 
 - **Theo ánh sáng:** ăn ở nước nông lúc bình minh/hoàng hôn; ban ngày vào bóng râm của cover, thiếu cover thì xuống sâu [S4]. Nước đục, sóng hoặc mây làm cá hoạt động cả ngày [S4]. Không coi mọi walleye chỉ ăn đêm hoặc luôn sát đáy.
-- **Sinh sản:** trên đá, sỏi, sâu 1–6 ft, cá đực tới trước, đỉnh ở 42–50 °F [S4]; Wisconsin giữa tháng 4 – đầu tháng 5, trứng nở sau 26 ngày ở 40 °F hoặc 7 ngày ở 57 °F, không chăm con [S7].
+- **Sinh sản:** trên đá, sỏi, sâu 1–6 ft, cá đực tới trước, đỉnh ở 42–50 °F [S4]; Wisconsin giữa tháng 4 – đầu tháng 5, trứng nở sau 26 ngày ở 40 °F hoặc 7 ngày ở 57 °F, không chăm con [S7]; Ohio đẻ suốt tháng 4 ở 40–55 °F [S15]. Cá chạy sinh sản ngược sông, ví dụ từ hệ Winnebago lên sông Wolf [S7].
+- **Theo mùa:** xuân tụ gần bờ trên bãi cát ăn đàn shiner; hè xuống sâu khi nước ấm; cuối hè–thu dần trở lại vùng nông và tản rộng [S5]. Ở sông, cá vào riffle nông lúc sáng sớm/chiều tối vào tháng 4 và tháng 10; cuối thu tới khi đóng băng tụ ở vùng trú đông sâu, ít dòng [S14]. Mùa băng vẫn câu được bằng tip-up/jig [S7].
+- **Ánh sáng yếu:** bình minh, hoàng hôn và sau khi tối là lúc câu tốt nhất (tháng 5, 6, 10) [S7]; tapetum giúp ăn ban đêm, yellow perch nhìn kém hơn trong tối [S4].
+
+| Tháng | Vùng | Hành vi | Nguồn |
+|---|---|---|---|
+| Đầu xuân | Minnesota | Cá đực vào bãi đẻ trước, nước chỉ vài độ trên điểm đóng băng | S4 |
+| T4 | Ohio | Đẻ suốt tháng 4 ở 40–55 °F | S15 |
+| Giữa T4 – đầu T5 | Wisconsin | Đẻ trên đá/sỏi; chạy sinh sản ngược sông (Wolf River) | S7 |
+| T4 và T10 | Sông Iowa | Vào riffle nông lúc sáng sớm/chiều tối | S14 |
+| Xuân | Hồ Minnesota | Tụ gần bờ, bãi cát lớn, ăn đàn shiner | S5 |
+| T5, T6, T10 | Wisconsin | Bình minh, hoàng hôn, sau khi tối là lúc câu tốt nhất | S7 |
+| Hè | Minnesota | Xuống nước sâu, mát, tránh sáng; ăn cả côn trùng | S4, S5 |
+| Cuối hè – thu | Hồ Minnesota | Dần về bờ/vùng nông, tản rộng; một số ở lại nước sâu | S5 |
+| Cuối thu → đóng băng | Iowa | Tụ ở vùng trú đông sâu, ít dòng; có cá rất lớn | S14 |
+| Mùa băng | Wisconsin | Câu được dưới băng bằng tip-up/jig | S7 |
+
+Nguồn ghi mùa hoặc tháng như trên; không có nguồn A/B nêu tháng đóng băng.
 
 ## 5. Tương tác
 
@@ -95,7 +112,8 @@ Hấp dẫn và viral cần kiểm qua output thực, không từ một fact ri�
 
 ## 8. Chưa biết và giới hạn
 
+- Chưa có nguồn A/B nêu "băng đầu mùa tháng 12" hay đợt chạy sông mùa thu ngoài riffle tháng 10 ở Iowa [S14]; tháng đóng băng thay đổi theo hồ/năm.
 - Kỷ lục thế giới 1960 chưa xác minh được qua IGFA/TWRA [S10, S11]; chi tiết tranh cãi chỉ từ nguồn cấp E.
 - Trang Minnesota DNR đọc qua bản lưu Wayback; Michigan DNR chưa mở lại.
 - Chưa mở Catalog of Fishes; chưa có tên tiếng Việt.
-- Ref ảnh: một ảnh thật adult (P1) đạt identity; ảnh đầu/răng và fingerling chỉ dựa vào chú thích; chưa có ref `scale` có số đo.
+- Ref ảnh: adult dưới nước (identity, vây lưng gập nên không thấy mảng sẫm), cận đầu/miệng có răng nanh (anatomy), đàn fingerling dưới nước (juvenile). Chưa có ảnh fry đạt chuẩn, chưa có ref `scale` có số đo.

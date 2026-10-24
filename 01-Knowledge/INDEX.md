@@ -26,3 +26,7 @@ Ba hồ sơ trên đã được bổ sung văn bản có nguồn ngày 2026-10-1
 ## Hồ sơ loài v3 — 2026-10-25
 
 Ba hồ sơ Redfish/Muskie/Walleye nâng lên v3.0 theo [chuẩn hồ sơ loài](../00-Standards/species-profile-standard.md), giữ ID: metadata JSON, bảng cỡ có Loại/Nguồn, Checklist hình ảnh, [sổ nguồn](sources/species/) có cấp A–E và trạng thái truy cập, module câu tách tại `equipment/species/`. Thêm loài bằng `scripts/species_profiles.py new`; tra tên bằng `resolve`, không đọc chỉ mục vào context.
+
+## Thư viện cá câu Mỹ — v3.1, 2026-10-25
+
+22 hồ sơ loài (xem [chỉ mục loài](species/INDEX.md)), mỗi loài có sổ nguồn và module câu. Ảnh tham chiếu thật ghi trong [manifest ảnh](sources/species/photo-references.json); file ảnh ở local, tải bằng `python scripts/species_profiles.py photos-fetch`.

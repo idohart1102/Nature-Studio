@@ -22,7 +22,7 @@ def profile(slug, sid, scientific, names, extra='', size_kind='typical', modules
         f'# {names[0]}', '```json\n' + json.dumps(meta) + '\n```',
         f'## 1. Nhận dạng\n\nDấu nhận dạng {cite}',
         f'## 2. Kích cỡ và giai đoạn\n\n| Thông số | Giá trị | Đơn vị | Phạm vi | Loại | Nguồn |\n|---|---|---|---|---|---|\n| TL | 50 | cm | adult | {size_kind} | S2 |',
-        '## 3. Sinh cảnh và phân bố\n\nx', '## 4. Hành vi\n\nx', '## 5. Tương tác\n\nx',
+        '## 3. Sinh cảnh và phân bố\n\nx', '## 4. Hành vi\n\n| Tháng | Vùng | Hành vi | Nguồn |\n|---|---|---|---|\n| T10 | US | spawn | S1 |', '## 5. Tương tác\n\nx',
         '## 6. Điểm đáng xem\n\nx', '## 7. Checklist hình ảnh\n\n- a\n- b\n- c',
         '## 8. Chưa biết và giới hạn\n\nx' + extra])
     return body
@@ -104,6 +104,72 @@ class SpeciesProfileTests(unittest.TestCase):
         def fail(url):
             raise OSError('offline')
         self.assertEqual({r['status'] for r in sp.snapshot(self.root, 'alpha', fetch=fail)['sources']}, {'fetch_error'})
+
+
+def png(width, height):
+    return b'\x89PNG\r\n\x1a\n' + b'\x00\x00\x00\rIHDR' + width.to_bytes(4, 'big') + height.to_bytes(4, 'big') + b'\x08\x02\x00\x00\x00'
+
+
+def jpeg(width, height):
+    return (b'\xff\xd8\xff\xe0\x00\x04ab' + b'\xff\xc0\x00\x11\x08' + height.to_bytes(2, 'big')
+            + width.to_bytes(2, 'big') + b'\x03' + b'\x00' * 9 + b'\xff\xd9')
+
+
+class PhotoManifestTests(unittest.TestCase):
+    def setUp(self):
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        self.root = Path(temp.name).resolve()
+        target = self.root / '01-Knowledge/species/alpha.md'
+        target.parent.mkdir(parents=True)
+        target.write_text(profile('alpha', 'K-SP-ALPHA-001', 'Alpha one', ['alpha fish']), encoding='utf-8')
+        ledger_path = self.root / '01-Knowledge/sources/species/alpha.md'
+        ledger_path.parent.mkdir(parents=True)
+        ledger_path.write_text(ledger('K-SP-ALPHA-001'), encoding='utf-8')
+        (self.root / '01-Knowledge/species/INDEX.md').write_text(sp.render_index(self.root), encoding='utf-8')
+        self.raw = png(2000, 1200)
+
+    def manifest(self, **change):
+        import hashlib
+        item = dict(asset_id='PH-ALPHA-ADULT-SIDE-01', entity_id='K-SP-ALPHA-001', stage='adult', variant=None, view='side',
+                    roles=['identity'], page_url='https://commons.example/File', file_url='https://upload.example/a.png',
+                    license='CC BY-SA 4.0', credit='Someone', sha256=hashlib.sha256(self.raw).hexdigest(), width=2000,
+                    height=1200, subject_coverage='medium', quality='1080p', observed='o', species_basis='b', use='u',
+                    reviewed='2026-10-25')
+        item.update(change)
+        path = self.root / sp.PHOTO_MANIFEST
+        path.write_text(json.dumps(dict(schema=1, photos=[item])), encoding='utf-8')
+
+    def test_tiers_and_measured_sizes(self):
+        self.assertEqual(sp.photo_tier(1920, 1080, 'small'), '1080p')
+        self.assertEqual(sp.photo_tier(1280, 720, 'large'), '720p')
+        self.assertIsNone(sp.photo_tier(1280, 720, 'medium'))
+        self.assertEqual(sp.photo_tier(1900, 1200, 'large'), '720p')
+        self.assertEqual(sp.image_size(png(2000, 1200)), (2000, 1200))
+        self.assertEqual(sp.image_size(jpeg(3000, 2000)), (3000, 2000))
+
+    def test_manifest_covers_stage_and_rejects_low_quality_or_bad_license(self):
+        self.manifest()
+        result = sp.validate(self.root)
+        self.assertTrue(result['ok'], result['errors'])
+        self.assertFalse(any('no real identity photo' in w for w in result['warnings']))
+        self.manifest(width=1280, height=720, quality='720p')
+        self.assertTrue(any('tier None' in e for e in sp.validate(self.root)['errors']))
+        self.manifest(license='All rights reserved')
+        self.assertTrue(any('license' in e for e in sp.validate(self.root)['errors']))
+
+    def test_fetch_verifies_hash_and_size_then_registers_privately(self):
+        import asset_catalog
+        self.manifest()
+        first = sp.photos_fetch(self.root, fetch=lambda url: self.raw)
+        self.assertEqual(first['photos'][0]['status'], 'registered')
+        with asset_catalog.connection(self.root) as db:
+            body = json.loads(db.execute('SELECT body FROM assets').fetchone()[0])
+        self.assertEqual((body['origin'], body['publication']['visibility'], body['quality']['tier']), ('photo', 'private', '1080p'))
+        bad = sp.photos_fetch(self.root, fetch=lambda url: png(10, 10))
+        self.assertIn(bad['photos'][0]['status'], ('unchanged', 'updated'))
+        (self.root / sp.PHOTO_STORE / 'PH-ALPHA-ADULT-SIDE-01.png').unlink()
+        self.assertEqual(sp.photos_fetch(self.root, fetch=lambda url: png(10, 10))['photos'][0]['status'], 'error')
 
 
 class SpeciesRoutingTests(unittest.TestCase):

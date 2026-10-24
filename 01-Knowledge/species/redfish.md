@@ -12,22 +12,22 @@
  "look_alikes": [{"name": "black drum", "scientific_name": "Pogonias cromis"}],
  "modules": {"angling": "01-Knowledge/equipment/species/redfish-angling.md"},
  "status": "researched",
- "version": "3.0",
+ "version": "3.1",
  "updated": "2026-10-25",
  "review_due": "2027-10-25",
  "sources_file": "01-Knowledge/sources/species/redfish.md"
 }
 ```
 
-Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.md). Nguồn: [sổ nguồn](../sources/species/redfish.md). ID giữ từ v2.1; v3.0 sửa hai trích dẫn sai của bản cũ (xem sổ nguồn).
+Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.md). Nguồn: [sổ nguồn](../sources/species/redfish.md). ID giữ từ v2.1; v3.0 sửa hai trích dẫn sai của bản cũ (xem sổ nguồn); v3.1 thêm lịch mùa và ảnh thật độ phân giải gốc.
 
 ## 1. Nhận dạng
 
 - Thân dài, lưng hơi cong, đầu dốc, mõm tù, miệng lớn nằm thấp; **không có râu cằm** [S11].
 - Màu từ đồng sẫm gần đen tới gần bạc [S6]; xám bạc ánh đồng [S9]. Nguồn đã mở không gắn màu với habitat cụ thể.
 - Đốm đen lớn ở phía trên gốc đuôi [S6]; số đốm biến thiên: một hoặc nhiều đốm từ dưới vây lưng mềm tới gốc đuôi [S9, S11]. Không ép mọi cá đúng một đốm, cũng không rải đốm khắp thân.
-- Con non ~15 cm: thân bạc, đốm gốc đuôi rõ (ảnh tham chiếu thật trong catalog).
-- Tên tiếng Anh: redfish, red drum, channel bass, spotted bass [S5]; "bull red" chỉ là tiếng lóng người câu. Chưa có tên tiếng Việt từ nguồn tin cậy.
+- Con non ~15 cm SL: thân bạc, đốm gốc đuôi rõ (ảnh tham chiếu thật trong catalog).
+- Tên tiếng Anh: redfish, red drum, channel bass, spotted bass [S5]; "bull red", "puppy drum", "rat red" là tên thông dụng [S11], "bull redfish run" chỉ đợt cá lớn ra bãi biển mùa thu [S6]; không có định nghĩa cỡ thống nhất. Chưa có tên tiếng Việt từ nguồn tin cậy.
 
 | Dễ nhầm | Dấu phân biệt | Lỗi hình cần chặn |
 |---|---|---|
@@ -65,7 +65,22 @@ Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.
 - **Tailing:** cúi đầu kiếm ăn trong cỏ, đuôi nhô khỏi mặt nước ở vùng nông [S6].
 - **Đơn lẻ hoặc theo đàn**, có thể đi cùng black drum và tarpon [S11]; trưởng thành có thể tụ nhóm gần bờ [S9].
 - **Sinh sản:** vùng Gulf giữa tháng 8 – giữa tháng 10 [S6] (nguồn khác: tháng 8 – tháng 11 [S7, S11]), gần cửa thông biển và bãi đảo chắn [S9].
+- **Theo mùa (Gulf/Texas):** mùa đông cá tụ ở sông và lạch triều; mùa thu, nhất là khi có bão, cá trưởng thành lớn ra bãi biển Gulf, có thể để sinh sản ("bull redfish run") [S6]. Bờ Đại Tây Dương: trưởng thành ra khơi/xuống nam mùa đông, vào bờ/lên bắc mùa xuân; đẻ ban đêm ở vùng gần bờ mùa hè–thu [S14].
 - **Âm thanh:** cá đực phát tiếng "drum" bằng cơ bóng hơi [S6], dùng để thu hút cá cái [S9]. Chỉ dùng tiếng này khi cảnh đúng mùa/ngữ cảnh, không thành tiếng nền mặc định.
+
+| Tháng | Vùng | Hành vi | Nguồn |
+|---|---|---|---|
+| Mùa đông (≈T12–T2) | Texas/Gulf | Tụ ở sông, lạch triều | S6 |
+| Mùa đông (≈T12–T2) | South Carolina | Con non xuống luồng sông sâu | S9 |
+| Đông → xuân (≈T12–T5) | Bờ Đại Tây Dương | Ra khơi/xuống nam mùa đông, vào bờ/lên bắc mùa xuân | S14 |
+| giữa T8 – giữa T10 | Gulf | Sinh sản gần cửa thông biển, bờ | S6 |
+| T8–T11 | Texas (S7); chung cho loài (S11: giữa T8 – giữa T11) | Mùa đẻ theo nguồn khác | S7, S11 |
+| Cuối hè–thu (≈T8–T11) | South Carolina | Đẻ gần cửa thông biển, bãi đảo chắn | S9 |
+| Hè–thu (≈T6–T11) | Bờ Đại Tây Dương | Đẻ ban đêm ở vùng gần bờ | S14 |
+| Mùa thu (≈T9–T11) | Bãi biển Gulf, Texas | Cá lớn ra bãi, rõ hơn khi có bão ("bull redfish run") | S6 |
+| Không nêu tháng | Bãi cỏ nông | Tailing: đầu cúi trong cỏ, đuôi nhô khỏi nước | S6 |
+
+Nguồn ghi mùa; tháng trong ngoặc "≈" là quy đổi theo mùa Bắc bán cầu, không phải số liệu của nguồn.
 
 ## 5. Tương tác
 
@@ -80,7 +95,7 @@ Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.
 | Tailing ở nước nông | Đuôi đồng nhô khỏi mặt nước khi đầu còn trong cỏ; góc dưới nước thấy cá đào mồi |
 | Đốm đuôi đánh lạc hướng kẻ săn | Kẻ săn nhắm vào đuôi, cá thoát theo hướng ngược lại; cần hình đọc được |
 | Số đốm biến thiên | Hai cá cạnh nhau khác số đốm, không phải lỗi |
-| Cá lớn ra vùng cửa thông biển mùa thu | Tương phản cỡ với cá con trong cỏ đầm lầy |
+| Cá lớn ra bãi biển/cửa thông biển mùa thu | Tương phản cỡ với cá con trong cỏ đầm lầy |
 
 Đây là gợi ý kể chuyện, chưa có bằng chứng hiệu quả viral; cường độ ending do Project/brief quyết định.
 
@@ -96,5 +111,6 @@ Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.
 ## 8. Chưa biết và giới hạn
 
 - Chưa có nguồn cấp A/B về màu theo habitat hoặc kẻ săn riêng của con non.
+- Đỉnh "bull run" tháng 10 chưa có nguồn A/B nêu tháng; nguồn chỉ ghi "mùa thu" [S6]. Tháng tailing mạnh nhất chưa có nguồn.
 - Ngày cụ thể và chiều dài 57 in của kỷ lục 1984 chỉ từ nguồn cấp E [S13]; tình trạng IUCN Least Concern chỉ qua trích dẫn [S12].
-- Ref ảnh: có ảnh thật adult/juvenile cho identity; chưa có ảnh head/mouth cận cảnh, chưa có ref `scale` có số đo.
+- Ref ảnh: adult nhìn ngang (bãi cát; mẫu FDA độ phân giải rất cao cho đầu/miệng), adult bơi trong bể nuôi, juvenile 720p. Chưa có ảnh dưới nước trong tự nhiên, chưa có ảnh larva, chưa có ref `scale` có số đo.

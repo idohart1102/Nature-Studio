@@ -32,6 +32,12 @@ SECTIONS = ('## 1. Nhận dạng', '## 2. Kích cỡ và giai đoạn', '## 3. S
 PROFILE_CHAR_BUDGET = 9000
 ID_PATTERN = r'K-SP-[A-Z0-9]+(?:-[A-Z0-9]+)*-[0-9]{3}'
 DATE_PATTERN = r'[0-9]{4}-[0-9]{2}-[0-9]{2}'
+PHOTO_MANIFEST = '01-Knowledge/sources/species/photo-references.json'
+PHOTO_STORE = '.nature-studio/assets/photos'
+REVIEW_STORE = '.nature-studio/assets/reviews'
+PHOTO_ROLES = ('identity', 'anatomy', 'production')
+COVERAGE = ('large', 'medium', 'small')
+LICENSE = re.compile(r'^(Public domain|CC0|CC BY(?:-SA)? [0-9.]+)\b')
 JSON_BLOCK = re.compile(r'```json\n(.*?)\n```', re.S)
 CITATION = re.compile(r'\[(S[0-9]+(?:\s*,\s*S[0-9]+)*)\]')
 
@@ -252,6 +258,16 @@ def validate_profile(root, path):
         if header and 'Nguồn' in header:
             column = header.index('Nguồn')
             cited |= {s for row in rows if len(row) == len(header) for s in re.findall(r'S[0-9]+', row[column])}
+        season_header, season_rows = table_rows(section(text, SECTIONS[3]))
+        if not season_header or 'Tháng' not in season_header or 'Nguồn' not in season_header or not season_rows:
+            errors.append(f'{relative}: behaviour section needs a season table with Tháng/Vùng/Hành vi/Nguồn columns')
+        else:
+            column = season_header.index('Nguồn')
+            for row in season_rows:
+                refs = set(re.findall(r'S[0-9]+', row[column])) if len(row) == len(season_header) else set()
+                if not refs or refs - set(known):
+                    errors.append(f'{relative}: season row needs known source ids: {row}')
+                cited |= refs
         warnings += [f'{relative}: source {s} listed but never cited' for s in sorted(set(known) - cited - tax_ids)]
         if not header or 'Loại' not in header or 'Nguồn' not in header or 'Đơn vị' not in header:
             errors.append(f'{relative}: size section needs a table with Đơn vị/Loại/Nguồn columns')
@@ -307,12 +323,178 @@ def validate(root, slug=None):
         for key, target in mapping.items():
             if not local(root, target).is_file():
                 errors.append(f'{recipe.relative_to(root).as_posix()}: species {key} -> missing {target}')
+    stages = {}
+    for path in profiles(root):
+        meta = metadata(root, path.relative_to(root).as_posix())
+        if meta:
+            stages[meta.get('id')] = set(meta.get('stages') or [])
+    photo_errors, covered = check_photos(root, stages)
+    errors += photo_errors
+    for sid, labels in sorted(stages.items()):
+        if slug and seen_ids.get(sid) != f'{slug}.md':
+            continue
+        for stage in sorted(labels - covered.get(sid, set())):
+            warnings.append(f'{sid}: no real identity photo for stage {stage}')
     if not slug:
         expected = render_index(root)
         current = root / SPECIES_DIR / 'INDEX.md'
         if not current.is_file() or current.read_text(encoding='utf-8-sig') != expected:
             errors.append(f'{SPECIES_DIR}/INDEX.md is stale; run species_profiles.py index')
     return dict(ok=not errors, errors=errors, warnings=warnings, profiles=len(seen_ids))
+
+
+def photo_tier(width, height, coverage):
+    """1080p = at least 1920x1080; 720p only counts when the subject fills most of the frame."""
+    short, long = min(width, height), max(width, height)
+    if short >= 1080 and long >= 1920:
+        return '1080p'
+    if short >= 720 and long >= 1280 and coverage == 'large':
+        return '720p'
+    return None
+
+
+def load_photos(root):
+    path = root / PHOTO_MANIFEST
+    if not path.is_file():
+        return []
+    data = json.loads(path.read_text(encoding='utf-8-sig'))
+    if data.get('schema') != 1 or not isinstance(data.get('photos'), list):
+        raise ValueError(PHOTO_MANIFEST + ': schema 1 with photos list required')
+    return data['photos']
+
+
+def check_photos(root, stages):
+    errors, covered, seen = [], {}, set()
+    try:
+        photos = load_photos(root)
+    except (ValueError, json.JSONDecodeError) as exc:
+        return [str(exc)], covered
+    for item in photos:
+        key = item.get('asset_id') if isinstance(item, dict) else None
+        where = f'{PHOTO_MANIFEST} {key}'
+        if not isinstance(key, str) or not re.fullmatch(r'PH-[A-Z0-9]+(?:-[A-Z0-9]+)*-[0-9]{2}', key) or key in seen:
+            errors.append(f'{where}: invalid/duplicate asset_id')
+            continue
+        seen.add(key)
+        sid = item.get('entity_id')
+        if sid not in stages:
+            errors.append(f'{where}: unknown entity_id {sid}')
+        elif item.get('stage') not in stages[sid]:
+            errors.append(f'{where}: stage {item.get("stage")} not in profile stages')
+        roles = item.get('roles')
+        if not isinstance(roles, list) or not roles or any(r not in PHOTO_ROLES for r in roles):
+            errors.append(f'{where}: roles must be a subset of {", ".join(PHOTO_ROLES)}')
+            roles = []
+        for field in ('page_url', 'file_url'):
+            if not isinstance(item.get(field), str) or not item[field].startswith('https://'):
+                errors.append(f'{where}: https {field} required')
+        if not isinstance(item.get('license'), str) or not LICENSE.match(item['license']):
+            errors.append(f'{where}: license must be Public domain, CC0, CC BY or CC BY-SA')
+        for field in ('credit', 'view', 'observed', 'species_basis', 'use'):
+            if not isinstance(item.get(field), str) or not item[field].strip():
+                errors.append(f'{where}: {field} required')
+        if not isinstance(item.get('sha256'), str) or not re.fullmatch(r'[0-9a-f]{64}', item['sha256']):
+            errors.append(f'{where}: sha256 required')
+        if not isinstance(item.get('reviewed'), str) or not re.fullmatch(DATE_PATTERN, item['reviewed']):
+            errors.append(f'{where}: reviewed date required')
+        width, height = item.get('width'), item.get('height')
+        if type(width) is not int or type(height) is not int:
+            errors.append(f'{where}: integer width/height required')
+            continue
+        if item.get('subject_coverage') not in COVERAGE:
+            errors.append(f'{where}: subject_coverage must be one of {"/".join(COVERAGE)}')
+        tier = photo_tier(width, height, item.get('subject_coverage'))
+        if tier is None or item.get('quality') != tier:
+            errors.append(f'{where}: {width}x{height} gives tier {tier}; quality field must match and be 1080p/720p')
+        elif 'identity' in roles and sid in stages:
+            covered.setdefault(sid, set()).add(item['stage'])
+    return errors, covered
+
+
+def image_size(raw):
+    """Pixel size from PNG/JPEG bytes; metadata is never trusted for the quality gate."""
+    if raw[:8] == b'\x89PNG\r\n\x1a\n':
+        return int.from_bytes(raw[16:20], 'big'), int.from_bytes(raw[20:24], 'big')
+    if raw[:2] == b'\xff\xd8':
+        index = 2
+        while index + 9 < len(raw):
+            if raw[index] != 0xFF:
+                index += 1
+                continue
+            marker = raw[index + 1]
+            if marker in (0xD8, 0x01) or 0xD0 <= marker <= 0xD7 or marker == 0xFF:
+                index += 1 if marker == 0xFF else 2
+                continue
+            length = int.from_bytes(raw[index + 2:index + 4], 'big')
+            if 0xC0 <= marker <= 0xCF and marker not in (0xC4, 0xC8, 0xCC):
+                return int.from_bytes(raw[index + 7:index + 9], 'big'), int.from_bytes(raw[index + 5:index + 7], 'big')
+            index += 2 + length
+    raise ValueError('Unsupported image format; use JPEG or PNG')
+
+
+def photos_fetch(root, slug=None, fetch=None):
+    """Download manifest photos into the private local store, verify, and (re)register them."""
+    import asset_catalog
+    photos = load_photos(root)
+    if slug:
+        meta = metadata(root, f'{SPECIES_DIR}/{slug}.md')
+        if not meta:
+            raise ValueError('No v3 profile: ' + slug)
+        photos = [p for p in photos if p.get('entity_id') == meta.get('id')]
+    fetch = fetch or (lambda url: urllib.request.urlopen(urllib.request.Request(
+        url, headers={'User-Agent': 'NatureStudio-reference-fetch/1.0 (local research use)'}), timeout=120).read())
+    store, reviews = root / PHOTO_STORE, root / REVIEW_STORE
+    store.mkdir(parents=True, exist_ok=True)
+    reviews.mkdir(parents=True, exist_ok=True)
+    report = []
+    for item in photos:
+        suffix = '.png' if item['file_url'].lower().endswith('.png') else '.jpg'
+        target = store / (item['asset_id'] + suffix)
+        try:
+            raw = target.read_bytes() if target.is_file() else b''
+            if hashlib.sha256(raw).hexdigest() != item['sha256']:
+                raw = fetch(item['file_url'])
+            if hashlib.sha256(raw).hexdigest() != item['sha256']:
+                raise ValueError('sha256 differs from manifest')
+            if image_size(raw) != (item['width'], item['height']):
+                raise ValueError(f'measured {image_size(raw)} differs from manifest size')
+        except Exception as exc:  # one bad download must not block the rest
+            report.append(dict(asset_id=item['asset_id'], status='error', error=type(exc).__name__ + ': ' + str(exc)[:160]))
+            continue
+        target.write_bytes(raw)
+        review = reviews / (item['asset_id'] + '.md')
+        review.write_text(
+            f"# {item['asset_id']} — real photo reference review\n\nReviewed: {item['reviewed']}. Origin: photo (third-party). "
+            f"Status: pass. Reviewed roles: {', '.join(item['roles'])}. Quality: {item['quality']} "
+            f"({item['width']}x{item['height']}, subject coverage {item['subject_coverage']}).\n\n"
+            f"Observed on actual image: {item['observed']}\n\nSpecies basis: {item['species_basis']}\n\n"
+            f"Source: {item['page_url']} — {item['license']}; credit: {item['credit']}. Image SHA256: {item['sha256']}.\n\n"
+            'Scope: static identity/anatomy only; not scale evidence; private local copy (manifest in Git, file not).\n',
+            encoding='utf-8')
+        record = dict(asset_id=item['asset_id'], entity_id=item['entity_id'], kind='organism', stage=item['stage'],
+                      variant=item.get('variant'), view=item['view'], roles=item['roles'], origin='photo',
+                      source=dict(url=item['page_url'], image_url=item['file_url'],
+                                  rights=f"{item['license']}; credit: {item['credit']}; attribution required where the license says so"),
+                      requires=[], applicability=dict(scope='shared', project_ids=[]),
+                      quality=dict(tier=item['quality'], width=item['width'], height=item['height'],
+                                   subject_coverage=item['subject_coverage']),
+                      reference_use=item['use'], qa_scope=item['observed'],
+                      notes='Real third-party photo for identity/anatomy; not scale evidence.',
+                      file=dict(path=target.relative_to(root).as_posix(), sha256=item['sha256']),
+                      review=dict(status='pass', roles=item['roles'], evidence=dict(
+                          path=review.relative_to(root).as_posix(), sha256=hashlib.sha256(review.read_bytes()).hexdigest())),
+                      publication=dict(visibility='private', reviewed=False))
+        with asset_catalog.connection(root) as db:
+            old = db.execute('SELECT body, sha FROM assets WHERE id=?', (item['asset_id'],)).fetchone() if db else None
+        if old:
+            current = json.loads(old[0])
+            current.pop('revision', None)
+            if current == json.loads(asset_catalog.canonical(record)):
+                report.append(dict(asset_id=item['asset_id'], status='unchanged'))
+                continue
+        result = asset_catalog.register(root, record, old[1] if old else None)
+        report.append(dict(asset_id=item['asset_id'], status='updated' if old else 'registered', revision=result['revision']))
+    return dict(photos=report, note='Files stay in .nature-studio (local); the manifest is the shared, re-downloadable record.')
 
 
 def render_index(root):
@@ -432,6 +614,7 @@ def main():
         p.add_argument('--' + flag, required=True)
     p.add_argument('--group', choices=GROUPS, required=True)
     p = sub.add_parser('snapshot'); p.add_argument('slug')
+    p = sub.add_parser('photos-fetch'); p.add_argument('slug', nargs='?')
     args = parser.parse_args()
     root = args.root.resolve()
     try:
@@ -460,6 +643,10 @@ def main():
         if args.action == 'new':
             print(json.dumps(scaffold(root, args.slug, args.id, args.scientific, args.name, args.group), ensure_ascii=False, indent=1))
             return 0
+        if args.action == 'photos-fetch':
+            result = photos_fetch(root, args.slug)
+            print(json.dumps(result, ensure_ascii=False, indent=1))
+            return 1 if any(r['status'] == 'error' for r in result['photos']) else 0
         print(json.dumps(snapshot(root, args.slug), ensure_ascii=False, indent=1))
         return 0
     except (ValueError, OSError, json.JSONDecodeError) as exc:

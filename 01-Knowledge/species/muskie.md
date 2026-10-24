@@ -5,21 +5,21 @@
  "id": "K-SP-MUSKIE-001",
  "slug": "muskie",
  "scientific_name": "Esox masquinongy",
- "taxonomy": {"authority": "Mitchill, 1824", "order": "Esociformes", "family": "Esocidae", "checked_with": "S1, S2"},
+ "taxonomy": {"authority": "Mitchill, 1824", "order": "Esociformes", "family": "Esocidae", "checked_with": "S1, S2, S20"},
  "common_names": {"en": ["muskie", "musky", "muskellunge", "lunge", "maskinonge"]},
  "group": "fish",
  "stages": ["fry", "juvenile", "adult"],
  "look_alikes": [{"name": "northern pike", "scientific_name": "Esox lucius"}, {"name": "tiger muskie", "scientific_name": "Esox masquinongy x lucius"}],
  "modules": {"angling": "01-Knowledge/equipment/species/muskie-angling.md"},
  "status": "researched",
- "version": "3.0",
+ "version": "3.1",
  "updated": "2026-10-25",
  "review_due": "2027-10-25",
  "sources_file": "01-Knowledge/sources/species/muskie.md"
 }
 ```
 
-Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.md). Nguồn: [sổ nguồn](../sources/species/muskie.md). ID giữ từ v2.1; v3.0 sửa trích dẫn thông số dây (xem sổ nguồn).
+Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.md). Nguồn: [sổ nguồn](../sources/species/muskie.md). ID giữ từ v2.1; v3.0 sửa trích dẫn thông số dây; v3.1 thêm lịch mùa, tuổi–dài Minnesota, đối chiếu Catalog of Fishes và ảnh gốc ≥1080p.
 
 ## 1. Nhận dạng
 
@@ -29,6 +29,7 @@ Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.
 - Má và nắp mang: nửa dưới **không có vảy**, chỉ nửa trên má có vảy [S4, S10].
 - Lỗ cảm giác dưới hàm: 6–9 mỗi bên [S3] (ND ghi 6–8 [S10]); pike thường ≤5 [S3]. Các nguồn lệch nhau nên không dùng số lỗ làm dấu duy nhất.
 - Tên: muskie, musky, muskellunge, 'lunge, maskinonge [S3, S4]; tiếng Pháp maskinongé [S1]. Chưa có tên tiếng Việt từ nguồn tin cậy.
+- Tên khoa học hợp lệ, tác giả Mitchill 1824; Catalog of Fishes ghi Mitchill chỉ dùng tên thông thường, tên khả dụng từ Jordan 1888 với Mitchill là tác giả [S20].
 
 | Dễ nhầm | Dấu phân biệt | Lỗi hình cần chặn |
 |---|---|---|
@@ -49,8 +50,12 @@ Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.
 | Fingerling cuối hè | 7–13 | in | juvenile, năm đầu | typical | S4 |
 | Tuổi 2 / 4 / 12 | 18,4 / 23,1 / 43 | in | Wisconsin | estimate | S5 |
 | Trưởng thành sinh dục | đực 28–31; cái 30–36 | in | đực 4–5 tuổi, cái 5–7 tuổi | typical | S4 |
+| Mẫu cleithra MN, cái | tuổi TB 10; dài TB 41,6 | in | Minnesota, mọi nguồn mẫu | estimate | S17 |
+| Mẫu cleithra MN, đực | tuổi TB 8; dài TB 35,3 | in | Minnesota, mọi nguồn mẫu | estimate | S17 |
+| Chiều dài tối hậu L∞ | cái 51,6; đực 44,4 | in | trung bình các lớp hồ MN | estimate | S17 |
+| Cá nhồi mẫu (taxidermist) | TB 45,1; trung vị 45,2 | in | Minnesota, mẫu thiên cá lớn | large | S17 |
 
-Kỷ lục "thế giới" đang tranh cãi: Wisconsin coi cá Spray là kỷ lục bang và thế giới [S7], nguồn thứ cấp nói IGFA công nhận cá Cal Johnson 67 lb 8 oz (1949) [S15]; không dùng kỷ lục làm cỡ dàn cảnh. Bảng tuổi S5 trích từ PDF không đầy đủ nên để `estimate`. Tuổi thọ thường ~18 năm, có cá 30 năm [S4]. Quan hệ dài–nặng a=0,00490, b=3,08 (cm TL) [S2] chỉ để ước lượng.
+Kỷ lục "thế giới" đang tranh cãi: Wisconsin coi cá Spray là kỷ lục bang và thế giới [S7], nguồn thứ cấp nói IGFA công nhận cá Cal Johnson 67 lb 8 oz (1949) [S15]; không dùng kỷ lục làm cỡ dàn cảnh. Bảng tuổi S5 trích từ PDF không đầy đủ nên để `estimate`; số Minnesota [S17] là trung bình mẫu thiên về cá người câu giữ lại, không phải đường tăng trưởng quần thể. Tuổi thọ thường ~18 năm, có cá 30 năm [S4]. Quan hệ dài–nặng a=0,00490, b=3,08 (cm TL) [S2] chỉ để ước lượng.
 
 ## 3. Sinh cảnh và phân bố
 
@@ -63,7 +68,17 @@ Kỷ lục "thế giới" đang tranh cãi: Wisconsin coi cá Spray là kỷ l�
 - **Phục kích:** sống đơn độc, rình trong thảm cỏ hoặc cover [S9]; chờ rồi lao tới, ngoạm con mồi bằng răng nanh và nuốt đầu trước [S4].
 - **Dựa vào thị giác:** khó kiếm ăn ban đêm hoặc khi nước đục [S4].
 - **Theo mồi giả tới thuyền mà không đớp** là hành vi được ghi nhận; người câu dùng động tác vẽ số 8 [S4].
-- **Sinh sản:** giữa tháng 4 – cuối tháng 5 khi nước 50–60 °F [S4] (9–16 °C [S12]); 22.000–180.000 trứng, nở sau 8–14 ngày [S3]; không chăm con [S4].
+- **Sinh sản:** giữa tháng 4 – cuối tháng 5 khi nước 50–60 °F [S4] (9–16 °C [S12]); 22.000–180.000 trứng, nở sau 8–14 ngày [S3]; không chăm con [S4]. Ngày đẻ đổi theo nhiệt độ nước từng năm, không theo lịch [S7].
+- **Quay về chỗ cũ:** cá gắn radio ở sông Mississippi (MN) quay lại cùng bãi đẻ và cùng vùng trú đông qua nhiều năm; xuân và thu là thời kỳ di chuyển giữa các vùng [S18].
+
+| Tháng | Vùng | Hành vi | Nguồn |
+|---|---|---|---|
+| T4–T5 | Wisconsin | Đẻ khi nước 50–60 °F, ngày đổi theo năm | S4, S7 |
+| T5–T12 | Wisconsin nội địa | Mùa câu từ thứ 7 đầu tháng 5 (2/5/2026) tới 31/12, chỉ nước mở | S19, S21 |
+| T6–T9 | sông Mississippi, MN | Range mùa hè; nước nông hơn mùa đông | S18 |
+| T10–T12 (cuối thu) | Indiana | Ăn mạnh trước mùa lạnh, cỏ thưa nên cá đi ra nước mở, mở rộng range nhiều nhất trong năm | S16 |
+| Thu | sông Mississippi, MN | Di chuyển từ range hè về vùng trú đông | S18 |
+| Mùa băng (T12–T3) | sông Mississippi, MN | Ít di chuyển; trú ở vực/lòng chính sâu TB 2,5–4,1 m, cùng chỗ mỗi năm | S18 |
 
 ## 5. Tương tác
 
@@ -93,7 +108,8 @@ Các hướng này không là bằng chứng viral; vẫn rà lịch sử theo c
 
 ## 8. Chưa biết và giới hạn
 
-- Kỷ lục thế giới tranh cãi; IGFA chưa mở được. Thông số leader của Mercury/Saric chưa xác nhận [S13].
-- Bảng tuổi–chiều dài S5 chưa đọc đủ; Indiana DNR (nguồn v2.1) không truy cập được.
-- Chưa mở Catalog of Fishes; chưa có tên tiếng Việt.
-- Ref ảnh: có ảnh thật adult (dạng đốm) và juvenile; chưa có ảnh thật lỗ cảm giác dưới hàm; chưa có ref `scale` có số đo.
+- Kỷ lục thế giới tranh cãi; trang tra kỷ lục IGFA không hiện dữ liệu khi mở (2026-10-25), nên kỷ lục IGFA Cal Johnson vẫn chỉ từ cấp E [S15]. Leader Mercury/Saric chưa xác nhận [S13].
+- Chưa có bảng chiều dài theo từng tuổi từ nguồn A/B; S5 đọc thiếu, S17 chỉ có tuổi/dài trung bình mẫu.
+- Mùa băng: chỉ có dữ liệu sông Mississippi (MN) [S18]; Wisconsin chỉ mở câu muskie nội địa ở nước mở [S21]; chưa có nguồn A/B về câu muskie qua lỗ băng ở bang khác; không dàn cảnh câu băng muskie như hoạt động phổ biến.
+- Chưa có tên tiếng Việt.
+- Ref ảnh (≥1080p): adult dạng đốm, juvenile, cận đầu cá dạng trơn trong bể; chưa có ảnh thật lỗ cảm giác dưới hàm hay dạng vạch; chưa có ref `scale` có số đo.

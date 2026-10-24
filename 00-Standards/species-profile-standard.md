@@ -1,6 +1,6 @@
 # Chuẩn hồ sơ loài — v3
 
-Version: 3.0 | Updated: 2026-10-25 | Scope: mọi nhóm sinh vật, mọi Project
+Version: 3.1 | Updated: 2026-10-25 | Scope: mọi nhóm sinh vật, mọi Project | v3.1: lịch mùa bắt buộc, chuẩn ảnh 1080p/720p, manifest ảnh
 
 Hồ sơ loài là tham chiếu sự kiện có nguồn cho sản xuất, không phải chuyên khảo khoa học đầy đủ. Mục tiêu: thêm loài mới theo một quy trình, máy kiểm được, skill chỉ đọc đúng loài đang làm. Mẫu: [hồ sơ](templates/species-profile.md), [sổ nguồn](templates/species-sources.md). Công cụ: `scripts/species_profiles.py`.
 
@@ -18,6 +18,7 @@ Khối ```json đầu file (máy đọc): `id`, `slug`, `scientific_name`, `taxo
 Tám mục cố định: 1 Nhận dạng · 2 Kích cỡ và giai đoạn · 3 Sinh cảnh và phân bố · 4 Hành vi · 5 Tương tác · 6 Điểm đáng xem · 7 Checklist hình ảnh · 8 Chưa biết và giới hạn.
 
 - Mục 2 là bảng `Thông số | Giá trị | Đơn vị | Phạm vi | Loại | Nguồn`; Loại chỉ là `typical`, `large`, `record`, `estimate`. Cỡ dàn cảnh mặc định lấy từ `typical`; `large`/`record` chỉ dùng khi brief chủ đích và ghi phạm vi. Không suy chiều dài từ cân nặng.
+- Mục 4 có bảng lịch mùa `Tháng | Vùng | Hành vi | Nguồn` (tháng ghi T1–T12 hoặc khoảng); mỗi dòng có nguồn. Ghi chú mùa từ danh sách nội bộ chỉ là đầu mối, phải kiểm bằng nguồn A/B trước khi vào bảng.
 - Mục 7 là 3–12 dòng kiểm nhanh mà /na-taoanh và /na-danhgia dùng khi chấm ảnh/video của loài đó. Checklist không thay quy chuẩn Project.
 - Thông tin chỉ cần cho một kiểu nội dung đặt trong module, ví dụ `angling` → `01-Knowledge/equipment/species/<slug>-angling.md`. Module chỉ được nạp khi tác vụ cần (angling: interaction khác `natural`). Module hợp lệ: `angling`, `hunting`, `life-cycle`, `seasonal`, `sign`. Hiện chỉ `angling` được packet tự nạp; module khác cần nối điều kiện nạp trong `chayvideo_context.py` (kèm test) trước khi dựa vào nó.
 - Ngân sách mềm 9.000 ký tự mỗi hồ sơ: hồ sơ được đọc nguyên văn mỗi lượt dùng loài, nên chi tiết dài chuyển sang module hoặc sổ nguồn.
@@ -50,7 +51,12 @@ Sổ nguồn `01-Knowledge/sources/species/<slug>.md` có khối JSON. Mỗi ngu
 
 ## Ảnh tham chiếu
 
-Theo [knowledge-routing](knowledge-routing.md) và catalog asset. Mỗi stage nên có ảnh thật (`origin: photo`) cho `identity` và nếu được `anatomy`; ảnh AI chỉ đóng vai `production`. Ghi giấy phép, tác giả, URL trang file trong `source`. Ảnh thật bên thứ ba mặc định `private`; chỉ đưa vào `08-Assets` khi người dùng duyệt xuất bản và giấy phép cho phép. `scale` cần số đo có nguồn, không lấy từ ảnh.
+- Chỉ ảnh thật (`origin: photo`) làm nhận dạng/anatomy; giấy phép Public domain, CC0, CC BY hoặc CC BY-SA, ghi tác giả.
+- **Chất lượng:** `1080p` = file gốc tối thiểu 1920×1080 (cạnh dài ≥1920, cạnh ngắn ≥1080). Khi không có ảnh 1080p cho một stage/góc, chấp nhận `720p` (≥1280×720) chỉ khi đối tượng chiếm phần lớn khung (`subject_coverage: large`). Kích thước đo từ file thật, không phóng to ảnh nhỏ. Ảnh dưới mức này không vào hồ sơ.
+- Mục tiêu mỗi loài: ảnh adult nhìn ngang cho `identity`; thêm juvenile, biến thể (ví dụ steelhead) và cận đầu/miệng cho `anatomy` khi có. Mỗi ảnh được người/AI mở xem thật, xác nhận đúng loài và ghi `observed`, `species_basis`.
+- Manifest chung `01-Knowledge/sources/species/photo-references.json` (trong Git) ghi URL trang/file, giấy phép, tác giả, sha256, kích thước, tier và review. File ảnh chỉ lưu local: `python scripts/species_profiles.py photos-fetch [slug]` tải lại, kiểm sha256 + kích thước thật rồi đăng ký vào catalog (`private`). Máy khác chạy cùng lệnh để có ảnh.
+- Ảnh AI trong `08-Assets` đều dưới 1080p: chỉ hỗ trợ `production`, không thay ảnh thật; tạo lại ở độ phân giải cao là việc tạo media riêng, cần người dùng giao.
+- `scale` cần số đo có nguồn, không lấy từ ảnh.
 
 ## Vòng đời
 

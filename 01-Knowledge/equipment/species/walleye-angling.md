@@ -1,6 +1,6 @@
 # Module câu — walleye
 
-Module `angling` của [K-SP-WALLEYE-001](../../species/walleye.md); chỉ nạp khi cảnh có câu cá. Cơ chế chung ở [dụng cụ Mỹ](../us-angling-tackle.md). Nguồn S-ID theo [sổ nguồn walleye](../../sources/species/walleye.md). Version: 1.0 | Updated: 2026-10-25 | Chuyển từ mục 3 của hồ sơ v2.1; thông số đã kiểm lại qua bản lưu Wayback của Minnesota DNR.
+Module `angling` của [K-SP-WALLEYE-001](../../species/walleye.md); chỉ nạp khi cảnh có câu cá. Cơ chế chung ở [dụng cụ Mỹ](../us-angling-tackle.md). Nguồn S-ID theo [sổ nguồn walleye](../../sources/species/walleye.md). Version: 1.1 | Updated: 2026-10-25 | Chuyển từ mục 3 của hồ sơ v2.1; thông số đã kiểm lại qua bản lưu Wayback của Minnesota DNR; 1.1 thêm chọn mồi theo mùa [S5, S7, S14].
 
 ## Cách câu có nguồn
 
@@ -11,6 +11,10 @@ Module `angling` của [K-SP-WALLEYE-001](../../species/walleye.md); chỉ nạp
 | Slip-bobber | Mồi treo ở tầng đặt trước | S5 |
 | Lure | Cỡ No. 5 và No. 7 phổ biến; trolling khoảng 1 mph | S5 |
 | Mồi cá | Sucker/fathead 2–6 in | S6 |
+| Mồi theo mùa | Minnow cuối thu – đầu xuân; nightcrawler/leech cuối xuân – đầu thu | S14 |
+| Hè | Trolling crankbait và 3-way rig gần bãi rong sâu (hồ) hoặc bãi đáy cứng (hồ chứa) | S14 |
+| Thu | Trolling/cast hard bait nhỏ dáng perch gần weedline nông, gravel bar, mũi đất | S5 |
+| Mùa băng | Tip-up hoặc jig | S7 |
 
 ## Dây và móc
 

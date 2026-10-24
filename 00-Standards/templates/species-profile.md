@@ -41,6 +41,10 @@ Môi trường, độ sâu/độ mặn/nhiệt độ khi có nguồn; khác bi�
 
 Mỗi hành vi kèm điều kiện (mùa, giờ, stage, môi trường) và nguồn. [S1]
 
+| Tháng | Vùng | Hành vi | Nguồn |
+|---|---|---|---|
+| unknown | unknown | unknown | S1 |
+
 ## 5. Tương tác
 
 Con mồi theo stage, kẻ săn, phản ứng với con người/vật thể. Thông số dụng cụ đặt trong module, không chép vào đây.

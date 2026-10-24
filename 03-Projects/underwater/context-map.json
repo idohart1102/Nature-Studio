@@ -40,7 +40,26 @@
   "species": {
     "redfish": "01-Knowledge/species/redfish.md",
     "muskie": "01-Knowledge/species/muskie.md",
-    "walleye": "01-Knowledge/species/walleye.md"
+    "walleye": "01-Knowledge/species/walleye.md",
+    "channel-catfish": "01-Knowledge/species/channel-catfish.md",
+    "blue-catfish": "01-Knowledge/species/blue-catfish.md",
+    "white-crappie": "01-Knowledge/species/white-crappie.md",
+    "black-crappie": "01-Knowledge/species/black-crappie.md",
+    "mahi-mahi": "01-Knowledge/species/mahi-mahi.md",
+    "wahoo": "01-Knowledge/species/wahoo.md",
+    "striped-bass": "01-Knowledge/species/striped-bass.md",
+    "spotted-seatrout": "01-Knowledge/species/spotted-seatrout.md",
+    "brook-trout": "01-Knowledge/species/brook-trout.md",
+    "brown-trout": "01-Knowledge/species/brown-trout.md",
+    "northern-pike": "01-Knowledge/species/northern-pike.md",
+    "largemouth-bass": "01-Knowledge/species/largemouth-bass.md",
+    "smallmouth-bass": "01-Knowledge/species/smallmouth-bass.md",
+    "bluegill": "01-Knowledge/species/bluegill.md",
+    "yellow-perch": "01-Knowledge/species/yellow-perch.md",
+    "rainbow-trout": "01-Knowledge/species/rainbow-trout.md",
+    "chinook-salmon": "01-Knowledge/species/chinook-salmon.md",
+    "atlantic-bluefin-tuna": "01-Knowledge/species/atlantic-bluefin-tuna.md",
+    "yellowfin-tuna": "01-Knowledge/species/yellowfin-tuna.md"
   },
   "angling": [
     "01-Knowledge/equipment/us-angling-tackle.md"

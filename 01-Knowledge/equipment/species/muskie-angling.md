@@ -1,11 +1,12 @@
 # Module câu — muskie
 
-Module `angling` của [K-SP-MUSKIE-001](../../species/muskie.md); chỉ nạp khi cảnh có câu cá. Cơ chế chung ở [dụng cụ Mỹ](../us-angling-tackle.md). Nguồn S-ID theo [sổ nguồn muskie](../../sources/species/muskie.md). Version: 1.0 | Updated: 2026-10-25 | Chuyển từ mục 3 của hồ sơ v2.1; sửa trích dẫn dây và đánh dấu leader chưa xác nhận.
+Module `angling` của [K-SP-MUSKIE-001](../../species/muskie.md); chỉ nạp khi cảnh có câu cá. Cơ chế chung ở [dụng cụ Mỹ](../us-angling-tackle.md). Nguồn S-ID theo [sổ nguồn muskie](../../sources/species/muskie.md). Version: 1.1 | Updated: 2026-10-25 | Chuyển từ mục 3 của hồ sơ v2.1; sửa trích dẫn dây và đánh dấu leader chưa xác nhận; 1.1 thêm cuối thu (S16).
 
 ## Mồi giả
 
 - Plugs, spoons, bucktails là các nhóm lure cơ quan quản lý nêu [S9]. Cánh spinner cần nước chuyển động tương đối; bucktail không tự bơi như prey.
 - **Mepps Musky Killer B5M standard:** một treble #5/0, cánh Aglia chạy nông, cánh cỡ 5, 3/4 oz [S14]. Không ghép với tandem hoặc Magnum; kiểm mẫu/ref trước khi khóa số điểm treo.
+- **Cuối thu:** Indiana DNR khuyên nhắm các thảm cỏ còn sót (còn mồi và che chắn), dùng lure lớn hoặc sucker sống để có cú đớp của cá lớn [S16]. Đây là gợi ý mùa của một bang, không là cấu hình rig.
 - Cá thường theo mồi tới thuyền mà không đớp; người câu vẽ số 8 cạnh thuyền [S4]. Không diễn figure-eight nếu điểm kéo/khung không hỗ trợ.
 
 ## Dây và leader

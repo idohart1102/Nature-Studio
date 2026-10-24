@@ -23,7 +23,7 @@ UF-D025 — 2026-10-22: 3 giây đầu phải giữ người xem theo [Hook 3 gi
 
 ## Chọn loài
 
-Đã có loài/quyền chọn thì không hỏi lại. Thiếu thì hỏi một câu: **Redfish / Muskie / Walleye / Loài cá được câu bất kỳ ở Mỹ**, cho nhập loài khác. Dùng lựa chọn click nếu công cụ hỗ trợ (có thể gộp trong giới hạn số lựa chọn của công cụ), nếu không thì lựa chọn chữ; không giả nút Markdown. Chờ đáp án thật, lựa chọn sẵn không là xác nhận. “Bất kỳ” cho phép tự nghiên cứu/chọn loài và vùng phù hợp. Không hỏi chọn cá khi chỉ sửa skill.
+Đã có loài/quyền chọn thì không hỏi lại. Thiếu thì hỏi một câu: **Redfish / Muskie / Walleye / Loài cá được câu bất kỳ ở Mỹ**, cho nhập loài khác. Thư viện hiện có 22 loài cá câu Mỹ (tra `python scripts/species_profiles.py list --group fish`); khi người dùng giao "bất kỳ", có thể ưu tiên theo [ưu tiên loài](species-priority.md) — dữ liệu thị trường nội bộ, không thay rà lịch sử/độ mới. Loài mới chưa có descriptor vùng thì nghiên cứu vùng theo chuẩn địa điểm. Dùng lựa chọn click nếu công cụ hỗ trợ (có thể gộp trong giới hạn số lựa chọn của công cụ), nếu không thì lựa chọn chữ; không giả nút Markdown. Chờ đáp án thật, lựa chọn sẵn không là xác nhận. “Bất kỳ” cho phép tự nghiên cứu/chọn loài và vùng phù hợp. Không hỏi chọn cá khi chỉ sửa skill.
 
 ## Runtime và bộ nhớ
 

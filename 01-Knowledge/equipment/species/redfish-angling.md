@@ -1,10 +1,11 @@
 # Module câu — redfish
 
-Module `angling` của [K-SP-REDFISH-001](../../species/redfish.md); chỉ nạp khi cảnh có câu cá. Cơ chế chung (rig, nhận lực, quy định) ở [dụng cụ Mỹ](../us-angling-tackle.md). Nguồn S-ID theo [sổ nguồn redfish](../../sources/species/redfish.md). Version: 1.0 | Updated: 2026-10-25 | Chuyển từ mục 3 của hồ sơ v2.1, số dây đã mở kiểm lại S6.
+Module `angling` của [K-SP-REDFISH-001](../../species/redfish.md); chỉ nạp khi cảnh có câu cá. Cơ chế chung (rig, nhận lực, quy định) ở [dụng cụ Mỹ](../us-angling-tackle.md). Nguồn S-ID theo [sổ nguồn redfish](../../sources/species/redfish.md). Version: 1.1 | Updated: 2026-10-25 | Chuyển từ mục 3 của hồ sơ v2.1, số dây đã mở kiểm lại S6; 1.1 thêm cần surf cho bull red [S6].
 
 ## Mồi và cách câu
 
 - Thức ăn tự nhiên gồm cá, cua, tôm [S9]; cá lớn dùng cut mullet là hướng có cơ sở. Dead bait không tự bơi.
+- "Bull" red (cá lớn mùa thu ở bãi biển/cầu cảng) câu tốt nhất bằng mồi tự nhiên; người câu surf/pier dùng cần dài hơn 10 ft, đủ cứng cho bộ chì nặng [S6].
 - Natural: không tự thêm dây/móc. Angling: chọn một bộ cụ thể; circle hook nhận lực tăng dần theo rig, không tự set ngay lúc chạm. Ngậm mồi, mắc câu và phản kháng là các kết luận khác nhau.
 - Popping cork–shrimp, slip-sinker–bait, spoon/jig/plug là các hướng khác nhau, không gộp phụ kiện của mọi bộ.
 
