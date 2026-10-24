@@ -235,14 +235,14 @@ class AssetContextTests(unittest.TestCase):
 
 class ProfilePilotTests(unittest.TestCase):
     def test_three_profiles_follow_one_practical_template_with_stable_ids(self):
+        import species_profiles
         root=Path(assets.ROOT)
-        headings=['Nhìn đúng','Cỡ và biến thể','Hành vi có thể khai thác','Điểm đáng xem','Điều kiện và lỗi cần tránh','Nguồn và asset']
         for name in ('redfish','muskie','walleye'):
             text=(root/f'01-Knowledge/species/{name}.md').read_text(encoding='utf-8')
-            for number,label in enumerate(headings,1):self.assertIn(f'## {number}. {label}',text)
-            self.assertIn(f'ID: K-SP-{name.upper()}-001',text);self.assertIn('https://',text)
+            for heading in species_profiles.SECTIONS:self.assertIn(heading,text)
+            self.assertEqual(species_profiles.json_block(text)['id'],f'K-SP-{name.upper()}-001')
         template=(root/'00-Standards/templates/species-profile.md').read_text(encoding='utf-8')
-        self.assertIn('Săn mồi là mục tùy loài',template)
+        for heading in species_profiles.SECTIONS:self.assertIn(heading,template)
 
     def test_pilots_read_only_selected_species_and_tackle_when_needed(self):
         root=Path(assets.ROOT)
@@ -254,6 +254,8 @@ class ProfilePilotTests(unittest.TestCase):
                     selected={p for p in paths if p.startswith('01-Knowledge/species/')}
                     self.assertEqual(selected,set() if mode=='caption' else {f'01-Knowledge/species/{species}.md'})
                     self.assertEqual('01-Knowledge/equipment/us-angling-tackle.md' in paths,mode!='caption' and interaction=='angling')
+                    modules={p for p in paths if p.startswith('01-Knowledge/equipment/species/')}
+                    self.assertEqual(modules,{f'01-Knowledge/equipment/species/{species}-angling.md'} if mode!='caption' and interaction=='angling' else set())
                     for row in packet['sources']:self.assertEqual(row['text'],(root/row['path']).read_bytes().decode('utf-8-sig'))
                     self.assertFalse(ctx.verify(root,packet))
 

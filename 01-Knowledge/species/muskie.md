@@ -1,51 +1,99 @@
 # Muskie / muskellunge
 
-ID: K-SP-MUSKIE-001
-Scientific name: Esox masquinongy
-Status: researched-reference
-Version: 2.1 | Updated: 2026-10-19
-Tags: fish, US-angling, muskie, muskellunge
+```json
+{
+ "id": "K-SP-MUSKIE-001",
+ "slug": "muskie",
+ "scientific_name": "Esox masquinongy",
+ "taxonomy": {"authority": "Mitchill, 1824", "order": "Esociformes", "family": "Esocidae", "checked_with": "S1, S2"},
+ "common_names": {"en": ["muskie", "musky", "muskellunge", "lunge", "maskinonge"]},
+ "group": "fish",
+ "stages": ["fry", "juvenile", "adult"],
+ "look_alikes": [{"name": "northern pike", "scientific_name": "Esox lucius"}, {"name": "tiger muskie", "scientific_name": "Esox masquinongy x lucius"}],
+ "modules": {"angling": "01-Knowledge/equipment/species/muskie-angling.md"},
+ "status": "researched",
+ "version": "3.0",
+ "updated": "2026-10-25",
+ "review_due": "2027-10-25",
+ "sources_file": "01-Knowledge/sources/species/muskie.md"
+}
+```
 
-## 1. Nhìn đúng
+Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.md). Nguồn: [sổ nguồn](../sources/species/muskie.md). ID giữ từ v2.1; v3.0 sửa trích dẫn thông số dây (xem sổ nguồn).
 
-Thân dài, mõm dạng duckbill, vây lưng/hậu môn gần đuôi; răng và hàm cần kiểm khi reveal. Hoa văn sẫm trên nền sáng thường giúp phân biệt pike, nhưng biến thiên màu/hoa văn có thật. Không biến tiger hybrid hoặc pike thành muskie chỉ bằng đổi tên. [M1, M2]
+## 1. Nhận dạng
 
-## 2. Cỡ và biến thể
+- Thân dài, đỉnh đầu không vảy, **mõm dài dạng mỏ vịt** [S3]; vây lưng và vây hậu môn lùi sát đuôi; răng nanh lớn [S4].
+- **Hoa văn sẫm trên nền sáng** (vạch dọc, đốm hoặc mảng; nền bạc) — ngược với pike có đốm sáng trên nền sẫm [S3, S4]. Có ba dạng: vạch, đốm và trơn gần như không hoa văn [S10].
+- Vây nhọn, thường màu gỉ sắt; thùy đuôi nhọn [S3, S4], đuôi chẻ sâu [S5].
+- Má và nắp mang: nửa dưới **không có vảy**, chỉ nửa trên má có vảy [S4, S10].
+- Lỗ cảm giác dưới hàm: 6–9 mỗi bên [S3] (ND ghi 6–8 [S10]); pike thường ≤5 [S3]. Các nguồn lệch nhau nên không dùng số lỗ làm dấu duy nhất.
+- Tên: muskie, musky, muskellunge, 'lunge, maskinonge [S3, S4]; tiếng Pháp maskinongé [S1]. Chưa có tên tiếng Việt từ nguồn tin cậy.
 
-Indiana DNR mô tả cá cái trong điều kiện phù hợp có thể dài hơn 50 inch (1,27 m). Đó là khả năng của cá lớn, không chiều dài mặc định hoặc thông số chung cho mọi giới tính/vùng. Không ghép cỡ lớn với anatomy con non; khi cần cực trị khác phải tìm nguồn cho đúng trường hợp, không tự tăng scale từ ảnh phối cảnh. [M3]
+| Dễ nhầm | Dấu phân biệt | Lỗi hình cần chặn |
+|---|---|---|
+| Northern pike *Esox lucius* | Đốm sáng trên nền sẫm, má phủ vảy hoàn toàn, vây tròn [S4] | Vẽ đốm sáng hình hạt đậu trên nền xanh sẫm |
+| Tiger muskie (cái muskie × đực pike) [S10] | Vạch sáng không đều trên nền sẫm, vây đuôi/ngực/bụng tròn [S5]; má phủ vảy toàn bộ hoặc 2/3 [S4] | Gọi cá lai là muskie chỉ bằng đổi tên |
 
-## 3. Hành vi có thể khai thác
+## 2. Kích cỡ và giai đoạn
 
-Muskie có thể trú gần cây thủy sinh/cover; plugs, spoons, bucktails là các nhóm lure được DNR nêu. Chọn hành vi và đường chạy theo môi trường, loại lure và câu chuyện, không mặc định mọi lần theo mồi đều đớp. Tốc độ định lượng và các lần đổi hướng cụ thể cần nghiên cứu/dàn cảnh rõ. [M1]
+| Thông số | Giá trị | Đơn vị | Phạm vi | Loại | Nguồn |
+|---|---|---|---|---|---|
+| Chiều dài phổ biến | 95 | cm TL | đực/không phân giới | typical | S2 |
+| Khoảng trưởng thành | 71–122 | cm TL | adult | typical | S12 |
+| Cá lớn | >50 | in | adult | large | S10 |
+| Chiều dài tối đa | 183 | cm TL | toàn loài | record | S2, S3 |
+| Khối lượng tối đa công bố | 31,8 | kg | toàn loài | record | S2 |
+| Kỷ lục Wisconsin (Spray) | 69 lb 11 oz, 63,5 in | lb | Chippewa Flowage, 20/10/1949 | record | S6, S11 |
+| Kỷ lục tiger muskie WI | 51 lb 3 oz, 54 in | lb | Lac Vieux Desert, 2019 | record | S6 |
+| Fingerling cuối hè | 7–13 | in | juvenile, năm đầu | typical | S4 |
+| Tuổi 2 / 4 / 12 | 18,4 / 23,1 / 43 | in | Wisconsin | estimate | S5 |
+| Trưởng thành sinh dục | đực 28–31; cái 30–36 | in | đực 4–5 tuổi, cái 5–7 tuổi | typical | S4 |
 
-Angling pilot có thể chọn **Mepps Musky Killer B5M standard**: nguồn hãng nêu Aglia blade và 5/0 treble; không ghép với cấu hình tandem hoặc Magnum khác. Kiểm mẫu/ref trước khi khóa số điểm treo và hình. Cánh spinner cần nước chuyển động tương đối; bucktail không tự bơi như prey. Bite leader/đầu nối theo bộ đã chọn, không dùng rig redfish. [M4; dụng cụ chung]
+Kỷ lục "thế giới" đang tranh cãi: Wisconsin coi cá Spray là kỷ lục bang và thế giới [S7], nguồn thứ cấp nói IGFA công nhận cá Cal Johnson 67 lb 8 oz (1949) [S15]; không dùng kỷ lục làm cỡ dàn cảnh. Bảng tuổi S5 trích từ PDF không đầy đủ nên để `estimate`. Tuổi thọ thường ~18 năm, có cá 30 năm [S4]. Quan hệ dài–nặng a=0,00490, b=3,08 (cm TL) [S2] chỉ để ước lượng.
 
-Ví dụ kế thừa, cần đọc nguồn khi chốt: [Wisconsin DNR](https://dnr.wisconsin.gov/topic/Fishing/outreach/hookyourcatch.html) nêu braid 50–80 lb; [Mercury/Jim Saric](https://www.mercurymarine.com/us/en/lifestyle/dockline/musky-leaders-101) nêu fluoro 130 lb dài 14 inch cho nhiều cách casting, không chuẩn duy nhất hoặc chống cắn tuyệt đối. Wire/heavy fluoro và số treble phải theo bộ thật. Live-sucker quick-strike là cấu hình khác cần nghiên cứu riêng và quy định địa phương. Không nhận các thông số kế thừa này đã được kiểm lại trong lượt cập nhật profile.
+## 3. Sinh cảnh và phân bố
 
-## 4. Điểm đáng xem
+- Bản địa lưu vực St. Lawrence–Great Lakes và Mississippi, từ Quebec tới đông nam Manitoba [S3], cả Hudson Bay (Red River) [S2].
+- Hồ có nhiều thảm cỏ ngập [S3]; nước mát 33–78 °F, chịu ngắn hạn tới 90 °F [S4].
+- Chọn vùng qua [descriptor muskie](../locations/muskie/INDEX.md); chỉ mở hồ sơ vùng được chọn.
 
-| Căn cứ | Hướng khai thác cần phát triển riêng |
+## 4. Hành vi
+
+- **Phục kích:** sống đơn độc, rình trong thảm cỏ hoặc cover [S9]; chờ rồi lao tới, ngoạm con mồi bằng răng nanh và nuốt đầu trước [S4].
+- **Dựa vào thị giác:** khó kiếm ăn ban đêm hoặc khi nước đục [S4].
+- **Theo mồi giả tới thuyền mà không đớp** là hành vi được ghi nhận; người câu dùng động tác vẽ số 8 [S4].
+- **Sinh sản:** giữa tháng 4 – cuối tháng 5 khi nước 50–60 °F [S4] (9–16 °C [S12]); 22.000–180.000 trứng, nở sau 8–14 ngày [S3]; không chăm con [S4].
+
+## 5. Tương tác
+
+- Thức ăn theo stage: cá bột ăn động vật phù du ngay hôm sau khi nở, vài ngày sau chuyển sang cá sống; trưởng thành ưa sucker, perch, cisco, đôi khi chuột xạ, vịt, chuột, ếch; con mồi dài tới 2/3 thân [S4].
+- Kẻ săn: con non bị pike, bass, yellow perch, cá thái dương, côn trùng nước và muskie khác ăn; trưởng thành không có kẻ săn dưới nước [S4].
+- Câu cá: module [muskie-angling](../equipment/species/muskie-angling.md), chỉ đọc khi cảnh có câu.
+
+## 6. Điểm đáng xem
+
+| Đặc điểm có căn cứ | Hướng phát triển, không là kịch bản mặc định |
 |---|---|
-| Thân dài, cá thể lớn | Lộ dần tỷ lệ và quỹ đạo qua cover; không phóng to kèm đổi anatomy |
-| Lure có bộ phận chuyển động | Cá phản ứng với sự thay đổi của lure; outcome theo brief |
-| Môi trường có cover | Tín hiệu phát hiện, đường đi và quyết định đổi quan hệ; không lặp áp sát để lấp thời gian |
+| Phục kích từ thảm cỏ, nuốt đầu trước | Lộ dần thân dài từ cover; con mồi xoay đầu trước khi nuốt |
+| Con mồi tới 2/3 thân, cả vịt/chuột xạ | Con mồi bất ngờ trên mặt nước, cỡ con mồi khớp tỷ lệ |
+| Theo mồi tới thuyền không đớp | Căng thẳng ở cự ly gần, kết cục theo brief |
+| Ba dạng hoa văn | Cá trơn không hoa văn vẫn là muskie; không phải lỗi |
 
-Các hướng này không là bằng chứng viral hoặc danh sách kết cục được phép; vẫn rà lịch sử theo cơ chế.
+Các hướng này không là bằng chứng viral; vẫn rà lịch sử theo cơ chế.
 
-## 5. Điều kiện và lỗi cần tránh
+## 7. Checklist hình ảnh
 
-Khớp hồ/sông, tầng nước, cover và prey theo vùng. Không ép một circle hook cho mọi lure; giữ số hook/nhánh/leader của mẫu thật. Phân biệt ngậm lure, attachment và lực dây. Không diễn figure-eight nếu điểm kéo/khung không hỗ trợ; không dùng răng/miệng pike thay thế khi thiếu ref. Mồi sống và prey tự nhiên cần nghiên cứu riêng, không lắp rig vào mọi cảnh.
+- Hoa văn sẫm trên nền sáng (hoặc trơn); không đốm sáng trên nền sẫm kiểu pike.
+- Thùy đuôi nhọn, vây nhọn màu gỉ; không vây tròn (pike/tiger).
+- Mõm mỏ vịt dài, răng nanh khi mở miệng.
+- Vây lưng và hậu môn nằm lùi sát đuôi.
+- Nửa dưới má và nắp mang trơn không vảy khi cận cảnh đầu.
+- Con mồi không dài quá ~2/3 thân cá; cỡ cá khớp bảng mục 2.
 
-## 6. Nguồn và asset
+## 8. Chưa biết và giới hạn
 
-Văn bản truy xuất 2026-10-18. Một số trang sản phẩm/direct-open bị chặn; M4 dùng đoạn văn hãng được web index trả về, chưa QA độc lập ảnh/SKU thật. Không nhập dữ liệu quảng bá hiệu quả vào facts.
-
-- M1 [Wisconsin DNR Muskellunge](https://dnr.wisconsin.gov/topic/Fishing/musky/muskywaters_illustration.html): cover, phân bố, nhóm lure.
-- M2 [DNR Wisconsin Muskellunge Waters](https://dnr.wisconsin.gov/sites/default/files/topic/Fishing/Musky_WisconsinMuskellungeWaters2018.pdf): nhận dạng/hoa văn; chưa xem hình PDF trong lượt này.
-- M3 [Indiana DNR Muskie Fishing](https://www.in.gov/dnr/fish-and-wildlife/fishing/muskie-fishing/): cỡ cá lớn có điều kiện, không là quy định toàn Mỹ.
-- M4 [Mepps Canada B5M](https://www.rapala.ca/ca_en/musky-killer): cấu hình được hãng mô tả; phải chọn đúng variant, không suy số móc của mọi Musky Killer.
-- [Dụng cụ](../equipment/us-angling-tackle.md), [tương tác](../interactions/fish-prey-and-lure.md). Catalog entity K-SP-MUSKIE-001; chọn identity/anatomy/scale và rig đúng nhu cầu; không tự dùng ref loài khác.
-
-## Vùng bối cảnh tại Mỹ
-
-Tra [descriptor vùng muskie](../locations/muskie/INDEX.md) khi chọn địa điểm; chỉ mở hồ sơ vùng được chọn. Áp dụng [chuẩn địa điểm](../../00-Standards/location-context.md): phân bố + sinh cảnh là bắt buộc; mức thích câu cá chỉ ưu tiên phụ. Không đọc các loài/vùng khác nếu không liên quan.
+- Kỷ lục thế giới tranh cãi; IGFA chưa mở được. Thông số leader của Mercury/Saric chưa xác nhận [S13].
+- Bảng tuổi–chiều dài S5 chưa đọc đủ; Indiana DNR (nguồn v2.1) không truy cập được.
+- Chưa mở Catalog of Fishes; chưa có tên tiếng Việt.
+- Ref ảnh: có ảnh thật adult (dạng đốm) và juvenile; chưa có ảnh thật lỗ cảm giác dưới hàm; chưa có ref `scale` có số đo.

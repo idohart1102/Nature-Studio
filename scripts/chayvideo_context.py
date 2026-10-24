@@ -13,6 +13,7 @@ import tempfile
 import time
 import memory_retrieval as memory
 import context_routing as routing
+import species_profiles
 
 ROOT = Path(__file__).resolve().parents[1]
 FINGERPRINT_FIELDS = ('opening', 'interaction', 'objects', 'terrain_role',
@@ -65,6 +66,20 @@ def active_files(root, slug):
     return sorted(files)
 
 
+def species_sources(root, recipe, name, angling):
+    """Project map grants a species; the profile resolver only maps aliases to that one profile."""
+    mapped = recipe.get('species', {})
+    key = name.lower()
+    if key not in mapped:
+        entry = species_profiles.resolve(root, name)
+        key = entry['slug'] if entry else key
+    profile = mapped.get(key)
+    if not profile:
+        return None
+    module = species_profiles.module_path(root, profile, 'angling') if angling else None
+    return [profile, *([module] if module else [])]
+
+
 def packet(root, slug, mode, species=(), interaction='unspecified',
            memory_selection=None, lesson_ids=(), topics=(), query_text='',
            stage=None, effects=(), tasks=(), asset_selection=None):
@@ -89,10 +104,11 @@ def packet(root, slug, mode, species=(), interaction='unspecified',
     files = [p for p in files if not (p.startswith('05-Memory/') and p.endswith('/INDEX.md'))]
     missing = []
     if mode != 'caption':
+        angling = interaction != 'natural' and (not plan or plan['include_angling'])
         for name in species if not plan or plan['include_species'] else ():
-            profile = recipe.get('species', {}).get(name.lower())
+            profile = species_sources(root, recipe, name, angling)
             if profile:
-                files.append(profile)
+                files += profile
             else:
                 missing.append(f'Research exact species/context: {name}; no substitute profile')
         # Underwater is the configured species-required workflow. Optional profiles
@@ -125,7 +141,7 @@ def packet(root, slug, mode, species=(), interaction='unspecified',
         dependencies.append(item)
     # asset_catalog.py is always a dependency so adding --asset-selection keeps the digest.
     for path in ['scripts/chayvideo_context.py', 'scripts/context_routing.py',
-                 'scripts/memory_retrieval.py', 'scripts/asset_catalog.py', '00-Standards/memory-taxonomy.json',
+                 'scripts/memory_retrieval.py', 'scripts/asset_catalog.py', 'scripts/species_profiles.py', '00-Standards/memory-taxonomy.json',
                  *[f'.agents/skills/na-chayvideo/references/{m}.md'
                    for m in ('new', 'revision', 'caption', 'reference')],
                  '00-Standards/context-routing.md', *([plan['config']] if plan and plan['config'] else [])]:
@@ -190,8 +206,9 @@ def verify(root, data):
             required = {*recipe['common'], *plan['files']}
             if data['mode'] != 'caption':
                 if plan['include_species']:
-                    required.update(recipe.get('species', {}).get(name.lower()) for name in data['species'])
-                    required.discard(None)
+                    angling = data['interaction'] != 'natural' and plan['include_angling']
+                    for name in data['species']:
+                        required.update(species_sources(root, recipe, name, angling) or [])
                 if data['interaction'] != 'natural' and plan['include_angling']:
                     required.update(recipe.get('angling', []))
             required = {p for p in required if not (p.startswith('05-Memory/') and p.endswith('/INDEX.md'))}

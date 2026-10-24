@@ -1,12 +1,12 @@
 # Knowledge chung, phạm vi riêng
 
-Version: 1.1 | Updated: 2026-10-19
+Version: 1.2 | Updated: 2026-10-25
 
 `01-Knowledge/` là thư viện toàn workspace, không thuộc riêng Underwater. Mỗi hồ sơ vẫn có phạm vi: loài, habitat, tương tác, dụng cụ, nguồn và trạng thái. Nội dung hiện tại tập trung Underwater; hồ sơ cá không tự áp cho deer. Quyết định format, khán giả và cách kể nằm trong Project, không chép vào Knowledge chung.
 
 ## Thêm loài hoặc Project
 
-1. Thêm hồ sơ có ID, tên khoa học, nguồn/ngày, phạm vi và điểm chưa chắc theo chuẩn nghiên cứu; cập nhật chỉ mục Knowledge. Một loài một nguồn chính; không thay tên loài trong hồ sơ cũ.
+1. Thêm hồ sơ theo [chuẩn hồ sơ loài v3](species-profile-standard.md) bằng `scripts/species_profiles.py new`, có sổ nguồn, validate và index. Một loài một nguồn chính; không thay tên loài trong hồ sơ cũ.
 2. Thêm key/đường dẫn trong `03-Projects/<slug>/context-map.json` đúng Project. Thêm mười hồ sơ cá không làm AI đọc cả mười: species map chọn hồ sơ đúng loài; các ràng buộc liên quan vẫn phải đọc.
 3. Với Project deer mới: dùng mẫu Project, ID/slug riêng; map chỉ trỏ nguồn deer/habitat/tương tác và chuẩn liên quan, không kế thừa map Underwater. Chưa có dự án rõ thì hỏi/chốt trước khi sản xuất.
 4. Xếp nguồn vào stage/effect trong `context-routing.json` nếu cần. Mode source list là mức bao phủ tối thiểu; nguồn chưa xếp stage được đọc rộng để tránh mất gate. Không đưa mọi loài vào danh sách nguồn nền của mọi mode.
@@ -16,7 +16,7 @@ Xem [cấu hình và cơ chế đọc](context-routing.md). Giữ nguyên văn n
 
 ## Hồ sơ phục vụ sáng tạo — v2.1.0
 
-Dùng [mẫu sáu phần](templates/species-profile.md): nhìn đúng; cỡ/biến thể; hành vi; điểm đáng xem; điều kiện/lỗi cần tránh; nguồn/asset. Giữ ID/đường dẫn đang có. Cỡ và stage là hai thông tin riêng; chỉ bổ sung các giai đoạn đúng loài và nhu cầu, không ép thú có trứng hoặc mọi loài phải săn mồi. Nét đặc biệt phải có căn cứ và đọc được trên hình; gợi ý ý tưởng không là kịch bản cố định hoặc điểm dự đoán viral.
+Từ 2026-10-25 thay bằng tám mục của [chuẩn v3](species-profile-standard.md); đoạn này giữ để truy vết. Bản v2.1.0 dùng mẫu sáu phần: nhìn đúng; cỡ/biến thể; hành vi; điểm đáng xem; điều kiện/lỗi cần tránh; nguồn/asset. Giữ ID/đường dẫn đang có. Cỡ và stage là hai thông tin riêng; chỉ bổ sung các giai đoạn đúng loài và nhu cầu, không ép thú có trứng hoặc mọi loài phải săn mồi. Nét đặc biệt phải có căn cứ và đọc được trên hình; gợi ý ý tưởng không là kịch bản cố định hoặc điểm dự đoán viral.
 
 Cá thể lớn và trường hợp đặc biệt được khai thác theo đúng scope nguồn. Không biến số liệu một trường hợp thành phổ biến; không ghép các cực trị độc lập hoặc đổi khối lượng thành chiều dài bằng đoán. Thiếu nguồn thì nghiên cứu, không tự gọi bất khả thi hoặc tự thu nhỏ để dễ sinh. Cảnh có thể hấp dẫn bằng hành vi/tương tác/biến thể khác. Một profile không phải hồ sơ khoa học đầy đủ; giữ thông tin có tác dụng với output và giới hạn thực.
 
@@ -58,3 +58,7 @@ Khi lần đầu tra mà catalog chưa có hoặc thiếu bộ tham chiếu đi 
 ## Vùng bối cảnh — v2.1.5
 
 Theo [chuẩn địa điểm](location-context.md): profile loài → descriptor vùng của loài → hồ sơ vùng được chọn. Knowledge lưu sự kiện có nguồn; Project giữ hashtag/khán giả. Thêm vùng bằng hồ sơ có ID/path/version/source và một dòng descriptor, không sửa skill hoặc nạp mọi vùng vào context-map. Chỉ mục loài hiện có tại `01-Knowledge/locations/<species>/INDEX.md`; mỗi loài khởi đầu năm vùng, không giới hạn tối đa. Hồ sơ vùng nằm ngoài packet nền: ghi path/version/hash của bản thực đã đọc trong INPUTS. Không tuyên bố coverage packet đã kiểm nguồn động.
+
+## Hồ sơ loài v3 — 2026-10-25
+
+Hồ sơ mọi nhóm sinh vật theo [species-profile-standard.md](species-profile-standard.md): khối metadata JSON, tám mục, bảng cỡ có Loại/Nguồn, Checklist hình ảnh, sổ nguồn có cấp A–E và trạng thái truy cập. `chayvideo_context.py` resolve alias/tên khoa học qua `species_profiles.py` nhưng chỉ nạp loài có trong context-map của Project; module (ví dụ `angling` → `01-Knowledge/equipment/species/<slug>-angling.md`) chỉ vào packet khi tác vụ cần. Không nạp chỉ mục loài, sổ nguồn hoặc hồ sơ loài khác. CI chạy `species_profiles.py validate`.

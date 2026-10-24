@@ -4,9 +4,7 @@ Các hồ sơ ban đầu là inherited-reference từ hướng dẫn đã chốt
 
 | ID | Chủ đề / thẻ | File |
 |---|---|---|
-| K-SP-REDFISH-001 | redfish, Sciaenops ocellatus, US-angling | [Redfish](species/redfish.md) |
-| K-SP-MUSKIE-001 | muskie, Esox masquinongy, US-angling | [Muskie](species/muskie.md) |
-| K-SP-WALLEYE-001 | walleye, Sander vitreus, US-angling | [Walleye](species/walleye.md) |
+| Loài | Mọi nhóm sinh vật, chuẩn v3 | [Chỉ mục loài](species/INDEX.md) (sinh tự động) |
 | K-HAB-UNDERWATER-001 | water, optics, habitat, sediment | [Môi trường dưới nước](habitats/underwater-realism.md) |
 | K-EQP-US-ANGLING-001 | bait, lure, hook, line, rig, trap | [Dụng cụ Mỹ](equipment/us-angling-tackle.md) |
 | K-INT-FISH-001 | predation, prey, lure, force | [Tương tác](interactions/fish-prey-and-lure.md) |
@@ -24,3 +22,7 @@ Ba hồ sơ trên đã được bổ sung văn bản có nguồn ngày 2026-10-1
 ## Vùng bối cảnh Mỹ — 2026-10-19
 
 15 hồ sơ văn bản có nguồn chính thức, không phải ảnh đã QA: [Redfish](locations/redfish/INDEX.md), [Muskie](locations/muskie/INDEX.md), [Walleye](locations/walleye/INDEX.md). Tra descriptor đúng loài rồi đọc vùng được chọn theo [chuẩn địa điểm](../00-Standards/location-context.md); không nạp toàn bộ các vùng mỗi lượt.
+
+## Hồ sơ loài v3 — 2026-10-25
+
+Ba hồ sơ Redfish/Muskie/Walleye nâng lên v3.0 theo [chuẩn hồ sơ loài](../00-Standards/species-profile-standard.md), giữ ID: metadata JSON, bảng cỡ có Loại/Nguồn, Checklist hình ảnh, [sổ nguồn](sources/species/) có cấp A–E và trạng thái truy cập, module câu tách tại `equipment/species/`. Thêm loài bằng `scripts/species_profiles.py new`; tra tên bằng `resolve`, không đọc chỉ mục vào context.

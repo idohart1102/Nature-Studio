@@ -1,49 +1,100 @@
 # Redfish / red drum
 
-ID: K-SP-REDFISH-001
-Scientific name: Sciaenops ocellatus
-Status: researched-reference
-Version: 2.1 | Updated: 2026-10-19
-Tags: fish, US-angling, redfish, red-drum
+```json
+{
+ "id": "K-SP-REDFISH-001",
+ "slug": "redfish",
+ "scientific_name": "Sciaenops ocellatus",
+ "taxonomy": {"authority": "(Linnaeus, 1766)", "order": "varies: Acanthuriformes (CoF), Eupercaria incertae sedis (WoRMS), Perciformes (ITIS)", "family": "Sciaenidae", "checked_with": "S1, S2, S3"},
+ "common_names": {"en": ["redfish", "red drum", "channel bass", "spotted bass", "bull red"]},
+ "group": "fish",
+ "stages": ["larva", "juvenile", "adult"],
+ "look_alikes": [{"name": "black drum", "scientific_name": "Pogonias cromis"}],
+ "modules": {"angling": "01-Knowledge/equipment/species/redfish-angling.md"},
+ "status": "researched",
+ "version": "3.0",
+ "updated": "2026-10-25",
+ "review_due": "2027-10-25",
+ "sources_file": "01-Knowledge/sources/species/redfish.md"
+}
+```
 
-## 1. Nhìn đúng
+Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.md). Nguồn: [sổ nguồn](../sources/species/redfish.md). ID giữ từ v2.1; v3.0 sửa hai trích dẫn sai của bản cũ (xem sổ nguồn).
 
-Thân đồng/đỏ đồng tới bạc; dấu đen gần gốc đuôi là dấu nhận dạng hữu ích. Có thể có nhiều đốm, không ép mọi cá đúng một đốm. Không thêm râu cằm của black drum. Kiểm màu dưới ánh sáng/nước thực, không dùng một ảnh làm ngoại hình duy nhất. [R1]
+## 1. Nhận dạng
 
-## 2. Cỡ và biến thể
+- Thân dài, lưng hơi cong, đầu dốc, mõm tù, miệng lớn nằm thấp; **không có râu cằm** [S11].
+- Màu từ đồng sẫm gần đen tới gần bạc [S6]; xám bạc ánh đồng [S9]. Nguồn đã mở không gắn màu với habitat cụ thể.
+- Đốm đen lớn ở phía trên gốc đuôi [S6]; số đốm biến thiên: một hoặc nhiều đốm từ dưới vây lưng mềm tới gốc đuôi [S9, S11]. Không ép mọi cá đúng một đốm, cũng không rải đốm khắp thân.
+- Con non ~15 cm: thân bạc, đốm gốc đuôi rõ (ảnh tham chiếu thật trong catalog).
+- Tên tiếng Anh: redfish, red drum, channel bass, spotted bass [S5]; "bull red" chỉ là tiếng lóng người câu. Chưa có tên tiếng Việt từ nguồn tin cậy.
 
-Nguồn R2 mô tả cá lớn có thể dài 5 ft (xấp xỉ 1,52 m); đây là khả năng của cá lớn, không cỡ phổ biến cho mọi cảnh hoặc tuyên bố kỷ lục hiện hành. Chọn cỡ và vùng/giai đoạn tương thích, có vật mốc hỗ trợ scale. Không suy cân nặng chính xác từ chiều dài; số của một cảnh là lựa chọn dàn cảnh. Con non/trứng cần ref đúng giai đoạn, không thu nhỏ adult. [R2]
+| Dễ nhầm | Dấu phân biệt | Lỗi hình cần chặn |
+|---|---|---|
+| Black drum *Pogonias cromis* | Có nhiều râu dưới hàm, thân cao lưng gù; con non có 4–5 vạch dọc sẫm [S10] | Thêm râu cằm hoặc vạch dọc cho redfish |
 
-## 3. Hành vi có thể khai thác
+## 2. Kích cỡ và giai đoạn
 
-Có thể kiếm ăn gần đáy hoặc trong cột nước khi có cơ hội; prey gồm cá, cua, tôm. Cá lớn dùng cut mullet là một hướng angling có cơ sở; dead bait không tự bơi. Không lấy hành vi của black drum thay cho red drum. [R1, R2]
+| Thông số | Giá trị | Đơn vị | Phạm vi | Loại | Nguồn |
+|---|---|---|---|---|---|
+| Chiều dài trung bình cá câu được | 23 (≈4,7 lb) | in | adult, Texas | typical | S7 |
+| Chiều dài trung bình | 18 (≈2,6 lb) | in | adult, South Carolina | typical | S9 |
+| Chiều dài phổ biến | 100 | cm TL | đực/không phân giới | large | S4 |
+| Cá lớn | 5 ft, >80 lb | ft | adult | large | S7 |
+| Chiều dài tối đa ghi nhận | 155 | cm TL | toàn loài | record | S4 |
+| Kỷ lục all-tackle thế giới | 94 lb 2 oz | lb | Hatteras Island NC, 11/1984 | record | S7, S8 |
+| Kỷ lục Texas | 54¼ in, 59½ lb | in | Gulf of Mexico, 01/2000 | record | S7 |
+| Ấu trùng | tới ~1 | in | larva, vài tuần | typical | S7 |
+| Con non | 1–30 | in | juvenile | typical | S7 |
+| Hết năm 1 | 11–12 | in | juvenile | typical | S6, S7 |
+| Năm 2 | 17–22 | in | juvenile | typical | S6, S7 |
+| Năm 3 | 22–24 (6–8 lb) | in | juvenile | typical | S6 |
+| Trưởng thành sinh dục | đực 28, cái 33 | in | 3–5 tuổi, SC | typical | S9 |
 
-Natural: không tự thêm dây/móc. Angling: chọn đúng bộ cụ thể trong [dụng cụ](../equipment/us-angling-tackle.md); circle-hook dùng nhận lực tăng dần theo rig, không tự set ngay lúc chạm. Ngậm mồi, mắc câu và phản kháng là các kết luận khác nhau.
+"Phổ biến 100 cm" của FishBase lớn hơn nhiều so với trung bình cá câu bang (18–23 in); dàn cảnh mặc định dùng số bang, cá ~1 m là lựa chọn "cá lớn" có chủ đích. Tuổi tối đa 50 năm [S4], SC ghi ~38 năm [S9]. Quan hệ dài–nặng FishBase (a=0,00851, b=3,07, cm TL) là ước tính Bayes [S4]; không dùng để khẳng định cân nặng của cá trong cảnh.
 
-Ví dụ tackle kế thừa cần mở lại R1 khi chọn thông số: mono/braid và leader chống mài mòn theo vật cản; tài liệu nêu 8–15 lb tại grass flats và 17–25 lb gần vật cản. Đây là sức chịu lực danh định, không là đường kính/lực căng/cân cá. Popping cork–shrimp, slip-sinker–bait, spoon/jig/plug là các hướng khác nhau, không gộp phụ kiện của mọi bộ.
+## 3. Sinh cảnh và phân bố
 
-## 4. Điểm đáng xem
+- Từ Massachusetts tới bắc Mexico, kể cả nam Florida; biển, nước lợ, sống gần đáy, thường trên nền cát và bùn cát, nhiều ở vùng sóng vỗ [S4].
+- Nước nông 1–4 ft dọc mép vịnh [S6]; trưởng thành thường ở nước mặn 30–35 ppt nhưng chịu được nước ngọt [S11], từng gặp xa ngược sông [S6].
+- Con non ở cửa sông, sát mép cỏ đầm lầy; mùa đông xuống luồng sông sâu hơn [S9]. Ba năm đầu ở vịnh hoặc vùng sóng gần cửa thông biển [S6]; cá lớn dành nhiều thời gian ngoài Gulf [S7].
+- Chọn vùng qua [descriptor redfish](../locations/redfish/INDEX.md); chỉ mở hồ sơ vùng được chọn theo [chuẩn địa điểm](../../00-Standards/location-context.md).
+
+## 4. Hành vi
+
+- **Tailing:** cúi đầu kiếm ăn trong cỏ, đuôi nhô khỏi mặt nước ở vùng nông [S6].
+- **Đơn lẻ hoặc theo đàn**, có thể đi cùng black drum và tarpon [S11]; trưởng thành có thể tụ nhóm gần bờ [S9].
+- **Sinh sản:** vùng Gulf giữa tháng 8 – giữa tháng 10 [S6] (nguồn khác: tháng 8 – tháng 11 [S7, S11]), gần cửa thông biển và bãi đảo chắn [S9].
+- **Âm thanh:** cá đực phát tiếng "drum" bằng cơ bóng hơi [S6], dùng để thu hút cá cái [S9]. Chỉ dùng tiếng này khi cảnh đúng mùa/ngữ cảnh, không thành tiếng nền mặc định.
+
+## 5. Tương tác
+
+- Thức ăn theo stage: ấu trùng ăn động vật phù du [S9]; con non ăn tôm, cá con, cua bùn, cua fiddler [S9]; trưởng thành ăn menhaden, spot, cá cơm, cua xanh [S9].
+- Kẻ săn: người, chim, cá lớn, rùa [S6]; chim ưng biển và cá lớn; đốm đuôi có thể đánh lạc hướng kẻ săn vào phần đuôi [S11].
+- Câu cá: module [redfish-angling](../equipment/species/redfish-angling.md), chỉ đọc khi cảnh có câu.
+
+## 6. Điểm đáng xem
 
 | Đặc điểm có căn cứ | Hướng phát triển, không là kịch bản mặc định |
 |---|---|
-| Cá thể lớn | Tương phản chủ thể–prey/vật mốc, rồi một thay đổi có nguyên nhân; không chỉ phóng to cá |
-| Kiếm ăn đáy hoặc đổi tầng nước | Tín hiệu phát hiện → tiếp cận có tiến triển → kết quả đọc được |
-| Cut bait/rig cụ thể | Quan sát lấy thịt, nhận lực hoặc nhả theo kết cục được chọn; không ép successful hookup |
+| Tailing ở nước nông | Đuôi đồng nhô khỏi mặt nước khi đầu còn trong cỏ; góc dưới nước thấy cá đào mồi |
+| Đốm đuôi đánh lạc hướng kẻ săn | Kẻ săn nhắm vào đuôi, cá thoát theo hướng ngược lại; cần hình đọc được |
+| Số đốm biến thiên | Hai cá cạnh nhau khác số đốm, không phải lỗi |
+| Cá lớn ra vùng cửa thông biển mùa thu | Tương phản cỡ với cá con trong cỏ đầm lầy |
 
-Đây là gợi ý kể chuyện, chưa có bằng chứng hiệu quả viral. Mốc key và cường độ ending do Project/brief quyết định.
+Đây là gợi ý kể chuyện, chưa có bằng chứng hiệu quả viral; cường độ ending do Project/brief quyết định.
 
-## 5. Điều kiện và lỗi cần tránh
+## 7. Checklist hình ảnh
 
-Khớp vùng ven biển/nước lợ, nền và vật cản theo nghiên cứu cảnh; [quang học/môi trường](../habitats/underwater-realism.md). Giữ anatomy và tỷ lệ qua turn; hook cứng, leader mềm, bait mềm có attachment liên tục. Che khuất không tự là mất vật; không dùng connector mới để nối môi với rig. Không suy độ đau hoặc buộc mọi cá giãy tới hết.
+- Đốm đen ở gốc đuôi phía trên; một hay nhiều đốm đều đúng, không đốm khắp thân.
+- Không có râu dưới hàm, không có vạch dọc sẫm trên thân (dấu của black drum).
+- Miệng nằm thấp, mõm tù; thân dài, lưng hơi cong, không gù cao.
+- Màu đồng/bạc ánh đồng hợp ánh sáng và độ đục; con non màu bạc.
+- Cỡ khớp stage và bảng mục 2; cá ~1 m+ phải có chủ đích và vật mốc.
+- Giữ nguyên số và vị trí đốm qua các frame.
 
-## 6. Nguồn và asset
+## 8. Chưa biết và giới hạn
 
-Truy xuất văn bản 2026-10-18; ngày bài viết nếu không ghi thì unknown. R1 truy xuất qua web index; direct open có lúc timeout. Chưa kiểm ảnh sản phẩm hoặc media sản xuất trong lần nghiên cứu văn bản này.
-
-- R1 [TPWD Red Drum](https://tpwd.texas.gov/huntwild/wild/species/reddrum/): nhận dạng, biến thiên đốm, feeding và bait; không chứng minh timing/lực cắn của cá cụ thể.
-- R2 [TPWD Redfish, an angler’s delight](https://tpwd.texas.gov/fishboat/fish/didyouknow/coastal/reddrum.phtml): giai đoạn/cỡ lớn và thức ăn. Bài lịch sử không xác minh kỷ lục hoặc quy định hiện hành.
-- Ref cần chọn khi làm cảnh: body/identity đúng stage, anatomy vùng miệng, scale khi claim cỡ lớn; circle-hook/assembly chỉ khi rig cần. Tra catalog local bằng entity ID trên; thiếu ref thì nghiên cứu, không giả đã có asset QA.
-
-## Vùng bối cảnh tại Mỹ
-
-Tra [descriptor vùng redfish](../locations/redfish/INDEX.md) khi chọn địa điểm; chỉ mở hồ sơ vùng được chọn. Áp dụng [chuẩn địa điểm](../../00-Standards/location-context.md): phân bố + sinh cảnh là bắt buộc; mức thích câu cá chỉ ưu tiên phụ. Không đọc các loài/vùng khác nếu không liên quan.
+- Chưa có nguồn cấp A/B về màu theo habitat hoặc kẻ săn riêng của con non.
+- Ngày cụ thể và chiều dài 57 in của kỷ lục 1984 chỉ từ nguồn cấp E [S13]; tình trạng IUCN Least Concern chỉ qua trích dẫn [S12].
+- Ref ảnh: có ảnh thật adult/juvenile cho identity; chưa có ảnh head/mouth cận cảnh, chưa có ref `scale` có số đo.

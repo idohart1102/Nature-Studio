@@ -30,7 +30,7 @@ Các thông số ví dụ tại profile là **ví dụ tham khảo có nguồn**
 
 ### 2A.3. Chọn cấu hình tại profile đúng loài
 
-Ví dụ loài đã chuyển về [Redfish](../species/redfish.md), [Muskie](../species/muskie.md), [Walleye](../species/walleye.md); chỉ đọc profile đang làm. Bảng này không là danh sách loài đóng. Loài khác cần hồ sơ/nghiên cứu riêng; không suy “hợp tại Mỹ” chỉ vì đồ được bán ở Mỹ. Chọn một bộ cụ thể và kiểm nguồn của thông số trước khi viết, không dán mọi lựa chọn vào prompt. Các ví dụ kế thừa không là chuẩn bắt buộc hoặc quyền thay cấu hình user đã khóa.
+Thông số theo loài nằm ở module câu của từng hồ sơ (từ 2026-10-25): [Redfish](species/redfish-angling.md), [Muskie](species/muskie-angling.md), [Walleye](species/walleye-angling.md); packet chỉ nạp module của loài đang làm. Bảng này không là danh sách loài đóng. Loài khác cần hồ sơ/nghiên cứu riêng; không suy “hợp tại Mỹ” chỉ vì đồ được bán ở Mỹ. Chọn một bộ cụ thể và kiểm nguồn của thông số trước khi viết, không dán mọi lựa chọn vào prompt. Các ví dụ kế thừa không là chuẩn bắt buộc hoặc quyền thay cấu hình user đã khóa.
 
 **Mồi tự nhiên cũng cần kiểm địa phương:** một con cá mồi có thể là prey tự nhiên nhưng bị hạn chế làm bait, bị hạn chế vận chuyển hoặc có yêu cầu nguồn cung. Khi cần live bait, kiểm tên loài thật, nguồn được phép và cách gắn hợp sản phẩm; không viết chung chung “local baitfish” rồi vẽ ngẫu nhiên cá nhiệt đới. Không cần ép tên hãng/logo lên hình; dùng ảnh sản phẩm làm tư liệu cấu tạo, không yêu cầu chữ thương hiệu.
 

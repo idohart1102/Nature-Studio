@@ -5,9 +5,9 @@ description: Đánh giá video đã render và số liệu sau đăng của mộ
 
 # /na-danhgia
 
-Version: 1.1 | Updated: 2026-10-23 | Thêm chấm chuyển động môi trường và yếu tố tự nhiên
+Version: 1.2 | Updated: 2026-10-25 | Chấm nhận dạng loài theo Checklist hình ảnh của hồ sơ loài v3
 
-Gốc workspace chứa START-HERE.md, đi lên ba cấp từ thư mục skill. Đọc START-HERE.md, SYSTEM.md, [quality-review](../../../00-Standards/quality-review.md), [media-review-and-finishing](../../../00-Standards/media-review-and-finishing.md) và quy chuẩn Project được PROJECT.md dẫn tới. Với Underwater đọc `format.md` (Hook 3 giây đầu, key, tương tác, âm thanh, kiểm trước giao), `first-frame-qa.md`, `audience-and-caption.md` và `01-Knowledge/habitats/underwater-realism.md` (hạt lơ lửng, bùn, ánh sáng, độ trong) cùng hồ sơ vùng đã chọn. Báo cáo tiếng Việt.
+Gốc workspace chứa START-HERE.md, đi lên ba cấp từ thư mục skill. Đọc START-HERE.md, SYSTEM.md, [quality-review](../../../00-Standards/quality-review.md), [media-review-and-finishing](../../../00-Standards/media-review-and-finishing.md) và quy chuẩn Project được PROJECT.md dẫn tới. Với Underwater đọc `format.md` (Hook 3 giây đầu, key, tương tác, âm thanh, kiểm trước giao), `first-frame-qa.md`, `audience-and-caption.md` và `01-Knowledge/habitats/underwater-realism.md` (hạt lơ lửng, bùn, ánh sáng, độ trong) cùng hồ sơ vùng đã chọn. Với mỗi loài trong video, mở đúng hồ sơ loài qua `python scripts/species_profiles.py resolve "<tên>"` và chấm theo mục 1 Nhận dạng + mục 7 Checklist hình ảnh; không mở hồ sơ loài khác. Báo cáo tiếng Việt.
 
 ## Vai trò độc lập
 

@@ -2,6 +2,13 @@
 
 Phiên bản toàn workspace được đọc từ [VERSION](VERSION). Phiên bản của từng skill/tài liệu được quản lý riêng; không đổi tất cả thành 1.0. Commit và hash dùng để phân biệt các bản có cùng số phiên bản hoặc có chỉnh sửa local.
 
+## Chưa phát hành — 2026-10-25
+
+- Chuẩn hồ sơ loài v3 (`00-Standards/species-profile-standard.md`, mẫu hồ sơ + sổ nguồn): một thư viện loài chung cho mọi nhóm sinh vật, Project cấp quyền qua context-map; metadata JSON, tám mục cố định, bảng cỡ `typical/large/record/estimate` có nguồn, Checklist hình ảnh, sổ nguồn cấp A–E với trạng thái `opened/indexed-only/not_accessed`, module tách theo nhu cầu (`angling`).
+- `scripts/species_profiles.py` (stdlib): `new`, `validate`, `index`, `resolve`, `list`, `snapshot` (bản lưu nguồn local trong `.nature-studio/knowledge-snapshots/`). `chayvideo_context.py` resolve alias/tên khoa học nhưng chỉ nạp loài Project đã map, cộng module câu của đúng loài khi interaction khác natural. CI chạy validate. Test `test_species_profiles.py`.
+- Redfish/Muskie/Walleye nâng lên v3.0, giữ ID: nghiên cứu lại với ITIS/WoRMS/Catalog of Fishes/FishBase/USGS NAS và cơ quan bang; sửa trích dẫn sai của bản v2.1; kiểm lại thông số dây/móc kế thừa; chuyển thông số câu sang `01-Knowledge/equipment/species/<slug>-angling.md`.
+- Ảnh thật tham chiếu (public domain/CC) đăng ký `origin: photo` trong catalog local, `private` cho tới khi người dùng duyệt xuất bản. /na-taoanh và /na-danhgia v1.2 dùng Checklist hình ảnh của hồ sơ loài.
+
 ## v2.2.1 — 2026-10-23
 
 - Skill mới `/na-danhgia` v1.1: chấm video render và số liệu sau đăng, độc lập với người viết prompt. Dùng `media_review.py`, frame 3 giây đầu/quanh key/toàn clip, nghe âm khi có khả năng; chấm cả chuyển động môi trường và yếu tố tự nhiên (dòng chảy, cỏ/rong, hạt lơ lửng, bùn, ánh sáng/quang học, bọt khí, sinh vật phụ, khớp địa điểm) trong miền visual/motion; ghi review, CURRENT-STATE schema2 và performance.md (retention 3s và trước key). Không sửa prompt, tạo media, đăng hay đổi approval.
