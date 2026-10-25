@@ -267,6 +267,29 @@
    "reviewed": "2026-10-25"
   },
   {
+   "asset_id": "PH-BAIT-LEECH-UNSPECIFIED-TOP-01",
+   "entity_id": "EQP-BAIT-LEECH",
+   "variant": null,
+   "view": "top",
+   "roles": [
+    "identity",
+    "anatomy"
+   ],
+   "page_url": "https://www.inaturalist.org/photos/218791419",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/218791419/original.jpeg",
+   "license": "CC BY 4.0",
+   "credit": "Alec Edward, \"Nephelopsis obscura\", iNaturalist photo 218791419, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+   "sha256": "20a307d147a151f0f6f38a6c93e12b117bc1f0d23f31a1d35a15d429bd4ff54c",
+   "width": 1536,
+   "height": 2048,
+   "subject_coverage": "medium",
+   "quality": "1080p",
+   "observed": "A single glossy dark leech resting on wet fingers, shown from above. Its broad flattened body has fine transverse rings, a rounded broad end, a tapering narrow end, and faint pale markings along the sides. No hook or fishing line is visible.",
+   "basis": "A soft, flattened, legless, finely ringed body with a broad rounded end and tapered opposite end clearly identifies a leech. Openverse identifies the source photograph as Nephelopsis obscura; species identification is source metadata, not established by this photograph alone. No hook through a sucker disk is visible, so the hooked variant is not assigned.",
+   "use": "Whole live leech body shape, wet surface and colour reference only. Original downloaded without resizing or cropping. Variant null: this does not document ribbon-leech-hooked or hook placement. Do not reproduce the hand or infer bait size from it.",
+   "reviewed": "2026-10-25"
+  },
+  {
    "asset_id": "PH-BAIT-MENHADEN-SIDE-01",
    "entity_id": "EQP-BAIT-MENHADEN",
    "variant": null,
@@ -552,6 +575,29 @@
    "observed": "White sucker swimming above gravel and driftwood in a tank; slim olive body, pale belly, small eye, fleshy lips under the snout",
    "basis": "Subterminal mouth with fleshy lips and olive-silver body consistent with S5; species named by photographer",
    "use": "Second identity reference (CC BY 2.0, credit Brian Gratwicke); no hook or rig shown",
+   "reviewed": "2026-10-25"
+  },
+  {
+   "asset_id": "PH-LURE-BUZZBAIT-STANDARD-SIDE-01",
+   "entity_id": "EQP-LURE-BUZZBAIT",
+   "variant": "standard",
+   "view": "side",
+   "roles": [
+    "identity",
+    "anatomy"
+   ],
+   "page_url": "https://commons.wikimedia.org/wiki/File:%E3%83%90%E3%82%BA%E3%83%99%E3%82%A4%E3%83%88.jpg",
+   "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/%E3%83%90%E3%82%BA%E3%83%99%E3%82%A4%E3%83%88.jpg",
+   "license": "Public domain",
+   "credit": "サミー (photographer); public-domain release on Wikimedia Commons",
+   "sha256": "f92a00cd80838415ca7421d83810eecb388c272489e4e8dc588fa876a15cfcb6",
+   "width": 1504,
+   "height": 1000,
+   "subject_coverage": "large",
+   "quality": "720p",
+   "observed": "Single buzzbait on a wooden surface: bent wire frame, a broad folded metal propeller on the upper arm, pale tapered jig head on the lower arm, chartreuse strand skirt, and an exposed single hook curving upward through the skirt.",
+   "basis": "The upper arm carries a two-wing propeller threaded along its rotation axis, visibly distinct from a suspended spoon-shaped spinner blade. A separate lower wire arm ends in the weighted skirted head and single hook. These visible parts identify the standard buzzbait.",
+   "use": "Identity and static construction reference. Original downloaded without resizing or cropping. The lure is lying on a table; do not infer buoyancy or copy the background. In a fishing scene, retrieval is needed to keep the propeller working at the surface.",
    "reviewed": "2026-10-25"
   },
   {
