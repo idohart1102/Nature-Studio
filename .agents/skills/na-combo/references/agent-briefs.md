@@ -7,14 +7,14 @@ Orchestrator sao brief tương ứng vào `.nature-studio/combo/drafts/<RUN>/`, 
 ## Nguyên tắc ngữ cảnh (mọi agent)
 
 - **Đọc một loài một lần, làm nhiều bộ.** Một agent chỉ chạm một loài chính và làm mọi bộ của nhóm mình trên cùng lần đọc nguồn. Không nạp hồ sơ loài, module câu, hồ sơ vùng hay ảnh mẫu của loài khác. Loài phụ trong cảnh (con mồi, chim) được tra đúng phần cần thiết.
-- **Nhóm tối đa 3 bộ/agent** cho writer, reviewer và agent ảnh: đủ để chia sẻ lần đọc, chưa dài tới mức bộ sau kém hoặc na ná bộ trước. Loài có hơn 3 bộ thì chia nhiều nhóm, dùng chung một danh sách ý tưởng.
+- **Nhóm tối đa 5 bộ/agent** cho writer, reviewer và agent ảnh: đọc dữ liệu loài một lần rồi viết các bộ khác nhau và khác lịch sử; trần 5 để context chưa dài tới mức bộ sau kém hoặc na ná bộ trước. Loài có hơn 5 bộ thì chia nhiều nhóm, dùng chung một danh sách ý tưởng.
 - **Bài học lọc theo bộ:** `python scripts/memory_retrieval.py query <slug> --mode new --task <task> --entity <slug-loài> [--interaction natural|angling] --candidates --out <tmp>/lessons-<n>.json`, đọc mọi trang và mở bản gốc của kết quả. Không dùng `combo.py lessons` để dựng bảng (lệnh đó trả mọi bài, kể cả của loài khác); chỉ orchestrator dùng nó ở bước đồng bộ và chống trùng.
 - **Độ mới đọc theo tầng:** `chayvideo_context.py history` + ledger/fingerprint + `MECHANISMS-*.md` của lượt. Chỉ mở bản gốc production/nháp khi cơ chế gần trùng (tối đa vài bản gần nhất), không mở toàn bộ.
 - **File tạm riêng:** mọi `--out`, packet, query ghi vào `.nature-studio/combo/drafts/<RUN>/<agent>-tmp/`, không dùng scratchpad chung.
 
 ## Bước 0 — Phân bổ (orchestrator, không agent)
 
-Lập `ALLOCATION.md`: N bộ chia theo loài và suất (Thường/Khám phá/Thử nghiệm) từ hướng chủ đề, `03-Projects/<slug>/species-priority.md` (điểm, mùa đang mở) và số bộ đã có mỗi loài (`chayvideo_context.py history`, chỉ metadata). Đa dạng loài/cơ chế là mặc định; không dồn quá nửa lượt vào một loài trừ khi người dùng chỉ định. Mỗi loài → nhóm ≤3 bộ; nhóm đầu của loài là **nhóm lập ý tưởng** cho cả loài.
+Lập `ALLOCATION.md`: N bộ chia theo loài và suất (Thường/Khám phá/Thử nghiệm) từ hướng chủ đề, `03-Projects/<slug>/species-priority.md` (điểm, mùa đang mở) và số bộ đã có mỗi loài (`chayvideo_context.py history`, chỉ metadata). Đa dạng loài/cơ chế là mặc định; không dồn quá nửa lượt vào một loài trừ khi người dùng chỉ định. Mỗi loài → nhóm ≤5 bộ; nhóm đầu của loài là **nhóm lập ý tưởng** cho cả loài.
 
 ## Bước 1 — Lên ý tưởng theo loài (writer nhóm đầu) + chọn ý độc lập
 
@@ -24,7 +24,7 @@ Sau khi đọc nguồn như mục Writer 1–3, writer nhóm đầu của mỗi 
 
 ## Writer
 
-Nhóm việc: các bộ **cùng một loài** trong lượt (tối đa 3 bộ/agent). Lượt có loài chỉ một bộ thì một agent một bộ.
+Nhóm việc: các bộ **cùng một loài** trong lượt (tối đa 5 bộ/agent). Lượt có loài chỉ một bộ thì một agent một bộ.
 
 1. Đọc skill /na-chayvideo, `new.md` và lõi chung một lần. Nguồn qua `chayvideo_context.py packet underwater --mode new --species <slug> --interaction <natural|angling|unspecified> --stage all --out <tmp>` rồi `view` (để `coverage` xác nhận); không đọc thẳng file nguồn. Có câu: packet kèm `baits` (mã mồi của loài); chỉ mở hồ sơ mồi đã chọn.
 2. Hồ sơ loài bằng `species_profiles.py resolve`; hồ sơ vùng qua descriptor của đúng loài; thiếu vùng thì nghiên cứu và tạo hồ sơ vùng theo location-context.md.
@@ -36,7 +36,7 @@ Nhóm việc: các bộ **cùng một loài** trong lượt (tối đa 3 bộ/ag
 
 ## Reviewer
 
-Một reviewer cho **một nhóm writer** (cùng loài, ≤3 bộ), **giữ nguyên qua các vòng** (orchestrator nhắn tiếp bằng SendMessage). Reviewer độc lập với writer: chỉ nhận `criteria.md`, `OUTPUT.json`, `geometry.json`/`geometry.md`, `meta.json`, `research.md` của từng bộ và đường dẫn nguồn. Đọc nguồn một lần cho cả nhóm nhưng **chấm từng bộ riêng** theo bảng tiêu chí riêng của bộ đó, không so điểm giữa các bộ, không để kết luận của bộ này ảnh hưởng bộ khác.
+Một reviewer cho **một nhóm writer** (cùng loài, ≤5 bộ), **giữ nguyên qua các vòng** (orchestrator nhắn tiếp bằng SendMessage). Reviewer độc lập với writer: chỉ nhận `criteria.md`, `OUTPUT.json`, `geometry.json`/`geometry.md`, `meta.json`, `research.md` của từng bộ và đường dẫn nguồn. Đọc nguồn một lần cho cả nhóm nhưng **chấm từng bộ riêng** theo bảng tiêu chí riêng của bộ đó, không so điểm giữa các bộ, không để kết luận của bộ này ảnh hưởng bộ khác.
 
 - Nguồn: `chayvideo_context.py packet ... --stage review` của đúng loài (+ module câu nếu có dụng cụ), hồ sơ vùng trong meta, bài học có trong `criteria.md`. Web chỉ khi cần kiểm dữ kiện cụ thể.
 - Độ mới theo tầng như trên.
@@ -48,14 +48,14 @@ Một reviewer cho **một nhóm writer** (cùng loài, ≤3 bộ), **giữ nguy
 
 ## Agent ảnh
 
-Nhóm việc: các mã **cùng loài** (tối đa 3 mã/agent), làm theo /na-taoanh. Đọc skill và first-frame.md/first-frame-qa.md một lần; hồ sơ loài chỉ đọc `python scripts/species_profiles.py section <loài> 1,2,7` (nhận dạng, cỡ, Checklist hình ảnh) trừ khi brief ảnh cần mục khác; hồ sơ vùng của mã đó; ảnh mẫu query đúng entity/role; mồi theo `bait_profiles.py for-species`. Bài học ảnh qua `memory_retrieval.py query --task image-generation --task image-review --entity <slug>`.
+Nhóm việc: các mã **cùng loài** (tối đa 5 mã/agent), làm theo /na-taoanh. Đọc skill và first-frame.md/first-frame-qa.md một lần; hồ sơ loài chỉ đọc `python scripts/species_profiles.py section <loài> 1,2,7` (nhận dạng, cỡ, Checklist hình ảnh) trừ khi brief ảnh cần mục khác; hồ sơ vùng của mã đó; ảnh mẫu query đúng entity/role; mồi theo `bait_profiles.py for-species`. Bài học ảnh qua `memory_retrieval.py query --task image-generation --task image-review --entity <slug>`.
 
 - Tuyến, budget 5 lượt, tên file `<Axx>/first-frame.png`, handoff theo skill. Không chạy `combo.py media/row/push`, không xóa ảnh.
 - Mỗi mã ghi `COMBO-IMAGE.json` (`id, attempt, status, calls, qa_image, qa_notes`). Trả về bảng mã · trạng thái · lượt · attempt và bài học ứng viên.
 
 ## Orchestrator
 
-- Bước 0 như trên; bước 1b giao cho agent chấm ý tưởng độc lập, orchestrator chỉ chuyển file; chia loài thành nhóm ≤3 trước khi giao; giữ ≤8 agent chạy cùng lúc để tránh chạm hạn mức; agent bị dừng giữa chừng thì nhắn tiếp (SendMessage), không tạo agent mới.
+- Bước 0 như trên; bước 1b giao cho agent chấm ý tưởng độc lập, orchestrator chỉ chuyển file; chia loài thành nhóm ≤5 trước khi giao; giữ ≤8 agent chạy cùng lúc để tránh chạm hạn mức; agent bị dừng giữa chừng thì nhắn tiếp (SendMessage), không tạo agent mới.
 - Chuyển kết quả giữa agent bằng đường dẫn file, không chép nội dung review vào tin nhắn.
 - Ghi `TRACKER.md`: mỗi bộ số vòng QA, vòng đạt, lỗi theo nhóm (hình học/sinh học/âm/hook/caption/khác) để đo hiệu quả giữa các lượt.
 - Gom bài học ứng viên vào `LESSON-CANDIDATES.md` của lượt; cuối lượt mới chống trùng bằng `combo.py lessons` rồi `lesson-new`/`lesson-confirm`.

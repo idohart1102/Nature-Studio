@@ -30,11 +30,11 @@ Quy ước trong chat. Workspace gốc đi lên ba cấp từ thư mục skill. 
 
 Giao việc cho agent theo [brief chuẩn](references/agent-briefs.md). Nguyên tắc: **đọc dữ liệu một loài một lần, làm nhiều bộ**; chất lượng mỗi bộ giữ nguyên chuẩn và quy trình kiểm như trước.
 
-- **Bước 0 — phân bổ:** orchestrator chia N bộ theo loài/suất (`ALLOCATION.md`), mỗi loài thành nhóm ≤3 bộ.
+- **Bước 0 — phân bổ:** orchestrator chia N bộ theo loài/suất (`ALLOCATION.md`), mỗi loài thành nhóm ≤5 bộ.
 - **Bước 1 — lên ý tưởng theo loài:** writer nhóm đầu của mỗi loài đọc nguồn một lần, viết `CONCEPTS-<loài>.md` với gấp đôi số suất rồi dừng; một agent chấm ý tưởng độc lập (chỉ đọc concept + ledger) loại ý gần trùng lịch sử/chéo loài và chọn mỗi suất ý tốt nhất (`CONCEPTS-REVIEW.md`) trước khi viết bộ đầy đủ.
-- Writer/agent ảnh chỉ làm các bộ **cùng một loài** (tối đa 3); packet dựng bằng `--species <loài>` và `--interaction` đúng bộ. Agent ảnh đọc hồ sơ loài qua `species_profiles.py section <loài> 1,2,7`.
+- Writer/agent ảnh chỉ làm các bộ **cùng một loài** (tối đa 5); packet dựng bằng `--species <loài>` và `--interaction` đúng bộ. Agent ảnh đọc hồ sơ loài qua `species_profiles.py section <loài> 1,2,7`.
 - **Hình học:** writer ghi `geometry.json`, `scripts/combo_geometry.py render` kiểm số học (khung, tầm nước, độ dài dây, tốc độ) và sinh `geometry.md`; reviewer dùng script thay cho tự tính.
-- **Reviewer theo nhóm:** một reviewer độc lập cho một nhóm writer (≤3 bộ cùng loài), giữ qua các vòng; đọc nguồn một lần nhưng chấm và ghi review riêng từng bộ. **QA 2 mức:** vòng 1–3 đầy đủ, vòng 4–5 chỉ lỗi còn mở và phần đã đổi.
+- **Reviewer theo nhóm:** một reviewer độc lập cho một nhóm writer (≤5 bộ cùng loài), giữ qua các vòng; đọc nguồn một lần nhưng chấm và ghi review riêng từng bộ. **QA 2 mức:** vòng 1–3 đầy đủ, vòng 4–5 chỉ lỗi còn mở và phần đã đổi.
 - Độ mới đọc theo tầng: history + ledger/fingerprint + `MECHANISMS-*.md`; chỉ mở bản gốc các bộ gần trùng.
 - ≤8 agent chạy cùng lúc; agent dừng giữa chừng thì nhắn tiếp, không tạo agent mới. File tạm của mỗi agent ở thư mục riêng trong `.nature-studio/combo/drafts/<RUN>/`. `TRACKER.md` ghi số vòng và nhóm lỗi từng bộ để so hiệu quả giữa các lượt.
 
