@@ -27,3 +27,62 @@ lb-test là sức chịu danh định, không phải đường kính hay cân n�
 - Không gộp phụ kiện của bộ suối (phao, split shot, egg sac) với bộ kéo ngoài hồ.
 - Cá đánh mạnh: mất cá thường do nút buộc kém, dây chùng, lưỡi yếu; cần nghiêng thấp, để cá kéo dây khi chạy [S7]. Không vẽ cần gập ở ngọn.
 - Thả cá: dùng vợt, giữ cá trong nước khi gỡ lưỡi, làm ướt tay [S7]; không treo cá dọc theo dây.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species rainbow-trout`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-SALMON-ROE",
+   "when": "steelhead trong suối thu–đông–xuân, sát đáy hoặc dưới phao",
+   "source": "S8",
+   "variants": [
+    "spawn-sac"
+   ]
+  },
+  {
+   "id": "EQP-LURE-EGG-IMITATION",
+   "when": "steelhead trong suối thu–đông–xuân, sát đáy hoặc dưới phao",
+   "source": "S8",
+   "variants": [
+    "yarn-egg",
+    "trout-bead"
+   ]
+  },
+  {
+   "id": "EQP-LURE-FLY",
+   "when": "steelhead trong suối thu–đông–xuân",
+   "source": "S8, S10"
+  },
+  {
+   "id": "EQP-LURE-SPOON",
+   "when": "trolling ngoài hồ xuân–hè; ném trong suối",
+   "source": "S7, S8, S10"
+  },
+  {
+   "id": "EQP-BAIT-MINNOW",
+   "when": "steelhead trong suối",
+   "source": "S7"
+  },
+  {
+   "id": "EQP-BAIT-INSECT-LARVAE",
+   "variants": [
+    "mealworm"
+   ],
+   "when": "steelhead trong suối",
+   "source": "S7"
+  },
+  {
+   "id": "EQP-LURE-INLINE-SPINNER",
+   "variants": [
+    "standard-inline"
+   ],
+   "when": "steelhead trong suối",
+   "source": "S7, S10"
+  }
+ ]
+}
+```

@@ -1,0 +1,17 @@
+# Sổ nguồn — Squid
+
+```json
+{
+ "bait_id": "EQP-BAIT-SQUID",
+ "sources": [
+  {"id": "S1", "tier": "B", "title": "Learn to Fish: A Basic Guide for the Beginning Angler (PWD BK K0700-0639d), p. 16 Natural and live baits", "publisher": "Texas Parks and Wildlife Department", "url": "https://tpwd.texas.gov/publications/pwdpubs/media/pwd_bk_k0700_0639d.pdf", "published": null, "accessed": "2026-10-25", "access": "opened", "supports": "dead squid bought for saltwater bottom fishing (gafftopsail catfish, snapper); hook the squid two or three times in and out through the body to keep small fish from stealing it", "limits": "beginner guide; no sizes"},
+  {"id": "S2", "tier": "B", "title": "Longfin Squid (Doryteuthis pealeii) species page", "publisher": "NOAA Fisheries", "url": "https://www.fisheries.noaa.gov/species/longfin-squid", "published": null, "accessed": "2026-10-25", "access": "opened", "supports": "also known as Loligo, Boston squid; harvested for bait since the late 1800s; fins long, at least half the mantle length; mantle up to 1.6 ft but usually under 1 ft; raw squid ivory with a speckled membrane; chromatophores change colour", "limits": "one species; bait squid sold in the US may be other species"},
+  {"id": "S3", "tier": "B", "title": "Maryland Weekly Fishing Report, June 10, 2015", "publisher": "Maryland Department of Natural Resources", "url": "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/index.asp?d=06102015", "published": "2015-06-10", "accessed": "2026-10-25", "access": "opened", "supports": "small sea bass inside the Ocean City inlet chewing up squid strip baits", "limits": "weekly report, single date"},
+  {"id": "S4", "tier": "B", "title": "Maryland Weekly Fishing Report, July 16, 2014", "publisher": "Maryland Department of Natural Resources", "url": "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/index.asp?d=07162014", "published": "2014-07-16", "accessed": "2026-10-25", "access": "opened", "supports": "squid and minnows are the old standby baits for flounder in Assawoman and Sinepuxent Bays; croaker, small bluefish and black sea bass attack squid baits", "limits": "weekly report, single date"},
+  {"id": "S5", "tier": "B", "title": "Circle Hooks for Striped Bass (angler flyer)", "publisher": "New Jersey Department of Environmental Protection, Division of Fish and Wildlife", "url": "https://dep.nj.gov/wp-content/uploads/njfw/circlehooks_strbass.pdf", "published": null, "accessed": "2026-10-25", "access": "opened", "supports": "squid listed among cut or whole natural baits that require inline circle hooks for striped bass (since 2021)", "limits": "New Jersey rule"},
+  {"id": "S6", "tier": "B", "title": "Stock Assessment and Fishery Evaluation Report for Atlantic Highly Migratory Species 2024-2025, sections 5.3.3.1 (PDF p. 122) and 10.1.2 (PDF p. 263)", "publisher": "NOAA Fisheries, Atlantic HMS Management Division", "url": "https://www.fisheries.noaa.gov/s3/2026-09/safe-report-2024-2025.pdf", "published": "2026-09", "accessed": "2026-10-25", "access": "opened", "supports": "commercial handgear vessels fishing for HMS (tunas, swordfish) that use bait typically use herring, mackerel, whiting, mullet, menhaden, ballyhoo, butterfish and squid; rod and reel presents live or dead baits drifted, weighted or trolled", "limits": "fishery description; does not say how squid is rigged"}
+ ]
+}
+```
+
+Cấp nguồn và trạng thái truy cập theo [chuẩn hồ sơ loài](../../../00-Standards/species-profile-standard.md). `opened` chỉ khi đã mở chính trang đó.

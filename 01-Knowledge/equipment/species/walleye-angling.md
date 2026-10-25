@@ -24,3 +24,47 @@ Module `angling` của [K-SP-WALLEYE-001](../../species/walleye.md); chỉ nạp
 ## Lỗi cần tránh
 
 Jig head/hook là một cấu tạo, không tách hay nhân đôi khi cá đổi góc. Không thêm treble từ lure khác, không cho chì trượt thành một khối với mọi vật, không tự thêm wire/hardware muskie. Khối lượng, độ nổi, dây và lực kéo cùng một cấu hình. Không suy mắc câu từ một frame gần miệng.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species walleye`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-NIGHTCRAWLER",
+   "when": "cuối xuân–đầu thu; rig slip-sinker giữa hè",
+   "source": "S5, S14"
+  },
+  {
+   "id": "EQP-BAIT-LEECH",
+   "when": "cuối xuân–đầu thu",
+   "source": "S5, S14"
+  },
+  {
+   "id": "EQP-LURE-CRANKBAIT",
+   "when": "hè trolling ~1 mph gần bãi rong sâu/đáy cứng; thu hard bait nhỏ dáng perch gần weedline",
+   "source": "S5, S14"
+  },
+  {
+   "id": "EQP-LURE-JIG",
+   "when": "jig-and-minnow đầu mùa; câu băng",
+   "source": "S5, S7"
+  },
+  {
+   "id": "EQP-BAIT-MINNOW",
+   "when": "đầu mùa gắn jig 1/8–3/8 oz; cuối thu–đầu xuân",
+   "source": "S5, S14"
+  },
+  {
+   "id": "EQP-BAIT-SUCKER",
+   "variants": [
+    "small-sucker"
+   ],
+   "when": "sucker/fathead 2–6 in, không gắn mùa",
+   "source": "S6"
+  }
+ ]
+}
+```

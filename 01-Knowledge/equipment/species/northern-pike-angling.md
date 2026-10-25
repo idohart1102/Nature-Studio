@@ -28,3 +28,40 @@ lb-test là sức chịu lực danh định, không phải cân nặng cá. "C�
 ## Lỗi cần tránh
 
 Không bỏ leader thép khi cảnh cận răng pike; không chép leader/braid muskie sang pike khi chưa có nguồn. Cờ tip-up bật lên là dấu cá kéo dây, không phải đã mắc câu. Không giật ngay khi cá vừa ngậm minnow. Không dàn băng mỏng có người đứng.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species northern-pike`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-LURE-SPOON",
+   "when": "đầm, thảm cỏ khi nước mát; nước ấm xuống tầng sâu mát",
+   "source": "S6"
+  },
+  {
+   "id": "EQP-LURE-FLY",
+   "when": "đầm, thảm cỏ khi nước mát; nước ấm xuống tầng sâu mát",
+   "source": "S6",
+   "variants": [
+    "streamer"
+   ]
+  },
+  {
+   "id": "EQP-BAIT-SUCKER",
+   "when": "sucker/chub sống tới 8 in dưới phao",
+   "source": "S6"
+  },
+  {
+   "id": "EQP-BAIT-MINNOW",
+   "when": "câu băng, quanh thảm cỏ sâu 5–15 ft, mồi cách đáy 2–3 ft",
+   "source": "S11",
+   "variants": [
+    "lip-hooked"
+   ]
+  }
+ ]
+}
+```

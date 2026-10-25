@@ -22,3 +22,49 @@ lb-test là sức chịu lực danh định, không phải đường kính hay c
 ## Lỗi cần tránh
 
 Miệng cá mỏng ("papermouth"), móc có thể rách ra khi kéo mạnh [S11]: cảnh vật lộn không nên giật cần quá mạnh rồi vẫn giữ cá. Không vẽ phao và jig chung một dây; không gộp phụ kiện của nhiều bộ. Không suy độ đau, không buộc mọi cá giãy tới hết.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species spotted-seatrout`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-SHRIMP",
+   "when": "dưới phao dọc rạn hàu, mép cỏ, cửa lạch",
+   "source": "S7, S8",
+   "variants": [
+    "live-popping-cork",
+    "live-tail-hooked",
+    "live-horn-hooked"
+   ]
+  },
+  {
+   "id": "EQP-BAIT-MULLET",
+   "when": "khi cá tạp rỉa hết tôm",
+   "source": "S7",
+   "variants": [
+    "finger-mullet-live"
+   ]
+  },
+  {
+   "id": "EQP-LURE-GRUB",
+   "when": "không gắn mùa",
+   "source": "S7",
+   "variants": [
+    "curly-tail-jighead"
+   ]
+  },
+  {
+   "id": "EQP-LURE-TOPWATER",
+   "when": "khi cá đớp finger mullet trên mặt, Florida và Gulf",
+   "source": "S7",
+   "variants": [
+    "popper",
+    "walk-the-dog"
+   ]
+  }
+ ]
+}
+```

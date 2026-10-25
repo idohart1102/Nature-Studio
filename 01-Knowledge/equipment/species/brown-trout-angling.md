@@ -30,3 +30,49 @@ Chưa có nguồn A/B cho dây/lưỡi khi câu brown hồ chạy suối; không
 - Minnow bị móc xuyên thân nặng nề khi nguồn chỉ nói móc nhẹ qua lưng/môi [S7]; mồi sống phải được phép tại bang đó.
 - Lội lên redd khi cá đang đẻ hoặc trứng còn ủ (Virginia: 3–6 tuần) [S4].
 - Thêm streamer, egg sac, spinner trong cùng một rig. Mùa đóng câu theo bang chưa kiểm.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species brown-trout`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-MINNOW",
+   "when": "brown lớn, thả trôi vào vực sâu có chỗ trú",
+   "source": "S7",
+   "variants": [
+    "lip-hooked",
+    "back-hooked"
+   ]
+  },
+  {
+   "id": "EQP-BAIT-SALMON-ROE",
+   "when": "T10–T11, Black River và Stony Creek, NY",
+   "source": "S6",
+   "variants": [
+    "spawn-sac"
+   ]
+  },
+  {
+   "id": "EQP-LURE-FLY",
+   "when": "T10–T11, Black River và Stony Creek, NY",
+   "source": "S6"
+  },
+  {
+   "id": "EQP-LURE-JIG",
+   "when": "suối, ném ngược dòng",
+   "source": "S7"
+  },
+  {
+   "id": "EQP-LURE-INLINE-SPINNER",
+   "variants": [
+    "standard-inline"
+   ],
+   "when": "T10–T11 cá hồ chạy suối; suối nhỏ",
+   "source": "S6, S7"
+  }
+ ]
+}
+```

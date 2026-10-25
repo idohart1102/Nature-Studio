@@ -1,6 +1,6 @@
 # Tham chiếu asset khi tạo nội dung và ảnh
 
-Version: 1.0 | Updated: 2026-10-18 | Dùng chung mọi Project
+Version: 1.1 | Updated: 2026-10-25 | Dùng chung mọi Project
 
 Đọc khi cần chọn/dùng ảnh tham chiếu hoặc xử lý binding; không nạp gallery/catalog toàn bộ. Knowledge xác lập sự kiện và kích cỡ; Project/brief quyết định câu chuyện, phong cách và t=0; asset hỗ trợ ngoại hình/cấu hình. Thư viện không giới hạn ý tưởng.
 
@@ -11,6 +11,10 @@ Version: 1.0 | Updated: 2026-10-18 | Dùng chung mọi Project
 Tự xác định đối tượng, cỡ, góc nhìn, đặc điểm nhận dạng, tiếp xúc/cấu tạo và bộ lắp ráp cần giữ. Phần chỉ lộ trong video ghi video, không ép vào t=0. Chỉ mở ảnh khi cần giải quyết chi tiết thị giác; đọc metadata không là xem ảnh. Asset ID gợi ý không ràng buộc /na-taoanh dùng ảnh không phù hợp.
 
 /na-taoanh luôn đánh giá lại nhu cầu theo brief/t=0 hiện hành. Ảnh trực tiếp từ user không phải đi qua /na-chayvideo; ghi cùng requirements trong INPUTS của attempt ảnh, không bịa bộ video. Caption-only không đổi requirements/selection. Revision hình/nội dung phải ghi lại requirements còn hiệu lực, kể cả phần không đổi; thiếu thì unverified, không kế thừa ngầm chứng nhận đúng.
+
+## Mồi câu
+
+Cảnh có mồi/lure: lấy mã từ `baits` của packet hoặc `python scripts/bait_profiles.py for-species <loài>`, chọn **một** mồi/biến thể cho cảnh và ghi item requirement với `entity_id`/`variant` đúng mã (role `identity`; thêm `assembly` khi móc/rig lộ trong khung). Dùng nguyên `requests` dựng sẵn để query, không duyệt cả thư viện. Mỗi mồi gửi tối đa một ảnh identity và một ảnh assembly; chỉ mở hồ sơ mồi đã chọn để lấy checklist QA. Thiếu ảnh thì dựa vào checklist, ghi lý do. Chi tiết ở [chuẩn hồ sơ mồi](bait-profile-standard.md).
 
 ## Tra cứu có phạm vi
 

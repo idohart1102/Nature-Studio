@@ -19,3 +19,19 @@ Chưa có nguồn A/B nêu sức chịu lực dây hay cỡ móc cho blue catfis
 - Không dùng kỷ lục 143 lb [S10] làm cỡ mặc định của cá mắc câu.
 - Virginia khuyến khích thu hoạch blue cỡ nhỏ, theo khuyến cáo tiêu thụ của Sở Y tế [S10]; giới hạn bag/size khác nhau theo bang và thủy vực, tra quy định hiện hành.
 - Không gộp trotline, jug, cần máy và bắt tay trong cùng một cảnh; không gắn noodling cho bang cấm.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species blue-catfish`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-SHAD-HERRING",
+   "when": "không gắn mùa",
+   "source": "S7"
+  }
+ ]
+}
+```

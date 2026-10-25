@@ -5,7 +5,7 @@ description: Tạo hoặc sửa bộ nội dung video Nature Studio khi gọi /n
 
 # /na-chayvideo
 
-Version: 2.14 | Updated: 2026-10-25 | Bài học là cổng QA (kể cả Chờ duyệt), QA tối đa 5 vòng reviewer độc lập, khám phá có chủ đích
+Version: 2.15 | Updated: 2026-10-25 | Mồi câu tra theo mã thư viện mồi; bài học là cổng QA (kể cả Chờ duyệt), QA tối đa 5 vòng reviewer độc lập, khám phá có chủ đích
 
 Gốc workspace chứa START-HERE.md, đi lên ba cấp từ thư mục skill; không ghi cứng ổ đĩa. Đọc START-HERE.md và SYSTEM.md trước công việc; trong cùng phiên không cần nạp lại nguồn nguyên vẹn đã đọc. Yêu cầu hiện hành của người dùng ưu tiên trong phạm vi được giao.
 
@@ -31,7 +31,7 @@ Gốc workspace chứa START-HERE.md, đi lên ba cấp từ thư mục skill; k
 
 Mỗi video đi theo pha, mỗi pha một chat: tạo bộ → ảnh (/na-taoanh) → loạt sửa. Mỗi lượt sửa ghi ngay một mục feedback.md theo [mẫu](../../../00-Standards/templates/feedback.md): lời người dùng nguyên văn, cách hiểu, phạm vi, phần đã chốt, phương án đã loại kèm lý do, việc còn mở. Sau khoảng 5 lượt sửa trong cùng chat, hoặc khi việc chuyển sang sửa hệ thống, đề nghị mở chat mới và in sẵn câu nối, ví dụ `/na-chayvideo sửa <ID> <attempt>: <việc còn mở>`. Chat mới đọc feedback.md, SUMMARY và CURRENT-STATE (nếu có), chạy resolve, rồi đọc lại nguồn theo lõi chung; không dựa vào trí nhớ chat cũ.
 
-Tự xác định nhu cầu asset từ brief, lưu reference_requirements trong OUTPUT/INPUTS theo [lõi chung](../../../00-Standards/video-prompt-workflow.md): đối tượng/biến thể, đặc điểm cần giữ, role và first_frame/video/both. Có thể ghi không cần với lý do. Query metadata đúng Project khi cần, chỉ mở ảnh để giải quyết chi tiết thị giác; ID gợi ý là planned, không giả đã truyền ảnh. /na-taoanh sẽ kiểm lại và chọn input thật. Revision ghi nhu cầu còn hiệu lực, caption-only giữ binding không tra asset. Thư viện không giới hạn ý tưởng; không đổi chuyện vì thiếu ảnh, không nạp cả catalog hoặc thêm mục vào bốn phần trả lời mặc định.
+Tự xác định nhu cầu asset từ brief, lưu reference_requirements trong OUTPUT/INPUTS theo [lõi chung](../../../00-Standards/video-prompt-workflow.md): đối tượng/biến thể, đặc điểm cần giữ, role và first_frame/video/both. Có thể ghi không cần với lý do. Query metadata đúng Project khi cần, chỉ mở ảnh để giải quyết chi tiết thị giác; ID gợi ý là planned, không giả đã truyền ảnh. /na-taoanh sẽ kiểm lại và chọn input thật. Revision ghi nhu cầu còn hiệu lực, caption-only giữ binding không tra asset. Thư viện không giới hạn ý tưởng; không đổi chuyện vì thiếu ảnh, không nạp cả catalog hoặc thêm mục vào bốn phần trả lời mặc định. Cảnh có mồi: chọn một mã/biến thể từ `baits` của packet theo [chuẩn hồ sơ mồi](../../../00-Standards/bait-profile-standard.md), ghi vào requirement và prompt đúng mồi đó; chỉ mở hồ sơ mồi đã chọn.
 
 Máy mới hoặc catalog thiếu bộ ref đi kèm: nếu có `08-Assets/reference-library.json`, chạy `python scripts/asset_catalog.py import-bundle 08-Assets/reference-library.json` trước khi báo thiếu, rồi query đúng Project. Không nạp cả manifest vào context hoặc tự ghi đè ID xung đột.
 

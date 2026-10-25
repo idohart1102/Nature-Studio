@@ -25,3 +25,108 @@ Máy baitcast hay spinning đều phổ biến; braid hợp topwater, spinnerbai
 - Cá đực canh tổ dễ cắn mồi vì bảo vệ tổ, không phải vì đói [S10]; tôn trọng quy định mùa câu tổ của bang.
 - Không mô tả "mùa thu ăn điên cuồng" như sự thật sinh học [S12].
 - Hook, leader, mồi giữ cùng một bộ liên tục; không thêm connector mới để nối môi cá với rig.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species largemouth-bass`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-LURE-CRANKBAIT",
+   "when": "rattle bait tiền sinh sản T3–đầu T4; crankbait mùa thu khi cá đang ăn",
+   "source": "S11",
+   "variants": [
+    "lipless",
+    "squarebill",
+    "shallow-diver",
+    "deep-diver"
+   ]
+  },
+  {
+   "id": "EQP-LURE-BLADED-JIG",
+   "when": "tiền sinh sản T3–đầu T4, quanh cây chìm, gỗ, đá",
+   "source": "S11",
+   "variants": [
+    "standard"
+   ]
+  },
+  {
+   "id": "EQP-LURE-SOFT-STICK",
+   "when": "tiền sinh sản quanh cây chìm; mùa hè Texas/wacky",
+   "source": "S11",
+   "variants": [
+    "texas-rig",
+    "wacky-rig"
+   ]
+  },
+  {
+   "id": "EQP-LURE-BUZZBAIT",
+   "when": "mùa hè sáng sớm hoặc chiều tối",
+   "source": "S11",
+   "variants": [
+    "standard"
+   ]
+  },
+  {
+   "id": "EQP-LURE-TOPWATER",
+   "when": "mùa hè sáng sớm hoặc chiều tối",
+   "source": "S11",
+   "variants": [
+    "walk-the-dog",
+    "prop-bait"
+   ]
+  },
+  {
+   "id": "EQP-LURE-SPINNERBAIT",
+   "when": "mùa thu khi cá đang ăn",
+   "source": "S11"
+  },
+  {
+   "id": "EQP-LURE-SWIMBAIT",
+   "when": "mùa thu khi cá đang ăn",
+   "source": "S11"
+  },
+  {
+   "id": "EQP-LURE-JERKBAIT",
+   "when": "mùa thu khi cá lười; mùa đông treo 3–4 ft",
+   "source": "S11",
+   "variants": [
+    "suspending-minnow"
+   ]
+  },
+  {
+   "id": "EQP-LURE-JIG",
+   "when": "mùa đông kéo đáy",
+   "source": "S11"
+  },
+  {
+   "id": "EQP-BAIT-NIGHTCRAWLER",
+   "when": "giữ mồi chuyển động gần chỗ che",
+   "source": "S10"
+  },
+  {
+   "id": "EQP-BAIT-CRAYFISH",
+   "variants": [
+    "whole-live"
+   ],
+   "when": "gần chỗ che",
+   "source": "S10"
+  },
+  {
+   "id": "EQP-BAIT-MINNOW",
+   "when": "cá con sống, gần chỗ che",
+   "source": "S10"
+  },
+  {
+   "id": "EQP-LURE-FROG",
+   "variants": [
+    "hollow-body"
+   ],
+   "when": "mồi chính, nguồn không gắn mùa",
+   "source": "S11"
+  }
+ ]
+}
+```

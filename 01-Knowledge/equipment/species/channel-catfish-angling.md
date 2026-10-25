@@ -27,3 +27,70 @@ Chưa có nguồn A/B cho cỡ móc cụ thể: không tự ghi số móc. lb-te
 - Kháng lực làm cá nhả mồi [S9]: không vẽ chì nặng neo cứng khi cảnh là slip-sinker.
 - Mùa đẻ cá cắn hung, cần giật nhanh với móc thường [S9]; không áp chung cho circle hook.
 - Không gộp trotline, jug và cần máy vào cùng một rig. Quy định bag/size theo bang và thủy vực [S4].
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species channel-catfish`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-NIGHTCRAWLER",
+   "when": "không gắn mùa",
+   "source": "S9"
+  },
+  {
+   "id": "EQP-BAIT-LEECH",
+   "when": "không gắn mùa",
+   "source": "S9"
+  },
+  {
+   "id": "EQP-BAIT-CRAYFISH",
+   "when": "không gắn mùa",
+   "source": "S9"
+  },
+  {
+   "id": "EQP-BAIT-PREPARED-CATFISH",
+   "when": "không gắn mùa",
+   "source": "S9"
+  },
+  {
+   "id": "EQP-BAIT-CRICKET",
+   "when": "không gắn mùa",
+   "source": "S4",
+   "variants": [
+    "grasshopper"
+   ]
+  },
+  {
+   "id": "EQP-BAIT-SHRIMP",
+   "when": "không gắn mùa",
+   "source": "S4"
+  },
+  {
+   "id": "EQP-LURE-SPOON",
+   "when": "kéo chậm sát đáy",
+   "source": "S6"
+  },
+  {
+   "id": "EQP-BAIT-CHICKEN-LIVER",
+   "when": "không gắn mùa",
+   "source": "S4"
+  },
+  {
+   "id": "EQP-BAIT-SHAD-HERRING",
+   "variants": [
+    "gizzard-shad-cut"
+   ],
+   "when": "băng tan; hồ chứa thả trôi rig ba chạc sát đáy",
+   "source": "S9"
+  },
+  {
+   "id": "EQP-BAIT-MINNOW",
+   "when": "mùa đẻ dưới phao trôi dọc đá kè",
+   "source": "S9"
+  }
+ ]
+}
+```

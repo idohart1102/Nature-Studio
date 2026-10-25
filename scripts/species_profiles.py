@@ -155,10 +155,10 @@ def load_sources(root, meta, profile_path):
     return ledger, []
 
 
-def check_sources(ledger, label, species_id):
+def check_sources(ledger, label, species_id, key='species_id'):
     errors, ids = [], {}
-    if ledger.get('species_id') != species_id:
-        errors.append(f'{label}: species_id must be {species_id}')
+    if ledger.get(key) != species_id:
+        errors.append(f'{label}: {key} must be {species_id}')
     for item in ledger['sources']:
         sid = item.get('id') if isinstance(item, dict) else None
         if not isinstance(sid, str) or not re.fullmatch(r'S[0-9]+', sid) or sid in ids:
@@ -434,13 +434,18 @@ def image_size(raw):
 
 def photos_fetch(root, slug=None, fetch=None):
     """Download manifest photos into the private local store, verify, and (re)register them."""
-    import asset_catalog
     photos = load_photos(root)
     if slug:
         meta = metadata(root, f'{SPECIES_DIR}/{slug}.md')
         if not meta:
             raise ValueError('No v3 profile: ' + slug)
         photos = [p for p in photos if p.get('entity_id') == meta.get('id')]
+    return fetch_and_register(root, photos, lambda item: 'organism', fetch)
+
+
+def fetch_and_register(root, photos, kind_of, fetch=None):
+    """Shared by species and bait manifests: download, verify hash/size, write review, register."""
+    import asset_catalog
     fetch = fetch or (lambda url: urllib.request.urlopen(urllib.request.Request(
         url, headers={'User-Agent': 'NatureStudio-reference-fetch/1.0 (local research use)'}), timeout=120).read())
     store, reviews = root / PHOTO_STORE, root / REVIEW_STORE
@@ -462,16 +467,17 @@ def photos_fetch(root, slug=None, fetch=None):
             report.append(dict(asset_id=item['asset_id'], status='error', error=type(exc).__name__ + ': ' + str(exc)[:160]))
             continue
         target.write_bytes(raw)
+        label, basis = ('Species basis', item['species_basis']) if 'species_basis' in item else ('Identity basis', item.get('basis'))
         review = reviews / (item['asset_id'] + '.md')
         review.write_text(
             f"# {item['asset_id']} — real photo reference review\n\nReviewed: {item['reviewed']}. Origin: photo (third-party). "
             f"Status: pass. Reviewed roles: {', '.join(item['roles'])}. Quality: {item['quality']} "
             f"({item['width']}x{item['height']}, subject coverage {item['subject_coverage']}).\n\n"
-            f"Observed on actual image: {item['observed']}\n\nSpecies basis: {item['species_basis']}\n\n"
+            f"Observed on actual image: {item['observed']}\n\n{label}: {basis}\n\n"
             f"Source: {item['page_url']} — {item['license']}; credit: {item['credit']}. Image SHA256: {item['sha256']}.\n\n"
             'Scope: static identity/anatomy only; not scale evidence; private local copy (manifest in Git, file not).\n',
             encoding='utf-8')
-        record = dict(asset_id=item['asset_id'], entity_id=item['entity_id'], kind='organism', stage=item['stage'],
+        record = dict(asset_id=item['asset_id'], entity_id=item['entity_id'], kind=kind_of(item), stage=item.get('stage'),
                       variant=item.get('variant'), view=item['view'], roles=item['roles'], origin='photo',
                       source=dict(url=item['page_url'], image_url=item['file_url'],
                                   rights=f"{item['license']}; credit: {item['credit']}; attribution required where the license says so"),

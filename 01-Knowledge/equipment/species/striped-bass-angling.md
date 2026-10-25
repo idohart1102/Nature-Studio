@@ -26,3 +26,64 @@ Chưa có nguồn A/B/D đã mở nêu sức chịu lực dây, cỡ móc hay le
 ## Lỗi cần tránh
 
 Móc J trên mồi tự nhiên; cá dưới khe cỡ bị giữ lại mà không có chủ đích; chim lao xuống ở nơi không có đàn mồi. Không suy độ đau, không buộc mọi cá giãy tới hết.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species striped-bass`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-MENHADEN",
+   "when": "menhaden tươi trên rig đáy khi câu từ bờ biển",
+   "source": "S9"
+  },
+  {
+   "id": "EQP-BAIT-EEL",
+   "when": "thả trôi ở cửa lạch",
+   "source": "S9",
+   "variants": [
+    "live-eel"
+   ]
+  },
+  {
+   "id": "EQP-LURE-UMBRELLA-RIG",
+   "when": "trolling",
+   "source": "S9",
+   "variants": [
+    "trolling-umbrella"
+   ]
+  },
+  {
+   "id": "EQP-LURE-BUCKTAIL-JIG",
+   "when": "trolling bucktail đôi",
+   "source": "S9",
+   "variants": [
+    "tandem-bucktail"
+   ]
+  },
+  {
+   "id": "EQP-LURE-SPOON",
+   "when": "trolling",
+   "source": "S9",
+   "variants": [
+    "trolling-spoon"
+   ]
+  },
+  {
+   "id": "EQP-LURE-SWIMBAIT",
+   "when": "swim shad dọc bờ đầm lầy sáng sớm/chiều tối",
+   "source": "S9",
+   "variants": [
+    "paddletail"
+   ]
+  },
+  {
+   "id": "EQP-LURE-TOPWATER",
+   "when": "dọc bờ đầm lầy sáng sớm/chiều tối",
+   "source": "S9"
+  }
+ ]
+}
+```

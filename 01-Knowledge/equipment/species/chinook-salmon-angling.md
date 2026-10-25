@@ -26,3 +26,69 @@ ADF&G nêu đây là ví dụ, không bảo đảm hiệu quả, không xác nh�
 - Không gộp downrigger/flasher của bộ kéo hồ với phao/egg sac của bộ suối.
 - Kiểm quy định mồi tự nhiên theo vùng [S14]. lb-test là sức chịu danh định, không phải cân nặng cá.
 - Cá lớn chạy mạnh: máy phải đủ dây (Michigan ghi chinook có thể kéo hết dây máy thiếu sức chứa [S10]).
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species chinook-salmon`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-LURE-SPOON",
+   "when": "xuân–hè, Great Lakes, trolling xuống sâu",
+   "source": "S9, S10",
+   "variants": [
+    "trolling-spoon"
+   ]
+  },
+  {
+   "id": "EQP-LURE-PLUG",
+   "when": "cửa suối mùa thu, kéo từ mặt tới 60 ft",
+   "source": "S9",
+   "variants": [
+    "slip-head-plug"
+   ]
+  },
+  {
+   "id": "EQP-LURE-FLASHER-RIG",
+   "when": "xuân–hè, Great Lakes, downrigger đưa mồi xuống sâu",
+   "source": "S9, S10",
+   "variants": [
+    "flasher-fly",
+    "dodger-fly"
+   ]
+  },
+  {
+   "id": "EQP-BAIT-SALMON-ROE",
+   "when": "trong suối, dưới phao hoặc sát đáy",
+   "source": "S10",
+   "variants": [
+    "spawn-sac",
+    "skein-chunk"
+   ]
+  },
+  {
+   "id": "EQP-LURE-EGG-IMITATION",
+   "when": "trong suối",
+   "source": "S9",
+   "variants": [
+    "soft-plastic-egg"
+   ]
+  },
+  {
+   "id": "EQP-LURE-FLY",
+   "when": "trong suối",
+   "source": "S9"
+  },
+  {
+   "id": "EQP-LURE-INLINE-SPINNER",
+   "variants": [
+    "standard-inline"
+   ],
+   "when": "trong suối",
+   "source": "S10"
+  }
+ ]
+}
+```

@@ -14,6 +14,7 @@ import time
 import memory_retrieval as memory
 import context_routing as routing
 import species_profiles
+import bait_profiles
 
 ROOT = Path(__file__).resolve().parents[1]
 FINGERPRINT_FIELDS = ('opening', 'interaction', 'objects', 'terrain_role',
@@ -102,13 +103,16 @@ def packet(root, slug, mode, species=(), interaction='unspecified',
     files = recipe['common'] + chosen
     # Human-facing indexes can grow without bound; discovery returns paged descriptors.
     files = [p for p in files if not (p.startswith('05-Memory/') and p.endswith('/INDEX.md'))]
-    missing = []
+    missing, baits = [], {}
     if mode != 'caption':
         angling = interaction != 'natural' and (not plan or plan['include_angling'])
         for name in species if not plan or plan['include_species'] else ():
             profile = species_sources(root, recipe, name, angling)
             if profile:
                 files += profile
+                if angling:
+                    # Compact rows only; the chosen bait profile is opened later, never the whole library.
+                    baits[name] = bait_profiles.for_species(root, name)['baits'] if species_profiles.resolve(root, name) else []
             else:
                 missing.append(f'Research exact species/context: {name}; no substitute profile')
         # Underwater is the configured species-required workflow. Optional profiles
@@ -141,7 +145,8 @@ def packet(root, slug, mode, species=(), interaction='unspecified',
         dependencies.append(item)
     # asset_catalog.py is always a dependency so adding --asset-selection keeps the digest.
     for path in ['scripts/chayvideo_context.py', 'scripts/context_routing.py',
-                 'scripts/memory_retrieval.py', 'scripts/asset_catalog.py', 'scripts/species_profiles.py', '00-Standards/memory-taxonomy.json',
+                 'scripts/memory_retrieval.py', 'scripts/asset_catalog.py', 'scripts/species_profiles.py',
+                 *(['scripts/bait_profiles.py', bait_profiles.PHOTO_MANIFEST] if baits else []), '00-Standards/memory-taxonomy.json',
                  *[f'.agents/skills/na-chayvideo/references/{m}.md'
                    for m in ('new', 'revision', 'caption', 'reference')],
                  '00-Standards/context-routing.md', *([plan['config']] if plan and plan['config'] else [])]:
@@ -167,6 +172,8 @@ def packet(root, slug, mode, species=(), interaction='unspecified',
                      'separately. Active location is discovery, not permission: inspect status and '
                          'conditions before applying. Project decides required inputs; generic packet '
                          'does not certify completeness. New facts need external research.')
+    if baits:
+        result['baits'] = baits
     if asset_selection is not None:
         import asset_catalog
         if asset_selection.get('schema')==2 and asset_selection.get('project_id')!=recipe.get('project_id'):

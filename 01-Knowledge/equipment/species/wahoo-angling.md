@@ -26,3 +26,25 @@ Răng tam giác, dẹt, có răng cưa và dùng để cắt mồi [S3, S5]: lea
 - Vạch xanh tắt nhanh sau khi chết [S5]: cá còn sống giữ vạch rõ, cá nằm lâu trên boong thì nhạt.
 - Không vẽ cả đàn wahoo đuổi theo mồi câu; loài này đơn lẻ hoặc nhóm lỏng [S3, S5].
 - Không tự thêm dụng cụ khi cảnh là săn mồi tự nhiên.
+
+## Mồi có nguồn (bổ sung 2026-10-25)
+
+- Wahoo chủ yếu bị câu bằng trolling, giống cách câu dolphin [S13]. Câu giải trí tập trung ngoài North Carolina và bờ đông Florida [S13].
+- Ngoài khơi Maryland, wahoo nằm trong mẻ của đội tàu trolling, đông vào giữa tháng 8 [S14]. Có ngày tàu ra điểm từ rạng sáng và câu được wahoo lớn trong dàn mồi giả trộn ballyhoo rig [S15].
+- Nghề kéo dolphin–wahoo chạy 4–10 knot quanh weedline [S13]. Kéo tốc độ cao (trên 10 knot), skirted lure nặng đầu, diving plug và leader thép chỉ có nguồn E [S12, S16]: ghi là giả định dàn cảnh, không ghi số.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species wahoo`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-LURE-OFFSHORE-TROLLING",
+   "when": "trolling ngoài khơi, đông cá giữa T8 (Maryland)",
+   "source": "S13, S14"
+  }
+ ]
+}
+```

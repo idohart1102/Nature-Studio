@@ -32,3 +32,67 @@ Dây, móc và cỡ lure lấy từ bảng mẹo black crappie của PA [S7]; MD
 - Cảnh FFS: cá thấy trên màn hình không có nghĩa là sẽ cắn; cá có thể chìm vào cành khi thuyền tới gần [S10].
 - Màn hình sonar là hình hiển thị âm, không vẽ thành ảnh quang học của từng con cá.
 - Cảnh câu băng: chưa có nguồn đã mở về dụng cụ câu băng cho loài này; không tự đặt thông số.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species black-crappie`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-MINNOW",
+   "when": "gần đáy hoặc dưới phao",
+   "source": "S7"
+  },
+  {
+   "id": "EQP-LURE-JIG",
+   "when": "treo gần như đứng yên khi cá lười",
+   "source": "S6"
+  },
+  {
+   "id": "EQP-LURE-SPOON",
+   "when": "nhấc–hạ 1–2 ft trên bụi sâu",
+   "source": "S6",
+   "variants": [
+    "jigging-spoon"
+   ]
+  },
+  {
+   "id": "EQP-BAIT-CRICKET",
+   "when": "thả mặt nước trên móc dây mảnh",
+   "source": "S7",
+   "variants": [
+    "cricket",
+    "grasshopper"
+   ]
+  },
+  {
+   "id": "EQP-LURE-CRANKBAIT",
+   "when": "lure nhỏ, không gắn mùa",
+   "source": "S7"
+  },
+  {
+   "id": "EQP-BAIT-NIGHTCRAWLER",
+   "when": "gần đáy hoặc dưới phao",
+   "source": "S7"
+  },
+  {
+   "id": "EQP-LURE-GRUB",
+   "variants": [
+    "curly-tail-jighead"
+   ],
+   "when": "twister nhỏ 1/32–1/8 oz",
+   "source": "S7"
+  },
+  {
+   "id": "EQP-LURE-INLINE-SPINNER",
+   "variants": [
+    "standard-inline"
+   ],
+   "when": "spinner nhỏ",
+   "source": "S7"
+  }
+ ]
+}
+```

@@ -22,3 +22,53 @@ Module `angling` của [K-SP-YELLOW-PERCH-001](../../species/yellow-perch.md); c
 ## Lỗi cần tránh
 
 Không cho perch táp mồi dữ dội kiểu cá săn mồi lớn; cú cắn là rỉa nhẹ. Không thêm nanh, wire leader hay lure cỡ walleye/pike. Jig, mồi và dây là một cấu hình; không gộp phao, chì và jig của mọi cách câu vào cùng một rig. Không suy mắc câu từ một frame cá chạm mồi.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species yellow-perch`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-MINNOW",
+   "when": "không gắn mùa",
+   "source": "S4"
+  },
+  {
+   "id": "EQP-BAIT-INSECT-LARVAE",
+   "when": "câu băng, có hồ ở 40–60 ft",
+   "source": "S4",
+   "variants": [
+    "waxworm"
+   ]
+  },
+  {
+   "id": "EQP-BAIT-CRAYFISH",
+   "when": "không gắn mùa",
+   "source": "S4",
+   "variants": [
+    "tail-meat"
+   ]
+  },
+  {
+   "id": "EQP-BAIT-SHRIMP",
+   "when": "không gắn mùa",
+   "source": "S4"
+  },
+  {
+   "id": "EQP-LURE-JIG",
+   "when": "câu băng, có hồ ở 40–60 ft",
+   "source": "S4",
+   "variants": [
+    "teardrop-ice-jig"
+   ]
+  },
+  {
+   "id": "EQP-BAIT-NIGHTCRAWLER",
+   "when": "mồi phổ biến nhất, thả sát đáy",
+   "source": "S4"
+  }
+ ]
+}
+```

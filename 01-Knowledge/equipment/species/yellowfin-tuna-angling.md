@@ -25,3 +25,45 @@ CFL đo theo đường cong thân từ mút hàm trên tới chẽ đuôi [S6]. 
 ## Lỗi cần tránh
 
 Không có nguồn A/B đã mở cho lb-test dây, cỡ lưỡi hay leader của yellowfin: không ghi số cụ thể vào prompt. Không bắn speargun vào cá đang mắc câu; không trộn trolling với downrigger khi đã gọi là surface trolling. Không gán cảnh đi cùng cá heo cho vùng Mỹ khi chưa có nguồn.
+
+## Mồi có nguồn (bổ sung 2026-10-25)
+
+- Ngoài khơi Maryland, yellowfin bị câu bằng hai cách chính: kéo ballyhoo rig (thường trong dàn trộn với mồi giả) và chunking [S15, S16].
+- Chunking cho yellowfin hay làm vào ban đêm ở vùng canyon, tàu đi qua đêm, cuối hè–đầu thu [S17, S18]. Đây là kỹ thuật "đặc biệt cho tuna": ném khúc cá cắt xuống nước để dụ cá tới tàu [S14].
+- Mồi tự nhiên phổ biến trên tàu câu HMS: herring, mackerel, whiting, mullet, menhaden, ballyhoo, butterfish, mực. Dàn kéo tuna thường gồm umbrella rig mồi nhựa mềm dưới mặt nước, ngoài ra có thể ném mồi giả vào đàn đang đớp mặt hoặc jig thẳng đứng [S14].
+- Cedar plug cho yellowfin mới chỉ có nguồn E [S19]; nếu dùng trong cảnh thì ghi là giả định dàn cảnh.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species yellowfin-tuna`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-BALLYHOO",
+   "variants": [
+    "rigged-trolling"
+   ],
+   "when": "kéo ngoài khơi mùa hè",
+   "source": "S15, S16"
+  },
+  {
+   "id": "EQP-BAIT-MENHADEN",
+   "variants": [
+    "cut-bunker-chunk"
+   ],
+   "when": "chunking ban đêm ở canyon, cuối hè–thu",
+   "source": "S14, S17"
+  },
+  {
+   "id": "EQP-LURE-OFFSHORE-TROLLING",
+   "variants": [
+    "skirted-trolling-lure"
+   ],
+   "when": "trolling ngoài khơi",
+   "source": "S14, S16"
+  }
+ ]
+}
+```

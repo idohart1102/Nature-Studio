@@ -25,3 +25,42 @@ CFL đo theo đường cong thân từ mút hàm trên tới chẽ đuôi [S7]. 
 ## Lỗi cần tránh
 
 Không có nguồn A/B đã mở cho lb-test dây, cỡ lưỡi hay leader của bluefin: không ghi số cụ thể vào prompt. Không cho bluefin bị speargun, không dựng cảnh nhắm bluefin ở Gulf of America, không kéo cá thả lên boong. Cá thả không được đưa khỏi nước; ngư cụ phụ (gaff, tail rope) chỉ xuất hiện với cá đã giữ lại hợp lệ.
+
+## Mồi có nguồn (bổ sung 2026-10-25)
+
+- Kéo mồi (trolling) là cách câu bluefin có căn cứ ngoài khơi Maryland: bluefin cỡ trung bị câu bằng trolling giữa tháng 5 [S20], và cùng yellowfin, dolphin ăn dàn mồi giả trộn ballyhoo rig dọc đường đẳng sâu 30 sải [S19].
+- Chunking (ném khúc cá cắt xuống nước để dụ cá tới tàu, mồi trên lưỡi trôi lẫn trong đó) là kỹ thuật dùng "đặc biệt cho tuna" [S18]; với bluefin ghép thêm menhaden mà cá lớn đớp mạnh ngoài Cape Hatteras [S8].
+- Mồi tự nhiên phổ biến trên tàu câu HMS gồm herring, mackerel, whiting, mullet, menhaden, ballyhoo, butterfish, mực [S18]; chọn một loại cho cảnh, không trộn nhiều mồi trên một lưỡi.
+- Dàn kéo tuna thường là umbrella rig nhiều mồi nhựa mềm chạy dưới mặt nước [S18]; chưa có nguồn A/B riêng cho bluefin về cedar plug hay spreader bar, không gán cho cảnh như sự thật đã kiểm.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species atlantic-bluefin-tuna`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-MENHADEN",
+   "variants": [
+    "cut-bunker-chunk"
+   ],
+   "when": "chunking khi tàu thả trôi/neo; cá lớn ngoài Cape Hatteras",
+   "source": "S8, S18"
+  },
+  {
+   "id": "EQP-BAIT-BALLYHOO",
+   "variants": [
+    "rigged-trolling"
+   ],
+   "when": "kéo ngoài khơi mùa hè, dàn trộn mồi giả",
+   "source": "S19"
+  },
+  {
+   "id": "EQP-LURE-OFFSHORE-TROLLING",
+   "when": "trolling ngoài khơi",
+   "source": "S18, S19"
+  }
+ ]
+}
+```

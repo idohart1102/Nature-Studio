@@ -27,3 +27,66 @@ lb-test là sức chịu lực danh định, không phải đường kính hay c
 - Cá đực canh tổ rất dễ cắn mồi [S9]; tôn trọng quy định mùa câu tổ.
 - Không dùng số dây/móc của largemouth cho smallmouth và ngược lại.
 - Không mô tả "mùa thu ăn điên cuồng" như sự thật sinh học [S13].
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species smallmouth-bass`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-MINNOW",
+   "when": "mồi sống; mùa thu gắn jig",
+   "source": "S8, S9"
+  },
+  {
+   "id": "EQP-BAIT-CRAYFISH",
+   "when": "mùa hè ở hồ, thả đáy với chì vừa đủ chìm",
+   "source": "S9",
+   "variants": [
+    "softshell"
+   ]
+  },
+  {
+   "id": "EQP-BAIT-INSECT-LARVAE",
+   "when": "không gắn mùa",
+   "source": "S8",
+   "variants": [
+    "hellgrammite"
+   ]
+  },
+  {
+   "id": "EQP-LURE-JIG",
+   "when": "tiền sinh sản quanh bờ đá/mỏm, kéo chậm và nảy đáy ở 48–55 °F",
+   "source": "S9",
+   "variants": [
+    "marabou-hair-jig"
+   ]
+  },
+  {
+   "id": "EQP-LURE-CRANKBAIT",
+   "when": "cuối tiền sinh sản và mùa hè; mùa thu lặn sâu; suối đục sau mưa",
+   "source": "S9"
+  },
+  {
+   "id": "EQP-LURE-SPINNERBAIT",
+   "when": "suối đục sau mưa",
+   "source": "S9"
+  },
+  {
+   "id": "EQP-LURE-GRUB",
+   "variants": [
+    "curly-tail-jighead"
+   ],
+   "when": "tiền sinh sản quanh bờ đá, nước 48–55 °F",
+   "source": "S9"
+  },
+  {
+   "id": "EQP-LURE-FLY",
+   "when": "không gắn mùa",
+   "source": "S8"
+  }
+ ]
+}
+```

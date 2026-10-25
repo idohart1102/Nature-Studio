@@ -1,6 +1,6 @@
 # Knowledge chung, phạm vi riêng
 
-Version: 1.2 | Updated: 2026-10-25
+Version: 1.3 | Updated: 2026-10-25
 
 `01-Knowledge/` là thư viện toàn workspace, không thuộc riêng Underwater. Mỗi hồ sơ vẫn có phạm vi: loài, habitat, tương tác, dụng cụ, nguồn và trạng thái. Nội dung hiện tại tập trung Underwater; hồ sơ cá không tự áp cho deer. Quyết định format, khán giả và cách kể nằm trong Project, không chép vào Knowledge chung.
 
@@ -62,3 +62,8 @@ Theo [chuẩn địa điểm](location-context.md): profile loài → descriptor
 ## Hồ sơ loài v3 — 2026-10-25
 
 Hồ sơ mọi nhóm sinh vật theo [species-profile-standard.md](species-profile-standard.md): khối metadata JSON, tám mục, bảng cỡ có Loại/Nguồn, Checklist hình ảnh, sổ nguồn có cấp A–E và trạng thái truy cập. `chayvideo_context.py` resolve alias/tên khoa học qua `species_profiles.py` nhưng chỉ nạp loài có trong context-map của Project; module (ví dụ `angling` → `01-Knowledge/equipment/species/<slug>-angling.md`) chỉ vào packet khi tác vụ cần. Không nạp chỉ mục loài, sổ nguồn hoặc hồ sơ loài khác. CI chạy `species_profiles.py validate`.
+
+## Thư viện mồi câu — 2026-10-25
+
+Mồi giả và mồi tự nhiên theo [bait-profile-standard.md](bait-profile-standard.md): mã `EQP-LURE-*`/`EQP-BAIT-*`, biến thể có alias, hồ sơ ≤4.500 ký tự, ảnh thật ≥1280×720 trong manifest riêng. Module câu của loài khai báo mồi trong `## Mã mồi`; packet `/na-chayvideo` khi interaction khác natural kèm `baits` gọn (mã, biến thể, mùa, nguồn, ảnh, request catalog) thay vì nạp hồ sơ mồi. Chỉ mở hồ sơ của mồi được chọn cho cảnh. CI chạy `bait_profiles.py validate`.
+

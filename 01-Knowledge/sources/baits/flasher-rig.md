@@ -1,0 +1,17 @@
+# Sổ nguồn — Flasher rig
+
+```json
+{
+ "bait_id": "EQP-LURE-FLASHER-RIG",
+ "sources": [
+  {"id": "S1", "tier": "B", "title": "Salmon fishing in marine areas", "publisher": "Washington Department of Fish & Wildlife", "url": "https://wdfw.wa.gov/fishing/basics/salmon/marine-areas", "published": null, "accessed": "2026-10-25", "access": "opened", "supports": "diver with dodger or flasher plus cut-plug herring, hootchie, bucktail, spoon or plug; hootchie or bucktail must have dodger/flasher for action (dart erratically side to side); dodger sways without rotating, flasher rotates 360; use dodgers or flashers not both; 40-60 lb leader; Table 1 leader lengths by species for 8 in and 11 in flashers; 11 in flasher 8-20 ft and 8 in flasher 10-20 ft behind downrigger ball; adjust boat speed", "limits": "Live page 403; read Wayback snapshot 2026-04-25. Pacific saltwater context."},
+  {"id": "S2", "tier": "C", "title": "Catching salmon in open water", "publisher": "Michigan State University Extension (Dan O'Keefe, Michigan Sea Grant)", "url": "https://www.canr.msu.edu/news/catching_salmon_in_open_water", "published": "2014-05-29", "accessed": "2026-10-25", "access": "opened", "supports": "Great Lakes trollers present lures deep with steel/lead/copper lines, downriggers with 10-16 lb cannonball, planer boards and divers", "limits": "Read via Wayback snapshot 2025-11-11; does not describe flashers."},
+  {"id": "S3", "tier": "B", "title": "Guide to Great Lakes Fishing", "publisher": "New York State Department of Environmental Conservation", "url": "https://extapps.dec.ny.gov/docs/fish_marine_pdf/glfishing.pdf", "published": null, "accessed": "2026-10-25", "access": "opened", "supports": "spoons or flasher/fly rigs for suspended salmonids at 50-55 F with downriggers, divers, wire; flasher/flies at tributary mouths for chinook and coho; lake trout", "limits": "Undated brochure; no dimensions."},
+  {"id": "S4", "tier": "B", "title": "Chinook Salmon (Michigan species page)", "publisher": "Michigan Department of Natural Resources", "url": "https://www.michigan.gov/dnr/education/michigan-species/fish-species/chinook-salmon", "published": null, "accessed": "2026-10-25", "access": "opened", "supports": "downriggers and lead-core or copper line take spoons, dodgers and flies or cut bait rigs to the strike zone; chinook often 100+ ft down", "limits": "Live page 403; read Wayback snapshot 2026-02-11."},
+  {"id": "S5", "tier": "B", "title": "Salmon fishing in estuaries and tidewater", "publisher": "Washington Department of Fish & Wildlife", "url": "https://wdfw.wa.gov/fishing/basics/salmon/tidewater", "published": null, "accessed": "2026-10-25", "access": "opened", "supports": "in-line rotating flasher rigged between three-way swivel and herring; swivel-to-flasher distance longer than weight dropper", "limits": "Read via Wayback snapshot 2025-05-12."},
+  {"id": "S6", "tier": "B", "title": "King Salmon Saltwater Fishing Setup from a Watercraft", "publisher": "Alaska Department of Fish and Game", "url": "https://www.adfg.alaska.gov/static/fishing/PDFs/sport/fishingsetups/cfs2_kingsaltwatercraft.pdf", "published": null, "accessed": "2026-10-25", "access": "opened", "supports": "flashers (sz. 000, 020, 030), divers, downrigger, hoochie squid, herring with two hooks for king salmon trolling", "limits": "Size codes not explained; product examples."}
+ ]
+}
+```
+
+Cấp nguồn và trạng thái truy cập theo [chuẩn hồ sơ loài](../../../00-Standards/species-profile-standard.md). `opened` chỉ khi đã mở chính trang đó.

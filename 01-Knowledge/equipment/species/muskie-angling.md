@@ -22,3 +22,36 @@ Bản v2.1 ghi "fluoro 130 lb dài 14 in" theo Mercury/Saric; chưa mở đượ
 ## Lỗi cần tránh
 
 Không ép một circle hook cho mọi lure; giữ số hook/nhánh/leader của mẫu thật. Phân biệt ngậm lure, attachment và lực dây. Không dùng răng/miệng pike thay thế khi thiếu ref; không dùng rig redfish.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species muskie`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-LURE-SPOON",
+   "when": "không gắn mùa",
+   "source": "S9"
+  },
+  {
+   "id": "EQP-LURE-INLINE-SPINNER",
+   "when": "bucktail chạy nông",
+   "source": "S9, S14",
+   "variants": [
+    "musky-bucktail"
+   ]
+  },
+  {
+   "id": "EQP-BAIT-SUCKER",
+   "variants": [
+    "live-large-sucker",
+    "quick-strike-rig"
+   ],
+   "when": "cuối thu quanh thảm cỏ còn sót",
+   "source": "S16"
+  }
+ ]
+}
+```

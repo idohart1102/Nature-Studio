@@ -29,3 +29,32 @@ Các số dưới đây là hướng dẫn trout chung của Iowa DNR, không ri
 - Lội và câu trên redd lúc cá đẻ hoặc khi trứng còn trong sỏi (Virginia: trứng nở giữa tháng 1 – tháng 2) [S4].
 - Dùng cỡ lưỡi/dây biển cho suối nhỏ; dàn cảnh cá câu được cỡ quá lớn so với bảng mục 2 của hồ sơ.
 - Mùa và quy định (mùa đóng, cấm mồi sống) theo bang chưa kiểm; tra trước khi viết cảnh có câu.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species brook-trout`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-LURE-JIG",
+   "when": "spinning ultralight, jig nhỏ",
+   "source": "S8"
+  },
+  {
+   "id": "EQP-LURE-FLY",
+   "when": "không gắn mùa",
+   "source": "S8"
+  },
+  {
+   "id": "EQP-LURE-INLINE-SPINNER",
+   "variants": [
+    "standard-inline"
+   ],
+   "when": "spinning ultralight, ném ngược dòng",
+   "source": "S8"
+  }
+ ]
+}
+```

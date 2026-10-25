@@ -1,0 +1,16 @@
+# Sổ nguồn — Umbrella rig
+
+```json
+{
+ "bait_id": "EQP-LURE-UMBRELLA-RIG",
+ "sources": [
+  {"id": "S1", "tier": "B", "title": "Maryland Fishing Report - May 27 (2020)", "publisher": "Maryland Department of Natural Resources", "url": "https://news.maryland.gov/dnr/2020/05/27/maryland-fishing-report-may-27/", "published": "2020-05-27", "accessed": "2026-10-25", "access": "opened", "supports": "Chesapeake trolling spreads mix large parachutes and bucktails dressed with sassy shads in tandem, and umbrella rigs with medium trailers; umbrella rigs with storm shads or bucktails as trailers for medium striped bass along shipping channel edges; white and chartreuse", "limits": "Live page 403; read Wayback snapshot 2025-02-22. Weekly report, not a gear guide."},
+  {"id": "S2", "tier": "B", "title": "Weekly Fishing Report (December 13, 2017)", "publisher": "Maryland Department of Natural Resources", "url": "https://news.maryland.gov/dnr/2017/12/13/weekly-fishing-report-39/", "published": "2017-12-13", "accessed": "2026-10-25", "access": "opened", "supports": "trolling deep channel edges; striped bass >20 in holding in about 40 ft close to bottom; hefty inline weights get tandem rigged lures or umbrella rigs down; swimshads, spoons and bucktails trail behind umbrella rigs", "limits": "Read via Wayback snapshot 2025-02-08. Weekly report."},
+  {"id": "S3", "tier": "B", "title": "Only three-hooked lures allowed on Alabama rigs in Missouri (Bill Graham)", "publisher": "Missouri Department of Conservation", "url": "https://mdc.mo.gov/newsroom/only-three-hooked-lures-allowed-alabama-rigs-missouri", "published": "2012-02-28", "accessed": "2026-10-25", "access": "opened", "supports": "multi-lure rig for largemouth bass called Alabama or umbrella rig; most sold are a weighted jig head with five 5-inch wires with swivels; attach plastic shads, marabou jigs or crankbaits; cast, lowered or trolled; imitates a group of shad; max three hooked lures per line in Missouri", "limits": "2012 news; Missouri rule only."},
+  {"id": "S4", "tier": "B", "title": "Alabama Rig Regulations", "publisher": "Missouri Department of Conservation", "url": "https://mdc.mo.gov/fishing/regulations/alabama-rig-regulations", "published": null, "accessed": "2026-10-25", "access": "opened", "supports": "Alabama, umbrella and similar rigs legal with only three hooked lures; extra attachment points may carry hookless baits or spinner blades; rigs seen have more than three wires", "limits": "Missouri rule only."},
+  {"id": "S5", "tier": "E", "title": "Umbrella Rigs for Stripers (Umbrella Policy, Gary Caputi)", "publisher": "Salt Water Sportsman", "url": "https://www.saltwatersportsman.com/techniques/umbrella-policy/", "published": "2007-09-21", "accessed": "2026-10-25", "access": "opened", "supports": "wire contraption with plastic tubes; rigged with soft-plastic shads, spoons or surgical-tube worms; big shad or tube 4-6 ft behind as dropper while others act as teasers; wire line 1 ft depth per 10 ft wire at 2-4 knots; downriggers", "limits": "Magazine, lead only; New Jersey/New York context."}
+ ]
+}
+```
+
+Cấp nguồn và trạng thái truy cập theo [chuẩn hồ sơ loài](../../../00-Standards/species-profile-standard.md). `opened` chỉ khi đã mở chính trang đó.

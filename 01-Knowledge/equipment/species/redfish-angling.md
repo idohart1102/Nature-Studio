@@ -22,3 +22,50 @@ lb-test là sức chịu lực danh định, không phải đường kính, lự
 ## Lỗi cần tránh
 
 Hook cứng, leader mềm, bait mềm có attachment liên tục. Che khuất không tự là mất vật; không dùng connector mới để nối môi với rig. Không suy độ đau hoặc buộc mọi cá giãy tới hết. Ref circle-hook/assembly tra catalog khi rig cần.
+
+## Mồi có nguồn (bổ sung 2026-10-25)
+
+- Texas: tôm sống là mồi được chọn nhiều nhất cho cá biển ven bờ, gồm red drum; ít red drum bỏ qua finger mullet sống; mồi giả hàng đầu là nhựa mềm đuôi tôm/đuôi shad/paddle tail [S15].
+- Cua được dùng làm mồi câu red drum [S16]; cách bẻ đôi cua móc qua thân trong nguồn là cho black drum, chỉ dùng như cách móc phổ biến, không coi là quy định cho red drum.
+
+## Mã mồi
+
+Mã trong [thư viện mồi](../baits/INDEX.md); tra nhanh bằng `python scripts/bait_profiles.py for-species redfish`. Chỉ liệt kê mồi đã có nguồn trong module này; chọn một mồi/biến thể cho cảnh.
+
+```json
+{
+ "baits": [
+  {
+   "id": "EQP-BAIT-SHRIMP",
+   "variants": [
+    "live-horn-hooked",
+    "live-tail-hooked",
+    "live-popping-cork"
+   ],
+   "when": "mồi được chọn nhiều nhất ở Texas",
+   "source": "S15"
+  },
+  {
+   "id": "EQP-BAIT-MULLET",
+   "variants": [
+    "finger-mullet-live"
+   ],
+   "when": "finger mullet sống",
+   "source": "S15"
+  },
+  {
+   "id": "EQP-LURE-SWIMBAIT",
+   "variants": [
+    "paddletail"
+   ],
+   "when": "mồi giả hàng đầu ven bờ Texas",
+   "source": "S15"
+  },
+  {
+   "id": "EQP-BAIT-BLUE-CRAB",
+   "when": "cua làm mồi",
+   "source": "S16"
+  }
+ ]
+}
+```

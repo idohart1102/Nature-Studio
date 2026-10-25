@@ -5,7 +5,7 @@ description: Tạo hoặc sửa ảnh first frame Nature Studio khi gọi /na-ta
 
 # /na-taoanh
 
-Version: 1.11 | Updated: 2026-10-25 | Checklist hình ảnh của hồ sơ loài v3 là tiêu chí QA; ảnh thật làm ref nhận dạng
+Version: 1.12 | Updated: 2026-10-25 | Mồi câu: request catalog dựng sẵn từ thư viện mồi, checklist hồ sơ mồi là tiêu chí QA; checklist loài v3; ảnh thật làm ref nhận dạng
 
 Quy ước trong chat, không cam kết giao diện đăng ký slash command. Dùng workspace chứa skill làm gốc (đi lên ba cấp từ thư mục skill). Tổng kết/QA tiếng Việt; prompt thực thi tiếng Anh một đoạn. Skill này tạo ảnh, không tạo video. Chỉ xây/sửa skill không phải yêu cầu chạy sinh ảnh.
 
@@ -71,7 +71,7 @@ Trả ảnh inline + đường dẫn tuyệt đối, QA status/ảnh đạt ở 
 
 Sau call, ghi `image_budget.py finish --production ... --call-id <id> --outcome success|error|cancelled|unknown`; thao tác này không hoàn lượt. Handoff ghi bằng lệnh `handoff` ở bước 8 (trường theo 00-Standards/templates/first-frame-handoff.json); không lưu template rỗng như ảnh đạt. Mỗi lượt sửa ảnh theo yêu cầu người dùng ghi feedback.md như mục Phiên làm việc của /na-chayvideo; vòng ảnh nên chạy trong chat riêng, nối bằng mã video và attempt. Quota helper chỉ xác nhận file chấp thuận tồn tại, agent phải kiểm đó là lời đồng ý thật cho số lượt/phạm vi tương ứng.
 
-Trước tạo/sửa, tự đánh giá ảnh cần asset gì từ brief/t=0: identity, anatomy, assembly và nguồn scale khi liên quan; kế thừa reference_requirements từ /na-chayvideo rồi kiểm lại, brief ảnh trực tiếp tự lập nhu cầu. Khi cần ref, theo [quy trình asset chung](../../../00-Standards/first-frame-asset-references.md): lọc đúng Project/entity/variant/stage/view/role, mở ảnh đã chọn, pin/verify receipt, chỉ gửi ảnh cần và ghi input thực có thứ tự/hash/mục đích. Không mang nền trắng/chữ kích thước từ thư viện vào cảnh; không coi nhãn AI là số đo. Handoff mới schema3 kiểm actual input, schema2 cũ không tự nâng. Thiếu ref hỗ trợ có thể dùng Knowledge; thiếu ref thiết yếu xử lý trước call. Không tạo ảnh chỉ từ việc mở profile/cập nhật catalog; không đọc cả thư viện.
+Trước tạo/sửa, tự đánh giá ảnh cần asset gì từ brief/t=0: identity, anatomy, assembly và nguồn scale khi liên quan; kế thừa reference_requirements từ /na-chayvideo rồi kiểm lại, brief ảnh trực tiếp tự lập nhu cầu. Khi cần ref, theo [quy trình asset chung](../../../00-Standards/first-frame-asset-references.md): lọc đúng Project/entity/variant/stage/view/role, mở ảnh đã chọn, pin/verify receipt, chỉ gửi ảnh cần và ghi input thực có thứ tự/hash/mục đích. Không mang nền trắng/chữ kích thước từ thư viện vào cảnh; không coi nhãn AI là số đo. Handoff mới schema3 kiểm actual input, schema2 cũ không tự nâng. Thiếu ref hỗ trợ có thể dùng Knowledge; thiếu ref thiết yếu xử lý trước call. Không tạo ảnh chỉ từ việc mở profile/cập nhật catalog; không đọc cả thư viện. Mồi/lure trong khung: dùng `requests` của mồi đã chọn (`bait_profiles.py for-species`), gửi tối đa một ảnh identity và một ảnh assembly mỗi mồi; checklist mục 5 của hồ sơ mồi là tiêu chí QA.
 
 Máy mới hoặc catalog thiếu bộ ref đi kèm: nếu có `08-Assets/reference-library.json`, chạy `python scripts/asset_catalog.py import-bundle 08-Assets/reference-library.json` trước khi báo thiếu, rồi query đúng Project. Không nạp cả manifest vào context hoặc tự ghi đè ID xung đột.
 
