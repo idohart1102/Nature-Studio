@@ -24,7 +24,7 @@ Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.
 ## 1. Nhận dạng
 
 - Hai bên vàng kim tới xanh đồng thau, bụng trắng tới vàng [S4, S5]; con non và cá ở hồ trong ít thực vật kém vàng hơn [S4].
-- **6–8 vạch đứng sẫm, rộng, đều nhau** vắt qua lưng xuống sườn, nhạt dần ở sườn dưới [S4, S5, S6]. Hồ sơ walleye ghi 6–9 vạch theo nguồn khác; nguồn của hồ sơ này đều ghi 6–8.
+- **6–8 vạch đứng sẫm, rộng, đều nhau** vắt qua lưng xuống sườn, nhạt dần ở sườn dưới [S4, S5, S6]. Minnesota DNR (nguồn của [hồ sơ walleye](walleye.md)) ghi 6–9; các nguồn của hồ sơ này đều ghi 6–8.
 - Hai vây lưng tách rời; vây lưng thứ nhất có mảng đen lớn phía sau và mảng nhỏ phía trước [S4, S6]. Vây bụng và vây hậu môn ánh cam/đỏ, rực nhất ở cá đực mùa sinh sản [S4, S5].
 - Không có răng nanh, chỉ có dải răng nhỏ như bàn chải [S4, S5, S6]. Mép sau xương trước nắp mang có răng cưa [S6].
 - Dài khoảng 3,5 lần chiều cao, thân cao hơn walleye và sauger [S4]. Vây đuôi chẻ nông, chóp tròn [S4].
@@ -101,7 +101,7 @@ MDC ghi kỷ lục 4 lb 3 oz [S6]. Trưởng thành ở 2–3 tuổi, sống kho
 
 ## 7. Checklist hình ảnh
 
-- 6–8 vạch đứng sẫm, rộng, đều nhau trên nền vàng kim/xanh đồng thau.
+- 6–8 vạch đứng sẫm, rộng, đều nhau trên nền vàng kim/xanh đồng thau (9 vạch vẫn nằm trong khoảng Minnesota DNR ghi, không phải lỗi).
 - Hai vây lưng tách rời; mảng đen ở phía sau vây lưng thứ nhất.
 - Không có răng nanh; miệng vừa, hàm trên tới khoảng giữa mắt.
 - Không chóp trắng ở thùy dưới vây đuôi (dấu walleye).
@@ -110,8 +110,8 @@ MDC ghi kỷ lục 4 lb 3 oz [S6]. Trưởng thành ở 2–3 tuổi, sống kho
 
 ## 8. Chưa biết và giới hạn
 
-- Số vạch: nguồn đã mở ghi 6–8, hồ sơ walleye ghi 6–9; cần đối chiếu khi review walleye.
+- Số vạch: nguồn của hồ sơ này ghi 6–8, Minnesota DNR (hồ sơ walleye) ghi 6–9; đã đối chiếu 2026-10-25, giữ cả hai có ghi nguồn. QA nhận 6–9, coi 6–8 là thường gặp.
 - Kỷ lục 1865 ghi 4 lb 3,5 oz [S4] và 4 lb 3 oz [S6]; chưa mở IGFA. Cỡ tối đa lệch giữa FishBase 50 cm và USGS 40 cm.
 - Thời điểm băng tháng 12 chỉ từ hai báo cáo Iowa 2019 [S7, S8]; năm và bang khác có thể lệch. Tháng của nhịp mùa hè/đông ở Wisconsin không được nguồn ghi.
 - Chưa mở được Minnesota, Michigan DNR; chưa mở Catalog of Fishes; không có số dây hay cỡ móc có nguồn.
-- Ref ảnh: adult nhìn ngang, adult dưới nước, cận đầu, juvenile (fingerling trại giống, nhận dạng dựa một phần vào nhãn) và dải trứng; chưa có ảnh fry, chưa có ref `scale`.
+- Ref ảnh: adult nhìn ngang, adult dưới nước, cận đầu, juvenile (fingerling trại giống, nhận dạng dựa một phần vào nhãn) và dải trứng; juvenile thứ hai nhận dạng bằng mắt (vạch thuôn, vây dưới cam; iNaturalist CC BY); chưa có ảnh fry, chưa có ảnh dải trứng đạt identity, chưa có ref `scale`.

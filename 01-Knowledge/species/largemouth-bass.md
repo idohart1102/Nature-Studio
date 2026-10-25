@@ -112,4 +112,4 @@ Gợi ý kể chuyện, chưa có bằng chứng hiệu quả viral.
 - Chưa mở được trang FWC về Florida bass [S17]; chưa có dấu ngoại hình đáng tin để phân biệt Florida bass trong ảnh.
 - Kỷ lục 1932 chỉ từ bia lịch sử cấp C [S15]; kỷ lục đồng hạng 2009 chỉ từ nguồn E [S16].
 - Khoảng "T10–T12" của New Jersey một phần đọc từ đoạn trích tìm kiếm do PDF trích chữ thiếu dòng [S11].
-- Chưa có ảnh fry thật đạt chuẩn; chưa có ref `scale` có số đo.
+- Ảnh fry thật (~3,5–4 cm, sọc sẫm liền dọc thân, khe sâu giữa hai vây lưng; iNaturalist CC BY) đạt identity; chưa có ref `scale` có số đo.

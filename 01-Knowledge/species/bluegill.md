@@ -114,4 +114,4 @@ Trưởng thành 1–2 tuổi, bắt đầu đẻ ở 2–3 tuổi [S8]. Tuổi 
 - Thời điểm băng tháng 12 chỉ từ hai báo cáo Iowa 2019 [S9, S10]; năm khác và bang khác có thể lệch.
 - Chưa mở được Minnesota DNR, MyFWC, TPWD; chưa mở Catalog of Fishes; không có số dây/lb-test có nguồn.
 - Chưa có nguồn mô tả riêng phân loài Florida hay màu "coppernose".
-- Ref ảnh: adult nhìn ngang, adult dưới nước và juvenile trên tay; chưa có ảnh fry, tổ hay ref `scale` có số đo.
+- Ref ảnh: adult nhìn ngang, adult dưới nước và juvenile trên tay; bổ sung juvenile thật thứ hai (đốm sẫm cuối vây lưng mềm, iNaturalist CC BY). Ảnh fry ~2,5–3 cm chỉ là `production` vì loài dựa vào nhãn; chưa có ảnh tổ hay ref `scale` có số đo.

@@ -34,7 +34,7 @@ Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.
 |---|---|---|
 | Sauger *S. canadensis* | Vây lưng có hàng đốm sẫm, không có mảng sẫm cuối vây, không có chóp đuôi trắng; hiếm khi quá 3 lb [S4] | Thêm hàng đốm trên vây lưng hoặc bỏ chóp đuôi trắng |
 | Saugeye (lai) | Màng vây lưng sẫm khắp [S8] | Gọi cá có vây lưng sẫm khắp là walleye |
-| Yellow perch *Perca flavescens* | 6–9 vạch dọc sẫm, không có răng nanh [S4] | Vạch dọc rõ trên walleye |
+| Yellow perch *Perca flavescens* ([hồ sơ](yellow-perch.md)) | 6–9 vạch đứng sẫm, không có răng nanh [S4]; nguồn của hồ sơ yellow perch ghi 6–8 | Vạch đứng đều, rõ trên walleye |
 
 ## 2. Kích cỡ và giai đoạn
 
@@ -105,7 +105,7 @@ Hấp dẫn và viral cần kiểm qua output thực, không từ một fact ri�
 
 - Chóp trắng ở thùy dưới vây đuôi.
 - Mảng sẫm cuối vây lưng thứ nhất khi vây dựng; không có hàng đốm trên vây lưng (sauger).
-- Không có vạch dọc rõ kiểu yellow perch; mảng loang dọc mờ, không đều là đúng.
+- Không có vạch đứng đều, rõ kiểu yellow perch; mảng loang mờ, không đều là đúng.
 - Mắt lớn, phản sáng chỉ khi có nguồn sáng chiếu tới.
 - Răng nanh khi miệng mở; thân hình ngư lôi, không thân cao.
 - Cỡ khớp stage và bảng mục 2; cá >10 lb là "cá lớn" có chủ đích.
@@ -116,4 +116,4 @@ Hấp dẫn và viral cần kiểm qua output thực, không từ một fact ri�
 - Kỷ lục thế giới 1960 chưa xác minh được qua IGFA/TWRA [S10, S11]; chi tiết tranh cãi chỉ từ nguồn cấp E.
 - Trang Minnesota DNR đọc qua bản lưu Wayback; Michigan DNR chưa mở lại.
 - Chưa mở Catalog of Fishes; chưa có tên tiếng Việt.
-- Ref ảnh: adult dưới nước (identity, vây lưng gập nên không thấy mảng sẫm), cận đầu/miệng có răng nanh (anatomy), đàn fingerling dưới nước (juvenile). Chưa có ảnh fry đạt chuẩn, chưa có ref `scale` có số đo.
+- Ref ảnh: adult dưới nước (identity, vây lưng gập nên không thấy mảng sẫm), cận đầu/miệng có răng nanh (anatomy), đàn fingerling dưới nước (juvenile). Bổ sung juvenile cầm tay (chóp trắng thùy đuôi dưới, vây gai không hàng đốm; iNaturalist CC0). Fry: ảnh hiển vi ấu trùng còn noãn hoàng (NOAA GLERL) và fry trại giống (USFWS) chỉ là `production` vì loài dựa vào nhãn; chưa có ref `scale` có số đo.

@@ -110,4 +110,4 @@ Cá suối dàn cảnh mặc định 7–20 in; cá hồ/chạy suối lớn hơ
 - Mâu thuẫn ăn ngày [S2] và ăn đêm [S5] chưa giải quyết theo vùng/cỡ.
 - "German brown" và "brownie" chưa thấy ở nguồn A/B đã mở; chưa dùng "German brown". Mùa đóng câu theo bang chưa kiểm.
 - Chưa có nguồn A/B mở được về parr mark của con non.
-- Ảnh: adult side, head, underwater và juvenile (dạng hồ châu Âu, cá nhỏ trong bát); chưa có ảnh cá chạy suối Ngũ Đại Hồ, chưa có ref `scale`.
+- Ảnh: adult side, head, underwater và juvenile (dạng hồ châu Âu, cá nhỏ trong bát; parr suối Utah có đốm đỏ viền sáng, vây mỡ viền cam, iNaturalist CC BY); chưa có ảnh cá chạy suối Ngũ Đại Hồ, chưa có ref `scale`.

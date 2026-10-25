@@ -109,4 +109,4 @@ Gợi ý kể chuyện, chưa có bằng chứng hiệu quả viral.
 - Lịch mùa vùng Mỹ chỉ có quanh năm và mùa sinh sản; chưa có nguồn A/B đã mở về đỉnh mùa câu theo bang (NC chỉ là đầu mối E) [S13].
 - Florida Museum nói các tuna khác đều có gan vân, mâu thuẫn FishBase cho yellowfin [S3, S11]; dùng FishBase.
 - Cực trị khác nhau giữa nguồn [S3, S8]. Chưa có số đo chiều dài con non.
-- Ref ảnh: adult ngang (2), đàn dưới nước, juvenile mẫu bảo tàng (màu đã phai); chưa có cận đầu/miệng.
+- Ref ảnh: adult ngang (2), đàn dưới nước, juvenile mẫu bảo tàng (màu đã phai), juvenile trên sàn thuyền có vạch nhạt xen hàng đốm sườn dưới (iNaturalist CC BY); chưa có cận đầu/miệng.

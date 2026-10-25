@@ -187,6 +187,29 @@
    "reviewed": "2026-10-25"
   },
   {
+   "asset_id": "PH-BLUE-CATFISH-JUV-SIDE-02",
+   "entity_id": "K-SP-BLUE-CATFISH-001",
+   "stage": "juvenile",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "identity"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/239700025",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/426928755/original.jpeg",
+   "license": "CC BY-SA 4.0",
+   "credit": "fishesoftexas (iNaturalist)",
+   "sha256": "9ac33aefb07dd8fb6b500eb82a77154d43c6922789303836aeec8b9b1ebd7899",
+   "width": 2048,
+   "height": 1536,
+   "subject_coverage": "large",
+   "quality": "1080p",
+   "observed": "Wild juvenile blue catfish (est. 15-17 cm, palm length) on an open hand over grass and limestone, Conroe, Texas, 17 Jul 2024. Full left side, sharp: slate-blue back with iridescent sheen, silvery-white flank and belly, no dark spots anywhere, long-based anal fin with straight dark-edged margin, deeply forked caudal with pointed lobes, wedge-shaped head with straight dorsal profile, short barbels.",
+   "species_basis": "Long straight-edged anal fin and complete absence of spots (profile marks separating blue from channel catfish); deeply forked tail rules out flathead; 3 iNaturalist IDs agree on Ictalurus furcatus (non-Rio Grande population)",
+   "use": "Juvenile identity: unspotted body and straight anal fin. Do not copy the hand, sleeve or grass background; render in turbid river/reservoir water.",
+   "reviewed": "2026-10-25"
+  },
+  {
    "asset_id": "PH-BLUEGILL-ADULT-SIDE-01",
    "entity_id": "K-SP-BLUEGILL-001",
    "stage": "adult",
@@ -234,6 +257,29 @@
    "reviewed": "2026-10-25"
   },
   {
+   "asset_id": "PH-BLUEGILL-FRY-SIDE-01",
+   "entity_id": "K-SP-BLUEGILL-001",
+   "stage": "fry",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "production"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/248788698",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/444609584/original.jpeg",
+   "license": "CC0 1.0",
+   "credit": "exploreremmanuel (iNaturalist)",
+   "sha256": "0f1f86fb8e9538aa880c0354f8ff5469d167c959f1f6117b75dab5befd47ac4b",
+   "width": 2048,
+   "height": 1365,
+   "subject_coverage": "medium",
+   "quality": "1080p",
+   "observed": "Tiny sunfish (roughly 2.5-3 cm judged against the plastic spoon bowl) in a little water in a white plastic spoon, left side. Translucent olive body, faint narrow dusky bars, large eye, small mouth; fins clear, no ear-flap or dorsal spot pigment developed yet.",
+   "species_basis": "iNaturalist research grade (Orange County FL, 2024-10-20; IDs Lepomis macrochirus x2 after an initial genus Lepomis). At this size no bluegill-specific mark is visible, so species rests on the community ID.",
+   "use": "Scale and look of a late fry/early fingerling sunfish: translucency, faint bars, proportions. Stage boundary fry vs juvenile is a judgement from size; observation annotated juvenile. Do not copy spoon or hand. Role limited to production: label-only ID, Lepomis fry not separable by eye.",
+   "reviewed": "2026-10-25"
+  },
+  {
    "asset_id": "PH-BLUEGILL-JUV-SIDE-01",
    "entity_id": "K-SP-BLUEGILL-001",
    "stage": "juvenile",
@@ -254,6 +300,29 @@
    "observed": "Two hatchery fingerlings lying in a wet open palm, heads up-right, hatchery raceway blurred behind. Deep compressed bodies, small mouths, clear dark vertical bars over greenish-silver flanks, pale throats. Each fish roughly finger length; ear flap small and not distinct at this size. Commons original is 7008x4672 (>15 MB); this is the Commons 3840 px rendition.",
    "species_basis": "Hatchery label 'Bluegill Fingerlings' plus visible deep body, small mouth and vertical bars; ear-flap mark not readable, so identity rests partly on label.",
    "use": "Juvenile body shape, bar pattern and relative size against a hand. Do not copy the hand or hatchery setting into wild scenes; not a reference for adult colour. Role limited to production: hatchery fingerlings, marks too small; label-only ID.",
+   "reviewed": "2026-10-25"
+  },
+  {
+   "asset_id": "PH-BLUEGILL-JUV-SIDE-02",
+   "entity_id": "K-SP-BLUEGILL-001",
+   "stage": "juvenile",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "identity"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/378261708",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/691798652/original.jpg",
+   "license": "CC BY 4.0",
+   "credit": "ntho (iNaturalist)",
+   "sha256": "6114f25baf5a65eca808c417986cad4588e5c9b1b690f524ac90ede392f4aa82",
+   "width": 2048,
+   "height": 1532,
+   "subject_coverage": "large",
+   "quality": "1080p",
+   "observed": "Small juvenile sunfish lying left-side-up on a wet palm, fins spread. Deep compressed body, small terminal mouth, dark opercular flap without pale/red rim, dark blotch at rear base of soft dorsal fin, 6-7 faint dusky vertical bars over bluish-silver flank, long pointed pectoral visible.",
+   "species_basis": "Visual: dark spot at posterior base of soft dorsal + all-dark ear flap + vertical bars + small mouth (bluegill juvenile marks; excludes pumpkinseed/redear ear-flap colour and green sunfish large mouth). iNaturalist research grade, 5 agreeing IDs, Montgomery County TX, 2026-07-04.",
+   "use": "Juvenile body shape, bar pattern, dorsal spot and ear flap. Do not copy hand, out-of-water flat posture or flattened fins into underwater scenes.",
    "reviewed": "2026-10-25"
   },
   {
@@ -441,6 +510,29 @@
    "reviewed": "2026-10-25"
   },
   {
+   "asset_id": "PH-BROWN-TROUT-JUV-SIDE-02",
+   "entity_id": "K-SP-BROWN-TROUT-001",
+   "stage": "juvenile",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "identity"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/333373010",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605223542/original.jpg",
+   "license": "CC BY 4.0",
+   "credit": "mr_capgras (iNaturalist)",
+   "sha256": "df15f5dace13a2d3153c9b7eb00782c521d1c29289c2da001bc53be812dfbf5e",
+   "width": 2048,
+   "height": 1536,
+   "subject_coverage": "large",
+   "quality": "1080p",
+   "observed": "Small stream brown trout (parr, est. 12-15 cm) lying on a pink mesh landing net with wet fallen leaves, Salt Creek, Nephi, Utah, 3 Jan 2026. Full left side, sharp: row of bluish-grey oval parr marks along the lateral line, bright red-orange spots with pale halos and black spots on the flank, olive-brown back, yellow belly and lower flank, orange-tinted pelvic/anal fins, orange-edged adipose fin, caudal fin without spots.",
+   "species_basis": "Red spots with pale halos + black spots, unspotted tail and orange-edged adipose (rules out rainbow/brook) together with parr marks; 7 iNaturalist IDs agree on Salmo trutta",
+   "use": "Juvenile (parr) identity: parr marks plus red spots. Do not copy the landing net, leaves or out-of-water pose; render the fish in water. US Great Basin stream fish, not a Great Lakes run fish.",
+   "reviewed": "2026-10-25"
+  },
+  {
    "asset_id": "PH-CHANNEL-CATFISH-ADULT-HEAD-01",
    "entity_id": "K-SP-CHANNEL-CATFISH-001",
    "stage": "adult",
@@ -603,6 +695,29 @@
    "reviewed": "2026-10-25"
   },
   {
+   "asset_id": "PH-CHINOOK-SALMON-JUV-SIDE-02",
+   "entity_id": "K-SP-CHINOOK-SALMON-001",
+   "stage": "juvenile",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "identity"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/82306970",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/135072646/original.jpeg",
+   "license": "CC0",
+   "credit": "bradenjudson (iNaturalist)",
+   "sha256": "8dfccc648df407b7b959d45aa37825ae18a0fd32a42358c4d23fedda6d5f5cb0",
+   "width": 2048,
+   "height": 1365,
+   "subject_coverage": "medium",
+   "quality": "1080p",
+   "observed": "Juvenile chinook (parr, size not stated) lying on a pale grey plastic tray, Nanaimo, BC, 4 Jun 2021. Full left side, sharp head and body: tall narrow dark parr marks crossed by the lateral line, small dark spots along the back and dorsal base, olive-gold back, silvery flank and belly, adipose fin with dark margin and clear centre, anal fin pale with no white leading edge or black stripe, unspotted caudal with dusky margin. Anal and pelvic fins slightly soft-focus.",
+   "species_basis": "Parr marks bisected by the lateral line (profile S6) plus pale anal fin without coho's white-edge/black stripe, dark-margined adipose and unspotted tail (not steelhead); 4 iNaturalist IDs agree on O. tshawytscha",
+   "use": "Juvenile/parr identity. Do not copy the plastic tray or out-of-water pose. Anal-fin detail is slightly soft; do not invent coho-style orange fins or white-edged anal fin.",
+   "reviewed": "2026-10-25"
+  },
+  {
    "asset_id": "PH-LARGEMOUTH-BASS-ADULT-HEAD-01",
    "entity_id": "K-SP-LARGEMOUTH-BASS-001",
    "stage": "adult",
@@ -670,6 +785,29 @@
    "observed": "Live adult swimming in an aquarium, true right-side profile on dark background. Dark midlateral band broken into blotches from gill to tail, plain silvery lower sides without rows of spots, deep dorsal notch, gold eye. Mouth closed; jaw end sits around the rear part of the eye in this pose. Light pinkish colour cast from lighting.",
    "species_basis": "Visual: blotched horizontal band, deep dorsal notch, no lower-side spot rows; USFWS label.",
    "use": "Underwater body-proportion and swimming-posture reference. Colour cast is aquarium lighting; natural water should read greener.",
+   "reviewed": "2026-10-25"
+  },
+  {
+   "asset_id": "PH-LARGEMOUTH-BASS-FRY-SIDE-01",
+   "entity_id": "K-SP-LARGEMOUTH-BASS-001",
+   "stage": "fry",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "identity"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/364891373",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/666156533/original.jpg",
+   "license": "CC BY 4.0",
+   "credit": "ntho (iNaturalist)",
+   "sha256": "cabc12cb8f2b4c3d373450ab8c7a85536c24e6d4d9ca6df796c1121c9e5169d3",
+   "width": 2048,
+   "height": 1538,
+   "subject_coverage": "large",
+   "quality": "1080p",
+   "observed": "Small bass (about one finger-width deep, roughly 3.5-4 cm long by finger scale) on fingers, left side. Bold dark mid-lateral stripe of joined blotches from snout through eye to tail base, row of dark dorsal blotches, silvery belly, mouth large with jaw reaching to below the eye, spiny and soft dorsal almost separated by a deep notch, orange-tinted caudal with dark base.",
+   "species_basis": "Visual: continuous dark lateral stripe (not the vertical bars of smallmouth juveniles), deep dorsal notch and large mouth reaching the eye; iNaturalist research grade, 3 agreeing IDs, Spring TX, 2026-05-24.",
+   "use": "Late fry / early fingerling colour pattern and proportions (profile: schools break up at a little over 1 in, piscivory near 2 in). Annotated juvenile on iNaturalist; treated as fry by size. Do not copy fingers/out-of-water pose; orange caudal tint varies, do not exaggerate it into a smallmouth-style tricolour tail.",
    "reviewed": "2026-10-25"
   },
   {
@@ -788,6 +926,52 @@
    "reviewed": "2026-10-25"
   },
   {
+   "asset_id": "PH-MAHI-MAHI-JUV-SIDE-01",
+   "entity_id": "K-SP-MAHI-MAHI-001",
+   "stage": "juvenile",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "production"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/132270769",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/225218500/original.jpeg",
+   "license": "CC BY 4.0",
+   "credit": "tokue (iNaturalist)",
+   "sha256": "0de8cbbbe489709c43a0dbe7167376532dfe1e97f670560794e88cbd387477df",
+   "width": 2048,
+   "height": 1536,
+   "subject_coverage": "large",
+   "quality": "1080p",
+   "observed": "Live juvenile (few cm) swimming in a clear acrylic viewing box, side view facing right, spanning ~70% of frame width. Slender body with alternating dark vertical bars and pale interspaces along the flank; long continuous reddish dorsal fin along the back to the tail; long dark anal fin from mid-body to tail; deep-forked reddish caudal without a full white margin. Slight softness, glass reflections and a second fish blurred at right edge.",
+   "species_basis": "Single long dorsal fin and long dark anal fin; slender body (depth well under 25% of length, rules out deeper-bodied pompano dolphinfish); barred juvenile pattern; no full white caudal margin. iNaturalist research grade (3 agreeing IDs; an identifier cites pigmented pelvic and anal fins). Pelvic fin pigment itself not clearly visible in this frame. Reviewer (2026-10-25): seen through tank glass, soft focus; single dorsal origin and pelvic pigment not confirmable on the image, so production only.",
+   "use": "Juvenile body plan, barring and fin layout. Do not copy acrylic box, glass edges, reflections or the second blurred fish; place in Sargassum/open water instead.",
+   "reviewed": "2026-10-25"
+  },
+  {
+   "asset_id": "PH-MAHI-MAHI-JUV-SIDE-02",
+   "entity_id": "K-SP-MAHI-MAHI-001",
+   "stage": "juvenile",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "identity"
+   ],
+   "page_url": "https://data.griidc.org/data/R4.x258.000:0029",
+   "file_url": "https://data.griidc.org/api/file/download/163299",
+   "license": "CC0",
+   "credit": "Perrichon et al., 'Observations of the developmental stages of Mahi-Mahi' (GRIIDC, doi:10.7266/n7-9h64-f119)",
+   "sha256": "578611dc14b480ce79ce105c7f5728b455603107368821a4b8703e62daa1d679",
+   "width": 2639,
+   "height": 1052,
+   "subject_coverage": "large",
+   "quality": "720p",
+   "observed": "Hatchery juvenile 40 days post-hatch, laid flat on white paper beside a cm ruler (about 11.2 to 20.6 cm, so roughly 9.5 cm long). Single dark dorsal fin running from the nape almost to the tail, long dark anal fin, dark pelvic fin, forked tail with white/pale tips, greenish-silver flank with pale spots, yellow eye ring.",
+   "species_basis": "Dorsal fin origin at the nape and full-length dorsal/anal fins (Coryphaena), slender body, dark pelvic fin and pale tail tips of juvenile common dolphinfish + dataset label (C. hippurus).",
+   "use": "Juvenile identity and fin layout. Dead specimen on paper with ruler: do not copy flat pose, dull post-mortem colour, paper or ruler into scenes. Ruler reading is approximate, not a measured scale ref.",
+   "reviewed": "2026-10-25"
+  },
+  {
    "asset_id": "PH-MUSKIE-ADULT-HEAD-01",
    "entity_id": "K-SP-MUSKIE-001",
    "stage": "adult",
@@ -831,6 +1015,29 @@
    "observed": "Live adult underwater in a sparse weed bed, full right side, head to the right. Dark irregular spots/blotches on a light silver-olive body (spotted phase), dense on rear half and caudal peduncle; pointed caudal lobes; dorsal and anal fins set far back near the tail; long duckbill snout; rusty-tinged pelvic/anal fins. Weed stems cross the tail and pelvic area; cheek scaling not resolvable. Original file replaces the earlier 1280 px thumbnail (same Commons file).",
    "species_basis": "Visual: dark-on-light markings and pointed tail lobes exclude northern pike (light spots on dark) and tiger muskie (rounded fins, dark bars on light); USFWS label Esox masquinongy.",
    "use": "Primary identity reference for the spotted phase in natural weed-bed habitat. Barred and clear phases are also valid; do not force spots on every muskie. Not a scale reference.",
+   "reviewed": "2026-10-25"
+  },
+  {
+   "asset_id": "PH-MUSKIE-FRY-SIDE-01",
+   "entity_id": "K-SP-MUSKIE-001",
+   "stage": "fry",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "identity"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/174016939",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/302264749/original.jpeg",
+   "license": "CC BY 4.0",
+   "credit": "rob21 (iNaturalist)",
+   "sha256": "a424e7d933ae89c9d01c15e91bbdd998a374606bd0830a523c6ca2f1a014a087",
+   "width": 2048,
+   "height": 1536,
+   "subject_coverage": "medium",
+   "quality": "1080p",
+   "observed": "Young-of-year (observer note \"YOY\", 18 Jul 2023, Thunder Bay District, Ontario) in a clear plastic viewing tube against a cm ruler; fish ~6.5 cm TL. Full left side, sharp: long duckbill snout, dorsal and anal fins set far back, dark brown blotches and a dark mid-lateral stripe on a pale tan/cream body, dark bar through the eye, small orange pectoral, forked caudal with pointed lobes and dark blotch at its base. Scratched plastic, water droplets and green water behind.",
+   "species_basis": "Esox (duckbill snout, dorsal/anal fins far back) with dark markings on a light ground, the profile's muskie-vs-pike pattern mark; 5 iNaturalist IDs agree on E. masquinongy",
+   "use": "Fry/YOY identity and proportions; the cm ruler gives a real size check (~6.5 cm in mid-July). Do not copy the plastic tube, scratches, droplets or ruler into scenes. Stage sits at the late fry / early fingerling boundary; the profile's 7-13 in fingerling is later in the summer.",
    "reviewed": "2026-10-25"
   },
   {
@@ -900,6 +1107,52 @@
    "observed": "Studio shot on white, fish in water swimming diagonally up-right, full left side, head lower left, tail breaking a splash at top right. Rows of light bean-shaped spots on dark olive-green flanks, pale belly, orange-yellow fins with dark bars and rounded tips, moderately forked tail, duckbill snout, dorsal and anal fins far back. Fine scales visible over the cheek. Sharp; body diagonal so length reads foreshortened slightly. Size not stated.",
    "species_basis": "Visual: light-on-dark bean spots and rounded fin tips exclude muskie and tiger muskie; no chain pattern (pickerel); USFWS caption Northern pike. Stage judged adult/subadult from proportions; length unknown.",
    "use": "Primary identity reference for colour pattern and fins. White background and surface splash are studio presentation; do not copy into natural scenes. Not a scale reference.",
+   "reviewed": "2026-10-25"
+  },
+  {
+   "asset_id": "PH-NORTHERN-PIKE-FRY-HEAD-01",
+   "entity_id": "K-SP-NORTHERN-PIKE-001",
+   "stage": "fry",
+   "variant": null,
+   "view": "head",
+   "roles": [
+    "production"
+   ],
+   "page_url": "https://commons.wikimedia.org/wiki/File:Northern_Pike_Fry_(51307147298).jpg",
+   "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Northern_Pike_Fry_%2851307147298%29.jpg",
+   "license": "Public domain",
+   "credit": "USFWS Mountain-Prairie (Garrison Dam National Fish Hatchery, 2017; via Wikimedia Commons)",
+   "sha256": "8e04436f94da3a4565e5184357f287c5e86cc40bf228f755e6b0c178fe44e203",
+   "width": 4288,
+   "height": 3216,
+   "subject_coverage": "large",
+   "quality": "1080p",
+   "observed": "Macro of the head and front body of a hatchery pike fry on a pale tray: elongated flat duckbill snout, large silver-ringed eye, dense dark melanophore speckling on olive-gold skin, translucent pinkish gill/belly area; other fry blurred at bottom of frame. Shallow depth of field.",
+   "species_basis": "USFWS caption: northern pike fry at Garrison Dam NFH; esocid snout visible but species from caption only",
+   "use": "Fry head/snout texture and translucency for close-ups. Role limited to production: pike vs muskie fry not separable from this crop (caption-only ID). Hatchery tray; do not copy the white background or blurred fry.",
+   "reviewed": "2026-10-25"
+  },
+  {
+   "asset_id": "PH-NORTHERN-PIKE-FRY-SIDE-01",
+   "entity_id": "K-SP-NORTHERN-PIKE-001",
+   "stage": "fry",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "identity"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/114004655",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/192550332/original.jpg",
+   "license": "CC BY 4.0",
+   "credit": "victor0001 (iNaturalist)",
+   "sha256": "dec94ac2c23a62eb945e9a16078af0190228782b44524ee0856c724f1b1c9e61",
+   "width": 2048,
+   "height": 1536,
+   "subject_coverage": "medium",
+   "quality": "1080p",
+   "observed": "Single pike fry (est. 3-4 cm, size not stated) in a clear plastic cup held up by blurred fingers, 30 Apr 2022, London UK. Slender body angled diagonally, sharp: flattened duckbill snout, large eye, dorsal fin far back, olive-yellow back with fine dark speckles, iridescent green-silver flank, pale translucent belly, dark line along the snout through the eye. No adult bean-spot pattern yet.",
+   "species_basis": "Esox fry (duckbill snout, dorsal fin far back) photographed in London, where E. lucius is the only Esox present; 5 iNaturalist IDs agree. Muskie fry would not be separable by these marks alone - basis is genus marks plus range, not pattern Reviewer (2026-10-25): visible marks confirm Esox only; species rests on range (E. lucius is the only Esox in Great Britain). Do not use it to tell pike fry from muskie fry.",
+   "use": "Early fry shape and speckled colour. Do not copy the cup, curved-plastic distortion or the hand in background. Fry have not yet developed the light bean spots; do not paint adult pike spots on fry.",
    "reviewed": "2026-10-25"
   },
   {
@@ -992,6 +1245,29 @@
    "observed": "Close-up of a steelhead head, right side, mouth open. Pale/white mouth lining and gums, maxilla extending past the eye, few dark spots on head, pinkish-red cheek, wet glossy skin; out of water at a hatchery.",
    "species_basis": "Visual: light mouth and gums (not black like Chinook), jaw reaching behind eye; USFWS caption steelhead at Abernathy Fish Technology Center.",
    "use": "Head/mouth anatomy: jaw length, pale gums, eye, cheek colour. Out-of-water hatchery shot; do not copy the hand or background.",
+   "reviewed": "2026-10-25"
+  },
+  {
+   "asset_id": "PH-RAINBOW-TROUT-JUV-SIDE-01",
+   "entity_id": "K-SP-RAINBOW-TROUT-001",
+   "stage": "juvenile",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "production"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/233625754",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/415216602/original.jpeg",
+   "license": "CC BY 4.0",
+   "credit": "leecain (iNaturalist)",
+   "sha256": "5e79b82cbfdb7bcab49a2e210c84d994e2357bcb41395949f044f7d76f34f946",
+   "width": 2048,
+   "height": 1536,
+   "subject_coverage": "large",
+   "quality": "1080p",
+   "observed": "Wild juvenile coastal rainbow trout (parr) in a clear photo tank, Upper Deer Creek, Selma, Oregon, 2 Aug 2024. Full right side, sharp: ~9 dark oval parr marks along the lateral line, many small black spots over back, flank, dorsal fin and the whole caudal fin, faint pink wash on the rear flank, olive back, silvery-white belly, short jaw ending below the eye, white-tipped pelvic fin. Gravel bar and trees behind the tank, water droplets on the glass.",
+   "species_basis": "Oval parr marks with spots across the caudal fin and short jaw (separates from brown trout - unspotted tail/red spots - and chinook parr - unspotted tail, tall narrow parr marks); 6 iNaturalist IDs agree on O. mykiss (irideus). Coastal cutthroat is not excluded by a visible throat slash from this angle Reviewer (2026-10-25): coastal cutthroat parr not excluded on visible marks (no throat view, fin tips unclear), so production only.",
+   "use": "Juvenile (parr) identity and proportions. Do not copy the tank, droplets or the gravel bar backdrop; this is a Pacific coastal stream parr, not a Great Lakes steelhead smolt.",
    "reviewed": "2026-10-25"
   },
   {
@@ -1461,6 +1737,75 @@
    "reviewed": "2026-10-25"
   },
   {
+   "asset_id": "PH-WALLEYE-FRY-GROUP-01",
+   "entity_id": "K-SP-WALLEYE-001",
+   "stage": "fry",
+   "variant": null,
+   "view": "group",
+   "roles": [
+    "production"
+   ],
+   "page_url": "https://commons.wikimedia.org/wiki/File:Walleye_(Sander_vitreus)_Fry.jpg",
+   "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Walleye_%28Sander_vitreus%29_Fry.jpg",
+   "license": "Public domain",
+   "credit": "Sam Stukel, USFWS Mountain-Prairie (via Wikimedia Commons)",
+   "sha256": "d5d616a3d094620053c58cbee98cf1240343286367c9b25f136ae10e50451b6e",
+   "width": 5213,
+   "height": 3724,
+   "subject_coverage": "medium",
+   "quality": "1080p",
+   "observed": "Hand holding a clear glass of water against the sky with about 30 pond-reared fry, each roughly 2-3 cm: slender translucent bodies, large silvery eyes, visible gut, fins mostly clear. Drained hatchery pond and two workers seining in the blurred background.",
+   "species_basis": "USFWS caption: walleye (Sander vitreus) fry at Gavins Point National Fish Hatchery. Slender percid fry shape agrees but species is not confirmable visually at this size.",
+   "use": "Size, translucency and density of late walleye fry. Do not copy glass, hand, hatchery pond or workers. Role limited to production: hatchery label-only ID.",
+   "reviewed": "2026-10-25"
+  },
+  {
+   "asset_id": "PH-WALLEYE-FRY-SIDE-01",
+   "entity_id": "K-SP-WALLEYE-001",
+   "stage": "fry",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "production"
+   ],
+   "page_url": "https://commons.wikimedia.org/wiki/File:Walleye_larva_(8740460659).jpg",
+   "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Walleye_larva_%288740460659%29.jpg",
+   "license": "CC BY-SA 2.0",
+   "credit": "NOAA Great Lakes Environmental Research Laboratory (via Wikimedia Commons)",
+   "sha256": "158288bbc0242f60190736c5f8a94f801f1e77f5a8f33ed67e95556c96335da3",
+   "width": 1280,
+   "height": 960,
+   "subject_coverage": "large",
+   "quality": "720p",
+   "observed": "Microscope view of a newly hatched larva on grey background: pale yellowish translucent body curved in an S, large yolk sac with sparse melanophores under the head, single dark eye, continuous fin fold along tail, no fins differentiated.",
+   "species_basis": "Caption only (NOAA GLERL: fish larvae, walleye, July 2010). Percid yolk-sac larvae are not separable by eye from this image.",
+   "use": "Look of a yolk-sac walleye larva for macro/early-life shots. Microscope lighting and grey dish background are not a habitat reference; no size scale. Role limited to production: label-only ID. 720p tier: no 1080p close-up found.",
+   "reviewed": "2026-10-25"
+  },
+  {
+   "asset_id": "PH-WALLEYE-JUV-SIDE-01",
+   "entity_id": "K-SP-WALLEYE-001",
+   "stage": "juvenile",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "identity"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/116621524",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/196873850/original.jpeg",
+   "license": "CC0 1.0",
+   "credit": "jlallaman (iNaturalist)",
+   "sha256": "f728b05090e2d1e17a5f975131a453bd6881c30f49dc2b2de01db3276f076c55",
+   "width": 2048,
+   "height": 1536,
+   "subject_coverage": "large",
+   "quality": "1080p",
+   "observed": "Juvenile walleye (hand-length) held over a flooded backwater with dead trees, left side, both dorsals erect. Slender olive-gold body with faint saddles, large glassy eye, toothy jaw slightly open, spiny dorsal membranes plain (no rows of round black spots) with darker rear membrane, white tip on lower caudal lobe clearly visible.",
+   "species_basis": "Visual: white lower-caudal tip and unspotted spiny dorsal with dark rear area (walleye; sauger has spotted spiny dorsal and no white tail tip). iNaturalist research grade, 4 agreeing IDs, Buffalo WI, 2022-05-10.",
+   "use": "Juvenile walleye identity, fin spread, eye and tail tip. Do not copy hand-held out-of-water pose into underwater scenes.",
+   "reviewed": "2026-10-25"
+  },
+  {
    "asset_id": "PH-WALLEYE-JUV-UNDERWATER-01",
    "entity_id": "K-SP-WALLEYE-001",
    "stage": "juvenile",
@@ -1530,6 +1875,30 @@
    "reviewed": "2026-10-25"
   },
   {
+   "asset_id": "PH-WHITE-CRAPPIE-JUV-FIN-01",
+   "entity_id": "K-SP-WHITE-CRAPPIE-001",
+   "stage": "juvenile",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "anatomy",
+    "identity"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/350866237",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/640231928/original.jpg",
+   "license": "CC BY 4.0",
+   "credit": "ntho (iNaturalist)",
+   "sha256": "4b99a34e989cba72a7818ea44320617d79e4b1ff52b8ece34270aaaf2537580f",
+   "width": 2048,
+   "height": 1536,
+   "subject_coverage": "large",
+   "quality": "1080p",
+   "observed": "Close-up of the same juvenile white crappie: dorsal fin raised against a yellow tray, thumb at left. Short graduated row of about 6 clear spines grading into soft rays with fine dusky membrane speckles; iridescent flank scales and speckled back below.",
+   "species_basis": "Visual: about 6 dorsal spines (white crappie 5-6, black crappie 7-8); same observation as PH-WHITE-CRAPPIE-JUV-SIDE-02, iNaturalist research grade with 5 agreeing IDs.",
+   "use": "Dorsal fin structure for close-ups and species separation. Fragment of the body only: not a whole-fish reference; do not copy thumb or tray colour.",
+   "reviewed": "2026-10-25"
+  },
+  {
    "asset_id": "PH-WHITE-CRAPPIE-JUV-SIDE-01",
    "entity_id": "K-SP-WHITE-CRAPPIE-001",
    "stage": "juvenile",
@@ -1550,6 +1919,29 @@
    "observed": "Small juvenile (a few cm) lying on a palm, left side. Slender silvery-iridescent body, large eye, dorsal and anal fins set far back opposite each other, forked tail with dark edge; no bars developed yet. Fish fills about half the frame width.",
    "species_basis": "Genus-level marks (fins set back, large eye, oblique mouth); species rests on Fishes of Texas team identification, iNaturalist research-grade observation 253129220 (3 IDs, Colorado County TX, 2024-11-23). Visible marks alone cannot exclude black crappie at this size.",
    "use": "Juvenile body proportion and colour only. Do not add adult bars or deep body to fish this small; do not use to separate the two crappie species. Role limited to production: juvenile marks cannot exclude black crappie; label-only ID.",
+   "reviewed": "2026-10-25"
+  },
+  {
+   "asset_id": "PH-WHITE-CRAPPIE-JUV-SIDE-02",
+   "entity_id": "K-SP-WHITE-CRAPPIE-001",
+   "stage": "juvenile",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "identity"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/350866237",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/640231904/original.jpg",
+   "license": "CC BY 4.0",
+   "credit": "ntho (iNaturalist)",
+   "sha256": "3c85f171ea71e1f8755c4f7676a036bf1ac78959ea0ed93cbc8c5eaf80157a1b",
+   "width": 2048,
+   "height": 1506,
+   "subject_coverage": "large",
+   "quality": "1080p",
+   "observed": "Juvenile crappie photographed through clear water in a yellow tray, left side, hand behind. Silvery, slightly compressed body, large eye, upturned mouth, faint olive back with fine dusky speckling along dorsal base, no bars yet. Dorsal fin set well back: distance from eye to dorsal origin clearly longer than the dorsal-fin base.",
+   "species_basis": "Visual: dorsal-fin base shorter than eye-to-dorsal-origin distance (white crappie key character; black crappie the reverse) plus 6 dorsal spines in companion photo PH-WHITE-CRAPPIE-JUV-FIN-01; iNaturalist research grade, 5 agreeing IDs, Spring TX, 2026-04-18 (dipnetted under a snag).",
+   "use": "Juvenile proportion, fin placement and plain silvery colour. Do not add adult vertical bars or deep body. Do not copy the yellow tray, hand or water-surface line.",
    "reviewed": "2026-10-25"
   },
   {
@@ -1670,6 +2062,29 @@
    "reviewed": "2026-10-25"
   },
   {
+   "asset_id": "PH-YELLOW-PERCH-JUV-SIDE-02",
+   "entity_id": "K-SP-YELLOW-PERCH-001",
+   "stage": "juvenile",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "identity"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/218201794",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/386093904/original.jpeg",
+   "license": "CC BY 4.0",
+   "credit": "qfc79 (iNaturalist)",
+   "sha256": "74045c2ec93bf5c23246fc92561ade6759308a1a46d6c2880d3c7549ba92fa08",
+   "width": 2048,
+   "height": 1536,
+   "subject_coverage": "large",
+   "quality": "1080p",
+   "observed": "Small yellow perch on an open palm in a boat, right side, hook and line at the mouth, yardstick partly visible beneath. Olive-yellow body with 6-7 dark vertical saddle bars tapering toward the belly, separate spiny and soft dorsals, orange-tinted pelvic and anal fins, no canine teeth, moderate eye.",
+   "species_basis": "Visual: tapering dark vertical bars on yellow-green ground + orange lower fins + separate dorsals and no canines (yellow perch; excludes walleye/sauger). iNaturalist research grade, Wolverine Lake MI, 2024-05-25.",
+   "use": "Juvenile perch bar pattern and muted colour. Do not copy hook, line, hand, ruler or boat floor.",
+   "reviewed": "2026-10-25"
+  },
+  {
    "asset_id": "PH-YELLOWFIN-TUNA-ADULT-SIDE-01",
    "entity_id": "K-SP-YELLOWFIN-TUNA-001",
    "stage": "adult",
@@ -1759,6 +2174,29 @@
    "observed": "Juvenile specimen on grey studio background, left side, fins spread. Short (not sickle) second dorsal and anal fins, faint yellow tinge on second dorsal tip, row of finlets, moderately long dark pectoral, pale vertical bars/spots on lower flank, dark back. Colours faded/greyish post-mortem; label text LUZ-026 USNM-445243 in corner.",
    "species_basis": "USNM catalogued specimen label Thunnus albacares juvenile + pale vertical lower-flank marks and finlet row",
    "use": "Juvenile proportions and fin shape. Faded museum colours: do not copy grey tone or label text; pair with live adult refs for colour. Role limited to production: faded museum juvenile; yellowfin vs bigeye juveniles not separable by eye here, label-only ID.",
+   "reviewed": "2026-10-25"
+  },
+  {
+   "asset_id": "PH-YELLOWFIN-TUNA-JUV-SIDE-02",
+   "entity_id": "K-SP-YELLOWFIN-TUNA-001",
+   "stage": "juvenile",
+   "variant": null,
+   "view": "side",
+   "roles": [
+    "identity"
+   ],
+   "page_url": "https://www.inaturalist.org/observations/37610935",
+   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/59656632/original.jpg",
+   "license": "CC BY 4.0",
+   "credit": "aerin_j (iNaturalist)",
+   "sha256": "dd5c132d63639b0dc4b86ae3ebf69bade405c37f85e159647d9811e73f97a0eb",
+   "width": 2048,
+   "height": 1536,
+   "subject_coverage": "large",
+   "quality": "1080p",
+   "observed": "Freshly caught small tuna lying on a boat deck, left side up, spanning most of the frame width. Lower flank shows the juvenile pattern: thin pale vertical bars alternating with rows of pale spots. Long pectoral fin reaches past the second dorsal fin origin; second dorsal and anal fins short and yellow (no long sickle); bright yellow finlets with thin dark edges; yellow-gold band along the upper flank; dark metallic-blue back. A fishing line crosses the head; feet, a reel and a little blood around it.",
+   "species_basis": "Alternating vertical bars and spot rows on the lower flank (juvenile yellowfin pattern) + long pectoral + bright yellow finlets with dark edges and a yellow lateral band (rules out blackfin and bluefin); short second dorsal/anal = young fish. Research grade (2 agreeing IDs).",
+   "use": "Juvenile flank pattern, pectoral length, finlet colour. Do not copy deck, feet, reel, line over the head or blood; dead-fish colours are duller than live.",
    "reviewed": "2026-10-25"
   }
  ]

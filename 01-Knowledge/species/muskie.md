@@ -112,4 +112,4 @@ Các hướng này không là bằng chứng viral; vẫn rà lịch sử theo c
 - Chưa có bảng chiều dài theo từng tuổi từ nguồn A/B; S5 đọc thiếu, S17 chỉ có tuổi/dài trung bình mẫu.
 - Mùa băng: chỉ có dữ liệu sông Mississippi (MN) [S18]; Wisconsin chỉ mở câu muskie nội địa ở nước mở [S21]; chưa có nguồn A/B về câu muskie qua lỗ băng ở bang khác; không dàn cảnh câu băng muskie như hoạt động phổ biến.
 - Chưa có tên tiếng Việt.
-- Ref ảnh (≥1080p): adult dạng đốm, juvenile, cận đầu cá dạng trơn trong bể; chưa có ảnh thật lỗ cảm giác dưới hàm hay dạng vạch; chưa có ref `scale` có số đo.
+- Ref ảnh (≥1080p): adult dạng đốm, juvenile, cận đầu cá dạng trơn trong bể, fry ~6,5 cm cạnh thước cm (vết sẫm trên nền sáng, iNaturalist CC BY); chưa có ảnh thật lỗ cảm giác dưới hàm hay dạng vạch; chưa có ref `scale` có số đo.
