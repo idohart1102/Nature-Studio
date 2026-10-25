@@ -111,4 +111,4 @@ Gợi ý kể chuyện, chưa có bằng chứng hiệu quả viral.
 - Nhận định "blue cỡ cúp tốt nhất mùa đông" chỉ có nguồn E (In-Fisherman, Carolina Sportsman) [S14]; trang MD DNR về nơi trú đông chỉ thấy qua index (HTTP 403) [S15]. Nguồn A/B chỉ xác nhận di chuyển mùa đông, không xác nhận cá lớn ăn mạnh hơn.
 - Tháng sinh sản ở Missouri chỉ ghi "có lẽ"; nhiệt độ bắt đầu di cư (46–50 °F) và đẻ (70–75 °F) là số Virginia.
 - Số tia vây hậu môn khác nhau giữa nguồn (30–35/30–36). Chưa có A/B về kẻ săn của cá con.
-- Ref ảnh: adult side, cận đầu, fry; juvenile hoang dã Texas cầm tay (không đốm, vây hậu môn dài bờ thẳng, iNaturalist CC BY-SA); chưa có ảnh trong tự nhiên hay ref `scale`.
+- Ref ảnh: adult side, cận đầu, juvenile hoang dã Texas cầm tay (không đốm, vây hậu môn dài bờ thẳng, iNaturalist CC BY-SA); chưa có ảnh trong tự nhiên hay ref `scale`.

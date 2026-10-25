@@ -104,4 +104,4 @@ SAFMC gọi 34–55 in là "trung bình" [S6], cao hơn cỡ cá gắn thẻ (18
 - Dấu mảng răng lưỡi bị S5/S6 mô tả ngược với S3/S4/S9; không dùng cho kiểm ảnh tới khi có nguồn đối chiếu thêm.
 - "Đỉnh mùa hè" mới có căn cứ cho cá non ở Florida Current [S4]; mốc tháng di cư theo bờ Đông chỉ từ nguồn cấp E [S10].
 - Chưa đọc bài gốc Merten et al. 2022; MyFWC bị chặn (403).
-- Ref ảnh: có adult side (cái), adult dưới nước (hồ cá) và ảnh nhóm cá chết so hình đầu; juvenile 40 ngày tuổi trại giống cạnh thước (vây lưng từ gáy, vây bụng sẫm, chóp đuôi trắng; GRIIDC CC0, 720p) đạt identity; ảnh juvenile trong bể kính chỉ `production`; chưa có ảnh larva đạt chuẩn kích thước, chưa có ảnh cá đực sống nhìn ngang.
+- Ref ảnh: có adult side (cái), adult dưới nước (hồ cá), ảnh nhóm cá chết so hình đầu và juvenile 40 ngày tuổi trại giống cạnh thước (vây lưng từ gáy, vây bụng sẫm, chóp đuôi trắng; GRIIDC CC0, 720p); chưa có ảnh larva đạt chuẩn kích thước, chưa có ảnh cá đực sống nhìn ngang.

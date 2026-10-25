@@ -164,29 +164,6 @@
    "reviewed": "2026-10-25"
   },
   {
-   "asset_id": "PH-BLUE-CATFISH-JUV-SIDE-01",
-   "entity_id": "K-SP-BLUE-CATFISH-001",
-   "stage": "juvenile",
-   "variant": "fry",
-   "view": "side",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://commons.wikimedia.org/wiki/File:Blue_Catfish_(Ictalurus_furcatus)_fry_(53678629223).jpg",
-   "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Blue_Catfish_%28Ictalurus_furcatus%29_fry_%2853678629223%29.jpg",
-   "license": "Public domain",
-   "credit": "Sam Stukel, USFWS Mountain-Prairie (Wikimedia Commons)",
-   "sha256": "a732461b202086a4647031d2ea25ac3d84472fc6b63e45fcabef3c526d366580",
-   "width": 3447,
-   "height": 1575,
-   "subject_coverage": "large",
-   "quality": "1080p",
-   "observed": "Hatchery fry on black background, side view: translucent grey body with fine melanophore speckling (not channel-type round spots), iridescent gut area, forked tail, long-based anal fin, short barbels. Sharp, no occlusion.",
-   "species_basis": "USFWS hatchery label (Gavins Point NFH); forked tail and long anal base consistent. Fry-stage separation from channel fry is not verifiable by eye here.",
-   "use": "Fry-stage proportions and translucency. Not a scale reference; do not render adult-type spots on blue juveniles. Role limited to production: fry cannot be told from channel catfish fry visually (label-only ID).",
-   "reviewed": "2026-10-25"
-  },
-  {
    "asset_id": "PH-BLUE-CATFISH-JUV-SIDE-02",
    "entity_id": "K-SP-BLUE-CATFISH-001",
    "stage": "juvenile",
@@ -254,52 +231,6 @@
    "observed": "In-water photo over gravel and leaf litter in greenish water; one adult in three-quarter side view centre frame, two more bluegill blurred in background. Black ear flap, blue-grey lower jaw and cheek, bright orange-yellow breast, faint scale spotting, small mouth. Fish fills about a third of the frame.",
    "species_basis": "Visual: black ear flap, small mouth, deep body, blue lower jaw; USFWS label.",
    "use": "Reference for natural underwater colour, turbidity and small loose group. Orange breast suggests a breeding-coloured fish; do not make every bluegill orange-breasted.",
-   "reviewed": "2026-10-25"
-  },
-  {
-   "asset_id": "PH-BLUEGILL-FRY-SIDE-01",
-   "entity_id": "K-SP-BLUEGILL-001",
-   "stage": "fry",
-   "variant": null,
-   "view": "side",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://www.inaturalist.org/observations/248788698",
-   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/444609584/original.jpeg",
-   "license": "CC0 1.0",
-   "credit": "exploreremmanuel (iNaturalist)",
-   "sha256": "0f1f86fb8e9538aa880c0354f8ff5469d167c959f1f6117b75dab5befd47ac4b",
-   "width": 2048,
-   "height": 1365,
-   "subject_coverage": "medium",
-   "quality": "1080p",
-   "observed": "Tiny sunfish (roughly 2.5-3 cm judged against the plastic spoon bowl) in a little water in a white plastic spoon, left side. Translucent olive body, faint narrow dusky bars, large eye, small mouth; fins clear, no ear-flap or dorsal spot pigment developed yet.",
-   "species_basis": "iNaturalist research grade (Orange County FL, 2024-10-20; IDs Lepomis macrochirus x2 after an initial genus Lepomis). At this size no bluegill-specific mark is visible, so species rests on the community ID.",
-   "use": "Scale and look of a late fry/early fingerling sunfish: translucency, faint bars, proportions. Stage boundary fry vs juvenile is a judgement from size; observation annotated juvenile. Do not copy spoon or hand. Role limited to production: label-only ID, Lepomis fry not separable by eye.",
-   "reviewed": "2026-10-25"
-  },
-  {
-   "asset_id": "PH-BLUEGILL-JUV-SIDE-01",
-   "entity_id": "K-SP-BLUEGILL-001",
-   "stage": "juvenile",
-   "variant": null,
-   "view": "side",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://commons.wikimedia.org/wiki/File:Bluegill_Fingerlings_(52581436451).jpg",
-   "file_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Bluegill_Fingerlings_%2852581436451%29.jpg/3840px-Bluegill_Fingerlings_%2852581436451%29.jpg",
-   "license": "Public domain",
-   "credit": "Sam Stukel, USFWS Mountain-Prairie (Gavins Point National Fish Hatchery, via Wikimedia Commons)",
-   "sha256": "de87e829ad99411bd099ee14a66a6f3eedc5b908bde3eb90d9638c93c8034a7c",
-   "width": 3840,
-   "height": 2560,
-   "subject_coverage": "medium",
-   "quality": "1080p",
-   "observed": "Two hatchery fingerlings lying in a wet open palm, heads up-right, hatchery raceway blurred behind. Deep compressed bodies, small mouths, clear dark vertical bars over greenish-silver flanks, pale throats. Each fish roughly finger length; ear flap small and not distinct at this size. Commons original is 7008x4672 (>15 MB); this is the Commons 3840 px rendition.",
-   "species_basis": "Hatchery label 'Bluegill Fingerlings' plus visible deep body, small mouth and vertical bars; ear-flap mark not readable, so identity rests partly on label.",
-   "use": "Juvenile body shape, bar pattern and relative size against a hand. Do not copy the hand or hatchery setting into wild scenes; not a reference for adult colour. Role limited to production: hatchery fingerlings, marks too small; label-only ID.",
    "reviewed": "2026-10-25"
   },
   {
@@ -487,29 +418,6 @@
    "reviewed": "2026-10-25"
   },
   {
-   "asset_id": "PH-BROWN-TROUT-JUV-SIDE-01",
-   "entity_id": "K-SP-BROWN-TROUT-001",
-   "stage": "juvenile",
-   "variant": "lake form (lacustris), Europe",
-   "view": "side",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://commons.wikimedia.org/wiki/File:Sirnitz_Neualbeck_10_Salmo_trutta_lacustris_Jungfische_16072013_555.jpg",
-   "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Sirnitz_Neualbeck_10_Salmo_trutta_lacustris_Jungfische_16072013_555.jpg",
-   "license": "CC BY-SA 3.0 AT",
-   "credit": "Johann Jaritz (own work, via Wikimedia Commons)",
-   "sha256": "f05c2327d6e417b9a7bee9334c58b91afe4bc43e75aba66b0d3e5814d0054bb5",
-   "width": 4928,
-   "height": 3264,
-   "subject_coverage": "small",
-   "quality": "1080p",
-   "observed": "Several young fish in a glass bowl of water on a blue surface, Carinthia, Austria. Two front fish in side view show dark oval parr marks, yellowish lower body, small red spots and reddish adipose/fin tips; others blurred by glass refraction. Each fish is small in the frame.",
-   "species_basis": "uploader label Salmo trutta lacustris + visible red spots and yellow underside; parr marks not covered by an opened A/B source",
-   "use": "Juvenile pattern ref only; fish are tiny in frame and seen through glass. Do not copy the bowl, crowding or bright surface; European lake form, not a US stream fish. Role limited to production: small fish through glass, European lake form.",
-   "reviewed": "2026-10-25"
-  },
-  {
    "asset_id": "PH-BROWN-TROUT-JUV-SIDE-02",
    "entity_id": "K-SP-BROWN-TROUT-001",
    "stage": "juvenile",
@@ -669,29 +577,6 @@
    "observed": "Underwater in a clear spring-fed stream: spawning adults over gravel and green weed. Main fish full side: olive-bronze body with dark vertical blotches and iridescent sheen, dense black spots on back, dorsal and both caudal lobes, black gum line with teeth on lower jaw, slightly hooked snout. Two more Chinook behind, one darker.",
    "species_basis": "Visual: spots on both tail lobes and black gums (checked at full resolution); USFWS caption Chinook returning to McAllister Springs, WA.",
    "use": "Spawning-phase identity, tail spotting and gum anatomy in natural light. 3840 px Commons thumbnail of a >15 MB original; do not copy weed layout as a fixed set.",
-   "reviewed": "2026-10-25"
-  },
-  {
-   "asset_id": "PH-CHINOOK-SALMON-JUV-SIDE-01",
-   "entity_id": "K-SP-CHINOOK-SALMON-001",
-   "stage": "juvenile",
-   "variant": null,
-   "view": "side",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://commons.wikimedia.org/wiki/File:Juvenile_Chinook_Salmon.jpg",
-   "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Juvenile_Chinook_Salmon.jpg",
-   "license": "Public domain",
-   "credit": "Sam Stukel, USFWS Mountain-Prairie (Flickr, via Wikimedia Commons)",
-   "sha256": "2fdddfe9b25fbef9b942a48de4cb15c41726b2582d48071be5b82cea8f4cc364",
-   "width": 5651,
-   "height": 2921,
-   "subject_coverage": "large",
-   "quality": "1080p",
-   "observed": "Single juvenile on white background, left side, fins spread. Silvery body with faint grey parr marks crossing the lateral line, small dark spots on back and dorsal area, forked translucent tail, large eye.",
-   "species_basis": "USFWS caption juvenile Chinook at Gavins Point NFH; visual parr marks and salmonid shape (species not separable from coho by eye at this stage).",
-   "use": "Juvenile/smolt identity and proportions. Studio background only. Role limited to production: juvenile salmonid marks not decisive visually; label-only ID.",
    "reviewed": "2026-10-25"
   },
   {
@@ -926,29 +811,6 @@
    "reviewed": "2026-10-25"
   },
   {
-   "asset_id": "PH-MAHI-MAHI-JUV-SIDE-01",
-   "entity_id": "K-SP-MAHI-MAHI-001",
-   "stage": "juvenile",
-   "variant": null,
-   "view": "side",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://www.inaturalist.org/observations/132270769",
-   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/225218500/original.jpeg",
-   "license": "CC BY 4.0",
-   "credit": "tokue (iNaturalist)",
-   "sha256": "0de8cbbbe489709c43a0dbe7167376532dfe1e97f670560794e88cbd387477df",
-   "width": 2048,
-   "height": 1536,
-   "subject_coverage": "large",
-   "quality": "1080p",
-   "observed": "Live juvenile (few cm) swimming in a clear acrylic viewing box, side view facing right, spanning ~70% of frame width. Slender body with alternating dark vertical bars and pale interspaces along the flank; long continuous reddish dorsal fin along the back to the tail; long dark anal fin from mid-body to tail; deep-forked reddish caudal without a full white margin. Slight softness, glass reflections and a second fish blurred at right edge.",
-   "species_basis": "Single long dorsal fin and long dark anal fin; slender body (depth well under 25% of length, rules out deeper-bodied pompano dolphinfish); barred juvenile pattern; no full white caudal margin. iNaturalist research grade (3 agreeing IDs; an identifier cites pigmented pelvic and anal fins). Pelvic fin pigment itself not clearly visible in this frame. Reviewer (2026-10-25): seen through tank glass, soft focus; single dorsal origin and pelvic pigment not confirmable on the image, so production only.",
-   "use": "Juvenile body plan, barring and fin layout. Do not copy acrylic box, glass edges, reflections or the second blurred fish; place in Sargassum/open water instead.",
-   "reviewed": "2026-10-25"
-  },
-  {
    "asset_id": "PH-MAHI-MAHI-JUV-SIDE-02",
    "entity_id": "K-SP-MAHI-MAHI-001",
    "stage": "juvenile",
@@ -1110,29 +972,6 @@
    "reviewed": "2026-10-25"
   },
   {
-   "asset_id": "PH-NORTHERN-PIKE-FRY-HEAD-01",
-   "entity_id": "K-SP-NORTHERN-PIKE-001",
-   "stage": "fry",
-   "variant": null,
-   "view": "head",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://commons.wikimedia.org/wiki/File:Northern_Pike_Fry_(51307147298).jpg",
-   "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Northern_Pike_Fry_%2851307147298%29.jpg",
-   "license": "Public domain",
-   "credit": "USFWS Mountain-Prairie (Garrison Dam National Fish Hatchery, 2017; via Wikimedia Commons)",
-   "sha256": "8e04436f94da3a4565e5184357f287c5e86cc40bf228f755e6b0c178fe44e203",
-   "width": 4288,
-   "height": 3216,
-   "subject_coverage": "large",
-   "quality": "1080p",
-   "observed": "Macro of the head and front body of a hatchery pike fry on a pale tray: elongated flat duckbill snout, large silver-ringed eye, dense dark melanophore speckling on olive-gold skin, translucent pinkish gill/belly area; other fry blurred at bottom of frame. Shallow depth of field.",
-   "species_basis": "USFWS caption: northern pike fry at Garrison Dam NFH; esocid snout visible but species from caption only",
-   "use": "Fry head/snout texture and translucency for close-ups. Role limited to production: pike vs muskie fry not separable from this crop (caption-only ID). Hatchery tray; do not copy the white background or blurred fry.",
-   "reviewed": "2026-10-25"
-  },
-  {
    "asset_id": "PH-NORTHERN-PIKE-FRY-SIDE-01",
    "entity_id": "K-SP-NORTHERN-PIKE-001",
    "stage": "fry",
@@ -1245,52 +1084,6 @@
    "observed": "Close-up of a steelhead head, right side, mouth open. Pale/white mouth lining and gums, maxilla extending past the eye, few dark spots on head, pinkish-red cheek, wet glossy skin; out of water at a hatchery.",
    "species_basis": "Visual: light mouth and gums (not black like Chinook), jaw reaching behind eye; USFWS caption steelhead at Abernathy Fish Technology Center.",
    "use": "Head/mouth anatomy: jaw length, pale gums, eye, cheek colour. Out-of-water hatchery shot; do not copy the hand or background.",
-   "reviewed": "2026-10-25"
-  },
-  {
-   "asset_id": "PH-RAINBOW-TROUT-JUV-SIDE-01",
-   "entity_id": "K-SP-RAINBOW-TROUT-001",
-   "stage": "juvenile",
-   "variant": null,
-   "view": "side",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://www.inaturalist.org/observations/233625754",
-   "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/415216602/original.jpeg",
-   "license": "CC BY 4.0",
-   "credit": "leecain (iNaturalist)",
-   "sha256": "5e79b82cbfdb7bcab49a2e210c84d994e2357bcb41395949f044f7d76f34f946",
-   "width": 2048,
-   "height": 1536,
-   "subject_coverage": "large",
-   "quality": "1080p",
-   "observed": "Wild juvenile coastal rainbow trout (parr) in a clear photo tank, Upper Deer Creek, Selma, Oregon, 2 Aug 2024. Full right side, sharp: ~9 dark oval parr marks along the lateral line, many small black spots over back, flank, dorsal fin and the whole caudal fin, faint pink wash on the rear flank, olive back, silvery-white belly, short jaw ending below the eye, white-tipped pelvic fin. Gravel bar and trees behind the tank, water droplets on the glass.",
-   "species_basis": "Oval parr marks with spots across the caudal fin and short jaw (separates from brown trout - unspotted tail/red spots - and chinook parr - unspotted tail, tall narrow parr marks); 6 iNaturalist IDs agree on O. mykiss (irideus). Coastal cutthroat is not excluded by a visible throat slash from this angle Reviewer (2026-10-25): coastal cutthroat parr not excluded on visible marks (no throat view, fin tips unclear), so production only.",
-   "use": "Juvenile (parr) identity and proportions. Do not copy the tank, droplets or the gravel bar backdrop; this is a Pacific coastal stream parr, not a Great Lakes steelhead smolt.",
-   "reviewed": "2026-10-25"
-  },
-  {
-   "asset_id": "PH-RAINBOW-TROUT-JUV-UNDERWATER-01",
-   "entity_id": "K-SP-RAINBOW-TROUT-001",
-   "stage": "juvenile",
-   "variant": null,
-   "view": "underwater",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://commons.wikimedia.org/wiki/File:Hot_Creek_Rainbow_Trout_Fry_(7441874608).jpg",
-   "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Hot_Creek_Rainbow_Trout_Fry_%287441874608%29.jpg",
-   "license": "Public domain",
-   "credit": "Rob Holm, USFWS Mountain-Prairie (Flickr, via Wikimedia Commons)",
-   "sha256": "ae9122c7c336515dc415545ed583dc1fe8ef9d230db66b987ef055bd3ad3c775",
-   "width": 4000,
-   "height": 3000,
-   "subject_coverage": "small",
-   "quality": "1080p",
-   "observed": "Dense school of hatchery rainbow fry underwater, many in side view. Each shows a row of dark oval parr marks along the side, small dark spots, olive-gold body, large eyes. Dark background, artificial light.",
-   "species_basis": "Visual: oval parr marks and body shape of salmonid fry; USFWS caption Hot Creek rainbow trout at Garrison Dam NFH.",
-   "use": "Juvenile identity (parr marks, proportions). Hatchery density is not a natural stream scene. Role limited to production: juvenile salmonid marks not decisive visually; label-only ID.",
    "reviewed": "2026-10-25"
   },
   {
@@ -1737,52 +1530,6 @@
    "reviewed": "2026-10-25"
   },
   {
-   "asset_id": "PH-WALLEYE-FRY-GROUP-01",
-   "entity_id": "K-SP-WALLEYE-001",
-   "stage": "fry",
-   "variant": null,
-   "view": "group",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://commons.wikimedia.org/wiki/File:Walleye_(Sander_vitreus)_Fry.jpg",
-   "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Walleye_%28Sander_vitreus%29_Fry.jpg",
-   "license": "Public domain",
-   "credit": "Sam Stukel, USFWS Mountain-Prairie (via Wikimedia Commons)",
-   "sha256": "d5d616a3d094620053c58cbee98cf1240343286367c9b25f136ae10e50451b6e",
-   "width": 5213,
-   "height": 3724,
-   "subject_coverage": "medium",
-   "quality": "1080p",
-   "observed": "Hand holding a clear glass of water against the sky with about 30 pond-reared fry, each roughly 2-3 cm: slender translucent bodies, large silvery eyes, visible gut, fins mostly clear. Drained hatchery pond and two workers seining in the blurred background.",
-   "species_basis": "USFWS caption: walleye (Sander vitreus) fry at Gavins Point National Fish Hatchery. Slender percid fry shape agrees but species is not confirmable visually at this size.",
-   "use": "Size, translucency and density of late walleye fry. Do not copy glass, hand, hatchery pond or workers. Role limited to production: hatchery label-only ID.",
-   "reviewed": "2026-10-25"
-  },
-  {
-   "asset_id": "PH-WALLEYE-FRY-SIDE-01",
-   "entity_id": "K-SP-WALLEYE-001",
-   "stage": "fry",
-   "variant": null,
-   "view": "side",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://commons.wikimedia.org/wiki/File:Walleye_larva_(8740460659).jpg",
-   "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Walleye_larva_%288740460659%29.jpg",
-   "license": "CC BY-SA 2.0",
-   "credit": "NOAA Great Lakes Environmental Research Laboratory (via Wikimedia Commons)",
-   "sha256": "158288bbc0242f60190736c5f8a94f801f1e77f5a8f33ed67e95556c96335da3",
-   "width": 1280,
-   "height": 960,
-   "subject_coverage": "large",
-   "quality": "720p",
-   "observed": "Microscope view of a newly hatched larva on grey background: pale yellowish translucent body curved in an S, large yolk sac with sparse melanophores under the head, single dark eye, continuous fin fold along tail, no fins differentiated.",
-   "species_basis": "Caption only (NOAA GLERL: fish larvae, walleye, July 2010). Percid yolk-sac larvae are not separable by eye from this image.",
-   "use": "Look of a yolk-sac walleye larva for macro/early-life shots. Microscope lighting and grey dish background are not a habitat reference; no size scale. Role limited to production: label-only ID. 720p tier: no 1080p close-up found.",
-   "reviewed": "2026-10-25"
-  },
-  {
    "asset_id": "PH-WALLEYE-JUV-SIDE-01",
    "entity_id": "K-SP-WALLEYE-001",
    "stage": "juvenile",
@@ -1803,29 +1550,6 @@
    "observed": "Juvenile walleye (hand-length) held over a flooded backwater with dead trees, left side, both dorsals erect. Slender olive-gold body with faint saddles, large glassy eye, toothy jaw slightly open, spiny dorsal membranes plain (no rows of round black spots) with darker rear membrane, white tip on lower caudal lobe clearly visible.",
    "species_basis": "Visual: white lower-caudal tip and unspotted spiny dorsal with dark rear area (walleye; sauger has spotted spiny dorsal and no white tail tip). iNaturalist research grade, 4 agreeing IDs, Buffalo WI, 2022-05-10.",
    "use": "Juvenile walleye identity, fin spread, eye and tail tip. Do not copy hand-held out-of-water pose into underwater scenes.",
-   "reviewed": "2026-10-25"
-  },
-  {
-   "asset_id": "PH-WALLEYE-JUV-UNDERWATER-01",
-   "entity_id": "K-SP-WALLEYE-001",
-   "stage": "juvenile",
-   "variant": null,
-   "view": "underwater",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://commons.wikimedia.org/wiki/File:Walleye_Fingerlings_(51310142464).jpg",
-   "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Walleye_Fingerlings_%2851310142464%29.jpg",
-   "license": "Public domain",
-   "credit": "Rob Holm, U.S. Fish and Wildlife Service (Garrison Dam NFH)",
-   "sha256": "9248d5d9998b2e02911ed7bf6f774a60e2b7ec6447861af63c8d8d8cd06b698c",
-   "width": 4000,
-   "height": 3000,
-   "subject_coverage": "medium",
-   "quality": "1080p",
-   "observed": "Dense school of live fingerlings underwater in green water over vegetation, many fish in side and oblique views. Slender bodies with olive-brown mottling and faint dark saddles, large reflective eyes, translucent fins; individual fish occupy a modest part of the frame, some motion blur and suspended particles.",
-   "species_basis": "USFWS caption (walleye fingerlings reared at Garrison Dam NFH, 2019); slender percid body and large eyes agree.",
-   "use": "Juvenile colour, mottling, body proportion and schooling density. Hatchery rearing pond density is not a wild default; no size scale in the image. Role limited to production: species from hatchery label only; sauger fingerlings look similar.",
    "reviewed": "2026-10-25"
   },
   {
@@ -1896,29 +1620,6 @@
    "observed": "Close-up of the same juvenile white crappie: dorsal fin raised against a yellow tray, thumb at left. Short graduated row of about 6 clear spines grading into soft rays with fine dusky membrane speckles; iridescent flank scales and speckled back below.",
    "species_basis": "Visual: about 6 dorsal spines (white crappie 5-6, black crappie 7-8); same observation as PH-WHITE-CRAPPIE-JUV-SIDE-02, iNaturalist research grade with 5 agreeing IDs.",
    "use": "Dorsal fin structure for close-ups and species separation. Fragment of the body only: not a whole-fish reference; do not copy thumb or tray colour.",
-   "reviewed": "2026-10-25"
-  },
-  {
-   "asset_id": "PH-WHITE-CRAPPIE-JUV-SIDE-01",
-   "entity_id": "K-SP-WHITE-CRAPPIE-001",
-   "stage": "juvenile",
-   "variant": null,
-   "view": "side",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://commons.wikimedia.org/wiki/File:Pomoxis_annularis_453185302.jpg",
-   "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Pomoxis_annularis_453185302.jpg",
-   "license": "CC BY-SA 4.0",
-   "credit": "Fishes of Texas team (iNaturalist photo 453185302, via Wikimedia Commons)",
-   "sha256": "9a35391434dc10658b699ab79cb39505a6ea5729f280c902595d9566bb85d891",
-   "width": 2048,
-   "height": 1536,
-   "subject_coverage": "medium",
-   "quality": "1080p",
-   "observed": "Small juvenile (a few cm) lying on a palm, left side. Slender silvery-iridescent body, large eye, dorsal and anal fins set far back opposite each other, forked tail with dark edge; no bars developed yet. Fish fills about half the frame width.",
-   "species_basis": "Genus-level marks (fins set back, large eye, oblique mouth); species rests on Fishes of Texas team identification, iNaturalist research-grade observation 253129220 (3 IDs, Colorado County TX, 2024-11-23). Visible marks alone cannot exclude black crappie at this size.",
-   "use": "Juvenile body proportion and colour only. Do not add adult bars or deep body to fish this small; do not use to separate the two crappie species. Role limited to production: juvenile marks cannot exclude black crappie; label-only ID.",
    "reviewed": "2026-10-25"
   },
   {
@@ -2036,29 +1737,6 @@
    "observed": "Hatchery worker's palm holding a translucent gelatinous egg mass with many small eggs, strands dripping into a turbid pond; sunken evergreen branch at right, plastic bag behind. Accordion folding is not clearly readable.",
    "species_basis": "Caption: USFWS hatchery yellow perch eggs about to hatch, placed on sunken evergreen trees; gelatinous strand matches S4/S5. Identity rests on the label.",
    "use": "Texture and translucency of perch egg strands and the cover they are draped on. Do not copy the hand, bag or hatchery handling into wild spawning scenes. Role limited to production: egg mass ID from caption only.",
-   "reviewed": "2026-10-25"
-  },
-  {
-   "asset_id": "PH-YELLOW-PERCH-JUV-SIDE-01",
-   "entity_id": "K-SP-YELLOW-PERCH-001",
-   "stage": "juvenile",
-   "variant": null,
-   "view": "side",
-   "roles": [
-    "production"
-   ],
-   "page_url": "https://commons.wikimedia.org/wiki/File:Yellow_Perch_Fingerlings_(52581436951).jpg",
-   "file_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Yellow_Perch_Fingerlings_%2852581436951%29.jpg/3840px-Yellow_Perch_Fingerlings_%2852581436951%29.jpg",
-   "license": "Public domain",
-   "credit": "Sam Stukel, USFWS Mountain-Prairie (Gavins Point National Fish Hatchery, via Wikimedia Commons)",
-   "sha256": "7e49dd61c0c865ebb737db61da73fa0337ff1b32834afe774e60225ee13fd0ce",
-   "width": 3840,
-   "height": 5760,
-   "subject_coverage": "medium",
-   "quality": "1080p",
-   "observed": "Portrait frame: three hatchery fingerlings held side by side in a wet palm, heads up, hatchery raceway blurred behind. Slender olive-green bodies with faint, mottled dark vertical bars, little yellow, pale bellies, separate spiny dorsal partly visible, mouths slightly open without canines. Fish occupy the middle third of the frame. Commons original is 4672x7008 (>15 MB); this is the Commons rendition at that URL.",
-   "species_basis": "Hatchery label 'Yellow Perch Fingerlings' plus faint bar pattern and perch body form; low yellow fits S4 note that young perch are less yellow. Identity rests partly on label.",
-   "use": "Juvenile body form, muted colour and size against a hand. Do not give juveniles the bold yellow and sharp bars of adults; do not copy hand or hatchery setting. Role limited to production: hatchery fingerlings, bars faint; label-only ID.",
    "reviewed": "2026-10-25"
   },
   {

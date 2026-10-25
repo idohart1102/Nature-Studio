@@ -112,4 +112,4 @@ Gợi ý kể chuyện, chưa có bằng chứng viral.
 - Chưa có nguồn A/B mở được cho tháng đẻ của rainbow suối ở miền Tây; mùa đông Texas không ghi tháng cụ thể [S12].
 - Số 45 in/55 lb và cú nhảy 11 ft chỉ từ trang phổ thông USFWS [S6]; kỷ lục Texas [S12] chưa ghi năm. Không có kỷ lục all-tackle thế giới từ nguồn đã mở.
 - Michigan DNR đọc qua bản Wayback [S9]. Kẻ săn của rainbow chưa có nguồn đã mở.
-- Ảnh: có adult identity và steelhead side/head; juvenile (parr dưới nước và parr trong hộp chụp Oregon) chỉ là `production` vì chưa loại trừ được cutthroat non bằng dấu nhìn thấy; chưa có ảnh rainbow màu đẻ cận cảnh, chưa có ref `scale`.
+- Ảnh: có adult identity và steelhead side/head; chưa có ảnh juvenile loại trừ được cutthroat non bằng dấu nhìn thấy, chưa có ảnh rainbow màu đẻ cận cảnh, chưa có ref `scale`.

@@ -115,4 +115,4 @@ Gợi ý kể chuyện, chưa có bằng chứng hiệu quả viral.
 - Kỷ lục thế giới IGFA chưa mở; kỷ lục trong S6 là tài liệu 2008, có thể đã bị vượt.
 - Lịch mùa chưa có nguồn A/B ghi tháng cụ thể cho cuối hè–thu, đầu mùa băng (tháng băng đóng tùy năm/vùng); chưa có nguồn A/B về hoa văn con non hay thanh sẫm dưới mắt ở pike.
 - Số lỗ dưới hàm lệch giữa S6 và S7; bảng tuổi S6 trích từ PDF bị xáo.
-- Ref ảnh (≥1080p): adult nhìn ngang, juvenile nhìn ngang, cận đầu adult; fry trong cốc (identity theo dấu chi *Esox* + phạm vi: Anh chỉ có pike; không dùng để phân biệt fry pike với muskie) và cận đầu fry trại giống (`production`); chưa có ảnh trong môi trường tự nhiên, ref `scale` có số đo.
+- Ref ảnh (≥1080p): adult nhìn ngang, juvenile nhìn ngang, cận đầu adult, fry trong cốc (identity theo dấu chi *Esox* + phạm vi: Anh chỉ có pike; không dùng để phân biệt fry pike với muskie); chưa có ảnh trong môi trường tự nhiên, ref `scale` có số đo.

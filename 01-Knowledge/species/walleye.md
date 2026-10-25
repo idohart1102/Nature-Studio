@@ -116,4 +116,4 @@ Hấp dẫn và viral cần kiểm qua output thực, không từ một fact ri�
 - Kỷ lục thế giới 1960 chưa xác minh được qua IGFA/TWRA [S10, S11]; chi tiết tranh cãi chỉ từ nguồn cấp E.
 - Trang Minnesota DNR đọc qua bản lưu Wayback; Michigan DNR chưa mở lại.
 - Chưa mở Catalog of Fishes; chưa có tên tiếng Việt.
-- Ref ảnh: adult dưới nước (identity, vây lưng gập nên không thấy mảng sẫm), cận đầu/miệng có răng nanh (anatomy), đàn fingerling dưới nước (juvenile). Bổ sung juvenile cầm tay (chóp trắng thùy đuôi dưới, vây gai không hàng đốm; iNaturalist CC0). Fry: ảnh hiển vi ấu trùng còn noãn hoàng (NOAA GLERL) và fry trại giống (USFWS) chỉ là `production` vì loài dựa vào nhãn; chưa có ref `scale` có số đo.
+- Ref ảnh: adult dưới nước (identity, vây lưng gập nên không thấy mảng sẫm), cận đầu/miệng có răng nanh (anatomy), juvenile cầm tay (chóp trắng thùy đuôi dưới, vây gai không hàng đốm; iNaturalist CC0). Chưa có ảnh fry nhận dạng được bằng mắt, chưa có ref `scale` có số đo.

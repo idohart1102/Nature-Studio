@@ -108,4 +108,4 @@ Chuẩn: [species-profile-standard](../../00-Standards/species-profile-standard.
 - Thời điểm bắt đầu câu băng (ví dụ T12) chưa có nguồn A/B đã mở; [S8] và [S10] chỉ xác nhận có mùa băng, không ghi tháng.
 - Lịch mùa thu–đông chủ yếu từ Missouri [S6]; nguồn gộp hai loài crappie. Minnesota DNR bị chặn (403).
 - Chưa có nguồn A/B đã mở về con lai giữa hai crappie; kỷ lục 5 lb 3 oz (1957) chỉ là đầu mối cấp E [S13].
-- Ref ảnh: có adult nhìn ngang (thường và sẫm màu mùa xuân) và juvenile; thêm juvenile nhận dạng bằng gốc vây lưng ngắn hơn khoảng mắt–vây lưng và cận vây lưng ~6 gai (iNaturalist CC BY); chưa có ảnh dưới nước, chưa có cận đầu riêng.
+- Ref ảnh: có adult nhìn ngang (thường và sẫm màu mùa xuân) và juvenile nhận dạng bằng gốc vây lưng ngắn hơn khoảng mắt–vây lưng, kèm cận vây lưng ~6 gai (iNaturalist CC BY); chưa có ảnh dưới nước, chưa có cận đầu riêng.

@@ -107,4 +107,4 @@ Gấu bắt cá hay cá nhảy thác chưa có nguồn riêng cho chinook (mục
 - Năm kỷ lục 97 lb: S8 ghi 1985, S7 ghi 1986.
 - Gấu bắt chinook và chinook nhảy thác: chưa có nguồn A/B đã mở; trang NPS Brooks Falls [S15] chỉ đọc qua index và không nêu loài.
 - Michigan DNR đọc qua bản Wayback [S10]. Mùa chạy Lake Superior/Huron chưa có nguồn đã mở.
-- Ảnh: có adult (bạc, đẻ, đầu/lợi) và juvenile; thêm parr British Columbia (vạch parr bị đường bên cắt, vây hậu môn không viền trắng–đen kiểu coho, đuôi không đốm; iNaturalist CC0); chưa có ảnh jack hoặc ref `scale`.
+- Ảnh: có adult (bạc, đẻ, đầu/lợi) và parr British Columbia (vạch parr bị đường bên cắt, vây hậu môn không viền trắng–đen kiểu coho, đuôi không đốm; iNaturalist CC0); chưa có ảnh jack hoặc ref `scale`.

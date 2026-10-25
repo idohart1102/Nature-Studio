@@ -114,4 +114,4 @@ MDC ghi kỷ lục 4 lb 3 oz [S6]. Trưởng thành ở 2–3 tuổi, sống kho
 - Kỷ lục 1865 ghi 4 lb 3,5 oz [S4] và 4 lb 3 oz [S6]; chưa mở IGFA. Cỡ tối đa lệch giữa FishBase 50 cm và USGS 40 cm.
 - Thời điểm băng tháng 12 chỉ từ hai báo cáo Iowa 2019 [S7, S8]; năm và bang khác có thể lệch. Tháng của nhịp mùa hè/đông ở Wisconsin không được nguồn ghi.
 - Chưa mở được Minnesota, Michigan DNR; chưa mở Catalog of Fishes; không có số dây hay cỡ móc có nguồn.
-- Ref ảnh: adult nhìn ngang, adult dưới nước, cận đầu, juvenile (fingerling trại giống, nhận dạng dựa một phần vào nhãn) và dải trứng; juvenile thứ hai nhận dạng bằng mắt (vạch thuôn, vây dưới cam; iNaturalist CC BY); chưa có ảnh fry, chưa có ảnh dải trứng đạt identity, chưa có ref `scale`.
+- Ref ảnh: adult nhìn ngang, adult dưới nước, cận đầu, juvenile cầm tay (vạch thuôn, vây dưới cam; iNaturalist CC BY) và dải trứng trại giống (`production`, loài theo nhãn); chưa có ảnh fry, chưa có ảnh dải trứng đạt identity, chưa có ref `scale`.
