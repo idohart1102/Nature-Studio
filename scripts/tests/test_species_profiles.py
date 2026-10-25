@@ -77,6 +77,14 @@ class SpeciesProfileTests(unittest.TestCase):
         for text in ('unknown source S9', "size kind 'huge'", 'A/B-tier', 'A-tier source ids'):
             self.assertIn(text, errors)
 
+    def test_section_returns_only_requested_parts(self):
+        found = sp.sections(self.root, 'red drum', [1, 7])
+        self.assertIn('## 1. Nhận dạng', found['text'])
+        self.assertIn('## 7. Checklist hình ảnh', found['text'])
+        self.assertNotIn('## 4. Hành vi', found['text'])
+        with self.assertRaises(ValueError):
+            sp.sections(self.root, 'red drum', [9])
+
     def test_not_accessed_source_cannot_claim_date(self):
         data = sp.json_block(ledger('K-SP-ALPHA-001'))
         data['sources'][1]['access'] = 'not_accessed'

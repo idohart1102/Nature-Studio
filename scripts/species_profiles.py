@@ -596,6 +596,19 @@ def snapshot(root, slug, fetch=None):
                      'do not assume the profile fact is wrong. Snapshots are local only.')
 
 
+def sections(root, name, numbers):
+    """Only the requested numbered sections of one profile (e.g. 1,2,7 for image work)."""
+    entry = resolve(root, name)
+    if not entry:
+        raise ValueError('Unknown or ambiguous species: ' + name)
+    text = local(root, entry['path']).read_text(encoding='utf-8-sig')
+    wanted = [SECTIONS[n - 1] for n in numbers if 1 <= n <= len(SECTIONS)]
+    if len(wanted) != len(numbers):
+        raise ValueError(f'Section numbers must be 1-{len(SECTIONS)}')
+    return dict(id=entry['id'], path=entry['path'], sha256=hashlib.sha256(text.encode()).hexdigest(),
+                text='\n\n'.join(section(text, h).strip() for h in wanted))
+
+
 def listing(root, group=None):
     rows, errors = scan(root)
     out = [dict(id=r['meta'].get('id'), slug=r['meta'].get('slug'), group=r['meta'].get('group'),
@@ -615,6 +628,7 @@ def main():
     p = sub.add_parser('index'); p.add_argument('--check', action='store_true')
     p = sub.add_parser('resolve'); p.add_argument('name')
     p = sub.add_parser('list'); p.add_argument('--group', choices=GROUPS)
+    p = sub.add_parser('section'); p.add_argument('name'); p.add_argument('numbers', help='e.g. 1,2,7')
     p = sub.add_parser('new')
     for flag in ('slug', 'id', 'scientific', 'name'):
         p.add_argument('--' + flag, required=True)
@@ -643,6 +657,10 @@ def main():
             print(json.dumps(found or dict(found=None, note='Unknown or ambiguous name; research the exact species, '
                                                          'do not substitute another profile'), ensure_ascii=False))
             return 0 if found else 1
+        if args.action == 'section':
+            found = sections(root, args.name, [int(n) for n in args.numbers.split(',')])
+            print(f"<!-- {found['path']} sha256 {found['sha256']} -->\n{found['text']}")
+            return 0
         if args.action == 'list':
             print(json.dumps(listing(root, args.group), ensure_ascii=False, indent=1))
             return 0
